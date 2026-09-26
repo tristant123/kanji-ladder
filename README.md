@@ -51,7 +51,7 @@ first.
 
 ## Mnemonics
 
-Every radical has an original name and story. All N5, N4 and N3 kanji (612)
+Every radical has an original name and story. All N5 to N2 kanji (979)
 have hand-written meaning and reading mnemonics. They reuse the radical names you
 learned, and each reading ties to a fixed *sound anchor* (こう is always a
 koala, かん a kangaroo, しょう a showman...) that's used across all kanji
