@@ -1,0 +1,854 @@
+{
+ "丿": {
+  "name": "Slide",
+  "mnemonic": "One stroke sweeping down and to the left, like a kid going down a <radical>slide</radical>."
+ },
+ "丨": {
+  "name": "Stick",
+  "mnemonic": "A single straight line standing upright. It's a <radical>stick</radical> planted in the ground."
+ },
+ "凵": {
+  "name": "Container",
+  "mnemonic": "An open box with no lid, waiting to be filled. It's a <radical>container</radical>."
+ },
+ "儿": {
+  "name": "Legs",
+  "mnemonic": "Two strokes walking off the bottom of a kanji. Those are <radical>legs</radical>."
+ },
+ "卜": {
+  "name": "Toe",
+  "mnemonic": "A line with a little stub sticking out, like a <radical>toe</radical> poking out of a sock."
+ },
+ "囗": {
+  "name": "Enclosure",
+  "mnemonic": "A big box that surrounds whatever is inside it. It's an <radical>enclosure</radical>, like a fence around a field. (Bigger than <radical>mouth</radical>, which is small and sits beside things.)"
+ },
+ "⺍": {
+  "name": "Sparkle",
+  "mnemonic": "Three little strokes flying off the top of something, the way a cartoon draws <radical>sparkle</radical> on a shiny object."
+ },
+ "冖": {
+  "name": "Lid",
+  "mnemonic": "A flat cover with the corners bent down. Pop it onto a pot: it's a <radical>lid</radical>."
+ },
+ "亠": {
+  "name": "Top Hat",
+  "mnemonic": "A dot above a flat brim. That's a <radical>top hat</radical> sitting on top of the kanji."
+ },
+ "气": {
+  "name": "Steam",
+  "mnemonic": "Wavy lines rising and curling off to the side. It's <radical>steam</radical> rising from a kettle."
+ },
+ "丆": {
+  "name": "Awning",
+  "mnemonic": "A flat roof with one side dropping down: a shop <radical>awning</radical> sticking out over the door."
+ },
+ "亻": {
+  "name": "Person",
+  "mnemonic": "This is <kanji>人</kanji> squeezed thin to fit on the left of a kanji. Whenever you see it, a <radical>person</radical> is standing there."
+ },
+ "彳": {
+  "name": "Going",
+  "mnemonic": "A double person on the left, one behind the other, marching along a road. They're <radical>going</radical> somewhere."
+ },
+ "幺": {
+  "name": "Cocoon",
+  "mnemonic": "Two little twists and a tail, wound up tight. It's a silkworm <radical>cocoon</radical>."
+ },
+ "夂": {
+  "name": "Winter",
+  "mnemonic": "This shape sits in <kanji>冬</kanji>, the kanji for winter. Picture a foot dragging slowly through snow: <radical>winter</radical>."
+ },
+ "刂": {
+  "name": "Knife",
+  "mnemonic": "Two upright strokes on the right side. It's <kanji>刀</kanji> standing on its edge: a <radical>knife</radical>, ready to cut whatever is next to it."
+ },
+ "冂": {
+  "name": "Helmet",
+  "mnemonic": "A tall frame with an open bottom. It's a knight's <radical>helmet</radical> seen from the front."
+ },
+ "聿": {
+  "name": "Brush",
+  "mnemonic": "A hand gripping a long shaft with lines across it. It's a calligraphy <radical>brush</radical>."
+ },
+ "丶": {
+  "name": "Drop",
+  "mnemonic": "A tiny single dot, like a <radical>drop</radical> of ink that fell off the brush."
+ },
+ "𠂉": {
+  "name": "Gun",
+  "mnemonic": "A short stroke and a bent one, like the barrel and grip of a <radical>gun</radical> pointed sideways."
+ },
+ "毋": {
+  "name": "Mother",
+  "mnemonic": "This is <kanji>母</kanji> with the dots merged into a line. Still a <radical>mother</radical>, just a strict one who says \"don't\"."
+ },
+ "𠂇": {
+  "name": "Hand",
+  "mnemonic": "A cross with a sweep, a <radical>hand</radical> reaching out. It's the top of <kanji>右</kanji> and <kanji>左</kanji>."
+ },
+ "乂": {
+  "name": "Cross",
+  "mnemonic": "Two strokes crossing each other in an X. A plain <radical>cross</radical>."
+ },
+ "龰": {
+  "name": "Footprint",
+  "mnemonic": "The bottom half of <kanji>足</kanji>, the kanji for foot. It's a <radical>footprint</radical> left behind in the mud."
+ },
+ "宀": {
+  "name": "Roof",
+  "mnemonic": "A dot for a chimney and a cover underneath. It's a <radical>roof</radical>, and whatever sits under it is indoors."
+ },
+ "艹": {
+  "name": "Grass",
+  "mnemonic": "Little shoots poking up at the top of the kanji. It's <radical>grass</radical>, and it usually means something about plants."
+ },
+ "龶": {
+  "name": "Life",
+  "mnemonic": "It's <kanji>生</kanji> with the bottom trimmed off. A little sprout of <radical>life</radical> growing on top."
+ },
+ "厶": {
+  "name": "Private",
+  "mnemonic": "A small closed loop that keeps something to itself. It's <radical>private</radical>, and none of your business."
+ },
+ "礻": {
+  "name": "Altar",
+  "mnemonic": "This is <kanji>示</kanji> squeezed onto the left side. It's a shrine <radical>altar</radical>, and kanji with it are about gods and blessings."
+ },
+ "也": {
+  "name": "Scorpion",
+  "mnemonic": "A curled body with a tail that hooks up. A <radical>scorpion</radical>, ready to sting."
+ },
+ "勿": {
+  "name": "Banner",
+  "mnemonic": "A pole with flowing strips hanging off it. It's a <radical>banner</radical> waving in the wind."
+ },
+ "マ": {
+  "name": "Mama",
+  "mnemonic": "This looks exactly like the katakana マ (ma). Picture your <radical>mama</radical>."
+ },
+ "⻌": {
+  "name": "Scooter",
+  "mnemonic": "A long swoop along the bottom that carries the rest of the kanji on its back. Everything is riding a <radical>scooter</radical>, so kanji with it are usually about moving."
+ },
+ "辶": {
+  "name": "Scooter",
+  "mnemonic": "The old-style form of the scooter swoop, with two dots on top. Same meaning: everything on it is on the move."
+ },
+ "豕": {
+  "name": "Pig",
+  "mnemonic": "A fat body on short legs with a curly tail. It's a <radical>pig</radical>."
+ },
+ "攵": {
+  "name": "Whip",
+  "mnemonic": "A hand holding a stick at an angle, ready to strike. It's a <radical>whip</radical>, and kanji with it usually involve making something happen."
+ },
+ "耂": {
+  "name": "Old Man",
+  "mnemonic": "The top of <kanji>老</kanji>, the kanji for old. It's an <radical>old man</radical> with a walking stick."
+ },
+ "氵": {
+  "name": "Water",
+  "mnemonic": "Three drops splashing down the left side. It's <radical>water</radical>, and kanji with it are usually wet."
+ },
+ "广": {
+  "name": "Canopy",
+  "mnemonic": "A roof with only one wall, like a big tent <radical>canopy</radical> sheltering a market stall."
+ },
+ "冫": {
+  "name": "Ice",
+  "mnemonic": "Water has three drops. This has only two, because the third one froze. It's <radical>ice</radical>."
+ },
+ "⺕": {
+  "name": "Broom",
+  "mnemonic": "A hand-like shape with bristles across it. It's a <radical>broom</radical>, sweeping from side to side."
+ },
+ "罒": {
+  "name": "Net",
+  "mnemonic": "A box with lines through it like mesh. It's a fishing <radical>net</radical> laid flat on top of the kanji."
+ },
+ "几": {
+  "name": "Table",
+  "mnemonic": "A flat top on two legs. It's a little <radical>table</radical>."
+ },
+ "灬": {
+  "name": "Fire",
+  "mnemonic": "Four sparks along the bottom of a kanji. It's <kanji>火</kanji>, <radical>fire</radical>, burning underneath something."
+ },
+ "𠂊": {
+  "name": "Hook",
+  "mnemonic": "Two little bent strokes, like a <radical>hook</radical> hanging off the top of the kanji."
+ },
+ "巴": {
+  "name": "Snake",
+  "mnemonic": "A coiled body with its tail curling out the bottom. It's a <radical>snake</radical>, curled up in a basket."
+ },
+ "禾": {
+  "name": "Grain",
+  "mnemonic": "A tree with the top bent over under its weight. It's a stalk of <radical>grain</radical>, heavy with rice."
+ },
+ "隹": {
+  "name": "Turkey",
+  "mnemonic": "A bird with lots of little lines for feathers. It's a fat <radical>turkey</radical>."
+ },
+ "亅": {
+  "name": "Barb",
+  "mnemonic": "A downward stroke that flicks up at the end, like the <radical>barb</radical> on a fishing hook."
+ },
+ "癶": {
+  "name": "Tent",
+  "mnemonic": "Two sides spreading apart like a <radical>tent</radical> being pitched with its flaps open."
+ },
+ "弋": {
+  "name": "Ceremony",
+  "mnemonic": "A stake with a ribbon tied to it, planted for a <radical>ceremony</radical>. (It's the part of <kanji>式</kanji> that isn't <radical>craft</radical>.)"
+ },
+ "頁": {
+  "name": "Head",
+  "mnemonic": "A shell on legs with a big face on top. It shows up in kanji about the face and head, like <kanji>顔</kanji> and <kanji>頭</kanji>, so call it <radical>head</radical>. (Also used for pages.)"
+ },
+ "扌": {
+  "name": "Fingers",
+  "mnemonic": "This is <kanji>手</kanji> squeezed onto the left. Kanji with it are done with your <radical>fingers</radical>: hold, throw, hit, fold."
+ },
+ "⻖": {
+  "name": "Building",
+  "mnemonic": "A big 'B' on the left side of a kanji. B for <radical>building</radical>."
+ },
+ "⻏": {
+  "name": "Town",
+  "mnemonic": "The same 'B' shape as building, but on the right side. It's a whole <radical>town</radical> down the road."
+ },
+ "歹": {
+  "name": "Bones",
+  "mnemonic": "A skeleton lying down. It's a pile of <radical>bones</radical>, and kanji with it are usually about death."
+ },
+ "匕": {
+  "name": "Spoon",
+  "mnemonic": "A handle with a curved bowl on the bottom. It's a <radical>spoon</radical>."
+ },
+ "疒": {
+  "name": "Sick",
+  "mnemonic": "A canopy with a hospital bed and two drops of sweat beside it. Someone is <radical>sick</radical>."
+ },
+ "艮": {
+  "name": "Root",
+  "mnemonic": "A shape stubbornly planted in place, like the <radical>root</radical> of a tree that won't come out. (It's the right side of <kanji>根</kanji>.)"
+ },
+ "匸": {
+  "name": "Hiding",
+  "mnemonic": "A box with the right side missing, and something tucked inside. It's <radical>hiding</radical> in there."
+ },
+ "飠": {
+  "name": "Eat",
+  "mnemonic": "This is <kanji>食</kanji> squeezed onto the left. Kanji with it are about food and eating, so it's <radical>eat</radical>."
+ },
+ "尸": {
+  "name": "Flag",
+  "mnemonic": "A pole with a flag hanging off the top of it. It's a <radical>flag</radical>."
+ },
+ "卩": {
+  "name": "Stamp",
+  "mnemonic": "A shape that looks like someone kneeling, pressing down hard. It's a seal <radical>stamp</radical>."
+ },
+ "勹": {
+  "name": "Wrap",
+  "mnemonic": "An arm curling around whatever is underneath it, to <radical>wrap</radical> it up."
+ },
+ "廴": {
+  "name": "Stretch",
+  "mnemonic": "A long swoop along the bottom, pulled out further than it should go. It's a big <radical>stretch</radical>."
+ },
+ "⺌": {
+  "name": "Triceratops",
+  "mnemonic": "Three horns sticking out of the top of the kanji. It's a <radical>triceratops</radical>."
+ },
+ "厂": {
+  "name": "Cliff",
+  "mnemonic": "A flat top with a steep side dropping straight down. It's a <radical>cliff</radical>."
+ },
+ "釆": {
+  "name": "Sort",
+  "mnemonic": "Rice grains with a claw above, picking them apart. It's the claw that helps you <radical>sort</radical> things out."
+ },
+ "彡": {
+  "name": "Hair",
+  "mnemonic": "Three slanted strokes, like strands of <radical>hair</radical> blowing to the side."
+ },
+ "疋": {
+  "name": "Coat Rack",
+  "mnemonic": "A stand with a leg sticking out at the bottom. It's a <radical>coat rack</radical>."
+ },
+ "⺤": {
+  "name": "Claw",
+  "mnemonic": "Three strokes reaching down from the top, like a <radical>claw</radical> ready to grab."
+ },
+ "戈": {
+  "name": "Halberd",
+  "mnemonic": "A long pole with a blade across it and a tassel. It's a <radical>halberd</radical>, a weapon."
+ },
+ "殳": {
+  "name": "Weapon",
+  "mnemonic": "A hand at the bottom holding up something heavy. It's a club, a <radical>weapon</radical>."
+ },
+ "氺": {
+  "name": "Splash",
+  "mnemonic": "<kanji>水</kanji> with the drops knocked loose. It's a <radical>splash</radical> of water."
+ },
+ "酉": {
+  "name": "Sake",
+  "mnemonic": "A jar with a line through the middle marking how full it is. It's a jar of <radical>sake</radical>."
+ },
+ "⺷": {
+  "name": "Sheep",
+  "mnemonic": "<kanji>羊</kanji> with its tail cut off so something else can sit underneath. Still a <radical>sheep</radical>."
+ },
+ "䒑": {
+  "name": "Horns",
+  "mnemonic": "Two little points sticking up above a line: a pair of <radical>horns</radical>."
+ },
+ "廾": {
+  "name": "Clasped Hands",
+  "mnemonic": "Two hands pressed together at the bottom of a kanji, lifting whatever sits on top. They're <radical>clasped hands</radical>."
+ },
+ "覀": {
+  "name": "West",
+  "mnemonic": "The top of <kanji>西</kanji> (west), used as a lid on other kanji. Think of it as the <radical>west</radical>."
+ },
+ "衤": {
+  "name": "Clothes",
+  "mnemonic": "This is <kanji>衣</kanji> squeezed onto the left side. It's <radical>clothes</radical>."
+ },
+ "忄": {
+  "name": "Feelings",
+  "mnemonic": "This is <kanji>心</kanji> (heart) standing up to fit on the left side. Kanji with it are about <radical>feelings</radical>."
+ },
+ "⺦": {
+  "name": "Bed",
+  "mnemonic": "A shape on its side like a bed seen from the end. It's a <radical>bed</radical>."
+ },
+ "⺨": {
+  "name": "Animal",
+  "mnemonic": "A beast with its claws out, crouched on the left. It's an <radical>animal</radical>."
+ },
+ "㔾": {
+  "name": "Crouch",
+  "mnemonic": "A figure bent in half, knees up. It's someone in a <radical>crouch</radical>."
+ },
+ "㐄": {
+  "name": "Steps",
+  "mnemonic": "Short strokes stacked like the <radical>steps</radical> of a staircase going down."
+ },
+ "韋": {
+  "name": "Leather",
+  "mnemonic": "Something stretched out tight from both ends, pulled in two directions. It's tanned <radical>leather</radical>."
+ },
+ "舛": {
+  "name": "Dance",
+  "mnemonic": "Two feet pointing in different directions, mid-step. It's a <radical>dance</radical>."
+ },
+ "彑": {
+  "name": "Pig Head",
+  "mnemonic": "A snout and a flat top, it's a <radical>pig head</radical>."
+ },
+ "髟": {
+  "name": "Long Hair",
+  "mnemonic": "<kanji>長</kanji> (long) next to <radical>hair</radical>: <radical>long hair</radical>."
+ },
+ "习": {
+  "name": "Wing",
+  "mnemonic": "A single feather folded over. It's one half of <kanji>羽</kanji>: a <radical>wing</radical>."
+ },
+ "龷": {
+  "name": "Stand",
+  "mnemonic": "Two posts joined on a crossbar, like a market <radical>stand</radical>."
+ },
+ "辰": {
+  "name": "Dragon",
+  "mnemonic": "This was the sign for the dragon in the old zodiac. Call it <radical>dragon</radical>."
+ },
+ "廿": {
+  "name": "Twenty",
+  "mnemonic": "Two tens stuck together and closed at the bottom. It's <radical>twenty</radical>."
+ },
+ "屮": {
+  "name": "Sprout",
+  "mnemonic": "A stem with a leaf on each side, just poking out of the ground. It's a <radical>sprout</radical>."
+ },
+ "耒": {
+  "name": "Plow",
+  "mnemonic": "A wooden tool with prongs, dragged through a field. It's a <radical>plow</radical>."
+ },
+ "业": {
+  "name": "Business",
+  "mnemonic": "The top of <kanji>業</kanji>. Think of it as <radical>business</radical>."
+ },
+ "虍": {
+  "name": "Tiger",
+  "mnemonic": "The top of <kanji>虎</kanji>, the stripes and the snarl. It's a <radical>tiger</radical>."
+ },
+ "卯": {
+  "name": "Rabbit",
+  "mnemonic": "Two long ears side by side. It's a <radical>rabbit</radical> from the old zodiac."
+ },
+ "隶": {
+  "name": "Slave",
+  "mnemonic": "A hand grabbing something by the tail and not letting go. It's a <radical>slave</radical> being caught."
+ },
+ "𦥑": {
+  "name": "Two Hands",
+  "mnemonic": "Two cupped hands on either side, lifting something up together. It's <radical>two hands</radical>."
+ },
+ "巛": {
+  "name": "River",
+  "mnemonic": "Three wavy lines flowing side by side. It's a <radical>river</radical>."
+ },
+ "巜": {
+  "name": "Stream",
+  "mnemonic": "Two wavy lines flowing side by side. It's a small <radical>stream</radical>."
+ },
+ "尤": {
+  "name": "Especially",
+  "mnemonic": "A big person with a hook sticking out of their side. It stands out, <radical>especially</radical>."
+ },
+ "乡": {
+  "name": "Countryside",
+  "mnemonic": "A twisting little path through the fields. It's the <radical>countryside</radical>."
+ },
+ "𧘇": {
+  "name": "Robe",
+  "mnemonic": "The bottom half of <kanji>衣</kanji> hanging down. It's a long <radical>robe</radical>."
+ },
+ "鬲": {
+  "name": "Cauldron",
+  "mnemonic": "A pot on three legs with the steam rising off it. It's a <radical>cauldron</radical>."
+ },
+ "乃": {
+  "name": "Fishhook",
+  "mnemonic": "A bent line that hooks back on itself. It's a <radical>fishhook</radical>."
+ },
+ "而": {
+  "name": "Beard",
+  "mnemonic": "A face with long strands hanging down underneath. It's a <radical>beard</radical>."
+ },
+ "旡": {
+  "name": "Choke",
+  "mnemonic": "Someone bent over with their mouth open, choking. It's <radical>choke</radical>."
+ },
+ "龍": {
+  "name": "Dragon King",
+  "mnemonic": "The full old-style dragon, scales and all. It's the <radical>dragon king</radical>."
+ },
+ "豸": {
+  "name": "Badger",
+  "mnemonic": "A long, low beast with a hunched back. It's a <radical>badger</radical>."
+ },
+ "瓜": {
+  "name": "Melon",
+  "mnemonic": "A vine with a round fruit hanging off it. It's a <radical>melon</radical>."
+ },
+ "⺗": {
+  "name": "Heart",
+  "mnemonic": "This is <kanji>心</kanji> flattened to fit on the bottom. It's the <radical>heart</radical>."
+ },
+ "丂": {
+  "name": "Snake Tongue",
+  "mnemonic": "A line with a forked hook under it, like a <radical>snake tongue</radical> flicking out."
+ },
+ "匚": {
+  "name": "Box",
+  "mnemonic": "A box lying on its side, open on the right. It's a <radical>box</radical>."
+ },
+ "⻞": {
+  "name": "Eat",
+  "mnemonic": "The squeezed-in form of <kanji>食</kanji> used on the left. It's <radical>eat</radical>."
+ },
+ "爻": {
+  "name": "Crossing",
+  "mnemonic": "Two X's stacked on each other. It's a double <radical>crossing</radical>."
+ },
+ "鬯": {
+  "name": "Herbs",
+  "mnemonic": "A pot filled with fragrant things and a spoon on the bottom. It's a pot of <radical>herbs</radical>."
+ },
+ "一": {
+  "name": "Ground",
+  "mnemonic": "A single flat line, like the horizon. As a kanji it means <kanji>one</kanji>; as a radical, think of it as the <radical>ground</radical>."
+ },
+ "口": {
+  "name": "Mouth",
+  "mnemonic": "A little square, open like a <radical>mouth</radical>."
+ },
+ "日": {
+  "name": "Sun",
+  "mnemonic": "A box with a line through the middle. It's the <radical>sun</radical>, which also means day."
+ },
+ "月": {
+  "name": "Moon",
+  "mnemonic": "Tall and with lines inside, like a crescent <radical>moon</radical>. On the side of a kanji it often means a body part (flesh)."
+ },
+ "十": {
+  "name": "Cross",
+  "mnemonic": "A plus sign. As a kanji it's <kanji>ten</kanji>; as a radical, just a <radical>cross</radical>."
+ },
+ "又": {
+  "name": "Stool",
+  "mnemonic": "A flat seat on crossed legs. It's a folding <radical>stool</radical>."
+ },
+ "寸": {
+  "name": "Glue",
+  "mnemonic": "A hook with a drop of something sticky beside it. It's <radical>glue</radical>."
+ },
+ "工": {
+  "name": "Craft",
+  "mnemonic": "An I-beam, used in building things. It's <radical>craft</radical>."
+ },
+ "大": {
+  "name": "Big",
+  "mnemonic": "A person with arms stretched as wide as they go, showing how <radical>big</radical> the fish was."
+ },
+ "土": {
+  "name": "Dirt",
+  "mnemonic": "A cross stuck in a wider line of ground. It's <radical>dirt</radical>."
+ },
+ "士": {
+  "name": "Samurai",
+  "mnemonic": "Like dirt, but the top line is the longer one: a proud <radical>samurai</radical> standing tall."
+ },
+ "田": {
+  "name": "Rice Paddy",
+  "mnemonic": "A field divided into four squares. It's a <radical>rice paddy</radical>."
+ },
+ "禸": {
+  "name": "Track",
+  "mnemonic": "A <radical>track</radical> left behind in the dirt."
+ },
+ "心": {
+  "name": "Heart",
+  "mnemonic": "A curve with three beats around it. It's the <radical>heart</radical>."
+ },
+ "王": {
+  "name": "King",
+  "mnemonic": "Three lines joined in the middle. It's a <radical>king</radical> (and in many kanji, a jewel)."
+ },
+ "貝": {
+  "name": "Shell",
+  "mnemonic": "An eye on two little legs. It's a clam <radical>shell</radical>, which people once used as money."
+ },
+ "見": {
+  "name": "See",
+  "mnemonic": "An eye on legs, walking around. It's out to <radical>see</radical> things."
+ },
+ "糸": {
+  "name": "Thread",
+  "mnemonic": "A twist of thread on top and loose strands at the bottom. It's <radical>thread</radical>."
+ },
+ "言": {
+  "name": "Say",
+  "mnemonic": "Lines of speech coming out of a mouth. It's <radical>say</radical>."
+ },
+ "金": {
+  "name": "Gold",
+  "mnemonic": "A roof over nuggets in the ground. It's <radical>gold</radical>, and kanji with it are about metal."
+ },
+ "門": {
+  "name": "Gate",
+  "mnemonic": "Two doors swinging open. It's a <radical>gate</radical>."
+ },
+ "雨": {
+  "name": "Rain",
+  "mnemonic": "A sky with drops falling out of it. It's <radical>rain</radical>."
+ },
+ "食": {
+  "name": "Eat",
+  "mnemonic": "A lid over a bowl of food. It's <radical>eat</radical>."
+ },
+ "竹": {
+  "name": "Bamboo",
+  "mnemonic": "Two stalks side by side with leaves at the top. It's <radical>bamboo</radical>."
+ },
+ "米": {
+  "name": "Rice",
+  "mnemonic": "Grains scattered in every direction. It's <radical>rice</radical>."
+ },
+ "羊": {
+  "name": "Sheep",
+  "mnemonic": "Two horns on top and a woolly body. It's a <radical>sheep</radical>."
+ },
+ "目": {
+  "name": "Eye",
+  "mnemonic": "An eye turned on its side. It's an <radical>eye</radical>."
+ },
+ "木": {
+  "name": "Tree",
+  "mnemonic": "A trunk with branches on top and roots on the bottom. It's a <radical>tree</radical>."
+ },
+ "水": {
+  "name": "Water",
+  "mnemonic": "A stream with drops splashing off each side. It's <radical>water</radical>."
+ },
+ "火": {
+  "name": "Fire",
+  "mnemonic": "A person with sparks flying off both sides. It's <radical>fire</radical>."
+ },
+ "人": {
+  "name": "Person",
+  "mnemonic": "Two legs walking. It's a <radical>person</radical>."
+ },
+ "女": {
+  "name": "Woman",
+  "mnemonic": "A figure with crossed legs, sitting gracefully. It's a <radical>woman</radical>."
+ },
+ "子": {
+  "name": "Child",
+  "mnemonic": "A baby wrapped up with its arms sticking out. It's a <radical>child</radical>."
+ },
+ "力": {
+  "name": "Power",
+  "mnemonic": "A flexed arm. It's <radical>power</radical>."
+ },
+ "刀": {
+  "name": "Sword",
+  "mnemonic": "A blade with a curved hilt. It's a <radical>sword</radical>."
+ },
+ "石": {
+  "name": "Stone",
+  "mnemonic": "A mouth-shaped rock under a cliff. It's a <radical>stone</radical>."
+ },
+ "山": {
+  "name": "Mountain",
+  "mnemonic": "Three peaks, the middle one tallest. It's a <radical>mountain</radical>."
+ },
+ "川": {
+  "name": "River",
+  "mnemonic": "Three lines flowing down. It's a <radical>river</radical>."
+ },
+ "小": {
+  "name": "Small",
+  "mnemonic": "A little stick with two crumbs beside it. It's <radical>small</radical>."
+ },
+ "立": {
+  "name": "Stand",
+  "mnemonic": "A person with a hat on standing on the ground. They <radical>stand</radical>."
+ },
+ "白": {
+  "name": "White",
+  "mnemonic": "The sun with a ray of light on top. It's <radical>white</radical>."
+ },
+ "止": {
+  "name": "Stop",
+  "mnemonic": "A foot planted firmly on the ground. It's <radical>stop</radical>."
+ },
+ "生": {
+  "name": "Life",
+  "mnemonic": "A sprout growing out of the ground. It's <radical>life</radical>."
+ },
+ "夕": {
+  "name": "Evening",
+  "mnemonic": "A crescent moon just coming up. It's <radical>evening</radical>."
+ },
+ "方": {
+  "name": "Direction",
+  "mnemonic": "A person with a hat pointing the way. It's <radical>direction</radical>."
+ },
+ "青": {
+  "name": "Blue",
+  "mnemonic": "Life on top of the moon. Looking back at Earth, everything is <radical>blue</radical>."
+ },
+ "示": {
+  "name": "Show",
+  "mnemonic": "An altar with offerings dripping off it. It's there to <radical>show</radical> the gods."
+ },
+ "衣": {
+  "name": "Clothes",
+  "mnemonic": "A top hat over a long robe. It's <radical>clothes</radical>."
+ },
+ "舌": {
+  "name": "Tongue",
+  "mnemonic": "Something sticking out of a mouth. It's a <radical>tongue</radical>."
+ },
+ "巾": {
+  "name": "Towel",
+  "mnemonic": "A cloth hanging on a hook. It's a <radical>towel</radical>."
+ },
+ "弓": {
+  "name": "Bow",
+  "mnemonic": "A curved line bent tight, ready to fire. It's a <radical>bow</radical>."
+ },
+ "矢": {
+  "name": "Arrow",
+  "mnemonic": "A shaft with fletching on the end. It's an <radical>arrow</radical>."
+ },
+ "斤": {
+  "name": "Axe",
+  "mnemonic": "A blade on a long handle. It's an <radical>axe</radical>."
+ },
+ "欠": {
+  "name": "Yawn",
+  "mnemonic": "A person with their mouth wide open. It's a <radical>yawn</radical>."
+ },
+ "皿": {
+  "name": "Plate",
+  "mnemonic": "A dish with little dividers on it. It's a <radical>plate</radical>."
+ },
+ "羽": {
+  "name": "Feathers",
+  "mnemonic": "Two wings side by side. It's <radical>feathers</radical>."
+ },
+ "耳": {
+  "name": "Ear",
+  "mnemonic": "An ear with the lines of the lobe drawn in. It's an <radical>ear</radical>."
+ },
+ "肉": {
+  "name": "Meat",
+  "mnemonic": "A cut of meat with the grain showing. It's <radical>meat</radical>."
+ },
+ "自": {
+  "name": "Self",
+  "mnemonic": "A nose on a face, pointing at yourself. It's <radical>self</radical>."
+ },
+ "至": {
+  "name": "Arrive",
+  "mnemonic": "An arrow hitting the ground. It's <radical>arrive</radical>."
+ },
+ "臼": {
+  "name": "Mortar",
+  "mnemonic": "A bowl for pounding rice. It's a <radical>mortar</radical>."
+ },
+ "舟": {
+  "name": "Boat",
+  "mnemonic": "A little vessel with things piled in it. It's a <radical>boat</radical>."
+ },
+ "虫": {
+  "name": "Insect",
+  "mnemonic": "A bug with a big body. It's an <radical>insect</radical>."
+ },
+ "血": {
+  "name": "Blood",
+  "mnemonic": "A plate with a drop falling into it. It's <radical>blood</radical>."
+ },
+ "行": {
+  "name": "Go",
+  "mnemonic": "A crossroads with people on both sides. It's <radical>go</radical>."
+ },
+ "角": {
+  "name": "Horn",
+  "mnemonic": "A long pointy shape with lines across. It's a <radical>horn</radical>."
+ },
+ "谷": {
+  "name": "Valley",
+  "mnemonic": "Mountains opening up above a mouth. It's a <radical>valley</radical>."
+ },
+ "豆": {
+  "name": "Bean",
+  "mnemonic": "A bowl on a stand with a lid. It's full of <radical>beans</radical>."
+ },
+ "赤": {
+  "name": "Red",
+  "mnemonic": "Dirt on top of fire. It glows <radical>red</radical>."
+ },
+ "走": {
+  "name": "Run",
+  "mnemonic": "Dirt kicked up by a foot. It's <radical>run</radical>."
+ },
+ "足": {
+  "name": "Foot",
+  "mnemonic": "A mouth over a footprint. It's a <radical>foot</radical>."
+ },
+ "身": {
+  "name": "Body",
+  "mnemonic": "A figure with a big belly. It's a <radical>body</radical>."
+ },
+ "車": {
+  "name": "Car",
+  "mnemonic": "A cart seen from above, axles and all. It's a <radical>car</radical>."
+ },
+ "辛": {
+  "name": "Spicy",
+  "mnemonic": "A person standing over a pointy needle. Ouch, that's <radical>spicy</radical>."
+ },
+ "里": {
+  "name": "Village",
+  "mnemonic": "Rice paddies on dirt. It's a <radical>village</radical>."
+ },
+ "長": {
+  "name": "Long",
+  "mnemonic": "Long hair flowing down. It's <radical>long</radical>."
+ },
+ "非": {
+  "name": "Wrong",
+  "mnemonic": "Two sides facing away from each other. Something's <radical>wrong</radical>."
+ },
+ "面": {
+  "name": "Face",
+  "mnemonic": "An eye inside a frame. It's a <radical>face</radical>."
+ },
+ "革": {
+  "name": "Leather",
+  "mnemonic": "An animal hide stretched out. It's <radical>leather</radical>."
+ },
+ "音": {
+  "name": "Sound",
+  "mnemonic": "Standing over the sun, you hear a <radical>sound</radical>."
+ },
+ "風": {
+  "name": "Wind",
+  "mnemonic": "An insect blown around inside a sail. It's <radical>wind</radical>."
+ },
+ "飛": {
+  "name": "Fly",
+  "mnemonic": "Wings flapping on both sides. It's <radical>fly</radical>."
+ },
+ "首": {
+  "name": "Neck",
+  "mnemonic": "A head with hair on top. It's a <radical>neck</radical>."
+ },
+ "馬": {
+  "name": "Horse",
+  "mnemonic": "A mane, four legs and a tail. It's a <radical>horse</radical>."
+ },
+ "骨": {
+  "name": "Bone",
+  "mnemonic": "A joint over flesh. It's a <radical>bone</radical>."
+ },
+ "高": {
+  "name": "Tall",
+  "mnemonic": "A tower with a top hat. It's <radical>tall</radical>."
+ },
+ "鬼": {
+  "name": "Demon",
+  "mnemonic": "A big-headed figure with a tail. It's a <radical>demon</radical>."
+ },
+ "魚": {
+  "name": "Fish",
+  "mnemonic": "A head, a body and a tail fin. It's a <radical>fish</radical>."
+ },
+ "鳥": {
+  "name": "Bird",
+  "mnemonic": "A beak, a body and tail feathers. It's a <radical>bird</radical>."
+ },
+ "黒": {
+  "name": "Black",
+  "mnemonic": "A village burnt by fire. It's <radical>black</radical>."
+ },
+ "歯": {
+  "name": "Tooth",
+  "mnemonic": "Rows of teeth under a stop sign. It's a <radical>tooth</radical>."
+ },
+ "鼻": {
+  "name": "Nose",
+  "mnemonic": "Self over a rice paddy. It's a <radical>nose</radical>."
+ },
+ "乙": {
+  "name": "Swan",
+  "mnemonic": "A long neck curving down into a body floating on the water. It's a <radical>swan</radical>."
+ },
+ "交": {
+  "name": "Mix",
+  "mnemonic": "A person with a top hat, legs crossed, mixing into the crowd. It's <radical>mix</radical>."
+ },
+ "寺": {
+  "name": "Temple",
+  "mnemonic": "<radical>Dirt</radical> on top of <radical>glue</radical>: the temple was built by gluing earth together. It's a <radical>temple</radical>."
+ }
+}

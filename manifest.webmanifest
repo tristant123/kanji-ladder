@@ -1,0 +1,10 @@
+{
+  "name": "Kanji Ladder",
+  "short_name": "Kanji",
+  "description": "WaniKani-style SRS for the Jōyō kanji, JLPT N5 to N1.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1d1b26",
+  "theme_color": "#1d1b26",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
