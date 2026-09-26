@@ -100,7 +100,7 @@ The build warns when a story mentions a radical the kanji isn't made of.
 ## Tests
 
 ```
-node --test tests/            # SRS rules, answer checking, romaji input, data checks
+node --test tests/*.test.js   # SRS rules, answer checking, romaji input, data checks
 node tools/smoke.js out/      # drives the real app in headless Chromium (needs playwright)
 ```
 
