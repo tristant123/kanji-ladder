@@ -322,7 +322,7 @@
   function vocabReading(cat, v) {
     const ks = v.k.map((c) => cat.get("k:" + c)).filter(Boolean);
     const okurigana = /[぀-ゟ]/.test(v.w);
-    const parts = ks.map((k) => '<span lang="ja">' + esc(k.ch) + "</span>: " + esc(k.on.concat(k.kun.map((r) => r.replace(".", "・"))).slice(0, 5).join("、")));
+    const parts = ks.map((k) => '<span lang="ja">' + esc(k.ch) + "</span>: " + esc(cleanReadings(k.on.concat(k.kun)).slice(0, 6).join("、")));
     let s = "";
     if (ks.length === 1 && okurigana) s = "A kanji followed by kana usually takes its <b>kun'yomi</b>. ";
     else if (ks.length > 1 && !okurigana) s = "Kanji compounds usually use each kanji's <b>on'yomi</b>. ";
@@ -330,10 +330,22 @@
     return s + "Readings you know:<br>" + parts.join("<br>");
   }
 
+  // KANJIDIC marks prefixes/suffixes with "-" (ひと-, -び); show each reading
+  // once, with okurigana after a dot.
+  function cleanReadings(list) {
+    const out = [];
+    for (const r of list) {
+      const c = r.replace(/-/g, "").replace(".", "・");
+      if (c && !out.includes(c)) out.push(c);
+    }
+    return out;
+  }
+
   function readingCol(label, list, primary) {
+    const rs = cleanReadings(list);
     return (
       '<div class="rcol' + (primary ? " primary" : "") + '"><div class="rlabel">' + label + (primary ? " · learn this" : "") + "</div>" +
-      '<div lang="ja">' + (list.length ? list.map((r) => esc(r.replace(".", "・"))).join("、") : "—") + "</div></div>"
+      '<div lang="ja">' + (rs.length ? rs.map(esc).join("、") : "—") + "</div></div>"
     );
   }
 

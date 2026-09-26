@@ -850,5 +850,9 @@
  "寺": {
   "name": "Temple",
   "mnemonic": "<radical>Dirt</radical> on top of <radical>glue</radical>: the temple was built by gluing earth together. It's a <radical>temple</radical>."
+ },
+ "市": {
+  "name": "Market",
+  "mnemonic": "A <radical>top hat</radical> over a <radical>towel</radical>: the hat seller and the towel seller side by side. It's a <radical>market</radical>."
  }
 }
