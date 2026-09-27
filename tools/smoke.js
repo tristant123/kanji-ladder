@@ -113,6 +113,10 @@ const server = http.createServer((req, res) => {
     ["#/search/water", ".chips", "12_search"],
     ["#/practice", ".practice-grid", "13_practice"],
     ["#/settings", "#s-batch", "14_settings"],
+    ["#/anime", ".series-grid", "18_anime"],
+    ["#/anime/onepiece", ".anime-line", "19_anime_series"],
+    ["#/item/v:魔法", ".anime-line", "20_anime_word"],
+    ["#/item/k:海", ".item-kanji", "21_kanji_anime"],
     ["#/", ".hero", "15_dashboard_after"],
   ]) {
     await page.goto(base + hash);

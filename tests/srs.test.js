@@ -117,3 +117,17 @@ test("skip to Guru unlocks dependents and never lowers an item", () => {
   // skipped items are reviewed like any other
   assert.strictEqual(SRS.reviewQueue(cat, progress, now + 167 * H).length, k.parts.length);
 });
+
+test("anime layer: every line names a real series and uses its word", () => {
+  const keys = new Set(data.series.map((s) => s.key));
+  const withEx = data.vocab.filter((v) => v.ex);
+  assert.ok(withEx.length > 300);
+  for (const v of withEx) {
+    assert.ok(keys.has(v.ex[0]), v.w + " → unknown series " + v.ex[0]);
+    for (const c of v.k) assert.ok(v.ex[1].includes(c), v.w + " line doesn't use " + c);
+  }
+  const anime = data.vocab.filter((v) => v.anime);
+  assert.ok(anime.length >= 150);
+  assert.ok(cat.get("v:魔法") && cat.get("v:魔法").anime);
+  assert.deepStrictEqual(cat.get("v:転生").r[0], "てんせい");
+});

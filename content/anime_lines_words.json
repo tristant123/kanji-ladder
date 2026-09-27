@@ -1,0 +1,802 @@
+{
+ "先生": [
+  "jjk",
+  "ゴジョウ先生は さいきょうの じゅじゅつしだ。",
+  "Gojo-sensei is the strongest sorcerer."
+ ],
+ "本気": [
+  "opm",
+  "サイタマが 本気を 出すと、パンチ 一ぱつで おわる。",
+  "When Saitama gets serious, it's over in one punch."
+ ],
+ "お前": [
+  "naruto",
+  "「お前は おれの 友だちだ」と ナルトは サスケに いった。",
+  "\"You're my friend,\" Naruto told Sasuke."
+ ],
+ "花火": [
+  "kiminona",
+  "なつ まつりの 花火を ミツハは 見て いた。",
+  "Mitsuha was watching the summer festival fireworks."
+ ],
+ "正体": [
+  "conan",
+  "コナンの 正体は、小さく なった くどう シンイチだ。",
+  "Conan's true identity is Shinichi Kudo, shrunk down."
+ ],
+ "夏休み": [
+  "doraemon",
+  "ノビタは 夏休みの しゅくだいを さいごまで やらない。",
+  "Nobita never does his summer homework until the very end."
+ ],
+ "弟子": [
+  "dbz",
+  "ゴクウと クリリンは、かめせんにんの 弟子だ。",
+  "Goku and Krillin are Master Roshi's disciples."
+ ],
+ "世界": [
+  "onepiece",
+  "ルフィは 世界一の かいぞく、かいぞくおうを めざす。",
+  "Luffy is aiming to be the world's greatest pirate, the Pirate King."
+ ],
+ "主人公": [
+  "mha",
+  "デクは『ヒロアカ』の 主人公だ。",
+  "Deku is the protagonist of My Hero Academia."
+ ],
+ "天使": [
+  "madoka",
+  "まどかは さいごに 天使の ような そんざいに なった。",
+  "In the end, Madoka became something like an angel."
+ ],
+ "転校": [
+  "spirited",
+  "チヒロは ひっこしで 転校する ことに なった。",
+  "Chihiro had to change schools because her family moved."
+ ],
+ "転生": [
+  "slime",
+  "三上さとるは スライムに 転生した。",
+  "Satoru Mikami was reincarnated as a slime."
+ ],
+ "転校生": [
+  "conan",
+  "コナンは ていたん小学校に 転校生として 入った。",
+  "Conan joined Teitan Elementary as a transfer student."
+ ],
+ "味方": [
+  "deathnote",
+  "エルは ライトを 味方に しようと した。",
+  "L tried to get Light on his side."
+ ],
+ "屋上": [
+  "bleach",
+  "イチゴたちは 学校の 屋上で ひるごはんを 食べる。",
+  "Ichigo and his friends eat lunch on the school roof."
+ ],
+ "屋台": [
+  "kimetsu",
+  "タンジロウは よるの 屋台で うどんを 食べた。",
+  "Tanjiro ate udon at a night food stall."
+ ],
+ "光": [
+  "laputa",
+  "ひこうせきは、あおい 光を はなつ。",
+  "The flight stone gives off a blue light."
+ ],
+ "学園": [
+  "mha",
+  "ゆうえいは ヒーローを そだてる 学園だ。",
+  "U.A. is a school that trains heroes."
+ ],
+ "王子": [
+  "dbz",
+  "ベジータは サイヤ人の 王子だ。",
+  "Vegeta is the prince of the Saiyans."
+ ],
+ "王国": [
+  "frieren",
+  "フリーレンたちは まおうを たおし、王国に もどった。",
+  "Frieren's party defeated the Demon King and returned to the kingdom."
+ ],
+ "番長": [
+  "jojo",
+  "くうじょう じょうたろうは 番長の ような ふりょう 高校生だ。",
+  "Jotaro Kujo is a delinquent high-schooler, a bit like a gang boss."
+ ],
+ "雪": [
+  "kimetsu",
+  "タンジロウの 家は 雪の 山の 中に あった。",
+  "Tanjiro's home was in the snowy mountains."
+ ],
+ "決着": [
+  "naruto",
+  "ナルトと サスケの たたかいに、ついに 決着が ついた。",
+  "The fight between Naruto and Sasuke was finally settled."
+ ],
+ "天才": [
+  "haikyu",
+  "カゲヤマは 天才 セッターと よばれる。",
+  "Kageyama is called a genius setter."
+ ],
+ "部活": [
+  "kon",
+  "ユイたちの 部活は、ほとんど おちゃの 時間だ。",
+  "Yui's club activities are mostly tea time."
+ ],
+ "勝負": [
+  "pokemon",
+  "「ポケモン 勝負だ！」",
+  "\"Let's have a Pokémon battle!\""
+ ],
+ "神社": [
+  "kiminona",
+  "ミツハの 家は 神社だ。",
+  "Mitsuha's family runs a shrine."
+ ],
+ "気配": [
+  "kimetsu",
+  "タンジロウは はなで おにの 気配を かんじる。",
+  "Tanjiro senses demons with his nose."
+ ],
+ "運命": [
+  "steinsgate",
+  "オカベは 運命を かえるため、なんども 時を もどる。",
+  "Okabe goes back in time again and again to change fate."
+ ],
+ "守る": [
+  "kimetsu",
+  "タンジロウは いもうとの ネズコを 守る。",
+  "Tanjiro protects his sister Nezuko."
+ ],
+ "神様": [
+  "spirited",
+  "ゆやには いろいろな 神様が やって くる。",
+  "All kinds of gods come to the bathhouse."
+ ],
+ "入学式": [
+  "mha",
+  "ゆうえいの 1年A組は、入学式に 出なかった。",
+  "Class 1-A at U.A. skipped the entrance ceremony."
+ ],
+ "勝利": [
+  "haikyu",
+  "からすのは 全国大会への 勝利を つかんだ。",
+  "Karasuno won their way to Nationals."
+ ],
+ "約束": [
+  "frieren",
+  "フリーレンは ヒンメルとの 約束を おぼえて いる。",
+  "Frieren remembers her promise to Himmel."
+ ],
+ "最強": [
+  "jjk",
+  "「さいきょう」と いえば、ゴジョウ・サトルだ。最強の じゅじゅつしだ。",
+  "When you say \"strongest\", you mean Satoru Gojo. The strongest sorcerer."
+ ],
+ "告白": [
+  "kiminona",
+  "タキは ミツハの 手に「すきだ」と 書いた。それが 告白だった。",
+  "Taki wrote \"I love you\" on Mitsuha's hand. That was his confession."
+ ],
+ "戦う": [
+  "aot",
+  "エレンは きょじんと 戦うと ちかった。",
+  "Eren swore to fight the Titans."
+ ],
+ "信じる": [
+  "pokemon",
+  "サトシは ピカチュウを 信じて いる。",
+  "Ash believes in Pikachu."
+ ],
+ "未来": [
+  "doraemon",
+  "ドラえもんは 未来から きた ネコがた ロボットだ。",
+  "Doraemon is a cat-shaped robot from the future."
+ ],
+ "友達": [
+  "deathnote",
+  "エルは ライトを「はじめての 友達」と よんだ。",
+  "L called Light his \"first friend\"."
+ ],
+ "不良": [
+  "gintama",
+  "ギントキは 不良の ようだが、じつは やさしい。",
+  "Gintoki looks like a delinquent but is actually kind."
+ ],
+ "伝説": [
+  "dbz",
+  "伝説の スーパーサイヤ人が あらわれた。",
+  "The legendary Super Saiyan appeared."
+ ],
+ "殺気": [
+  "hxh",
+  "キルアは あいての 殺気に すぐ 気づく。",
+  "Killua notices an opponent's bloodlust immediately."
+ ],
+ "必殺": [
+  "opm",
+  "サイタマの 必殺わざは「マジシリーズ」だ。",
+  "Saitama's killer moves are the \"Serious Series\"."
+ ],
+ "努力": [
+  "naruto",
+  "ロック・リーは 努力の 天才だ。",
+  "Rock Lee is a genius of hard work."
+ ],
+ "支配": [
+  "chainsaw",
+  "マキマは「支配の あくま」だった。",
+  "Makima turned out to be the Control Devil."
+ ],
+ "友情": [
+  "onepiece",
+  "ルフィたちの 友情は なによりも 強い。",
+  "The friendship between Luffy and his crew is stronger than anything."
+ ],
+ "生徒会": [
+  "kon",
+  "ユイの おさななじみ、和(のどか)は 生徒会の メンバーだ。",
+  "Yui's childhood friend Nodoka is on the student council."
+ ],
+ "過去": [
+  "steinsgate",
+  "Dメールは 過去に おくる メールだ。",
+  "A D-Mail is a message sent to the past."
+ ],
+ "能力": [
+  "onepiece",
+  "あくまの みを 食べると、ふしぎな 能力が 手に 入る。",
+  "Eat a Devil Fruit and you gain a strange power."
+ ],
+ "絶対": [
+  "onepiece",
+  "ルフィは 絶対に なかまを 見すてない。",
+  "Luffy absolutely never abandons his crew."
+ ],
+ "絶望": [
+  "madoka",
+  "まほう少女は 絶望すると、まじょに なって しまう。",
+  "When a magical girl falls into despair, she becomes a witch."
+ ],
+ "彼女": [
+  "kiminona",
+  "タキは 彼女の 名前を おもいだせない。",
+  "Taki can't remember her name."
+ ],
+ "猫": [
+  "kiki",
+  "キキの 黒猫の 名前は ジジだ。",
+  "Kiki's black cat is called Jiji."
+ ],
+ "倒す": [
+  "opm",
+  "サイタマは どんな てきも 一ぱつで 倒す。",
+  "Saitama takes down any enemy in one hit."
+ ],
+ "委員長": [
+  "mha",
+  "1年A組の 委員長は 飯田くんだ。",
+  "Class 1-A's class president is Iida."
+ ],
+ "温泉": [
+  "spirited",
+  "ゆばーばの 「ゆや」は 神様の ための 温泉だ。",
+  "Yubaba's bathhouse is a hot-spring bath for the gods."
+ ],
+ "祭り": [
+  "kiminona",
+  "ミツハの 町では 神社の 祭りが あった。",
+  "Mitsuha's town held a shrine festival."
+ ],
+ "文化祭": [
+  "kon",
+  "けいおん部は 文化祭で ライブを した。",
+  "The light music club played a show at the school festival."
+ ],
+ "放課後": [
+  "kon",
+  "『けいおん！』の バンド名は「放課後ティータイム」だ。",
+  "The band in K-On! is called Afterschool Tea Time."
+ ],
+ "希望": [
+  "madoka",
+  "まほう少女は 希望を まもる ために たたかう。",
+  "Magical girls fight to protect hope."
+ ],
+ "仲間": [
+  "onepiece",
+  "ルフィは 仲間を あつめて 海へ 出た。",
+  "Luffy gathered a crew and set out to sea."
+ ],
+ "卒業": [
+  "kon",
+  "ユイたちは さいごに 卒業して しまった。",
+  "In the end, Yui and the others graduated."
+ ],
+ "勇気": [
+  "mha",
+  "デクには 力は なかったが、勇気は あった。",
+  "Deku had no power, but he had courage."
+ ],
+ "浴衣": [
+  "kiminona",
+  "なつまつりには 浴衣を きて 行こう。",
+  "Let's wear yukata to the summer festival."
+ ],
+ "仲良し": [
+  "spyfam",
+  "アーニャと ベッキーは 仲良しだ。",
+  "Anya and Becky are best friends."
+ ],
+ "勇者": [
+  "frieren",
+  "勇者ヒンメルは まおうを たおした。",
+  "Himmel the Hero defeated the Demon King."
+ ],
+ "回復": [
+  "sao",
+  "キリトは ポーションで HPを 回復した。",
+  "Kirito restored his HP with a potion."
+ ],
+ "技": [
+  "dbz",
+  "かめはめはは ゴクウの いちばん ゆうめいな 技だ。",
+  "The Kamehameha is Goku's most famous technique."
+ ],
+ "防御": [
+  "mha",
+  "キリシマの こせいは 防御に つよい。",
+  "Kirishima's quirk is great for defence."
+ ],
+ "必殺技": [
+  "mha",
+  "ヒーローには 必殺技が ひつようだ。",
+  "Every hero needs a special move."
+ ],
+ "暴走": [
+  "eva",
+  "エヴァ初号機が 暴走した。",
+  "Eva Unit-01 went berserk."
+ ],
+ "片思い": [
+  "doraemon",
+  "ノビタは しずかちゃんに 片思い して いる。",
+  "Nobita has a crush on Shizuka."
+ ],
+ "装備": [
+  "sao",
+  "キリトは くろい コートを 装備して いる。",
+  "Kirito is equipped with a black coat."
+ ],
+ "城": [
+  "howl",
+  "ハウルの 城は あるいて うごく。",
+  "Howl's castle walks around."
+ ],
+ "裏切り": [
+  "deathnote",
+  "『DEATH NOTE』は 裏切りと うその 話だ。",
+  "Death Note is a story of betrayal and lies."
+ ],
+ "超能力": [
+  "dandadan",
+  "モモは おばあちゃんから 超能力を うけついだ。",
+  "Momo inherited psychic powers from her grandmother."
+ ],
+ "相棒": [
+  "pokemon",
+  "ピカチュウは サトシの 相棒だ。",
+  "Pikachu is Ash's partner."
+ ],
+ "爆発": [
+  "mha",
+  "バクゴウの こせいは「爆破」だ。手の ひらで 爆発を おこす。",
+  "Bakugo's quirk is Explosion. He sets off blasts from his palms."
+ ],
+ "恋": [
+  "kiminona",
+  "『君の名は。』は ふしぎな 恋の 話だ。",
+  "Your Name is a strange love story."
+ ],
+ "殿": [
+  "gintama",
+  "『ぎんたま』には 将軍 殿も 出て くる。",
+  "The Shogun himself shows up in Gintama."
+ ],
+ "封印": [
+  "naruto",
+  "ナルトの 体には 九びが 封印されて いる。",
+  "The Nine-Tails is sealed inside Naruto's body."
+ ],
+ "賢者": [
+  "fma",
+  "エドと アルは「賢者の 石」を さがして いる。",
+  "Ed and Al are searching for the Philosopher's Stone."
+ ],
+ "刀": [
+  "kimetsu",
+  "きさつたいの 刀は「日輪刀」と いう。",
+  "The Demon Slayer Corps' swords are called Nichirin blades."
+ ],
+ "変身": [
+  "sailormoon",
+  "うさぎは セーラームーンに 変身する。",
+  "Usagi transforms into Sailor Moon."
+ ],
+ "彼氏": [
+  "oshinoko",
+  "アイドルに 彼氏が いる ことは ひみつだ。",
+  "An idol having a boyfriend is a secret."
+ ],
+ "結界": [
+  "jjk",
+  "じゅじゅつ高専は 結界で まもられて いる。",
+  "Jujutsu High is protected by a barrier."
+ ],
+ "武器": [
+  "chainsaw",
+  "デンジの 武器は、体から 出る チェンソーだ。",
+  "Denji's weapons are the chainsaws that come out of his body."
+ ],
+ "救う": [
+  "kimetsu",
+  "タンジロウは ネズコを 人間に もどして 救いたい。",
+  "Tanjiro wants to save Nezuko by turning her human again."
+ ],
+ "戦士": [
+  "sailormoon",
+  "『美少女戦士セーラームーン』の セーラー戦士たち。",
+  "The Sailor Guardians of Sailor Moon."
+ ],
+ "馬鹿": [
+  "aot",
+  "エレンは よく「馬鹿」と いわれる。",
+  "Eren often gets called an idiot."
+ ],
+ "我": [
+  "slime",
+  "ヴェルドラは じぶんを「我」と よぶ。",
+  "Veldora refers to himself as \"ware\" (I)."
+ ],
+ "正義": [
+  "deathnote",
+  "「キラは 正義だ」と ライトは しんじて いた。",
+  "Light believed that Kira was justice."
+ ],
+ "桜": [
+  "ccs",
+  "きのもと 桜は クロウカードを あつめる。",
+  "Sakura Kinomoto collects the Clow Cards."
+ ],
+ "敵": [
+  "naruto",
+  "サスケは 一時 ナルトの 敵に なった。",
+  "For a time, Sasuke became Naruto's enemy."
+ ],
+ "素顔": [
+  "opm",
+  "サイタマの 素顔は、いつも ぼんやりした 顔だ。",
+  "Saitama's real face is always blank."
+ ],
+ "仮面": [
+  "onepiece",
+  "ウソップは「そげキング」の 仮面を つけた。",
+  "Usopp put on the Sogeking mask."
+ ],
+ "修行": [
+  "dbz",
+  "ゴクウは 界王さまの ところで 修行した。",
+  "Goku trained with King Kai."
+ ],
+ "宿敵": [
+  "dbz",
+  "ベジータは ゴクウの 宿敵だ。",
+  "Vegeta is Goku's arch-rival."
+ ],
+ "無敵": [
+  "opm",
+  "サイタマは 無敵なので、たたかいが つまらない。",
+  "Saitama is invincible, so fighting is boring for him."
+ ],
+ "お弁当": [
+  "spyfam",
+  "ヨルは りょうりが にがてで、お弁当も たいへんだ。",
+  "Yor is bad at cooking, so even bento is a struggle."
+ ],
+ "奥義": [
+  "naruto",
+  "「らせんがん」は ナルトの 奥義だ。",
+  "The Rasengan is Naruto's ultimate technique."
+ ],
+ "兄貴": [
+  "gurren",
+  "シモンは カミナを「兄貴」と よぶ。",
+  "Simon calls Kamina \"Aniki\" (big bro)."
+ ],
+ "異世界": [
+  "slime",
+  "さとるは 異世界で スライムとして 生まれかわった。",
+  "Satoru was reborn as a slime in another world."
+ ],
+ "貴様": [
+  "dbz",
+  "「貴様！」ベジータは よく こう さけぶ。",
+  "\"You bastard!\" Vegeta often yells."
+ ],
+ "宇宙": [
+  "dbz",
+  "フリーザは 宇宙の ていおうだ。",
+  "Frieza is the emperor of the universe."
+ ],
+ "秘密": [
+  "spyfam",
+  "フォージャー家は みんな 秘密を もって いる。",
+  "Everyone in the Forger family has a secret."
+ ],
+ "宇宙船": [
+  "dbz",
+  "ゴクウは 宇宙船に のって ナメック星へ 行った。",
+  "Goku flew to Planet Namek in a spaceship."
+ ],
+ "攻撃": [
+  "aot",
+  "きょじんの 攻撃で かべが こわれた。",
+  "The wall was broken in the Titans' attack."
+ ],
+ "影": [
+  "naruto",
+  "シカマルは「影まね」の じゅつを つかう。",
+  "Shikamaru uses the Shadow Possession Jutsu."
+ ],
+ "英雄": [
+  "frieren",
+  "ヒンメルは 英雄と して みんなに おぼえられて いる。",
+  "Himmel is remembered by everyone as a hero."
+ ],
+ "帝国": [
+  "sao",
+  "『SAO』の あとの 話には、帝国も 出て くる。",
+  "Empires show up in the later arcs of SAO."
+ ],
+ "決闘": [
+  "sao",
+  "キリトは ヒースクリフと 決闘した。",
+  "Kirito dueled Heathcliff."
+ ],
+ "契約": [
+  "madoka",
+  "「ぼくと 契約して まほう少女に なってよ！」とキュゥべえは いう。",
+  "\"Make a contract with me and become a magical girl!\" says Kyubey."
+ ],
+ "一生懸命": [
+  "haikyu",
+  "ヒナタは いつも 一生懸命 ボールを おう。",
+  "Hinata always chases the ball with everything he's got."
+ ],
+ "召喚": [
+  "naruto",
+  "ナルトは ガマブン太を 召喚した。",
+  "Naruto summoned Gamabunta."
+ ],
+ "竜": [
+  "dbz",
+  "シェンロンは ねがいを かなえる 竜だ。",
+  "Shenron is a dragon that grants wishes."
+ ],
+ "鬼": [
+  "kimetsu",
+  "ネズコは 鬼に なって しまった。",
+  "Nezuko was turned into a demon."
+ ],
+ "炎": [
+  "kimetsu",
+  "レンゴクさんは 炎の 柱、炎柱だ。",
+  "Rengoku is the Flame Hashira."
+ ],
+ "竜巻": [
+  "opm",
+  "竜巻は S級ヒーローの 一人だ。",
+  "Tatsumaki (\"Tornado\") is one of the S-Class heroes."
+ ],
+ "滅ぼす": [
+  "aot",
+  "エレンは さいごに 世界を 滅ぼそうと した。",
+  "In the end, Eren tried to destroy the world."
+ ],
+ "頑張る": [
+  "kimetsu",
+  "「頑張れ タンジロウ、頑張れ！」",
+  "\"Hang in there, Tanjiro, hang in there!\""
+ ],
+ "冒険": [
+  "onepiece",
+  "ルフィたちの 冒険は まだ つづく。",
+  "Luffy's crew's adventure still goes on."
+ ],
+ "剣": [
+  "sao",
+  "キリトは 二本の 剣で たたかう。",
+  "Kirito fights with two swords."
+ ],
+ "剣士": [
+  "onepiece",
+  "ゾロは せかい一の 剣士を めざして いる。",
+  "Zoro is aiming to be the world's greatest swordsman."
+ ],
+ "聖剣": [
+  "frieren",
+  "勇者の 剣は、本当は 聖剣では なかった。",
+  "The Hero's sword wasn't really a holy sword."
+ ],
+ "記憶": [
+  "kiminona",
+  "目が さめると、タキと ミツハの 記憶は きえて しまう。",
+  "When they wake up, Taki and Mitsuha's memories fade away."
+ ],
+ "先輩": [
+  "haikyu",
+  "ヒナタは 田中先輩を そんけいして いる。",
+  "Hinata looks up to Tanaka-senpai."
+ ],
+ "大丈夫": [
+  "mha",
+  "「もう 大丈夫、私が 来た！」",
+  "\"It's fine now. Why? Because I am here!\""
+ ],
+ "後輩": [
+  "kon",
+  "あずさは ユイたちの 後輩だ。",
+  "Azusa is Yui and the others' junior."
+ ],
+ "覚悟": [
+  "kimetsu",
+  "タンジロウは 覚悟を きめて 鬼殺隊に 入った。",
+  "Tanjiro made up his mind and joined the Demon Slayer Corps."
+ ],
+ "盾": [
+  "frieren",
+  "せんしの アイゼンは、パーティを まもる 盾だった。",
+  "Eisen the warrior was the shield that protected the party."
+ ],
+ "雷": [
+  "kimetsu",
+  "ゼンイツは 雷の こきゅうを つかう。",
+  "Zenitsu uses Thunder Breathing."
+ ],
+ "精霊": [
+  "spirited",
+  "ハクは 川の 精霊の ような そんざいだ。",
+  "Haku is something like the spirit of a river."
+ ],
+ "姫": [
+  "mononoke",
+  "サンは「もののけ姫」と よばれる。",
+  "San is called the Princess Mononoke."
+ ],
+ "悪魔": [
+  "chainsaw",
+  "ポチタは チェンソーの 悪魔だ。",
+  "Pochita is the Chainsaw Devil."
+ ],
+ "魔法": [
+  "frieren",
+  "フリーレンは めずらしい 魔法を あつめるのが すきだ。",
+  "Frieren loves collecting unusual spells."
+ ],
+ "魔女": [
+  "kiki",
+  "キキは 十三さいの 魔女だ。",
+  "Kiki is a thirteen-year-old witch."
+ ],
+ "魔術": [
+  "frieren",
+  "フリーレンの 世界では、魔族が 魔術を つかう。",
+  "In Frieren's world, demons use magic."
+ ],
+ "魔力": [
+  "frieren",
+  "フリーレンは いつも 魔力を かくして いる。",
+  "Frieren always hides her mana."
+ ],
+ "魔物": [
+  "slime",
+  "リムルの 国には いろいろな 魔物が すんで いる。",
+  "All kinds of monsters live in Rimuru's nation."
+ ],
+ "魔王": [
+  "slime",
+  "リムルは さいごに 魔王に なった。",
+  "Rimuru eventually became a Demon Lord."
+ ],
+ "姫様": [
+  "laputa",
+  "シータは ラピュタの 王家の 姫様だった。",
+  "Sheeta turned out to be a princess of Laputa's royal line."
+ ],
+ "魔剣": [
+  "sao",
+  "キリトの 剣は 魔剣の ように つよい。",
+  "Kirito's sword is strong as a cursed blade."
+ ],
+ "世界征服": [
+  "dbz",
+  "ピッコロ大魔王は 世界征服を ねらって いた。",
+  "King Piccolo was out for world domination."
+ ],
+ "怪物": [
+  "aot",
+  "きょじんは 人を 食べる 怪物だ。",
+  "Titans are monsters that eat people."
+ ],
+ "師匠": [
+  "naruto",
+  "じらいやは ナルトの 師匠だ。",
+  "Jiraiya is Naruto's master."
+ ],
+ "騎士": [
+  "sao",
+  "アスナは「血盟騎士団」の ふくだんちょうだ。",
+  "Asuna is vice-commander of the Knights of the Blood."
+ ],
+ "忍者": [
+  "naruto",
+  "ナルトは 木ノ葉の 忍者だ。",
+  "Naruto is a ninja of the Leaf."
+ ],
+ "嵐": [
+  "onepiece",
+  "ナミは 嵐の 前ぶれを 空気で かんじる。",
+  "Nami can sense a coming storm in the air."
+ ],
+ "俺": [
+  "onepiece",
+  "「かいぞく王に 俺は なる！」",
+  "\"I'm gonna be King of the Pirates!\""
+ ],
+ "闇": [
+  "jjk",
+  "「闇より 出でて 闇より 黒く」 帳を おろす ことばだ。",
+  "\"Emerge from darkness, blacker than darkness\": the words that lower a Veil."
+ ],
+ "侍": [
+  "gintama",
+  "ギントキは 刀を もつ 侍だ。",
+  "Gintoki is a samurai who carries a sword."
+ ],
+ "妖怪": [
+  "dandadan",
+  "オカルンと モモは 妖怪や 宇宙人と たたかう。",
+  "Okarun and Momo fight yokai and aliens."
+ ],
+ "拙者": [
+  "kenshin",
+  "ひむら けんしんは じぶんを「拙者」と よぶ。",
+  "Kenshin Himura calls himself \"sessha\" (this humble one)."
+ ],
+ "幽霊": [
+  "dandadan",
+  "モモは 幽霊を しんじて いる。",
+  "Momo believes in ghosts."
+ ],
+ "呪い": [
+  "jjk",
+  "じゅじゅつしは 呪いと たたかう。",
+  "Jujutsu sorcerers fight curses."
+ ],
+ "呪文": [
+  "frieren",
+  "フリーレンは 花畑を 出す 呪文が すきだ。",
+  "Frieren likes the spell that makes a field of flowers."
+ ],
+ "諦める": [
+  "naruto",
+  "ナルトは ぜったいに 諦めない。",
+  "Naruto never gives up."
+ ],
+ "覚醒": [
+  "dbz",
+  "ゴクウは いかりで スーパーサイヤ人に 覚醒した。",
+  "In his rage, Goku awakened as a Super Saiyan."
+ ]
+}

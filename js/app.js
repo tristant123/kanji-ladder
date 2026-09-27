@@ -104,7 +104,21 @@
       '<section class="panel"><h2>Next 24 hours</h2>' + (bars || '<p class="muted">No reviews coming up in the next day.</p>') + "</section>" +
       "</div>" +
       '<section class="panel"><h2>JLPT progress <span class="muted small">(kanji at Guru or above)</span></h2><div class="tiers">' + tiers.join("") + "</div></section>" +
+      lineOfTheDay() +
       (Object.keys(p.items).length ? "" : welcome());
+    app.querySelectorAll("[data-say]").forEach((b) => (b.onclick = () => Render.speak(b.dataset.say)));
+  }
+
+  // A line from something you've learned (or the first levels, before that),
+  // chosen by the date so it changes once a day.
+  function lineOfTheDay() {
+    const all = withLines();
+    if (!all.length) return "";
+    const learned = all.filter((v) => SRS.stageOf(ctx.progress, v.id) > 0);
+    const pool = learned.length >= 5 ? learned : all.filter((v) => v.level <= 3);
+    const day = Math.floor(Date.now() / (24 * SRS.HOUR));
+    const v = pool[day % pool.length];
+    return '<section class="panel"><h2>Anime line of the day</h2>' + Render.animeLine(v, true) + '<p class="small"><a href="#/anime">All anime lines →</a></p></section>';
   }
 
   function progressLine(label, list, done, goal) {
@@ -492,6 +506,40 @@
     };
   }
 
+  // ------------------------------------------------------------ anime
+  const withLines = () => cat.items.filter((it) => it.type === "vocab" && it.ex);
+
+  function animeIndex() {
+    const p = ctx.progress;
+    const counts = {};
+    withLines().forEach((v) => (counts[v.ex[0]] = (counts[v.ex[0]] || 0) + 1));
+    const series = DATA.series.slice().sort((a, b) => (counts[b.key] || 0) - (counts[a.key] || 0));
+    const words = cat.items.filter((it) => it.anime).sort((a, b) => a.level - b.level || a.order - b.order);
+    app.innerHTML =
+      '<h1 class="page-title">Anime</h1>' +
+      '<p class="muted">Example lines about real anime, and words you\'ll hear in them. Pick a series to see every line from it.</p>' +
+      '<div class="series-grid">' +
+      series
+        .filter((sr) => counts[sr.key])
+        .map((sr) => '<a class="series-card" href="#/anime/' + esc(sr.key) + '" style="--sc:' + esc(sr.color) + '"><span class="big-icon">' + esc(sr.icon) + '</span><span><b>' + esc(sr.jp) + "</b><span>" + esc(sr.en) + " · " + counts[sr.key] + " lines</span></span></a>")
+        .join("") +
+      "</div>" +
+      '<section class="panel"><h2>Anime words <span class="muted small">' + words.length + "</span></h2>" +
+      '<p class="muted small">Words like 魔法, 先輩 and 覚悟. They unlock with their kanji, like any other vocabulary.</p>' +
+      '<div class="chips">' + words.map((v) => chip(v, p, { locked: !SRS.isUnlocked(cat, p, v, SRS.currentLevel(cat, p)) && SRS.stageOf(p, v.id) === 0 })).join("") + "</div></section>";
+  }
+
+  function animeSeries(key) {
+    const sr = Render.SERIES[key];
+    if (!sr) return notFound();
+    const lines = withLines().filter((v) => v.ex[0] === key).sort((a, b) => a.level - b.level || a.order - b.order);
+    app.innerHTML =
+      '<div class="level-head"><a class="btn small ghost-btn" href="#/anime">←</a><h1 class="page-title">' + esc(sr.icon) + " " + '<span lang="ja">' + esc(sr.jp) + '</span> <span class="muted">' + esc(sr.en) + "</span></h1></div>" +
+      '<p class="muted small">' + lines.length + " lines, easiest first. The level shows when you'll have learned each word.</p>" +
+      lines.map((v) => '<div class="muted small">Level ' + v.level + "</div>" + Render.animeLine(v, true)).join("");
+    app.querySelectorAll("[data-say]").forEach((b) => (b.onclick = () => Render.speak(b.dataset.say)));
+  }
+
   function notFound() {
     app.innerHTML = '<div class="empty-state"><h1>Not found</h1><a class="btn" href="#/">Home</a></div>';
   }
@@ -513,6 +561,7 @@
     else if (head === "search") search(arg);
     else if (head === "practice") practice(arg);
     else if (head === "settings") settings();
+    else if (head === "anime") arg ? animeSeries(arg) : animeIndex();
     else notFound();
     if (!app.contains(document.activeElement)) app.focus({ preventScroll: true });
     if (!/^item/.test(head)) window.scrollTo(0, 0);

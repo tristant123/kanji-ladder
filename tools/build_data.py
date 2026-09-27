@@ -251,7 +251,33 @@ def load_vocab(db, joyo):
 
     out = {}
     for text, w in words.items():
-        idseq = w["idseq"]
+        rec = describe(db, text, w["idseq"], w["chars"])
+        if rec:
+            rec["score"] = w["score"]
+            out[text] = rec
+    return out
+
+
+def lookup_word(db, text, joyo):
+    """One JMdict word by its spelling, common or not (for the anime extras)."""
+    kanji_re = re.compile(r"[一-鿿]")
+    chars = [c for c in text if kanji_re.match(c)]
+    if any(c not in joyo for c in chars):
+        return None
+    rows = db.execute(
+        "select k.idseq, (select count(*) from KJP p where p.kid = k.id) from Kanji k where k.text = ? order by 2 desc", (text,)
+    ).fetchall()
+    for idseq, _ in rows:
+        rec = describe(db, text, idseq, chars, allow_kana=True)
+        if rec:
+            rec["score"] = 99
+            return rec
+    return None
+
+
+def describe(db, text, idseq, chars, allow_kana=False):
+    """Readings, meanings and part of speech for one JMdict entry."""
+    if True:
         readings = []
         for kana_id, kana, nokanji in db.execute("select id, text, nokanji from Kana where idseq = ?", (idseq,)):
             if nokanji:
@@ -263,7 +289,7 @@ def load_vocab(db, joyo):
             readings.append((0 if prio else 1, kana))
         readings = [r for _, r in sorted(readings, key=lambda t: t[0])][:2]
         if not readings:
-            continue
+            return None
         senses, pos, usually_kana = [], None, False
         for (sid,) in db.execute("select id from Sense where idseq = ? order by id", (idseq,)):
             stagk = [t for (t,) in db.execute("select text from stagk where sid = ?", (sid,))]
@@ -283,22 +309,20 @@ def load_vocab(db, joyo):
                 senses.append(gl)
             if len(senses) >= 3:
                 break
-        if not senses or usually_kana:
-            continue
+        if not senses or (usually_kana and not allow_kana):
+            return None
         meanings = []
         for s in senses:
             for g in s[:3]:
                 if g not in meanings:
                     meanings.append(g)
-        out[text] = {
+        return {
             "w": text,
             "r": readings,
             "m": meanings[:6],
             "pos": pos or "",
-            "k": list(dict.fromkeys(w["chars"])),
-            "score": w["score"],
+            "k": list(dict.fromkeys(chars)),
         }
-    return out
 
 
 def strip_kun(r):
@@ -448,6 +472,27 @@ def main():
         if w in chosen:
             chosen[w].update(over)
 
+    # --- anime layer: extra words you'll hear in anime, and example lines
+    anime_words = load_json("anime_vocab.json", {}).get("words", [])
+    for w in anime_words:
+        if w in chosen:
+            chosen[w]["anime"] = True
+            continue
+        rec = all_vocab.get(w) or lookup_word(db, w, joyo)
+        if not rec:
+            print("  anime word not found in JMdict:", w, file=sys.stderr)
+            continue
+        chosen[w] = dict(rec, level=max(kanji[c]["level"] for c in rec["k"]), anime=True)
+    for w, over in vocab_content.items():
+        if w in chosen:
+            chosen[w].update(over)
+    series = load_json("anime_series.json", [])
+    lines = {}
+    for name in sorted(os.listdir(CONTENT)):
+        if name.startswith("anime_lines") and name.endswith(".json"):
+            lines.update(load_json(name, {}))
+    check_lines(lines, chosen, kanji, {s["key"] for s in series})
+
     # --- assemble
     out_kanji = {}
     for k in ordered:
@@ -478,6 +523,10 @@ def main():
         rec = {"w": v["w"], "r": v["r"], "m": v["m"], "pos": v["pos"], "k": v["k"], "level": v["level"]}
         if v.get("mm"):
             rec["mm"] = v["mm"]
+        if v.get("anime"):
+            rec["anime"] = 1
+        if v["w"] in lines:
+            rec["ex"] = lines[v["w"]]
         out_vocab[v["w"]] = rec
 
     data = {
@@ -487,6 +536,7 @@ def main():
         "kanji": list(out_kanji.values()),
         "vocab": list(out_vocab.values()),
         "readingKeys": load_json("reading_keywords.json", {}),
+        "series": series,
     }
     os.makedirs(OUT, exist_ok=True)
     write_js(os.path.join(OUT, "kanji-data.js"), "KANJI_DATA", data)
@@ -497,6 +547,8 @@ def main():
     print("levels:", len(levels), " radicals:", len(radicals), " vocab:", len(out_vocab))
     print("kanji per tier:", {"N%d" % t: tiers[t] for t in (5, 4, 3, 2, 1)})
     print("hand-written kanji mnemonics:", sum(1 for k in out_kanji.values() if "mm" in k))
+    print("anime words:", sum(1 for v in out_vocab.values() if v.get("anime")),
+          " example lines:", sum(1 for v in out_vocab.values() if v.get("ex")))
 
 
 JUNK = re.compile(r"kokuji|radical|counter for|\(no\.|^\W")
@@ -542,6 +594,30 @@ def check_mnemonics(kanji, radicals):
                 bad += 1
     if bad:
         print("  %d radical mismatches in mnemonics" % bad, file=sys.stderr)
+
+
+def check_lines(lines, vocab, kanji, speakers):
+    """Each example line needs a known series, must actually use its word,
+    and should only use kanji you've met by that word's level."""
+    for w, line in lines.items():
+        where = "  line for %s: " % w
+        if w not in vocab:
+            print(where + "no such vocabulary item", file=sys.stderr)
+            continue
+        if len(line) != 3 or line[0] not in speakers:
+            print(where + "expected [series, japanese, english]", file=sys.stderr)
+            continue
+        jp = line[1]
+        ks = vocab[w]["k"]
+        if not all(c in jp for c in ks):
+            print(where + "doesn't contain " + "".join(ks), file=sys.stderr)
+        lvl = vocab[w]["level"]
+        late = sorted({c for c in jp if c in kanji and kanji[c]["level"] > lvl} - set(ks))
+        other = sorted({c for c in jp if "\u4e00" <= c <= "\u9fff" and c not in kanji})
+        if late:
+            print(where + "uses kanji from later levels: " + "".join(late), file=sys.stderr)
+        if other:
+            print(where + "uses non-Jōyō kanji: " + "".join(other), file=sys.stderr)
 
 
 def write_js(path, var, obj):

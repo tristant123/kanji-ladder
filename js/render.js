@@ -47,6 +47,7 @@
     return (
       '<a class="chip chip-' + it.type + " " + stageClass(progress, it) + locked + '" href="#/item/' + encodeURIComponent(it.id) + '" title="' + esc(SRS.STAGES[SRS.stageOf(progress, it.id)].name) + '">' +
       '<span class="chip-ch" lang="ja">' + glyph(it) + "</span>" +
+      (it.anime ? '<span class="anime-dot" title="Anime word">アニメ</span>' : "") +
       (opts.brief ? "" : '<span class="chip-sub"><span lang="ja">' + sub + "</span><span>" + esc(primaryMeaning(it)) + "</span></span>") +
       "</a>"
     );
@@ -238,7 +239,7 @@
       '<section class="item-head item-' + it.type + '">' +
       '<div class="big" lang="ja">' + glyph(it) + "</div>" +
       '<div class="head-meta"><div class="type">' + TYPE_LABEL[it.type] + " · Level " + it.level + (jlpt ? " · " + jlpt : "") + "</div>" +
-      '<h1>' + esc(primaryMeaning(it)) + "</h1>" +
+      '<h1>' + esc(primaryMeaning(it)) + (it.anime ? ' <span class="anime-badge">アニメ word</span>' : "") + "</h1>" +
       (it.type === "vocab" ? '<div class="reading-line" lang="ja">' + it.r.map(esc).join("、") + (canSpeak() ? ' <button class="btn icon" type="button" data-say="' + esc(it.r[0]) + '" aria-label="Play pronunciation">🔊</button>' : "") + "</div>" : "") +
       '<div class="stage ' + stageClass(progress, it) + '">' + esc(SRS.STAGES[stage].name) +
       (p && p.at && stage < SRS.BURNED ? " · next review " + esc(when(p.at)) : "") + "</div>" +
@@ -272,6 +273,8 @@
       out.push(section("Stroke order · " + it.strokes + " strokes", '<div class="strokes-box" data-strokes></div>'));
       const vocab = cat.usedIn(it.id).map((id) => cat.get(id));
       if (vocab.length) out.push(section("Vocabulary", '<div class="chips">' + vocab.map((v) => chip(v, progress)).join("") + "</div>"));
+      const lines = vocab.filter((v) => v.ex).slice(0, 3);
+      if (lines.length) out.push(section("In anime", lines.map((v) => animeLine(v, true)).join("")));
     }
 
     if (it.type === "vocab") {
@@ -284,6 +287,7 @@
         '<p class="answers" lang="ja"><b>' + it.r.map(esc).join("、") + "</b></p>" +
         '<div class="mnemonic muted">' + vocabReading(cat, it) + "</div>" +
         wkBlock(wk && opts.showWK, wk && wk.v[it.w], "reading") + notesBlock(progress, it, "r", "Reading note")));
+      if (it.ex) out.push(section("In anime", animeLine(it)));
       const ks = it.k.map((c) => cat.get("k:" + c)).filter(Boolean);
       out.push(section("Kanji in this word", '<div class="chips">' + ks.map((k) => chip(k, progress)).join("") + "</div>"));
     }
@@ -304,6 +308,49 @@
       );
     }
     return '<article class="item" data-id="' + esc(it.id) + '">' + out.join("") + "</article>";
+  }
+
+  // ------------------------------------------------------------ anime lines
+  const SERIES = {};
+  ((root.KANJI_DATA && root.KANJI_DATA.series) || []).forEach((x) => (SERIES[x.key] = x));
+
+  // Your own picture for a series, if you've put one in img/anime/<key>.jpg
+  // (that folder is git-ignored: it's for screenshots you took yourself).
+  function seriesArt(sr) {
+    return '<img class="series-art" src="img/anime/' + esc(sr.key) + '.jpg" alt="" onerror="this.remove()">';
+  }
+
+  function seriesTag(sr) {
+    return (
+      '<a class="series-tag" href="#/anime/' + esc(sr.key) + '" style="--sc:' + esc(sr.color) + '">' +
+      '<span class="series-icon" aria-hidden="true">' + esc(sr.icon) + "</span>" +
+      '<span lang="ja">' + esc(sr.jp) + "</span><span class=\"series-en\">" + esc(sr.en) + "</span></a>"
+    );
+  }
+
+  function highlightWord(jp, v) {
+    const e = esc(jp);
+    // highlight the word as written, or its kanji part when it's conjugated
+    for (const cand of [v.w, v.w.replace(/[\u3040-\u309f]+$/, "")]) {
+      if (cand && e.includes(cand)) return e.split(cand).join('<mark lang="ja">' + esc(cand) + "</mark>");
+    }
+    return e;
+  }
+
+  function animeLine(v, withWord) {
+    const [key, jp, en] = v.ex;
+    const sr = SERIES[key] || { key, jp: key, en: key, icon: "🎬", color: "#666" };
+    return (
+      '<figure class="anime-line" style="--sc:' + esc(sr.color) + '">' +
+      seriesArt(sr) +
+      '<div class="anime-body">' + seriesTag(sr) +
+      (withWord ? ' <a class="anime-word" href="#/item/' + encodeURIComponent(v.id) + '" lang="ja">' + esc(v.w) + "</a>" : "") +
+      '<blockquote lang="ja">' + highlightWord(jp, v) +
+      (canSpeak() ? ' <button class="btn icon" type="button" data-say="' + esc(jp) + '" aria-label="Play the line">🔊</button>' : "") +
+      "</blockquote>" +
+      '<details class="anime-en"><summary>Translation</summary>' + esc(en) + "</details>" +
+      "</div></figure>"
+    );
   }
 
   function defaultRadicalStory(cat, r) {
@@ -406,5 +453,5 @@
     });
   }
 
-  root.Render = { esc, markup, chip, itemView, bindItem, speak, canSpeak, when, primaryMeaning, glyph, TYPE_LABEL, stageClass, loadStrokes };
+  root.Render = { animeLine, seriesTag, SERIES, esc, markup, chip, itemView, bindItem, speak, canSpeak, when, primaryMeaning, glyph, TYPE_LABEL, stageClass, loadStrokes };
 })(this);

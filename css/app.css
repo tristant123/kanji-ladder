@@ -322,3 +322,26 @@ svg.strokes .grid line { stroke: var(--line); stroke-dasharray: 3 3; stroke-widt
 .toast.up { background: var(--right); color: #fff; }
 .toast.down { background: var(--wrong); color: #fff; }
 main:focus-visible { outline: none; }
+
+/* ---------------------------------------------------------------- anime layer */
+.anime-dot { font: 700 0.6rem var(--ja); background: #fff; color: var(--vocab); border-radius: 4px; padding: 0 3px; align-self: flex-start; margin-left: -4px; }
+.anime-badge { font: 700 0.75rem var(--ja); background: #fff; color: var(--vocab); border-radius: 6px; padding: 2px 6px; vertical-align: middle; }
+.anime-line { display: flex; gap: 12px; margin: 10px 0; padding: 12px 14px; border-radius: 12px; border-left: 5px solid var(--sc); background: var(--surface-2); }
+.anime-line + .anime-line { margin-top: 8px; }
+.anime-body { flex: 1; min-width: 0; }
+.series-art { width: 96px; height: 72px; object-fit: cover; border-radius: 8px; flex: none; }
+.series-tag { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 0.8rem; font-weight: 700; color: #fff; background: var(--sc); padding: 2px 10px 2px 6px; border-radius: 99px; }
+.series-icon { font-size: 1rem; }
+.series-en { font-weight: 500; opacity: 0.85; }
+.anime-word { font: 600 0.95rem var(--ja); margin-left: 6px; color: var(--vocab); }
+.anime-line blockquote { margin: 8px 0 4px; font-size: 1.15rem; line-height: 1.7; }
+.anime-line mark { background: transparent; color: var(--vocab); font-weight: 700; border-bottom: 2px solid var(--vocab); }
+.anime-en summary { cursor: pointer; color: var(--muted); font-size: 0.85rem; }
+.anime-en { font-size: 0.95rem; }
+.series-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.series-card { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--sc); text-decoration: none; }
+.series-card .big-icon { font-size: 1.8rem; }
+.series-card b { display: block; font-family: var(--ja); }
+.series-card span { color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 520px) { .series-art { display: none; } }
+.brand-anime { font: 700 0.7rem var(--ja); background: var(--vocab); color: #fff; border-radius: 6px; padding: 1px 6px; vertical-align: 2px; }

@@ -1,0 +1,289 @@
+[
+ {
+  "key": "onepiece",
+  "jp": "ONE PIECE",
+  "en": "One Piece",
+  "icon": "🏴‍☠️",
+  "color": "#d9412b"
+ },
+ {
+  "key": "naruto",
+  "jp": "NARUTO",
+  "en": "Naruto",
+  "icon": "🍥",
+  "color": "#f28c1e"
+ },
+ {
+  "key": "kimetsu",
+  "jp": "鬼滅の刃",
+  "en": "Demon Slayer",
+  "icon": "👹",
+  "color": "#2f8f6a"
+ },
+ {
+  "key": "aot",
+  "jp": "進撃の巨人",
+  "en": "Attack on Titan",
+  "icon": "🧱",
+  "color": "#7a5c3e"
+ },
+ {
+  "key": "dbz",
+  "jp": "ドラゴンボール",
+  "en": "Dragon Ball",
+  "icon": "🐉",
+  "color": "#f5a300"
+ },
+ {
+  "key": "jjk",
+  "jp": "呪術廻戦",
+  "en": "Jujutsu Kaisen",
+  "icon": "👁️",
+  "color": "#3d3aa8"
+ },
+ {
+  "key": "conan",
+  "jp": "名探偵コナン",
+  "en": "Detective Conan",
+  "icon": "🔍",
+  "color": "#2463b3"
+ },
+ {
+  "key": "pokemon",
+  "jp": "ポケットモンスター",
+  "en": "Pokémon",
+  "icon": "⚡",
+  "color": "#e8b400"
+ },
+ {
+  "key": "spirited",
+  "jp": "千と千尋の神隠し",
+  "en": "Spirited Away",
+  "icon": "🛁",
+  "color": "#c2413a"
+ },
+ {
+  "key": "totoro",
+  "jp": "となりのトトロ",
+  "en": "My Neighbor Totoro",
+  "icon": "🌳",
+  "color": "#4d8a3a"
+ },
+ {
+  "key": "kiki",
+  "jp": "魔女の宅急便",
+  "en": "Kiki's Delivery Service",
+  "icon": "🧹",
+  "color": "#8a3fa3"
+ },
+ {
+  "key": "laputa",
+  "jp": "天空の城ラピュタ",
+  "en": "Castle in the Sky",
+  "icon": "🏰",
+  "color": "#3a86b5"
+ },
+ {
+  "key": "mononoke",
+  "jp": "もののけ姫",
+  "en": "Princess Mononoke",
+  "icon": "🐺",
+  "color": "#6b7f3a"
+ },
+ {
+  "key": "kiminona",
+  "jp": "君の名は。",
+  "en": "Your Name",
+  "icon": "☄️",
+  "color": "#5a6fd6"
+ },
+ {
+  "key": "haikyu",
+  "jp": "ハイキュー!!",
+  "en": "Haikyu!!",
+  "icon": "🏐",
+  "color": "#f07f1b"
+ },
+ {
+  "key": "spyfam",
+  "jp": "SPY×FAMILY",
+  "en": "Spy × Family",
+  "icon": "🥜",
+  "color": "#b5476b"
+ },
+ {
+  "key": "fma",
+  "jp": "鋼の錬金術師",
+  "en": "Fullmetal Alchemist",
+  "icon": "⚗️",
+  "color": "#b33a2e"
+ },
+ {
+  "key": "deathnote",
+  "jp": "DEATH NOTE",
+  "en": "Death Note",
+  "icon": "📓",
+  "color": "#333333"
+ },
+ {
+  "key": "mha",
+  "jp": "僕のヒーローアカデミア",
+  "en": "My Hero Academia",
+  "icon": "💥",
+  "color": "#2f7d5c"
+ },
+ {
+  "key": "sailormoon",
+  "jp": "美少女戦士セーラームーン",
+  "en": "Sailor Moon",
+  "icon": "🌙",
+  "color": "#d6479b"
+ },
+ {
+  "key": "eva",
+  "jp": "新世紀エヴァンゲリオン",
+  "en": "Neon Genesis Evangelion",
+  "icon": "🤖",
+  "color": "#6d3fa3"
+ },
+ {
+  "key": "opm",
+  "jp": "ワンパンマン",
+  "en": "One-Punch Man",
+  "icon": "👊",
+  "color": "#d99a1f"
+ },
+ {
+  "key": "frieren",
+  "jp": "葬送のフリーレン",
+  "en": "Frieren",
+  "icon": "💐",
+  "color": "#5d9cb3"
+ },
+ {
+  "key": "doraemon",
+  "jp": "ドラえもん",
+  "en": "Doraemon",
+  "icon": "🔔",
+  "color": "#1d8fd8"
+ },
+ {
+  "key": "slime",
+  "jp": "転生したらスライムだった件",
+  "en": "That Time I Got Reincarnated as a Slime",
+  "icon": "💧",
+  "color": "#3aa3c2"
+ },
+ {
+  "key": "sao",
+  "jp": "ソードアート・オンライン",
+  "en": "Sword Art Online",
+  "icon": "⚔️",
+  "color": "#35457a"
+ },
+ {
+  "key": "kon",
+  "jp": "けいおん!",
+  "en": "K-On!",
+  "icon": "🎸",
+  "color": "#e0628f"
+ },
+ {
+  "key": "ccs",
+  "jp": "カードキャプターさくら",
+  "en": "Cardcaptor Sakura",
+  "icon": "🃏",
+  "color": "#e05a8a"
+ },
+ {
+  "key": "hxh",
+  "jp": "HUNTER×HUNTER",
+  "en": "Hunter × Hunter",
+  "icon": "🎣",
+  "color": "#3a8a4d"
+ },
+ {
+  "key": "chainsaw",
+  "jp": "チェンソーマン",
+  "en": "Chainsaw Man",
+  "icon": "🪚",
+  "color": "#c2552f"
+ },
+ {
+  "key": "oshinoko",
+  "jp": "【推しの子】",
+  "en": "Oshi no Ko",
+  "icon": "⭐",
+  "color": "#d64fa0"
+ },
+ {
+  "key": "bleach",
+  "jp": "BLEACH",
+  "en": "Bleach",
+  "icon": "🗡️",
+  "color": "#3a3a4a"
+ },
+ {
+  "key": "gintama",
+  "jp": "銀魂",
+  "en": "Gintama",
+  "icon": "🍓",
+  "color": "#6a7a8a"
+ },
+ {
+  "key": "howl",
+  "jp": "ハウルの動く城",
+  "en": "Howl's Moving Castle",
+  "icon": "🔥",
+  "color": "#d9731f"
+ },
+ {
+  "key": "apothecary",
+  "jp": "薬屋のひとりごと",
+  "en": "The Apothecary Diaries",
+  "icon": "🌿",
+  "color": "#5a8f5a"
+ },
+ {
+  "key": "madoka",
+  "jp": "魔法少女まどか☆マギカ",
+  "en": "Puella Magi Madoka Magica",
+  "icon": "🎀",
+  "color": "#d05a8f"
+ },
+ {
+  "key": "steinsgate",
+  "jp": "STEINS;GATE",
+  "en": "Steins;Gate",
+  "icon": "📱",
+  "color": "#6a5a3a"
+ },
+ {
+  "key": "dandadan",
+  "jp": "ダンダダン",
+  "en": "Dandadan",
+  "icon": "👽",
+  "color": "#4ab0a0"
+ },
+ {
+  "key": "jojo",
+  "jp": "ジョジョの奇妙な冒険",
+  "en": "JoJo's Bizarre Adventure",
+  "icon": "✨",
+  "color": "#8a3fb5"
+ },
+ {
+  "key": "gurren",
+  "jp": "天元突破グレンラガン",
+  "en": "Gurren Lagann",
+  "icon": "🕶️",
+  "color": "#c23a2e"
+ },
+ {
+  "key": "kenshin",
+  "jp": "るろうに剣心",
+  "en": "Rurouni Kenshin",
+  "icon": "🌀",
+  "color": "#b33a4a"
+ }
+]
