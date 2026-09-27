@@ -26,7 +26,16 @@
     <input id="search-input" type="search" placeholder="Search 漢字, meaning, reading" autocomplete="off" lang="ja">
   </form>
 </header>
-<main id="app" tabindex="-1"></main>
+<main id="app" tabindex="-1">
+  <!-- Replaced as soon as the app starts. If it stays, the scripts didn't load. -->
+  <div style="max-width:560px;margin:48px auto;padding:20px;font:16px/1.5 system-ui,sans-serif;border:2px solid #e2206f;border-radius:12px;background:#fff;color:#222">
+    <b>Loading…</b>
+    <p>If this message doesn't go away, the app's files didn't load. Usually that means
+    <code>index.html</code> was opened from inside the zip. Right-click the zip, choose
+    <b>Extract All</b>, then open <code>kanji/index.html</code> from the extracted folder.
+    The <code>css</code>, <code>js</code> and <code>data</code> folders must sit next to it.</p>
+  </div>
+</main>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <noscript>Kanji Ladder needs JavaScript.</noscript>
 
