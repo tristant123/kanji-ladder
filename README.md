@@ -35,8 +35,15 @@ Each level has its radicals, ~30 kanji and ~90 vocabulary words.
 
 **Unlocking, as on WaniKani.** A kanji unlocks when every radical in it
 reaches *Guru*. A word unlocks when every kanji in it reaches Guru. The next
-level opens when 90% of this level's kanji are at Guru. Already know N5? Go to
-Settings → *Skip ahead*.
+level opens when 90% of this level's kanji are at Guru.
+
+**Skipping what you already know.** *Skip to Guru* puts an item straight at
+Guru 1, which unlocks everything built on it. It still comes back for one
+review a week later, so a wrong guess about what you know gets caught. You'll
+find it on every item page, in lessons, in the lesson quiz and reviews, on
+each level page (the whole level at once) and in Settings → *Skip ahead*
+(every level up to one you pick). *Burn* is the stronger option: the item is
+never shown again.
 
 **SRS stages and intervals.** Apprentice 1–4 (4h, 8h, 1d, 2d), Guru 1–2 (1w,
 2w), Master (1 month), Enlightened (4 months), then Burned. A wrong answer

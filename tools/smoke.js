@@ -40,6 +40,10 @@ const server = http.createServer((req, res) => {
   await page.click(".big-btn.lessons");
   await page.waitForSelector(".lesson");
   await shot("02_lesson");
+  // Skip the first item straight to Guru
+  await page.click("[data-skip]");
+  const skipped = await page.evaluate(() => Object.values(JSON.parse(localStorage.getItem("kanji-ladder.v1")).items).filter((e) => e.stage === 5).length);
+  if (skipped !== 1) throw new Error("lesson skip did not mark one item as Guru: " + skipped);
   for (let i = 0; i < 10 && !(await page.$("[data-quiz]")); i++) await page.click("[data-next]");
   await page.click("[data-quiz]");
 
@@ -117,6 +121,21 @@ const server = http.createServer((req, res) => {
     await shot(name);
   }
   if (!(await page.$("#app .chip"))) throw new Error("dashboard shows no kanji");
+
+  // Skip from an item page, and a whole level
+  page.on("dialog", (d) => d.accept());
+  await page.goto(base + "#/item/k:語");
+  await page.click('[data-act="guru"]');
+  await page.waitForSelector(".item-head .stage.st-guru");
+  await page.goto(base + "#/level/2");
+  await page.click("#skip-level");
+  await page.waitForTimeout(200);
+  const lv2 = await page.evaluate(() => {
+    const p = JSON.parse(localStorage.getItem("kanji-ladder.v1")).items;
+    return window.KANJI_DATA.kanji.filter((k) => k.level === 2).every((k) => p["k:" + k.ch] && p["k:" + k.ch].stage >= 5);
+  });
+  if (!lv2) throw new Error("level skip did not put every level-2 kanji at Guru");
+  await shot("17_level_skipped");
 
   // mobile layout
   await page.setViewportSize({ width: 390, height: 844 });

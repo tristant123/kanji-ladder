@@ -148,6 +148,7 @@
         '<span class="muted small">' + queue.length + " in queue</span></nav>" +
         Render.itemView(ctx, it, { lesson: true, showWK: ctx.progress.settings.showWK }) +
         '<div class="lesson-foot"><button class="btn" data-prev ' + (i ? "" : "disabled") + ">← Back</button>" +
+        '<button class="btn ghost-btn" data-skip title="Already know it: mark as Guru and leave it out of this lesson">Skip to Guru</button>' +
         (i < batch.length - 1 ? '<button class="btn primary" data-next>Next →</button>' : '<button class="btn primary" data-quiz>Start the quiz</button>') +
         "</div></div>";
       Render.bindItem(app, ctx, it, show);
@@ -157,6 +158,15 @@
       if (n) n.onclick = () => (i++, show());
       const q = app.querySelector("[data-quiz]");
       if (q) q.onclick = () => Quiz.start(ctx, app, batch, "lesson");
+      app.querySelector("[data-skip]").onclick = () => {
+        SRS.skipToGuru(ctx.progress, it.id, Date.now());
+        ctx.save();
+        toast(Render.primaryMeaning(it) + ": skipped to Guru");
+        batch.splice(i, 1);
+        if (!batch.length) return lessons();
+        i = Math.min(i, batch.length - 1);
+        show();
+      };
       if (it.type === "vocab" && ctx.progress.settings.autoplay) Render.speak(it.r[0]);
       window.scrollTo(0, 0);
     };
@@ -245,7 +255,18 @@
       '<h1 class="page-title">Level ' + n + ' <span class="muted">· JLPT N' + cat.levels[n - 1].jlpt + "</span></h1>" +
       '<a class="btn small ghost-btn" href="#/level/' + (n + 1) + '"' + (n < cat.maxLevel ? "" : " hidden") + ">→</a></div>" +
       block("Radicals", L.radical) + block("Kanji", L.kanji) + block("Vocabulary", L.vocab) +
-      '<p><a class="btn" href="#/practice/level/' + n + '">Practice this level</a></p>';
+      '<div class="row"><a class="btn" href="#/practice/level/' + n + '">Practice this level</a>' +
+      '<button class="btn ghost-btn" id="skip-level">Skip this level to Guru</button></div>';
+    document.getElementById("skip-level").onclick = () => {
+      const items = L.radical.concat(L.kanji, L.vocab).filter((it) => SRS.stageOf(p, it.id) < SRS.GURU);
+      if (!items.length) return toast("Everything here is already Guru or above");
+      if (!confirm("Mark " + items.length + " items in level " + n + " as Guru? They skip their lessons and come back for review in a week.")) return;
+      const now = Date.now();
+      items.forEach((it) => SRS.skipToGuru(p, it.id, now));
+      ctx.save();
+      toast(items.length + " items skipped to Guru");
+      levelView(n);
+    };
   }
 
   function itemPage(id) {
@@ -257,11 +278,11 @@
       app.querySelectorAll("[data-act]").forEach(
         (b) =>
           (b.onclick = () => {
-            if (b.dataset.act === "known") {
-              const e = SRS.entry(ctx.progress, it.id);
-              e.stage = SRS.BURNED;
-              e.burned = Date.now();
-              e.at = null;
+            if (b.dataset.act === "guru") {
+              SRS.skipToGuru(ctx.progress, it.id, Date.now());
+              toast("Skipped to Guru");
+            } else if (b.dataset.act === "known") {
+              SRS.burn(ctx.progress, it.id, Date.now());
               toast("Burned");
             } else if (confirm("Put this item back to the start? Its SRS progress is lost.")) {
               delete ctx.progress.items[it.id];
@@ -368,9 +389,9 @@
       '<label class="field"><span>Open every level up to</span><select id="s-start">' +
       cat.levels.map((l) => '<option value="' + l.n + '"' + (s.startLevel === l.n ? " selected" : "") + ">Level " + l.n + " (N" + l.jlpt + ")</option>").join("") +
       "</select></label>" +
-      '<p class="muted">Or mark whole levels as known. Items are burned and never reviewed:</p>' +
+      '<p class="muted">Or skip whole levels. <b>Guru</b> skips the lessons but still reviews each item in a week, to check you really know it. <b>Burn</b> removes the items for good.</p>' +
       '<div class="row"><select id="s-burnto">' + cat.levels.map((l) => '<option value="' + l.n + '">Levels 1–' + l.n + " (N" + l.jlpt + ")</option>").join("") + "</select>" +
-      '<button class="btn" id="s-burn">Mark as known</button></div>' +
+      '<button class="btn" id="s-guru">Mark as Guru</button><button class="btn" id="s-burn">Burn</button></div>' +
       "</section>" +
       '<section class="panel"><h2>WaniKani mnemonics (optional)</h2>' +
       "<p class=\"muted\">This app ships with its own mnemonics. If you have a WaniKani account, you can pull WaniKani's mnemonics into this browser with your personal API token. They are stored only here, shown next to the matching items, and never leave your device. Get a read-only token at wanikani.com → Settings → API Tokens.</p>" +
@@ -400,25 +421,25 @@
       toast("Saved");
     };
     ["s-batch", "s-order", "s-autoplay", "s-wk", "s-start"].forEach((id) => ($(id).onchange = saveSet));
-    $("s-burn").onclick = () => {
+    const bulk = (mode) => {
       const upto = +$("s-burnto").value;
-      if (!confirm("Mark every radical, kanji and word in levels 1–" + upto + " as known? They won't come up in lessons or reviews.")) return;
+      const msg = mode === "guru"
+        ? "Mark every radical, kanji and word in levels 1–" + upto + " as Guru? They skip their lessons and come back for review in a week. Items already higher stay where they are."
+        : "Burn every radical, kanji and word in levels 1–" + upto + "? They won't come up in lessons or reviews again.";
+      if (!confirm(msg)) return;
       const now = Date.now();
       let n = 0;
       for (const it of cat.items) {
         if (it.level > upto) continue;
-        const e = SRS.entry(ctx.progress, it.id);
-        if (e.stage === SRS.BURNED) continue;
-        e.stage = SRS.BURNED;
-        e.burned = now;
-        e.at = null;
-        n++;
+        if (mode === "guru" ? SRS.skipToGuru(ctx.progress, it.id, now) : SRS.burn(ctx.progress, it.id, now)) n++;
       }
       s.startLevel = Math.max(s.startLevel, Math.min(upto + 1, cat.maxLevel));
       ctx.save();
-      toast(n + " items marked as known");
+      toast(n + " items " + (mode === "guru" ? "skipped to Guru" : "burned"));
       settings();
     };
+    $("s-guru").onclick = () => bulk("guru");
+    $("s-burn").onclick = () => bulk("burn");
     $("wk-go").onclick = async () => {
       const token = $("wk-token").value;
       if (!token.trim()) return;

@@ -73,6 +73,7 @@
         '<div class="qbar"><span class="qtitle">' + title + "</span>" +
         '<span title="correct answers">✓ ' + pct + "</span>" +
         '<span title="items finished">' + done + " / " + total + "</span>" +
+        (mode !== "practice" && SRS.stageOf(progress, it.id) < SRS.GURU ? '<button class="btn small ghost-btn" data-skip title="Already know it: mark as Guru">Skip to Guru</button>' : "") +
         (mode !== "lesson" ? '<button class="btn small ghost-btn" data-wrap ' + (wrapping ? "disabled" : "") + ">" + (wrapping ? "Wrapping up…" : "Wrap up") + "</button>" : "") +
         '<button class="btn small ghost-btn" data-exit>End</button></div>' +
         '<div class="qchar" lang="ja">' + Render.glyph(it) + "</div>" +
@@ -98,6 +99,8 @@
         submit(input.value);
       };
       el.querySelector("[data-exit]").onclick = () => finish(true);
+      const skip = el.querySelector("[data-skip]");
+      if (skip) skip.onclick = skipCurrent;
       const wrap = el.querySelector("[data-wrap]");
       if (wrap) wrap.onclick = () => {
         wrapping = true;
@@ -154,6 +157,23 @@
       if (it.type === "vocab") return it.r.join("、");
       const list = it.pr === "kun" ? it.kun : it.on;
       return (list.length ? list : it.on.concat(it.kun)).slice(0, 3).map((r) => r.replace(".", "・")).join("、");
+    }
+
+    // Take the current item out of this session and put it straight at Guru.
+    function skipCurrent() {
+      const s = cur.s;
+      // an answer already given for this item doesn't count towards the score
+      if (state === "answered") {
+        answeredQ--;
+        if (lastResult !== "wrong") correctQ--;
+      }
+      pool.splice(pool.indexOf(s), 1);
+      SRS.skipToGuru(progress, s.it.id, Date.now());
+      ctx.save();
+      results.push({ it: s.it, wrong: 0, skipped: true });
+      ctx.toast(Render.primaryMeaning(s.it) + ": skipped to Guru", "up");
+      cur = null;
+      pick();
     }
 
     function undo() {
@@ -219,8 +239,10 @@
       if (early && mode === "lesson" && results.length < total) {
         ctx.toast("Lessons not finished stay in your lesson queue.");
       }
-      const right = results.filter((r) => !r.wrong);
-      const wrong = results.filter((r) => r.wrong);
+      const skipped = results.filter((r) => r.skipped);
+      const answered = results.filter((r) => !r.skipped);
+      const right = answered.filter((r) => !r.wrong);
+      const wrong = answered.filter((r) => r.wrong);
       const list = (rs) =>
         '<div class="chips">' +
         rs.map((r) => Render.chip(r.it, progress) + (r.after !== undefined ? '<span class="arrow ' + (r.after > r.before ? "up" : "down") + '">' + esc(SRS.STAGES[r.after].name) + "</span>" : "")).join("") +
@@ -229,9 +251,10 @@
         '<div class="summary">' +
         "<h1>" + title + (results.length ? " done" : "") + "</h1>" +
         (results.length
-          ? '<p class="big-num">' + Math.round((100 * right.length) / results.length) + '%<span> of ' + results.length + " items all right first time</span></p>" +
+          ? (answered.length ? '<p class="big-num">' + Math.round((100 * right.length) / answered.length) + '%<span> of ' + answered.length + " items all right first time</span></p>" : "") +
             (wrong.length ? "<h2>Missed (" + wrong.length + ")</h2>" + list(wrong) : "") +
-            (right.length ? "<h2>Right (" + right.length + ")</h2>" + list(right) : "")
+            (right.length ? "<h2>Right (" + right.length + ")</h2>" + list(right) : "") +
+            (skipped.length ? "<h2>Skipped to Guru (" + skipped.length + ")</h2>" + list(skipped) : "")
           : '<p class="muted">Nothing finished this time.</p>') +
         '<div class="row"><a class="btn" href="#/">Home</a>' +
         (mode === "lesson" ? '<a class="btn primary" href="#/lessons">Next lessons</a>' : "") +

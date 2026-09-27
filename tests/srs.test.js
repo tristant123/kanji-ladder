@@ -100,3 +100,20 @@ test("reading answers", () => {
   assert.strictEqual(SRS.checkReading(v, "taberu", Kana.toKana).result, "correct");
   assert.strictEqual(SRS.checkReading(v, "タベル", (s) => Kana.kataToHira(Kana.toKana(s))).result, "correct");
 });
+
+test("skip to Guru unlocks dependents and never lowers an item", () => {
+  const progress = { items: {}, settings: {} };
+  const now = Date.UTC(2026, 0, 1, 10, 0);
+  const k = cat.get("k:語");
+  for (const id of cat.prereqs(k)) assert.ok(SRS.skipToGuru(progress, id, now));
+  assert.ok(SRS.isUnlocked(cat, progress, k, 99));
+  const e = progress.items["r:" + k.parts[0]];
+  assert.strictEqual(e.stage, SRS.GURU);
+  assert.strictEqual(e.at, now + 167 * H);
+  // already Guru or higher: untouched
+  SRS.burn(progress, "k:語", now);
+  assert.strictEqual(SRS.skipToGuru(progress, "k:語", now), false);
+  assert.strictEqual(progress.items["k:語"].stage, SRS.BURNED);
+  // skipped items are reviewed like any other
+  assert.strictEqual(SRS.reviewQueue(cat, progress, now + 167 * H).length, k.parts.length);
+});

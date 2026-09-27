@@ -297,7 +297,8 @@
     if (!opts.lesson && !opts.quiz) {
       out.push(
         '<section class="item-actions">' +
-        (stage === 0 ? '<button class="btn ghost-btn" data-act="known">I already know this (burn)</button>' : '<button class="btn ghost-btn" data-act="reset">Reset this item</button>') +
+        (stage < SRS.GURU ? '<button class="btn ghost-btn" data-act="guru">Skip to Guru</button>' : "") +
+        (stage === 0 ? '<button class="btn ghost-btn" data-act="known">I know this well (burn)</button>' : '<button class="btn ghost-btn" data-act="reset">Reset this item</button>') +
         (stage > 0 && stage < SRS.BURNED ? '<button class="btn ghost-btn" data-act="known">Burn it</button>' : "") +
         "</section>"
       );

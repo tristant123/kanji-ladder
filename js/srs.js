@@ -172,6 +172,28 @@
     return e;
   }
 
+  // Skip: you already know it well enough, so jump straight to Guru 1. It
+  // unlocks what depends on it and comes back for a review in a week.
+  // Never moves an item down. Returns whether anything changed.
+  function skipToGuru(progress, id, now) {
+    const e = entry(progress, id);
+    if (e.stage >= GURU) return false;
+    e.stage = GURU;
+    e.at = nextReviewAt(GURU, now);
+    e.learned = e.learned || now;
+    e.skipped = now;
+    return true;
+  }
+
+  function burn(progress, id, now) {
+    const e = entry(progress, id);
+    if (e.stage === BURNED) return false;
+    e.stage = BURNED;
+    e.burned = now;
+    e.at = null;
+    return true;
+  }
+
   // A review finished. `wrongM` / `wrongR` = how many times each part was missed.
   function answer(progress, id, wrongM, wrongR, now) {
     const e = entry(progress, id);
@@ -280,7 +302,7 @@
     HOUR, INTERVAL_H, BURNED, GURU, STAGES,
     floorHour, nextReviewAt, nextStage,
     Catalogue, stageOf, currentLevel, isUnlocked, lessonQueue, reviewQueue, forecast,
-    learn, answer, entry,
+    learn, answer, entry, skipToGuru, burn,
     normMeaning, levenshtein, checkMeaning, checkReading, kanjiReadings, meaningAnswers,
   };
   if (typeof module !== "undefined") module.exports = api;
