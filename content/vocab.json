@@ -1,4 +1,90 @@
 {
- "転生": {"r": ["てんせい", "てんしょう"], "m": ["reincarnation", "rebirth", "transmigration of souls"]},
- "精霊": {"r": ["せいれい", "しょうりょう"], "m": ["spirit", "elemental", "spirit of the dead"]}
+ "転生": {
+  "r": [
+   "てんせい",
+   "てんしょう"
+  ],
+  "m": [
+   "reincarnation",
+   "rebirth",
+   "transmigration of souls"
+  ]
+ },
+ "精霊": {
+  "r": [
+   "せいれい",
+   "しょうりょう"
+  ],
+  "m": [
+   "spirit",
+   "elemental",
+   "spirit of the dead"
+  ]
+ },
+ "人": {
+  "primary": "ひと"
+ },
+ "本": {
+  "primary": "ほん"
+ },
+ "下": {
+  "primary": "した"
+ },
+ "前": {
+  "primary": "まえ"
+ },
+ "空": {
+  "primary": "そら"
+ },
+ "字": {
+  "primary": "じ"
+ },
+ "通り": {
+  "primary": "とおり"
+ },
+ "文": {
+  "primary": "ぶん"
+ },
+ "度": {
+  "primary": "ど"
+ },
+ "石": {
+  "primary": "いし"
+ },
+ "市": {
+  "primary": "し"
+ },
+ "頭": {
+  "primary": "あたま"
+ },
+ "面": {
+  "primary": "めん"
+ },
+ "実": {
+  "primary": "み"
+ },
+ "他": {
+  "primary": "ほか"
+ },
+ "背": {
+  "primary": "せ"
+ },
+ "羽": {
+  "primary": "はね"
+ },
+ "象": {
+  "primary": "ぞう"
+ },
+ "帯": {
+  "primary": "おび"
+ },
+ "床": {
+  "primary": "ゆか"
+ },
+ "罰": {
+  "primary": "ばつ"
+ },
+ "主": {
+  "primary": "ぬし"
+ }
 }

@@ -225,6 +225,10 @@ def radical_strokes(g):
 PRIO_RANK = {"news1": 0, "ichi1": 0, "spec1": 1, "spec2": 2, "news2": 2, "gai1": 3}
 
 
+# Everyday reading to teach for spellings JMdict splits into several words.
+PRIMARY = {}
+
+
 def load_vocab(db, joyo):
     """Common JMdict words written only with Jōyō kanji (and kana)."""
     kanji_re = re.compile(r"[一-鿿々]")
@@ -244,17 +248,34 @@ def load_vocab(db, joyo):
         if db.execute("select 1 from KJI where kid = ?", (kid,)).fetchone():
             continue  # irregular / outdated spelling
         score = (nf[0] if nf else 30 + rank * 10) + rank * 4
-        prev = words.get(text)
-        if prev and prev["score"] <= score:
-            continue
-        words[text] = {"idseq": idseq, "score": score, "chars": chars}
+        words.setdefault(text, []).append({"idseq": idseq, "score": score, "chars": chars})
 
+    # One spelling can be several common words (空: そら sky, から empty).
+    # Teach the most frequent one unless content/vocab.json names another
+    # ("primary"), and accept the others' readings and meanings too.
     out = {}
-    for text, w in words.items():
-        rec = describe(db, text, w["idseq"], w["chars"])
-        if rec:
-            rec["score"] = w["score"]
-            out[text] = rec
+    for text, entries in words.items():
+        recs = []
+        for w in sorted(entries, key=lambda e: e["score"]):
+            rec = describe(db, text, w["idseq"], w["chars"])
+            if rec:
+                rec["score"] = w["score"]
+                recs.append(rec)
+        if not recs:
+            continue
+        want = PRIMARY.get(text)
+        if want:
+            recs.sort(key=lambda r: want not in r["r"])
+        main = dict(recs[0])
+        main["r"] = [want] + [r for r in main["r"] if r != want] if want else list(main["r"])
+        main["m"] = list(main["m"])
+        main["score"] = min(r["score"] for r in recs)
+        for other in recs[1:]:
+            main["r"] += [r for r in other["r"] if r not in main["r"]]
+            main["m"] += [m for m in other["m"][:2] if m not in main["m"]]
+        main["r"] = main["r"][:4]
+        main["m"] = main["m"][:8]
+        out[text] = main
     return out
 
 
@@ -329,25 +350,53 @@ def strip_kun(r):
     return r.split(".")[0].replace("-", "")
 
 
-def primary_reading(k, vocab_list):
-    """'on' or 'kun': whichever the common vocabulary actually uses more."""
-    if not k["on"]:
-        return "kun"
-    if not k["kun"]:
-        return "on"
-    on_hits = kun_hits = 0
-    kun_stems = [strip_kun(r) for r in k["kun"]]
+VOICED = dict(zip("かきくけこさしすせそたちつてとはひふへほ", "がぎぐげござじずぜぞだぢづでどばびぶべぼ"))
+HALF = dict(zip("はひふへほ", "ぱぴぷぺぽ"))
+
+
+def sound_forms(stem):
+    """A reading as it can surface in a word: rendaku (ころ→ごろ),
+    p-sounds (へき→ぺき) and a doubled consonant (がく→がっ)."""
+    forms = {stem}
+    if stem and stem[0] in VOICED:
+        forms.add(VOICED[stem[0]] + stem[1:])
+    if stem and stem[0] in HALF:
+        forms.add(HALF[stem[0]] + stem[1:])
+    if len(stem) > 1 and stem[-1] in "くつちき":
+        forms |= {f[:-1] + "っ" for f in list(forms)}
+    return forms
+
+
+def reading_hits(ch, reading, vocab_list):
+    """How many words read this kanji this way, matched over the kanji's own
+    slice of the word (so 今日 in a word doesn't count as 頃's きょう). A match
+    only through a sound change (下駄 げた for だ→た) counts half, and a word
+    that is the kanji on its own a bit extra (扉 とびら)."""
+    stem = strip_kun(reading)
+    score = 0
     for v in vocab_list:
-        reading = v["r"][0]
-        if len(v["k"]) == 1:
-            if any(reading.startswith(s) for s in kun_stems if s):
-                kun_hits += 2 if v["w"][0] == k["ch"] else 1
-        else:
-            if any(o in reading for o in k["on"]):
-                on_hits += 1
-    # On'yomi is what compounds use, so it's the default (as on WaniKani);
-    # kun'yomi wins only for kanji that mostly live on their own.
-    return "kun" if kun_hits > 2 * on_hits + 1 else "on"
+        for forms, weight in (({stem}, 1), (sound_forms(stem), 0.5)):
+            alt = "|".join(sorted(map(re.escape, forms), key=len, reverse=True))
+            pat = "".join("(?:%s)" % alt if c == ch else ".+?" if "\u4e00" <= c <= "\u9fff" or c in "々ヶ"
+                          else re.escape(to_hira(c)) for c in v["w"])
+            if re.fullmatch(pat, v["r"][0]):
+                score += weight + (0.5 if len(v["k"]) == 1 and v["w"].startswith(ch) and weight == 1 else 0)
+                break
+    return score
+
+
+def order_readings(k, vocab_list):
+    """KANJIDIC's order isn't by use (木 lists ぼく before もく). Put the
+    readings the vocabulary uses most first, and affix-only kun'yomi last."""
+    k["on"] = sorted(k["on"], key=lambda o: -reading_hits(k["ch"], o, vocab_list))
+    k["kun"] = sorted(k["kun"], key=lambda r: (r.startswith("-") or r.endswith("-"),
+                                               -reading_hits(k["ch"], r, vocab_list)))
+
+
+def taught_first(rm):
+    """The reading a mnemonic teaches: 'Learn X first', else its first tag."""
+    m = re.search(r"Learn <reading>([^<]+)</reading> first", rm) or re.search(r"<reading>([^<]+)</reading>", rm)
+    return m.group(1) if m else None
 
 
 # --------------------------------------------------------------------- build
@@ -366,6 +415,9 @@ def main():
         if name.startswith("mnemonics") and name.endswith(".json"):
             mnemonics.update(load_json(name, {}))
     vocab_content = load_json("vocab.json", {})
+    for w, over in vocab_content.items():
+        if over.get("primary"):
+            PRIMARY[w] = over["primary"]
     names = load_json("names.json", {})
     for ch, name in names.items():
         mnemonics.setdefault(ch, {}).setdefault("name", name)
@@ -467,10 +519,17 @@ def main():
                 continue
             chosen[v["w"]] = dict(v, level=lvl(v))
             extra_wanted -= 1
-        k["primary"] = primary_reading(k, cands[:12])
+        # On'yomi is what compounds use, so it wins ties (as on WaniKani);
+        # kun'yomi wins when the words mostly read the kanji that way.
+        # Count over the words the app actually shows for this kanji.
+        shown = [v for v in cands if v["w"] in chosen] or cands[:20]
+        order_readings(k, shown)
+        on_hits = max((reading_hits(k["ch"], r, shown) for r in k["on"]), default=0)
+        kun_hits = max((reading_hits(k["ch"], r, shown) for r in k["kun"]), default=0)
+        k["primary"] = "kun" if not k["on"] or kun_hits > on_hits else "on"
     for w, over in vocab_content.items():
         if w in chosen:
-            chosen[w].update(over)
+            chosen[w].update({k: v for k, v in over.items() if k != "primary"})
 
     # --- anime layer: extra words you'll hear in anime, and example lines
     anime_words = load_json("anime_vocab.json", {}).get("words", [])
@@ -485,7 +544,7 @@ def main():
         chosen[w] = dict(rec, level=max(kanji[c]["level"] for c in rec["k"]), anime=True)
     for w, over in vocab_content.items():
         if w in chosen:
-            chosen[w].update(over)
+            chosen[w].update({k: v for k, v in over.items() if k != "primary"})
     series = load_json("anime_series.json", [])
     lines = {}
     for name in sorted(os.listdir(CONTENT)):
@@ -516,6 +575,17 @@ def main():
             rec["mm"] = mn["meaning"]
         if mn.get("reading"):
             rec["rm"] = mn["reading"]
+            # The reading shown and quizzed first is the one the story teaches.
+            want = taught_first(mn["reading"])
+            for kind in ("on", "kun"):
+                hit = [r for r in rec[kind] if r.replace("-", "").replace(".", "") == want
+                       or r.replace("-", "").split(".")[0] == want]
+                if hit:
+                    rec["pr"] = kind
+                    rec[kind] = hit[:1] + [r for r in rec[kind] if r != hit[0]]
+                    break
+            else:
+                print("reading mnemonic teaches a reading KANJIDIC lacks:", k["ch"], want)
         out_kanji[k["ch"]] = rec
 
     out_vocab = {}

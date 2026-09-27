@@ -134,6 +134,18 @@ python3 tools/build_data.py   # writes data/kanji-data.js and data/strokes.js
 ```
 
 The build warns when a story mentions a radical the kanji isn't made of.
+The reading a kanji story teaches is the one the quiz asks for first; for
+kanji without a story it's whichever reading the kanji's words actually use.
+
+Checking the content:
+
+```
+python3 tools/check_content.py   # every <reading>/<ja> in the stories against KANJIDIC/JMdict
+```
+
+Where JMdict has two words with the same spelling (人 じん/ひと, 石 こく/いし),
+the build teaches the everyday one and accepts the others' readings too. If
+it picks wrong, name the reading in `content/vocab.json` under `"primary"`.
 
 ## Tests
 

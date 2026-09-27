@@ -156,7 +156,7 @@
  ],
  "入学式": [
   "mha",
-  "{雄英|ゆうえい}の1年A組は、入学式に出なかった。",
+  "{雄英|ゆうえい}の1年A{組|ぐみ}は、入学式に出なかった。",
   "Class 1-A at U.A. skipped the entrance ceremony."
  ],
  "勝利": [
@@ -276,7 +276,7 @@
  ],
  "委員長": [
   "mha",
-  "1年A組の委員長は{飯田|いいだ}くんだ。",
+  "1年A{組|ぐみ}の委員長は{飯田|いいだ}くんだ。",
   "Class 1-A's class president is Iida."
  ],
  "温泉": [
@@ -416,7 +416,7 @@
  ],
  "刀": [
   "kimetsu",
-  "鬼殺隊の刀は「日輪刀」という。",
+  "{鬼殺隊|きさつたい}の刀は「日輪刀」という。",
   "The Demon Slayer Corps' swords are called Nichirin blades."
  ],
  "変身": [
@@ -486,7 +486,7 @@
  ],
  "修行": [
   "dbz",
-  "{悟空|ごくう}は{界王|かいおう}様のところで修行した。",
+  "{悟空|ごくう}は{界王様|かいおうさま}のところで修行した。",
   "Goku trained with King Kai."
  ],
  "宿敵": [
@@ -581,7 +581,7 @@
  ],
  "竜": [
   "dbz",
-  "神龍は願いを叶える竜だ。",
+  "{神龍|シェンロン}は願いを叶える竜だ。",
   "Shenron is a dragon that grants wishes."
  ],
  "鬼": [
@@ -591,8 +591,8 @@
  ],
  "炎": [
   "kimetsu",
-  "{煉獄|れんごく}さんは{炎柱|えんばしら}だ。",
-  "Rengoku is the Flame Hashira."
+  "{煉獄|れんごく}さんは「{炎|ほのお}の呼吸」の使い手だ。",
+  "Rengoku is a master of Flame Breathing."
  ],
  "竜巻": [
   "opm",
@@ -651,7 +651,7 @@
  ],
  "覚悟": [
   "kimetsu",
-  "{炭治郎|たんじろう}は覚悟を決めて、鬼殺隊に入った。",
+  "{炭治郎|たんじろう}は覚悟を決めて、{鬼殺隊|きさつたい}に入った。",
   "Tanjiro made up his mind and joined the Demon Slayer Corps."
  ],
  "盾": [

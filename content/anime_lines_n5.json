@@ -31,7 +31,7 @@
  ],
  "十一": [
   "totoro",
-  "サツキは十一歳、メイは四歳だ。",
+  "サツキは{十一歳|じゅういっさい}、メイは四歳だ。",
   "Satsuki is eleven and Mei is four."
  ],
  "十九": [
@@ -40,9 +40,9 @@
   "Two years later, Luffy turned nineteen."
  ],
  "二": [
-  "dbz",
-  "ドラゴンボールを二つ見つけた。あと五つだ！",
-  "We found two Dragon Balls. Five to go!"
+  "eva",
+  "エヴァンゲリオン{二号機|にごうき}のパイロットはアスカだ。",
+  "Asuka pilots Evangelion Unit-02."
  ],
  "十二": [
   "kimetsu",
@@ -56,7 +56,7 @@
  ],
  "九月": [
   "haikyu",
-  "九月、{烏野|からすの}のバレー部はまた練習を始めた。",
+  "{九月|くがつ}、{烏野|からすの}のバレー部はまた練習を始めた。",
   "In September, Karasuno's volleyball club started practising again."
  ],
  "五": [
@@ -141,8 +141,8 @@
  ],
  "二つ": [
   "fma",
-  "エドとアルは、二人で一つの目標を追う。",
-  "Ed and Al chase one goal, the two of them."
+  "エドとアルは、二つのものを失った。アルの体と、エドの手足だ。",
+  "Ed and Al lost two things: Al's body, and Ed's arm and leg."
  ],
  "本人": [
   "conan",
@@ -191,7 +191,7 @@
  ],
  "金子": [
   "spirited",
-  "カオナシは手から金を出し、金子でみんなの気を引いた。",
+  "カオナシは手から金を出し、{金子|きんす}でみんなの気を引いた。",
   "No-Face made gold come out of his hands and won everyone over with money."
  ],
  "日々": [
@@ -211,7 +211,7 @@
  ],
  "お金": [
   "gintama",
-  "万事屋にはいつもお金がない。",
+  "{万事屋|よろずや}にはいつもお金がない。",
   "The Yorozuya never has any money."
  ],
  "入学": [
@@ -251,7 +251,7 @@
  ],
  "大山": [
   "mononoke",
-  "シシ神は{大山|たいざん}の森に住む神だ。",
+  "シシ{神|がみ}は{大山|たいざん}の森に住む神だ。",
   "The Forest Spirit is the god of the great mountain forest."
  ],
  "一円": [
@@ -285,14 +285,14 @@
   "Deku is an only child and lives with his mum."
  ],
  "人": [
-  "dbz",
-  "{悟空|ごくう}はサイヤ{人|じん}だ。",
-  "Goku is a Saiyan."
+  "deathnote",
+  "デスノートに名前を書かれた{人|ひと}は死ぬ。",
+  "Anyone whose name is written in the Death Note dies."
  ],
  "本": [
-  "naruto",
-  "ナルトの強さの本は、決して諦めない心だ。",
-  "The root of Naruto's strength is a heart that never gives up."
+  "onepiece",
+  "ロビンは{本|ほん}を読むのが大好きだ。",
+  "Robin loves reading books."
  ],
  "中": [
   "kimetsu",
@@ -346,7 +346,7 @@
  ],
  "七": [
   "dbz",
-  "ドラゴンボールを七つ集めると、神龍が現れる。",
+  "ドラゴンボールを七つ集めると、{神龍|シェンロン}が現れる。",
   "Gather all seven Dragon Balls and Shenron appears."
  ],
  "七月": [
@@ -366,7 +366,7 @@
  ],
  "百": [
   "opm",
-  "サイタマは毎日、腕立て伏せを百回した。",
+  "サイタマは毎日、腕立て伏せを{百回|ひゃっかい}した。",
   "Saitama did a hundred push-ups every day."
  ],
  "千": [
@@ -390,9 +390,9 @@
   "Karasuno High's boys' volleyball team got strong again."
  ],
  "木": [
-  "naruto",
-  "ナルトは{木|こ}の{葉|は}{隠|がく}れの里の{忍|しのび}だ。",
-  "Naruto is a ninja of the Hidden Leaf Village."
+  "totoro",
+  "メイは大きな木の根元で、眠っているトトロを見つけた。",
+  "At the foot of the big tree, Mei found Totoro asleep."
  ],
  "学校": [
   "jjk",
@@ -406,12 +406,12 @@
  ],
  "右": [
   "fma",
-  "エドの右腕は機械鎧（オートメイル）だ。",
+  "エドの右腕は{機械鎧|オートメイル}だ。",
   "Ed's right arm is automail."
  ],
  "左": [
   "fma",
-  "エドは左足も機械鎧だ。",
+  "エドは左足も{機械鎧|オートメイル}だ。",
   "Ed's left leg is automail too."
  ],
  "国": [
@@ -451,7 +451,7 @@
  ],
  "二百": [
   "opm",
-  "腕立て伏せ百回と腹筋百回、合わせて二百回。サイタマの修行だ。",
+  "腕立て伏せ{百回|ひゃっかい}と腹筋{百回|ひゃっかい}、合わせて{二百回|にひゃっかい}。サイタマの修行だ。",
   "A hundred push-ups and a hundred sit-ups make two hundred. That's Saitama's training."
  ],
  "先月": [
@@ -600,9 +600,9 @@
   "Zoro has no sense of direction and can't tell left from right."
  ],
  "下": [
-  "naruto",
-  "ナルトはカカシ先生の{下|もと}で修行した。",
-  "Naruto trained under Kakashi-sensei."
+  "laputa",
+  "シータは空から、ゆっくりと{下|した}へ降りてきた。",
+  "Sheeta floated slowly down from the sky."
  ],
  "下げる": [
   "onepiece",
@@ -630,9 +630,9 @@
   "In Gintama's Edo, the aliens have come down from the heavens and taken all the cushy jobs."
  ],
  "長": [
-  "naruto",
-  "ナルトの夢は、里の長である{火影|ほかげ}になることだ。",
-  "Naruto's dream is to become the village leader, the Hokage."
+  "kimetsu",
+  "{産屋敷家|うぶやしきけ}の当主は、{鬼殺隊|きさつたい}の{長|ちょう}でもある。",
+  "The head of the Ubuyashiki family is also the leader of the Demon Slayer Corps."
  ],
  "大雨": [
   "totoro",
@@ -684,11 +684,6 @@
   "ピカチュウはいつもサトシの先を行く。",
   "Pikachu always goes ahead of Ash."
  ],
- "小": [
-  "conan",
-  "コナンは体が小さくなった高校生探偵だ。",
-  "Conan is a high-school detective whose body shrank."
- ],
  "右下": [
   "pokemon",
   "ポケモンのバトルでは、自分のHPは右下に出る。",
@@ -735,9 +730,9 @@
   "Denji is something between a devil and a human."
  ],
  "東": [
-  "jjk",
-  "東京の呪術高専に、{五条|ごじょう}先生がいる。",
-  "Gojo-sensei is at Tokyo Jujutsu High."
+  "onepiece",
+  "ルフィは{東|ひがし}の海（イーストブルー）の出身だ。",
+  "Luffy comes from the East Blue."
  ],
  "今月": [
   "oshinoko",
@@ -766,8 +761,8 @@
  ],
  "話": [
   "onepiece",
-  "アニメのONE PIECEは千話を超えた。",
-  "The One Piece anime has passed a thousand episodes."
+  "ONE PIECEは、ルフィが海賊王を目指す{話|はなし}だ。",
+  "One Piece is the story of Luffy aiming to be Pirate King."
  ],
  "電話": [
   "steinsgate",
@@ -934,11 +929,6 @@
   "{猫猫|マオマオ}は読書より薬の実験が好きだ。",
   "Maomao prefers experimenting with medicine to reading."
  ],
- "毎月": [
-  "gintama",
-  "{銀時|ぎんとき}は毎月、家賃が払えない。",
-  "Gintoki can't pay the rent, month after month."
- ],
  "お母さん": [
   "totoro",
   "サツキとメイのお母さんは入院している。",
@@ -986,7 +976,7 @@
  ],
  "外食": [
   "gintama",
-  "万事屋の三人は、お金がないので外食ができない。",
+  "{万事屋|よろずや}の三人は、お金がないので外食ができない。",
   "The three at the Yorozuya can't eat out because they're broke."
  ],
  "高": [
@@ -1020,9 +1010,9 @@
   "After a fight, Goku eats mountains of food."
  ],
  "前": [
-  "kimetsu",
-  "前の柱たちも、{無惨|むざん}を倒すことはできなかった。",
-  "The previous Hashira couldn't beat Muzan either."
+  "onepiece",
+  "ルフィはシャンクスの{前|まえ}で、海賊王になると宣言した。",
+  "In front of Shanks, Luffy declared he would become Pirate King."
  ],
  "万": [
   "dbz",

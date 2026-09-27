@@ -131,3 +131,12 @@ test("anime layer: every line names a real series and uses its word", () => {
   assert.ok(cat.get("v:魔法") && cat.get("v:魔法").anime);
   assert.deepStrictEqual(cat.get("v:転生").r[0], "てんせい");
 });
+
+test("the reading quizzed first is the one the mnemonic teaches", () => {
+  for (const k of data.kanji) {
+    if (!k.rm) continue;
+    const m = /Learn <reading>([^<]+)<\/reading> first/.exec(k.rm) || /<reading>([^<]+)<\/reading>/.exec(k.rm);
+    const first = (k.pr === "kun" ? k.kun : k.on)[0].replace(/-/g, "");
+    assert.ok([first.replace(/\./g, ""), first.split(".")[0]].includes(m[1]), k.ch + ": story teaches " + m[1] + ", quiz wants " + first);
+  }
+});

@@ -328,6 +328,8 @@
     );
   }
 
+  const kataToHira = (s) => s.replace(/[\u30a1-\u30f6]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
+
   // "{漢字|かんじ}です" -> [{t:"漢字", r:"かんじ"}, {t:"です"}]
   function rubySegments(markup) {
     const out = [];
@@ -347,9 +349,28 @@
   function rubyLine(markup, v) {
     const segs = rubySegments(markup);
     const plain = segs.map((x) => x.t).join("");
+    // Reading of the text between two offsets (ruby groups count whole).
+    const readingAt = (i, n) => {
+      let at = 0, r = "";
+      for (const x of segs) {
+        const a = at, b = at + x.t.length;
+        at = b;
+        if (b > i && a < i + n) r += x.r || x.t.slice(Math.max(0, i - a), Math.min(x.t.length, i + n - a));
+      }
+      return r;
+    };
+    // Mark the occurrence read the way this word is taught (千 as せん, not
+    // the 千 inside 千尋), falling back to the first one.
     let start = -1, len = 0;
     for (const cand of [v.w, v.w.replace(/[\u3040-\u309f]+$/, "")]) {
-      if (cand && (start = plain.indexOf(cand)) >= 0) { len = cand.length; break; }
+      if (!cand) continue;
+      const hits = [];
+      for (let i = plain.indexOf(cand); i >= 0; i = plain.indexOf(cand, i + 1)) hits.push(i);
+      if (!hits.length) continue;
+      const good = hits.find((i) => v.r.some((r) => kataToHira(readingAt(i, cand.length)).startsWith(kataToHira(r).slice(0, Math.max(1, kataToHira(r).length - (cand === v.w ? 0 : 3))))));
+      start = good !== undefined ? good : hits[0];
+      len = cand.length;
+      break;
     }
     const end = start + len;
     let at = 0, html = "";
