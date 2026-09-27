@@ -18,6 +18,8 @@ if [ ! -s "$SRC/jamdict.db" ]; then
   rm -rf "$SRC/pip"
 fi
 
+"$PY" -m pip install -q sudachipy sudachidict_core  # furigana for the anime lines
+
 [ -s "$SRC/kanji.json" ] || curl -sSfL -o "$SRC/kanji.json" \
   https://raw.githubusercontent.com/davidluzgouveia/kanji-data/master/kanji.json
 

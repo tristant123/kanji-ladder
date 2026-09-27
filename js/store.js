@@ -12,6 +12,7 @@
     autoplay: true,    // speak vocab readings after a correct answer
     startLevel: 1,     // skip ahead: treat levels below this as open
     showWK: true,      // show imported WaniKani mnemonics on item pages
+    furigana: false,   // always show furigana on anime lines
   };
 
   function blank() {

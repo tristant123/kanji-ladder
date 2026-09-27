@@ -526,7 +526,9 @@ def main():
         if v.get("anime"):
             rec["anime"] = 1
         if v["w"] in lines:
-            rec["ex"] = lines[v["w"]]
+            key, jp, en = lines[v["w"]]
+            ruby, kana = furigana(jp)
+            rec["ex"] = [key, plain_text(jp), en, ruby, kana]
         out_vocab[v["w"]] = rec
 
     data = {
@@ -596,9 +598,66 @@ def check_mnemonics(kanji, radicals):
         print("  %d radical mismatches in mnemonics" % bad, file=sys.stderr)
 
 
+# ------------------------------------------------------------------ furigana
+MANUAL = re.compile(r"\{([^|{}]+)\|([^{}]+)\}")
+HAS_KANJI = re.compile(r"[\u4e00-\u9fff々〆ヶ]")
+_tok = None
+
+
+def _tokenizer():
+    global _tok
+    if _tok is None:
+        from sudachipy import dictionary, tokenizer  # pip install sudachipy sudachidict_core
+        _tok = (dictionary.Dictionary().create(), tokenizer.Tokenizer.SplitMode.C)
+    return _tok
+
+
+def to_hira(s):
+    return "".join(chr(ord(c) - 0x60) if "ァ" <= c <= "ヶ" else c for c in s)
+
+
+def align(surface, reading):
+    """Split one word's reading over its kanji, leaving okurigana bare:
+    浴び + あび -> [(浴, あ), (び, "")]."""
+    runs = re.findall(r"[\u4e00-\u9fff々〆ヶ]+|[^\u4e00-\u9fff々〆ヶ]+", surface)
+    pattern = "".join("(.+?)" if HAS_KANJI.match(r) else "(" + re.escape(to_hira(r)) + ")" for r in runs)
+    m = re.fullmatch(pattern, reading)
+    if not m:
+        return [(surface, reading)]
+    return [(r, m.group(i + 1) if HAS_KANJI.match(r) else "") for i, r in enumerate(runs)]
+
+
+def furigana(text):
+    """Text -> ruby markup "{漢字|よみ}..." plus an all-kana version for audio.
+    {漢字|よみ} written in the source is kept as is (names, counters)."""
+    tok, mode = _tokenizer()
+    ruby, kana, pos = [], [], 0
+    for m in list(MANUAL.finditer(text)) + [None]:
+        plain = text[pos : m.start() if m else len(text)]
+        for t in tok.tokenize(plain, mode) if plain else []:
+            surf = t.surface()
+            if not HAS_KANJI.search(surf):
+                ruby.append(surf)
+                kana.append(surf)
+                continue
+            reading = to_hira(t.reading_form())
+            kana.append(reading)
+            for piece, r in align(surf, reading):
+                ruby.append("{%s|%s}" % (piece, r) if r else piece)
+        if m:
+            ruby.append(m.group(0))
+            kana.append(m.group(2))
+            pos = m.end()
+    return "".join(ruby), "".join(kana)
+
+
+def plain_text(text):
+    return MANUAL.sub(lambda m: m.group(1), text)
+
+
 def check_lines(lines, vocab, kanji, speakers):
-    """Each example line needs a known series, must actually use its word,
-    and should only use kanji you've met by that word's level."""
+    """Each example line needs a known series and must actually use its word.
+    Furigana comes from sudachi; {漢字|よみ} in the source overrides it."""
     for w, line in lines.items():
         where = "  line for %s: " % w
         if w not in vocab:
@@ -607,17 +666,10 @@ def check_lines(lines, vocab, kanji, speakers):
         if len(line) != 3 or line[0] not in speakers:
             print(where + "expected [series, japanese, english]", file=sys.stderr)
             continue
-        jp = line[1]
+        jp = plain_text(line[1])
         ks = vocab[w]["k"]
         if not all(c in jp for c in ks):
             print(where + "doesn't contain " + "".join(ks), file=sys.stderr)
-        lvl = vocab[w]["level"]
-        late = sorted({c for c in jp if c in kanji and kanji[c]["level"] > lvl} - set(ks))
-        other = sorted({c for c in jp if "\u4e00" <= c <= "\u9fff" and c not in kanji})
-        if late:
-            print(where + "uses kanji from later levels: " + "".join(late), file=sys.stderr)
-        if other:
-            print(where + "uses non-Jōyō kanji: " + "".join(other), file=sys.stderr)
 
 
 def write_js(path, var, obj):

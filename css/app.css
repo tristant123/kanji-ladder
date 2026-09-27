@@ -345,3 +345,13 @@ main:focus-visible { outline: none; }
 .series-card span { color: var(--muted); font-size: 0.85rem; }
 @media (max-width: 520px) { .series-art { display: none; } }
 .brand-anime { font: 700 0.7rem var(--ja); background: var(--vocab); color: #fff; border-radius: 6px; padding: 1px 6px; vertical-align: 2px; }
+/* furigana: hidden until you hover (or tap) the kanji, unless always-on.
+   The reading floats above its kanji so long readings never spread the
+   characters apart. */
+.anime-line blockquote { line-height: 2.3; }
+.anime-line ruby { position: relative; display: inline-block; line-height: 1.3; cursor: help; ruby-position: over; }
+.anime-line rt { position: absolute; left: 50%; bottom: 100%; transform: translateX(-50%); white-space: nowrap;
+  font-size: 0.55em; line-height: 1.2; color: var(--muted); visibility: hidden; user-select: none; pointer-events: none; }
+.anime-line ruby:hover rt, .anime-line ruby.show rt, .furigana-on .anime-line rt { visibility: visible; }
+.anime-line ruby:hover { background: var(--line); border-radius: 3px; }
+.anime-line mark rt { color: var(--vocab); }

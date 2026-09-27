@@ -6,9 +6,10 @@ levels, SRS and mnemonics as the main app, plus:
 - **Anime example lines.** Vocabulary shows a sentence about a real series
   (One Piece, Demon Slayer, Frieren, Spirited Away, ~40 shows), with the
   word highlighted, a play button and a tap-to-reveal translation. Kanji
-  pages show lines from their words. Lines only use kanji you'll have met
-  by that word's level; anything later is written in kana. So far every N5
-  word and every anime word has a line.
+  pages show lines from their words. Lines are written the way a Japanese
+  writer would, kanji and all: **hover (or tap) any kanji for its
+  furigana**, or turn on *Always show furigana* in Settings. So far every
+  N5 word and every anime word has a line.
 - **Anime words.** 160 extra words you hear constantly in anime (魔法, 先輩,
   覚悟, 異世界, 必殺技, 貴様...), marked アニメ. They're real dictionary
   words and unlock with their kanji like everything else.
@@ -23,6 +24,11 @@ The lines are original sentences about the shows. A handful quote a famous
 catchphrase of a few words (「海賊王に俺はなる！」, 「月にかわっておしおきよ！」),
 credited to the series. They live in `content/anime_lines_*.json` as
 `"word": ["series", "Japanese", "English"]`, and the build checks each one.
+
+Furigana are generated at build time with the Sudachi morphological
+analyser (`pip install sudachipy sudachidict_core`). Where it guesses wrong,
+usually names and counters, write the reading into the line yourself:
+`{炭治郎|たんじろう}`, `{四人|よにん}`. Those always win.
 
 
 A WaniKani-style spaced-repetition trainer for all 2,136 Jōyō kanji, laid out

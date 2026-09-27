@@ -328,25 +328,56 @@
     );
   }
 
-  function highlightWord(jp, v) {
-    const e = esc(jp);
-    // highlight the word as written, or its kanji part when it's conjugated
-    for (const cand of [v.w, v.w.replace(/[\u3040-\u309f]+$/, "")]) {
-      if (cand && e.includes(cand)) return e.split(cand).join('<mark lang="ja">' + esc(cand) + "</mark>");
+  // "{漢字|かんじ}です" -> [{t:"漢字", r:"かんじ"}, {t:"です"}]
+  function rubySegments(markup) {
+    const out = [];
+    const re = /\{([^|{}]+)\|([^{}]+)\}/g;
+    let pos = 0, m;
+    while ((m = re.exec(markup))) {
+      if (m.index > pos) out.push({ t: markup.slice(pos, m.index) });
+      out.push({ t: m[1], r: m[2] });
+      pos = re.lastIndex;
     }
-    return e;
+    if (pos < markup.length) out.push({ t: markup.slice(pos) });
+    return out;
+  }
+
+  // Ruby HTML with the example's own word marked. Plain text is split where
+  // the word starts and ends; a ruby group is marked whole if it overlaps.
+  function rubyLine(markup, v) {
+    const segs = rubySegments(markup);
+    const plain = segs.map((x) => x.t).join("");
+    let start = -1, len = 0;
+    for (const cand of [v.w, v.w.replace(/[\u3040-\u309f]+$/, "")]) {
+      if (cand && (start = plain.indexOf(cand)) >= 0) { len = cand.length; break; }
+    }
+    const end = start + len;
+    let at = 0, html = "";
+    for (const x of segs) {
+      const a = at, b = at + x.t.length;
+      at = b;
+      if (x.r) {
+        const inner = "<ruby>" + esc(x.t) + "<rt>" + esc(x.r) + "</rt></ruby>";
+        html += start >= 0 && a < end && b > start ? "<mark>" + inner + "</mark>" : inner;
+        continue;
+      }
+      if (start < 0 || b <= start || a >= end) { html += esc(x.t); continue; }
+      const s1 = Math.max(start, a) - a, s2 = Math.min(end, b) - a;
+      html += esc(x.t.slice(0, s1)) + "<mark>" + esc(x.t.slice(s1, s2)) + "</mark>" + esc(x.t.slice(s2));
+    }
+    return html.replace(/<\/mark><mark>/g, "");
   }
 
   function animeLine(v, withWord) {
-    const [key, jp, en] = v.ex;
+    const [key, jp, en, ruby, kana] = v.ex;
     const sr = SERIES[key] || { key, jp: key, en: key, icon: "🎬", color: "#666" };
     return (
       '<figure class="anime-line" style="--sc:' + esc(sr.color) + '">' +
       seriesArt(sr) +
       '<div class="anime-body">' + seriesTag(sr) +
       (withWord ? ' <a class="anime-word" href="#/item/' + encodeURIComponent(v.id) + '" lang="ja">' + esc(v.w) + "</a>" : "") +
-      '<blockquote lang="ja">' + highlightWord(jp, v) +
-      (canSpeak() ? ' <button class="btn icon" type="button" data-say="' + esc(jp) + '" aria-label="Play the line">🔊</button>' : "") +
+      '<blockquote lang="ja" title="Hover or tap a kanji for its reading">' + rubyLine(ruby || jp, v) +
+      (canSpeak() ? ' <button class="btn icon" type="button" data-say="' + esc(kana || jp) + '" aria-label="Play the line">🔊</button>' : "") +
       "</blockquote>" +
       '<details class="anime-en"><summary>Translation</summary>' + esc(en) + "</details>" +
       "</div></figure>"
@@ -453,5 +484,5 @@
     });
   }
 
-  root.Render = { animeLine, seriesTag, SERIES, esc, markup, chip, itemView, bindItem, speak, canSpeak, when, primaryMeaning, glyph, TYPE_LABEL, stageClass, loadStrokes };
+  root.Render = { rubyLine, animeLine, seriesTag, SERIES, esc, markup, chip, itemView, bindItem, speak, canSpeak, when, primaryMeaning, glyph, TYPE_LABEL, stageClass, loadStrokes };
 })(this);

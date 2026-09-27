@@ -396,6 +396,7 @@
       [["random", "Random"], ["level", "Lower levels first"], ["stage", "Lowest SRS stage first"]].map(([v, l]) => '<option value="' + v + '"' + (s.order === v ? " selected" : "") + ">" + l + "</option>").join("") +
       "</select></label>" +
       '<label class="field check"><input type="checkbox" id="s-autoplay"' + (s.autoplay ? " checked" : "") + "><span>Speak vocabulary readings (uses your device's Japanese voice" + (Render.canSpeak() ? "" : ": none found in this browser") + ")</span></label>" +
+      '<label class="field check"><input type="checkbox" id="s-furi"' + (s.furigana ? " checked" : "") + "><span>Always show furigana on anime lines (otherwise hover or tap a kanji)</span></label>" +
       '<label class="field check"><input type="checkbox" id="s-wk"' + (s.showWK ? " checked" : "") + "><span>Show imported WaniKani mnemonics</span></label>" +
       "</section>" +
       '<section class="panel"><h2>Skip ahead</h2>' +
@@ -430,11 +431,13 @@
       s.order = $("s-order").value;
       s.autoplay = $("s-autoplay").checked;
       s.showWK = $("s-wk").checked;
+      s.furigana = $("s-furi").checked;
+      applyFurigana();
       s.startLevel = +$("s-start").value;
       ctx.save();
       toast("Saved");
     };
-    ["s-batch", "s-order", "s-autoplay", "s-wk", "s-start"].forEach((id) => ($(id).onchange = saveSet));
+    ["s-batch", "s-order", "s-autoplay", "s-wk", "s-furi", "s-start"].forEach((id) => ($(id).onchange = saveSet));
     const bulk = (mode) => {
       const upto = +$("s-burnto").value;
       const msg = mode === "guru"
@@ -540,6 +543,15 @@
     app.querySelectorAll("[data-say]").forEach((b) => (b.onclick = () => Render.speak(b.dataset.say)));
   }
 
+  function applyFurigana() {
+    document.body.classList.toggle("furigana-on", !!ctx.progress.settings.furigana);
+  }
+  // Touch screens have no hover: tapping a kanji shows its reading.
+  document.addEventListener("click", (e) => {
+    const r = e.target.closest && e.target.closest(".anime-line ruby");
+    if (r) r.classList.toggle("show");
+  });
+
   function notFound() {
     app.innerHTML = '<div class="empty-state"><h1>Not found</h1><a class="btn" href="#/">Home</a></div>';
   }
@@ -583,5 +595,6 @@
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
 
+  applyFurigana();
   route();
 })();
