@@ -1,5 +1,7 @@
 # Kanji Ladder
 
+This is the plain edition. The anime edition is on `main`.
+
 A WaniKani-style spaced-repetition trainer for all 2,136 Jōyō kanji, laid out
 from JLPT N5 to N1. Radicals first, then the kanji built from them, then real
 vocabulary that uses those kanji. Everything is typed: meanings in English,
@@ -12,10 +14,10 @@ your browser.
 
 - **On your computer:** open `index.html` in a browser. That's it.
 - **As a local server** (needed for offline mode and the WaniKani import):
-  `python3 -m http.server -d kanji 8000`, then go to http://localhost:8000.
+  `python3 -m http.server 8000` in this folder, then go to http://localhost:8000.
 - **On your phone:** publish it with GitHub Pages. In the repo, go to
   Settings → Pages and set *Source* to **GitHub Actions**, then run the
-  **kanji-pages** workflow from the Actions tab. Open the URL it prints and
+  **pages** workflow from the Actions tab. Open the URL it prints and
   "Add to Home Screen"; it works offline after the first load.
 
 Progress lives in the browser you study in. Use Settings → *Export progress*
@@ -111,7 +113,7 @@ node --test tests/*.test.js   # SRS rules, answer checking, romaji input, data c
 node tools/smoke.js out/      # drives the real app in headless Chromium (needs playwright)
 ```
 
-CI runs both on every change to `kanji/` (`.github/workflows/kanji.yml`).
+CI runs both on every push (`.github/workflows/tests.yml`).
 
 ## Data and credits
 
