@@ -355,6 +355,7 @@
       }),
       apprentice: learned.filter((it) => SRS.stageOf(p, it.id) < SRS.GURU),
       burned: learned.filter((it) => SRS.stageOf(p, it.id) === SRS.BURNED),
+      anime: learned.filter((it) => it.type === "vocab" && it.ex),
     };
     if (arg) {
       let items;
@@ -368,7 +369,7 @@
         location.hash = "#/practice";
         return;
       }
-      Quiz.start(ctx, app, Quiz.shuffle(items.slice()).slice(0, 50), "practice");
+      Quiz.start(ctx, app, Quiz.shuffle(items.slice()).slice(0, 50), "practice", null, arg === "anime" ? { lines: "always" } : null);
       return;
     }
     const card = (key, title, desc) =>
@@ -380,6 +381,7 @@
       card("missed", "Leeches", "Items you miss more than a quarter of the time") +
       card("apprentice", "Apprentice", "Everything still in Apprentice") +
       card("burned", "Burned", "Check you really still know them") +
+      card("anime", "Anime lines", "Your words, asked inside their anime lines") +
       "</div><p class=\"muted small\">You can also practise any single level from its level page.</p>";
   }
 
@@ -396,6 +398,9 @@
       [["random", "Random"], ["level", "Lower levels first"], ["stage", "Lowest SRS stage first"]].map(([v, l]) => '<option value="' + v + '"' + (s.order === v ? " selected" : "") + ">" + l + "</option>").join("") +
       "</select></label>" +
       '<label class="field check"><input type="checkbox" id="s-autoplay"' + (s.autoplay ? " checked" : "") + "><span>Speak vocabulary readings (uses your device's Japanese voice" + (Render.canSpeak() ? "" : ": none found in this browser") + ")</span></label>" +
+      '<label class="field"><span>Ask vocabulary inside its anime line</span><select id="s-lines">' +
+      [["some", "Sometimes (about half the time)"], ["always", "Whenever the word has a line"], ["off", "Never"]].map(([v, l]) => '<option value="' + v + '"' + (s.lineQuiz === v ? " selected" : "") + ">" + l + "</option>").join("") +
+      "</select></label>" +
       '<label class="field check"><input type="checkbox" id="s-furi"' + (s.furigana ? " checked" : "") + "><span>Always show furigana on anime lines (otherwise hover or tap a kanji)</span></label>" +
       '<label class="field check"><input type="checkbox" id="s-wk"' + (s.showWK ? " checked" : "") + "><span>Show imported WaniKani mnemonics</span></label>" +
       "</section>" +
@@ -432,12 +437,13 @@
       s.autoplay = $("s-autoplay").checked;
       s.showWK = $("s-wk").checked;
       s.furigana = $("s-furi").checked;
+      s.lineQuiz = $("s-lines").value;
       applyFurigana();
       s.startLevel = +$("s-start").value;
       ctx.save();
       toast("Saved");
     };
-    ["s-batch", "s-order", "s-autoplay", "s-wk", "s-furi", "s-start"].forEach((id) => ($(id).onchange = saveSet));
+    ["s-batch", "s-order", "s-autoplay", "s-wk", "s-furi", "s-lines", "s-start"].forEach((id) => ($(id).onchange = saveSet));
     const bulk = (mode) => {
       const upto = +$("s-burnto").value;
       const msg = mode === "guru"
@@ -548,7 +554,7 @@
   }
   // Touch screens have no hover: tapping a kanji shows its reading.
   document.addEventListener("click", (e) => {
-    const r = e.target.closest && e.target.closest(".anime-line ruby");
+    const r = e.target.closest && e.target.closest(".anime-line ruby, .qline ruby");
     if (r) r.classList.toggle("show");
   });
 
@@ -557,6 +563,7 @@
   }
 
   // ------------------------------------------------------------ router
+  let pageInTimer = null;
   function route() {
     lessonKeys = null;
     const h = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
@@ -575,6 +582,12 @@
     else if (head === "settings") settings();
     else if (head === "anime") arg ? animeSeries(arg) : animeIndex();
     else notFound();
+    // A short fade-in on each new page (not on the dashboard's own refresh).
+    app.classList.remove("page-in");
+    void app.offsetWidth;
+    app.classList.add("page-in");
+    clearTimeout(pageInTimer);
+    pageInTimer = setTimeout(() => app.classList.remove("page-in"), 700);
     if (!app.contains(document.activeElement)) app.focus({ preventScroll: true });
     if (!/^item/.test(head)) window.scrollTo(0, 0);
   }

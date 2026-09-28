@@ -53,10 +53,10 @@ const server = http.createServer((req, res) => {
     for (let n = 0; n < 200; n++) {
       if (await page.$(".summary")) return;
       const q = await page.evaluate(() => {
-        const ch = document.querySelector(".qchar").textContent;
+        const quiz = document.querySelector(".quiz");
         const kind = document.querySelector(".qprompt").className.includes("q-reading") ? "reading" : "meaning";
-        const type = document.querySelector(".quiz").className.match(/quiz-(\w+)/)[1];
-        return { ch, kind, type };
+        const type = quiz.className.match(/quiz-(\w+)/)[1];
+        return { ch: quiz.dataset.id.slice(2), kind, type };
       });
       const ans = await page.evaluate(({ ch, kind, type }) => {
         const D = window.KANJI_DATA;
@@ -101,6 +101,23 @@ const server = http.createServer((req, res) => {
   await shot("05_summary");
   const stages = await page.evaluate(() => Object.values(JSON.parse(localStorage.getItem("kanji-ladder.v1")).items).map((e) => e.stage));
   if (!stages.includes(2)) throw new Error("reviews did not advance any item: " + stages);
+
+  // --- a word asked inside its anime line
+  await page.evaluate(() => {
+    const p = JSON.parse(localStorage.getItem("kanji-ladder.v1"));
+    for (const id in p.items) p.items[id].at = Date.now() + 1e9;
+    p.items["v:一つ"] = Object.assign({}, p.items[Object.keys(p.items)[0]], { stage: 1, at: Date.now() - 1000, learned: Date.now() });
+    p.settings.lineQuiz = "always";
+    localStorage.setItem("kanji-ladder.v1", JSON.stringify(p));
+  });
+  await page.goto(base + "#/reviews");
+  await page.reload();
+  await page.waitForSelector(".qline mark");
+  await page.waitForTimeout(400);
+  await shot("22_line_question");
+  if (await page.$eval(".qline-en", (e) => getComputedStyle(e).opacity !== "0")) errors.push("line translation shown before answering");
+  await answerQuiz(false);
+  await page.waitForSelector(".summary");
 
   // --- pages
   for (const [hash, sel, name] of [

@@ -13,6 +13,7 @@
     startLevel: 1,     // skip ahead: treat levels below this as open
     showWK: true,      // show imported WaniKani mnemonics on item pages
     furigana: false,   // always show furigana on anime lines
+    lineQuiz: "some",  // ask vocab inside its anime line: off | some | always
   };
 
   function blank() {

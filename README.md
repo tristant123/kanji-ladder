@@ -13,6 +13,11 @@ levels, SRS and mnemonics as the main app, plus:
 - **Anime words.** 160 extra words you hear constantly in anime (魔法, 先輩,
   覚悟, 異世界, 必殺技, 貴様...), marked アニメ. They're real dictionary
   words and unlock with their kanji like everything else.
+- **Questions inside the lines.** In reviews, a word that has a line is
+  sometimes asked inside it: the sentence is shown with the word marked, and
+  its furigana and the translation appear once you've answered. Settings →
+  *Ask vocabulary inside its anime line* sets how often (sometimes, always,
+  never), and Practice → *Anime lines* drills only these.
 - **An Anime page** to browse lines by series, and a line of the day on the
   dashboard.
 - **Your own pictures.** Drop a screenshot named after a series key (see

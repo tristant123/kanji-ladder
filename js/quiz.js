@@ -23,9 +23,32 @@
     return items;
   }
 
+  // A vocab question can be asked inside the word's anime line instead of
+  // on its own: the word is marked in the sentence, with its furigana
+  // hidden until you answer. Lessons always show the word alone.
+  function lineFor(it, how) {
+    if (it.type !== "vocab" || !it.ex || !it.ex[3] || how === "off") return null;
+    if (how !== "always" && Math.random() < 0.5) return null;
+    const html = Render.rubyLine(it.ex[3], it);
+    return html.includes("<mark>") ? html : null;
+  }
+
+  function lineCard(it, html) {
+    const [key, , en] = it.ex;
+    const sr = Render.SERIES[key] || { jp: key, en: key, icon: "🎬", color: "#666" };
+    return (
+      '<div class="qline" style="--sc:' + esc(sr.color) + '">' +
+      '<span class="series-tag"><span class="series-icon" aria-hidden="true">' + esc(sr.icon) + '</span><span lang="ja">' + esc(sr.jp) + '</span><span class="series-en">' + esc(sr.en) + "</span></span>" +
+      '<blockquote lang="ja">' + html + "</blockquote>" +
+      '<p class="qline-en">' + esc(en) + "</p></div>"
+    );
+  }
+
   // mode: "review" | "lesson" | "practice"
-  function start(ctx, el, items, mode, onExit) {
+  // opts.lines: "off" | "some" | "always" (default: the setting)
+  function start(ctx, el, items, mode, onExit, opts) {
     const progress = ctx.progress;
+    const lines = mode === "lesson" ? "off" : (opts && opts.lines) || progress.settings.lineQuiz || "some";
     const title = { review: "Reviews", lesson: "Lesson quiz", practice: "Practice" }[mode];
     const queue = (mode === "lesson" ? shuffle(items.slice()) : orderItems(items, progress.settings.order, progress)).map((it) => ({
       it,
@@ -38,7 +61,7 @@
     const pool = [];
     const results = [];
     let wrapping = false;
-    let cur = null; // { s, kind }
+    let cur = null; // { s, kind, line }
     let state = "asking"; // asking | answered
     let lastResult = null;
     let answeredQ = 0, correctQ = 0;
@@ -58,7 +81,7 @@
       if (s.needM) kinds.push("meaning");
       if (s.needR) kinds.push("reading");
       const kind = mode === "lesson" && s.needM ? "meaning" : kinds[Math.floor(Math.random() * kinds.length)];
-      cur = { s, kind };
+      cur = { s, kind, line: lineFor(s.it, lines) };
       state = "asking";
       lastResult = null;
       draw();
@@ -69,15 +92,16 @@
       const done = results.length;
       const pct = answeredQ ? Math.round((100 * correctQ) / answeredQ) + "%" : "–";
       el.innerHTML =
-        '<div class="quiz quiz-' + it.type + '">' +
+        '<div class="quiz quiz-' + it.type + '" data-id="' + esc(it.id) + '">' +
         '<div class="qbar"><span class="qtitle">' + title + "</span>" +
         '<span title="correct answers">✓ ' + pct + "</span>" +
         '<span title="items finished">' + done + " / " + total + "</span>" +
         (mode !== "practice" && SRS.stageOf(progress, it.id) < SRS.GURU ? '<button class="btn small ghost-btn" data-skip title="Already know it: mark as Guru">Skip to Guru</button>' : "") +
         (mode !== "lesson" ? '<button class="btn small ghost-btn" data-wrap ' + (wrapping ? "disabled" : "") + ">" + (wrapping ? "Wrapping up…" : "Wrap up") + "</button>" : "") +
         '<button class="btn small ghost-btn" data-exit>End</button></div>' +
-        '<div class="qchar" lang="ja">' + Render.glyph(it) + "</div>" +
-        '<div class="qprompt q-' + cur.kind + '">' + Render.TYPE_LABEL[it.type] + " <b>" + (cur.kind === "meaning" ? (it.type === "radical" ? "Name" : "Meaning") : "Reading") + "</b></div>" +
+        (cur.line ? lineCard(it, cur.line) : '<div class="qchar" lang="ja">' + Render.glyph(it) + "</div>") +
+        '<div class="qprompt q-' + cur.kind + '">' + Render.TYPE_LABEL[it.type] + " <b>" + (cur.kind === "meaning" ? (it.type === "radical" ? "Name" : "Meaning") : "Reading") + "</b>" +
+        (cur.line ? ' <span class="qprompt-sub">of the marked word</span>' : "") + "</div>" +
         '<form class="qform" autocomplete="off"><input id="answer" ' + (cur.kind === "reading" ? 'lang="ja" placeholder="答え (type romaji)"' : 'placeholder="Your answer"') +
         ' autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go"><button class="btn" aria-label="Submit">→</button></form>' +
         '<div class="qmsg" aria-live="polite"></div>' +
@@ -130,6 +154,7 @@
         return;
       }
       state = "answered";
+      el.querySelector(".quiz").classList.add("answered");
       lastResult = r.result;
       answeredQ++;
       input.readOnly = true;
@@ -182,6 +207,7 @@
       else cur.s.wrongR--;
       answeredQ--;
       state = "asking";
+      el.querySelector(".quiz").classList.remove("answered");
       const input = el.querySelector("#answer");
       input.readOnly = false;
       input.classList.remove("wrong");
