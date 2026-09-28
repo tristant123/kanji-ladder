@@ -140,3 +140,11 @@ test("the reading quizzed first is the one the mnemonic teaches", () => {
     assert.ok([first.replace(/\./g, ""), first.split(".")[0]].includes(m[1]), k.ch + ": story teaches " + m[1] + ", quiz wants " + first);
   }
 });
+
+test("kanji break into the radicals WaniKani teaches", () => {
+  const parts = (c) => data.kanji.find((k) => k.ch === c).parts.join("+");
+  assert.strictEqual(parts("開"), "門+开"); // Gate + Lantern, not Gate + Dry
+  assert.strictEqual(parts("作"), "亻+乍");
+  assert.strictEqual(parts("年"), "𠂉+牛");
+  for (const r of data.radicals) assert.ok(r.name && r.name !== r.ch, "radical without a name: " + r.ch);
+});

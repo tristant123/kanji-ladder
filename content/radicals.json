@@ -854,5 +854,313 @@
  "市": {
   "name": "Market",
   "mnemonic": "A <radical>top hat</radical> over a <radical>towel</radical>: the hat seller and the towel seller side by side. It's a <radical>market</radical>."
+ },
+ "丷": {
+  "name": "Horns",
+  "mnemonic": "Two short strokes poking up like a pair of <radical>horns</radical>."
+ },
+ "冋": {
+  "name": "Mustache",
+  "mnemonic": "A frame with a little mouth tucked inside, like a face hiding behind a big <radical>mustache</radical>."
+ },
+ "乚": {
+  "name": "Umbrella",
+  "mnemonic": "One stroke that drops down and hooks up at the end, like the handle of an <radical>umbrella</radical>."
+ },
+ "昜": {
+  "name": "Easy",
+  "mnemonic": "The sun rising over a banner: getting up is <radical>easy</radical> on a morning like this."
+ },
+ "乍": {
+  "name": "Key",
+  "mnemonic": "A crooked stroke with little teeth sticking out to the right, just like a <radical>key</radical>."
+ },
+ "𡗗": {
+  "name": "Spring",
+  "mnemonic": "Three lines of new shoots with a person striding through them. That's <radical>spring</radical>."
+ },
+ "𠆢": {
+  "name": "Hat",
+  "mnemonic": "A person squashed flat on top of a kanji, spread out like a <radical>hat</radical>."
+ },
+ "朮": {
+  "name": "Angel",
+  "mnemonic": "A tree with a little drop floating beside it, like an <radical>angel</radical> hovering over the branches."
+ },
+ "开": {
+  "name": "Lantern",
+  "mnemonic": "Two crossbars on two legs: a paper <radical>lantern</radical> hanging from its frame."
+ },
+ "云": {
+  "name": "Cloud",
+  "mnemonic": "Two lines over a twisting shape, a small puff of <radical>cloud</radical> drifting by."
+ },
+ "𠂤": {
+  "name": "Bear",
+  "mnemonic": "A stack of two humps with a stroke on the side, like a big <radical>bear</radical> sitting up."
+ },
+ "𠂢": {
+  "name": "Tofu",
+  "mnemonic": "Soft slices drooping to one side, like wobbly blocks of <radical>tofu</radical>."
+ },
+ "𠃊": {
+  "name": "Lion",
+  "mnemonic": "One bent stroke, down then across, like a <radical>lion</radical> lying with its tail out."
+ },
+ "僉": {
+  "name": "Squid",
+  "mnemonic": "A roof over two mouths and two people: a <radical>squid</radical> with lots of little arms."
+ },
+ "兀": {
+  "name": "Pi",
+  "mnemonic": "A bar on two legs. It looks just like the Greek letter <radical>pi</radical>."
+ },
+ "袁": {
+  "name": "Zombie",
+  "mnemonic": "Dirt, a mouth and a ragged robe: a <radical>zombie</radical> climbing out of its grave."
+ },
+ "咅": {
+  "name": "Clown",
+  "mnemonic": "A mouth standing on a stand: a <radical>clown</radical> shouting from a box."
+ },
+ "夬": {
+  "name": "Hook",
+  "mnemonic": "A bent frame with a person through it, snagged on a <radical>hook</radical>."
+ },
+ "其": {
+  "name": "Crab",
+  "mnemonic": "A box on legs with claws at the side, scuttling like a <radical>crab</radical>."
+ },
+ "𠔉": {
+  "name": "Gladiator",
+  "mnemonic": "Horns, a crossbar and a big person: a helmeted <radical>gladiator</radical>."
+ },
+ "𠃌": {
+  "name": "Cape",
+  "mnemonic": "One stroke across and down, like a <radical>cape</radical> falling off someone's shoulders."
+ },
+ "畐": {
+  "name": "Scarecrow",
+  "mnemonic": "A head, a mouth and a rice paddy: a <radical>scarecrow</radical> standing in the field."
+ },
+ "㓁": {
+  "name": "Pi",
+  "mnemonic": "A lid on two legs, the shape of the letter <radical>pi</radical>."
+ },
+ "勺": {
+  "name": "Pool",
+  "mnemonic": "A wrap with a drop inside: a little <radical>pool</radical> of water."
+ },
+ "亦": {
+  "name": "Red",
+  "mnemonic": "A top hat over a person with sparks at the sides, glowing <radical>red</radical>."
+ },
+ "弗": {
+  "name": "Dollar",
+  "mnemonic": "A bow with two lines through it, like a <radical>dollar</radical> sign."
+ },
+ "兌": {
+  "name": "Guard",
+  "mnemonic": "Horns above an older brother: the big brother standing <radical>guard</radical>."
+ },
+ "戔": {
+  "name": "Bar",
+  "mnemonic": "Two halberds stacked up, like the metal <radical>bar</radical>s of a cell."
+ },
+ "坴": {
+  "name": "Womb",
+  "mnemonic": "Dirt, legs and dirt again, round and full like a <radical>womb</radical>."
+ },
+ "壴": {
+  "name": "Drum",
+  "mnemonic": "A samurai standing over a mouth on legs: a big taiko <radical>drum</radical>."
+ },
+ "圣": {
+  "name": "Tombstone",
+  "mnemonic": "A hand resting on dirt, where a <radical>tombstone</radical> stands."
+ },
+ "爿": {
+  "name": "Icicle",
+  "mnemonic": "A tall line with little strokes hanging off it, like an <radical>icicle</radical>."
+ },
+ "冓": {
+  "name": "Lifeguard",
+  "mnemonic": "Crossed beams stacked on a frame: a <radical>lifeguard</radical>'s tall chair."
+ },
+ "啇": {
+  "name": "Mohawk",
+  "mnemonic": "A top hat, a frame and an old face: a <radical>mohawk</radical> sticking up on top."
+ },
+ "丩": {
+  "name": "Vines",
+  "mnemonic": "Two strokes twisting around each other like <radical>vines</radical>."
+ },
+ "苟": {
+  "name": "Poem",
+  "mnemonic": "Grass over a phrase: a little <radical>poem</radical> written about a meadow."
+ },
+ "乎": {
+  "name": "Peace",
+  "mnemonic": "Horns on a dry stick with a slide above: a quiet sign of <radical>peace</radical>."
+ },
+ "菫": {
+  "name": "Boot",
+  "mnemonic": "Grass above a dirt-covered frame: a muddy <radical>boot</radical>."
+ },
+ "堇": {
+  "name": "Boot",
+  "mnemonic": "A frame of dirt with grass on top, like a muddy <radical>boot</radical>."
+ },
+ "亥": {
+  "name": "Slice",
+  "mnemonic": "A top hat over angled strokes, cut clean like a <radical>slice</radical>."
+ },
+ "莫": {
+  "name": "Greenhouse",
+  "mnemonic": "Grass above and below the sun: plants growing in a <radical>greenhouse</radical>."
+ },
+ "复": {
+  "name": "Black Hole",
+  "mnemonic": "A gun over the sun with winter below: everything falls into the <radical>black hole</radical>."
+ },
+ "甫": {
+  "name": "Wedding",
+  "mnemonic": "A use with a cross and a drop on top: the ring at a <radical>wedding</radical>."
+ },
+ "卬": {
+  "name": "Cat Pirate",
+  "mnemonic": "A hook and a stamp side by side: a <radical>cat pirate</radical> with a hooked hand."
+ },
+ "禺": {
+  "name": "Splinter",
+  "mnemonic": "A field over a twisty base, full of sharp little <radical>splinter</radical>s."
+ },
+ "尭": {
+  "name": "Gambler",
+  "mnemonic": "Crosses stacked on legs, like a <radical>gambler</radical>'s tower of chips."
+ },
+ "咸": {
+  "name": "Feeling",
+  "mnemonic": "A halberd guarding a mouth: shouting out a strong <radical>feeling</radical>."
+ },
+ "俞": {
+  "name": "Death Star",
+  "mnemonic": "A hat over a moon and a knife: a round space station, the <radical>Death Star</radical>."
+ },
+ "扁": {
+  "name": "Library",
+  "mnemonic": "A door over a stack of volumes: the way into the <radical>library</radical>."
+ },
+ "丞": {
+  "name": "Coral",
+  "mnemonic": "A child between two hands on a line, reaching up like branches of <radical>coral</radical>."
+ },
+ "尞": {
+  "name": "Charcoal",
+  "mnemonic": "A big fire over the sun and small sparks: glowing <radical>charcoal</radical>."
+ },
+ "尃": {
+  "name": "Specialty",
+  "mnemonic": "A wedding with glue under it: the chef's <radical>specialty</radical>."
+ },
+ "冘": {
+  "name": "Pirate",
+  "mnemonic": "A lid with a bent leg and a peg: a <radical>pirate</radical> stomping about."
+ },
+ "𠦝": {
+  "name": "Morning",
+  "mnemonic": "The sun between two crosses, rising in the <radical>morning</radical>."
+ },
+ "喿": {
+  "name": "Syrup",
+  "mnemonic": "Three mouths over a tree, all licking <radical>syrup</radical> off it."
+ },
+ "电": {
+  "name": "Turtle",
+  "mnemonic": "A rice paddy with a tail curling out: a <radical>turtle</radical> in its shell."
+ },
+ "爰": {
+  "name": "Football",
+  "mnemonic": "A claw grabbing at a friend: fighting over the <radical>football</radical>."
+ },
+ "禹": {
+  "name": "Mantis",
+  "mnemonic": "A twisted body with a head on top: a praying <radical>mantis</radical>."
+ },
+ "夋": {
+  "name": "Spider",
+  "mnemonic": "A private legs-and-winter shape, creeping like a <radical>spider</radical>."
+ },
+ "离": {
+  "name": "Rocket",
+  "mnemonic": "A top hat on a boxy body with legs: a <radical>rocket</radical> on the launch pad."
+ },
+ "辟": {
+  "name": "Hot Pepper",
+  "mnemonic": "A flag, a mouth and something spicy: a <radical>hot pepper</radical>."
+ },
+ "㐮": {
+  "name": "Nurse",
+  "mnemonic": "A robe with two mouths and crossbars: a <radical>nurse</radical> in uniform."
+ },
+ "之": {
+  "name": "Hills",
+  "mnemonic": "A zigzag stroke running over <radical>hills</radical>."
+ },
+ "䍃": {
+  "name": "Satellite",
+  "mnemonic": "A claw over a can: a <radical>satellite</radical> dish grabbing signals."
+ },
+ "菐": {
+  "name": "Business",
+  "mnemonic": "Grass over a busy stack of lines: a <radical>business</radical> in full swing."
+ },
+ "叚": {
+  "name": "Comb",
+  "mnemonic": "A stack of little teeth beside a stool, like a <radical>comb</radical>."
+ },
+ "龹": {
+  "name": "Gladiator",
+  "mnemonic": "Horns, a crossbar and a big person: a helmeted <radical>gladiator</radical>."
+ },
+ "匃": {
+  "name": "Plead",
+  "mnemonic": "A wrap around someone who is lost, down on their knees to <radical>plead</radical>."
+ },
+ "夆": {
+  "name": "Signpost",
+  "mnemonic": "Winter over a stack of lines: a <radical>signpost</radical> in the snow."
+ },
+ "夌": {
+  "name": "Frostbite",
+  "mnemonic": "Dirt and legs over winter: toes with <radical>frostbite</radical>."
+ },
+ "敝": {
+  "name": "Penguin",
+  "mnemonic": "A shabby cloth beside a whip-like flipper: a <radical>penguin</radical>."
+ },
+ "并": {
+  "name": "Side By Side",
+  "mnemonic": "Two horns over two posts standing <radical>side by side</radical>."
+ },
+ "关": {
+  "name": "Barrier",
+  "mnemonic": "Horns over heaven: a <radical>barrier</radical> nobody gets past."
+ },
+ "丑": {
+  "name": "Ox",
+  "mnemonic": "A hand gripping a bar: the <radical>ox</radical> of the zodiac pulling a plow."
+ },
+ "叟": {
+  "name": "Elder",
+  "mnemonic": "A hand holding a torch high: the village <radical>elder</radical>."
+ },
+ "屰": {
+  "name": "Upside Down",
+  "mnemonic": "A sprout turned the wrong way: growing <radical>upside down</radical>."
+ },
+ "咢": {
+  "name": "Startle",
+  "mnemonic": "Two mouths over a twisting body, yelling to <radical>startle</radical> you."
  }
 }

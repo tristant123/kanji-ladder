@@ -5,3 +5,4 @@ node_modules/
 
 # your own anime screenshots for the Anime Edition (never committed)
 img/anime/
+__pycache__/

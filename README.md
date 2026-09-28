@@ -9,7 +9,8 @@ levels, SRS and mnemonics as the main app, plus:
   word highlighted, a play button and a tap-to-reveal translation. Kanji
   pages show lines from their words. Lines are written the way a Japanese
   writer would, kanji and all: **hover (or tap) any kanji for its
-  furigana**, or turn on *Always show furigana* in Settings. So far every
+  furigana** and a little card with the word's and each kanji's meaning,
+  or turn on *Always show furigana* in Settings. So far every
   N5 word and every anime word has a line.
 - **Anime words.** 160 extra words you hear constantly in anime (魔法, 先輩,
   覚悟, 異世界, 必殺技, 貴様...), marked アニメ. They're real dictionary
@@ -93,9 +94,23 @@ typo. Small spelling slips in meanings are accepted. For kanji readings, any
 correct on'yomi or kun'yomi counts; the page tells you which one to learn
 first.
 
+## Radicals
+
+Each kanji is broken into the radicals WaniKani uses for it (開 is Gate +
+Lantern, 年 is Gun + Cow), including WaniKani's look-alikes where a shape
+isn't strictly that component. The breakdown comes from the WaniKani radical
+lists recorded in kanji-data's `kanji.json`; `tools/wk_components.json` says
+which character each of those radical names is, and the build checks it
+against the kanji's KanjiVG strokes. Kanji WaniKani doesn't teach are broken
+down from KanjiVG so that every stroke belongs to a part. Where either is
+wrong, `content/parts.json` fixes a kanji by hand.
+
+Radicals added for that follow WaniKani's names (Lantern, Gladiator,
+Mohawk...) so they match what you'd look up; their stories are this app's own.
+
 ## Mnemonics
 
-Every radical has an original name and story. All N5 to N2 kanji (979)
+Every radical has a name and a story. All N5 to N2 kanji (979)
 have hand-written meaning and reading mnemonics. They reuse the radical names you
 learned, and each reading ties to a fixed *sound anchor* (こう is always a
 koala, かん a kangaroo, しょう a showman...) that's used across all kanji
@@ -122,6 +137,7 @@ GitHub Pages), not opened as a file.
 Content lives in `content/`:
 
 - `radicals.json`: radical names and stories.
+- `parts.json`: a kanji's radicals, by hand, where the automatic breakdown is wrong.
 - `mnemonics_*.json`: kanji stories, keyed by kanji:
   ```json
   "語": {"name": "Language", "also": ["word"], "primary": "on",
@@ -172,10 +188,16 @@ CI runs both on every push (`.github/workflows/tests.yml`).
   Ulrich Apel, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 - JLPT levels: Jonathan Waller's lists, via
   [davidluzgouveia/kanji-data](https://github.com/davidluzgouveia/kanji-data) (MIT).
+  The same file records WaniKani's radical breakdown of each kanji, which
+  the radicals here follow.
+- Word lists are ordered by how often words come up in film and TV
+  subtitles: [hermitdave/FrequencyWords](https://github.com/hermitdave/FrequencyWords)
+  (OpenSubtitles, CC BY-SA 4.0).
 - The level structure, SRS timings and approach follow
   [WaniKani](https://www.wanikani.com); the idea of building kanji stories from
-  named components goes back to James Heisig's *Remembering the Kanji*. All
-  radical names and mnemonics here are original.
+  named components goes back to James Heisig's *Remembering the Kanji*.
+  Kanji breakdowns and many radical names follow WaniKani; the mnemonics
+  are this app's own.
 
 Because the generated data files include CC BY-SA material, `data/` is
 shared under CC BY-SA 4.0 too.

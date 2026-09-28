@@ -23,6 +23,10 @@ fi
 [ -s "$SRC/kanji.json" ] || curl -sSfL -o "$SRC/kanji.json" \
   https://raw.githubusercontent.com/davidluzgouveia/kanji-data/master/kanji.json
 
+# How often words come up in film and TV subtitles (orders vocabulary lists).
+[ -s "$SRC/ja_50k.txt" ] || curl -sSfL -o "$SRC/ja_50k.txt" \
+  https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2016/ja/ja_50k.txt
+
 # One KanjiVG file per Jōyō kanji.
 "$PY" - "$SRC" <<'PY' > "$SRC/joyo.txt"
 import sqlite3, sys

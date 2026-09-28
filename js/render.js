@@ -251,7 +251,8 @@
         (it.mn ? '<div class="mnemonic">' + markup(it.mn) + "</div>" : '<div class="mnemonic muted">' + markup(defaultRadicalStory(cat, it)) + "</div>") +
         wkBlock(wk && opts.showWK, wk && wk.r[it.ch], "meaning") + notesBlock(progress, it, "m", "Name note")));
       out.push(section("Stroke order", '<div class="strokes-box" data-strokes></div>'));
-      const used = cat.usedIn(it.id).map((id) => cat.get(id));
+      // most common kanji first
+      const used = cat.usedIn(it.id).map((id) => cat.get(id)).sort((a, b) => (a.freq || 9999) - (b.freq || 9999));
       out.push(section("Found in kanji", '<div class="chips">' + used.map((k) => chip(k, progress)).join("") + "</div>"));
     }
 
@@ -271,7 +272,8 @@
         '<div class="mnemonic' + (rm.own ? "" : " muted") + '">' + rm.html + "</div>" + phoneticHint(cat, progress, it) +
         wkBlock(wk && opts.showWK, wk && wk.k[it.ch], "reading") + notesBlock(progress, it, "r", "Reading note")));
       out.push(section("Stroke order · " + it.strokes + " strokes", '<div class="strokes-box" data-strokes></div>'));
-      const vocab = cat.usedIn(it.id).map((id) => cat.get(id));
+      // most common words first
+      const vocab = cat.usedIn(it.id).map((id) => cat.get(id)).sort((a, b) => (a.f ?? 99) - (b.f ?? 99) || a.level - b.level);
       if (vocab.length) out.push(section("Vocabulary", '<div class="chips">' + vocab.map((v) => chip(v, progress)).join("") + "</div>"));
       const lines = vocab.filter((v) => v.ex).slice(0, 3);
       if (lines.length) out.push(section("In anime", lines.map((v) => animeLine(v, true)).join("")));

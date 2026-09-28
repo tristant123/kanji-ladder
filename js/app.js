@@ -552,10 +552,59 @@
   function applyFurigana() {
     document.body.classList.toggle("furigana-on", !!ctx.progress.settings.furigana);
   }
-  // Touch screens have no hover: tapping a kanji shows its reading.
+  // Kanji in anime lines: hover (or tap, on touch screens) shows the
+  // furigana and a small card with the word's and each kanji's meaning.
+  const tip = document.createElement("div");
+  tip.className = "kanji-tip";
+  tip.hidden = true;
+  document.body.appendChild(tip);
+  const RUBY = ".anime-line ruby, .qline ruby";
+  let tipFor = null;
+
+  function tipHTML(r) {
+    const text = r.firstChild ? r.firstChild.textContent : "";
+    const reading = (r.querySelector("rt") || {}).textContent || "";
+    const word = cat.get("v:" + text);
+    const ks = [...text].filter((c) => /[\u4e00-\u9fff]/.test(c)).map((c) => cat.get("k:" + c)).filter(Boolean);
+    return (
+      '<div class="kt-head"><span lang="ja" class="kt-w">' + esc(text) + '</span> <span lang="ja" class="kt-r">' + esc(reading) + "</span>" +
+      (word ? '<span class="kt-m">' + esc(word.m.slice(0, 2).join(", ")) + "</span>" : "") + "</div>" +
+      ks.map((k) => '<div class="kt-k"><span lang="ja">' + esc(k.ch) + "</span> " + esc(k.m.slice(0, 2).join(", ")) + "</div>").join("")
+    );
+  }
+
+  function showTip(r) {
+    // in a quiz, the word being asked about stays hidden until you answer
+    const quiz = r.closest(".quiz");
+    if (quiz && !quiz.classList.contains("answered") && r.closest("mark")) return hideTip();
+    tipFor = r;
+    tip.innerHTML = tipHTML(r);
+    tip.hidden = false;
+    const b = r.getBoundingClientRect();
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    const left = Math.max(8, Math.min(window.innerWidth - w - 8, b.left + b.width / 2 - w / 2));
+    const below = b.bottom + 8 + h < window.innerHeight;
+    tip.style.left = left + "px";
+    tip.style.top = (below ? b.bottom + 8 : b.top - h - 22) + "px";
+  }
+  function hideTip() {
+    tipFor = null;
+    tip.hidden = true;
+  }
+  document.addEventListener("mousemove", (e) => {
+    const r = e.target.closest && e.target.closest(RUBY);
+    if (r && r !== tipFor) showTip(r);
+    else if (!r && tipFor) hideTip();
+  });
+  document.addEventListener("scroll", hideTip, { passive: true });
+  window.addEventListener("hashchange", hideTip);
+  // Touch screens have no hover: tapping a kanji shows its reading and card.
   document.addEventListener("click", (e) => {
-    const r = e.target.closest && e.target.closest(".anime-line ruby, .qline ruby");
-    if (r) r.classList.toggle("show");
+    const r = e.target.closest && e.target.closest(RUBY);
+    document.querySelectorAll(".anime-line ruby.show, .qline ruby.show").forEach((x) => x !== r && x.classList.remove("show"));
+    if (!r) return hideTip();
+    r.classList.toggle("show");
+    r.classList.contains("show") ? showTip(r) : hideTip();
   });
 
   function notFound() {

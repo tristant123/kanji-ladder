@@ -60,7 +60,7 @@ const server = http.createServer((req, res) => {
       });
       const ans = await page.evaluate(({ ch, kind, type }) => {
         const D = window.KANJI_DATA;
-        if (type === "radical") return D.radicals.find((r) => r.ch === ch || r.svg && document.querySelector(".qchar svg")).name;
+        if (type === "radical") return D.radicals.find((r) => r.ch === ch).name;
         if (type === "kanji") {
           const k = D.kanji.find((x) => x.ch === ch);
           return kind === "meaning" ? k.m[0] : (k.pr === "kun" ? k.kun[0] : k.on[0]).split(".")[0];
@@ -142,6 +142,16 @@ const server = http.createServer((req, res) => {
     await shot(name);
   }
   if (!(await page.$("#app .chip"))) throw new Error("dashboard shows no kanji");
+
+  // hovering a kanji in an anime line shows its reading and a meaning card
+  await page.goto(base + "#/anime/onepiece");
+  await page.waitForSelector(".anime-line ruby");
+  await page.hover(".anime-line ruby");
+  await page.waitForSelector(".kanji-tip:not([hidden]) .kt-k");
+  await page.waitForTimeout(400);
+  await shot("23_kanji_tip");
+  await page.mouse.move(5, 5);
+  if (!(await page.$(".kanji-tip[hidden]"))) errors.push("kanji card did not hide");
 
   // Skip from an item page, and a whole level
   page.on("dialog", (d) => d.accept());

@@ -370,6 +370,17 @@ main:focus-visible { outline: none; }
 .quiz.answered .qline-en { opacity: 1; transform: none; }
 .qprompt-sub { font-size: 0.85rem; opacity: 0.75; }
 
+/* the card that pops up over a kanji in an anime line */
+.kanji-tip { position: fixed; z-index: 30; max-width: 260px; padding: 8px 11px; border-radius: 10px;
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); box-shadow: 0 6px 20px rgba(20, 16, 30, 0.18);
+  font-size: 0.85rem; line-height: 1.4; pointer-events: none; animation: fade-up 0.15s ease-out; }
+.kanji-tip .kt-head { margin-bottom: 3px; }
+.kanji-tip .kt-w { font: 600 1.05rem var(--ja); }
+.kanji-tip .kt-r { color: var(--muted); font-family: var(--ja); }
+.kanji-tip .kt-m { display: block; font-weight: 600; }
+.kanji-tip .kt-k { color: var(--muted); }
+.kanji-tip .kt-k span { font-family: var(--ja); color: var(--kanji); font-weight: 600; }
+
 /* ---------------------------------------------------------------- motion
    Small and quick: pages fade in, questions slide in, answers settle. */
 @keyframes fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }

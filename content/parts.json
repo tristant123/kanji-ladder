@@ -1,0 +1,27 @@
+{
+ "_comment": "Hand-checked parts for kanji where the automatic breakdown is wrong. Wins over everything else.",
+ "柳": [
+  "木",
+  "卯"
+ ],
+ "襟": [
+  "衤",
+  "木",
+  "示"
+ ],
+ "印": [
+  "印"
+ ],
+ "段": [
+  "段"
+ ],
+ "鍛": [
+  "金",
+  "段"
+ ],
+ "興": [
+  "臼",
+  "同",
+  "八"
+ ]
+}

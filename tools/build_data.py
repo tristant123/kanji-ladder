@@ -133,39 +133,134 @@ def paths(g):
     return [p.get("d") for p in g.iter(SVG + "path")]
 
 
+# A loose stroke that isn't part of any named component is taught as the
+# basic stroke radical it is (a drop, a slide...), as WaniKani does.
+STROKE_RADICAL = {"㇐": "一", "㇑": "丨", "㇒": "丿", "㇓": "丿", "㇔": "丶", "㇚": "亅", "㇙": "亅"}
+
+
+def stroke_radical(path):
+    t = (path.get(KV + "type") or "").split("/")[0]
+    return STROKE_RADICAL.get(t.rstrip("abcdefg"))
+
+
 def decompose(ch, root, joyo):
     """Top-level meaningful parts of a kanji, WaniKani style.
 
-    We stop descending at anything that is a Jōyō kanji or a recognised radical;
-    other named groups (e.g. 吾 in 語) are broken into their own parts.
-    Returns (parts, groups) where groups maps part -> first <g> seen for it.
+    We stop descending at anything that is a Jōyō kanji or a recognised radical.
+    Other named groups (e.g. 吾 in 語) are broken into their own parts, but only
+    when that accounts for every stroke: a group that would leave strokes
+    behind (乍 in 作) or fall apart into half-shapes (开 in 開, drawn as two
+    partial 干) is kept whole. A single leftover stroke becomes its stroke
+    radical (丶, 丿...). Returns (parts, groups), groups mapping part -> <g>.
     """
-    found, groups, bare = [], {}, [False]
 
-    def walk(g, depth):
+    def stop(c, e):
+        return e in joyo or e in PRIMITIVES or c.get(KV + "radical") or not has_named_child(c)
+
+    def pieces(g):
+        """[(part, group, loose)] covering every stroke in g, or None."""
+        out = []
         for c in g:
-            if is_g(c):
+            if c.tag == SVG + "path":
+                r = stroke_radical(c)
+                if not r:
+                    return None
+                out.append((r, None, True))
+            elif is_g(c):
                 e = elem(c)
-                if e and (e in joyo or e in PRIMITIVES or c.get(KV + "radical") or not has_named_child(c)):
-                    found.append(e)
-                    # a split element (kvg:part) only holds some of its strokes
-                    if not c.get(KV + "part"):
-                        groups.setdefault(e, c)
+                if e and stop(c, e):
+                    out.append((e, c, False))
+                    continue
+                sub = pieces(c)
+                if e and (sub is None or sum(x[2] for x in sub) > 1
+                          or any(d.get(KV + "partial") == "true" for d in c.iter(SVG + "g") if d is not c)):
+                    out.append((e, c, False))
+                elif sub is None:
+                    return None
                 else:
-                    walk(c, depth + 1)
-            elif depth == 0:
-                bare[0] = True
+                    out.extend(sub)
+        return out
 
-    walk(root, 0)
-    parts = []
-    for p in found:
+    found = pieces(root)
+    if found is None:
+        return [ch], {ch: root}
+    parts, groups = [], {}
+    for p, g, _ in found:
         if p not in parts:
             parts.append(p)
-    # A kanji with no parts, one part plus loose strokes, or that is just one
-    # named element, is taught as its own radical (口, 石, 一 ...).
-    if not parts or (len(parts) == 1 and (bare[0] or len(found) == 1)):
+        # a split element (kvg:part) only holds some of its strokes
+        if g is not None and not g.get(KV + "part"):
+            groups.setdefault(p, g)
+    # A kanji that is just one named element, maybe plus loose strokes, is
+    # taught as its own radical (口, 石, 丹 ...). One element twice (双 is 又
+    # and 又) stays that element.
+    named = [p for p, _, loose in found if not loose]
+    if not named or (len(set(named)) == 1 and (len(named) == 1 or len(named) < len(found))):
         return [ch], {ch: root}
     return parts, groups
+
+
+# ------------------------------------------------------- WaniKani reference
+# kanji.json records, for most Jōyō kanji, the names of the radicals WaniKani
+# builds it from. tools/wk_components.json says which character each of those
+# names is (Lantern is 开, Scooter is 辶...), with alternatives in order; the
+# first one KanjiVG actually has in this kanji wins. Only the structure is
+# used: radical names and stories here are this app's own.
+WK_COMPONENTS = {}
+WK_ALIAS = {}
+PART_STROKES = set("一丨丿丶亅乚乙𠃊𠃌")
+
+
+def labelled(root, keys=("element", "original")):
+    out = collections.defaultdict(list)
+    for g in root.iter(SVG + "g"):
+        for key in keys:
+            e = g.get(KV + key)
+            if e:
+                out[e].append(g)
+    return out
+
+
+WK_UNSEEN = []  # (kanji, part) picked without KanjiVG showing it in that kanji
+
+
+def wk_parts(ch, root, names, known):
+    """The kanji's parts following WaniKani's breakdown, or None.
+
+    A candidate is "丷" or "广+廿" (several parts), or "丷@八": teach 丷 where
+    KanjiVG labels the shape 八. The first candidate KanjiVG labels in this
+    kanji wins, preferring its own form over the original it stands for
+    (飠 over 食)."""
+    if not names:
+        return None
+    if len(names) == 1:
+        return [ch]
+    own = labelled(root, ("element",))
+    anyform = labelled(root)
+
+    def need(c):
+        return c.split("@")[-1]
+
+    def emit(c):
+        return c.split("@")[0]
+
+    parts = []
+    for n in names:
+        cands = [c.split("+") for c in WK_COMPONENTS.get(n, [])]
+        pick = None
+        for there in (own, anyform):
+            pick = next((cs for cs in cands if all(need(c) in there or c in PART_STROKES for c in cs)), None)
+            if pick:
+                break
+        if pick is None:
+            pick = next((cs for cs in cands if all(need(c) in known or c in PART_STROKES for c in cs)), None)
+            if pick is None:
+                return None
+            WK_UNSEEN.extend((ch, n, emit(c)) for c in pick)
+        parts += [emit(c) for c in pick if emit(c) not in parts]
+    # WaniKani sometimes names a radical that looks like the kanji itself
+    # (互 = Ground + Shuriken): then the kanji is simply its own radical.
+    return [ch] if ch in parts else parts
 
 
 def phonetic(root):
@@ -219,6 +314,52 @@ def radical_strokes(g):
     tx = 54.5 - (x0 + w / 2) * s
     ty = 54.5 - (y0 + h / 2) * s
     return {"d": ds, "t": [round(s, 3), round(tx, 2), round(ty, 2)]}
+
+
+def leftover_strokes(k, part):
+    """A part KanjiVG never labels (a lone bent stroke like 𠃊) drawn from the
+    strokes of the kanji that no other part accounts for."""
+    root = kvg_root(k["ch"])
+    here = labelled(root)
+    used = set()
+    for q in k["parts"]:
+        for g in here.get(q, []) + here.get(WK_ALIAS.get(q), []):
+            used |= {id(x) for x in g.iter(SVG + "path")}
+    rest = [x for x in root.iter(SVG + "path") if id(x) not in used]
+    # other one-stroke parts (the 丶 in 以) take their own stroke first
+    for q in k["parts"]:
+        if q in PART_STROKES and q != part:
+            mine = next((x for x in rest if stroke_radical(x) == q), None)
+            if mine is not None:
+                rest.remove(mine)
+    if not rest:
+        return None
+    g = ET.Element(SVG + "g")
+    g.extend(rest)
+    return g
+
+
+# How common a word is, for ordering word lists: its rank in a list of words
+# from film and TV subtitles (spoken Japanese, close to anime), lower is more
+# common. That list splits verbs from their endings (見る is counted as 見),
+# so a word ending in kana is looked up by its kanji stem. Words it lacks
+# fall in after, by JMdict's newspaper frequency band.
+SUBTITLE_RANK = {}
+
+
+def commonness(word, news_score):
+    if not SUBTITLE_RANK:
+        path = os.path.join(SRC, "ja_50k.txt")
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as f:
+                for i, line in enumerate(f):
+                    w = line.split(" ")[0]
+                    SUBTITLE_RANK.setdefault(w, i + 1)
+        SUBTITLE_RANK.setdefault("", 0)
+    rank = SUBTITLE_RANK.get(word)
+    if rank is None and re.search(r"[\u3040-\u309f]$", word):
+        rank = SUBTITLE_RANK.get(re.sub(r"[\u3040-\u309f]+$", "", word))
+    return rank if rank else 50000 + news_score * 1000
 
 
 # -------------------------------------------------------------------- JMdict
@@ -424,9 +565,32 @@ def main():
 
     strokes = {}
     groups_by_part = {}
+    WK_COMPONENTS.update(load_json("../tools/wk_components.json", {}))
+    # "丷@八": the part 丷 is drawn from what KanjiVG labels 八
+    WK_ALIAS.update(c.split("@") for cs in WK_COMPONENTS.values() for c in cs if "@" in c)
+    overrides = {k: v for k, v in load_json("parts.json", {}).items() if not k.startswith("_")}
+    # every shape KanjiVG labels anywhere, so a part can always be drawn
+    anywhere = {}
+    for ch in sorted(kanji):
+        for e, gs in labelled(kvg_root(ch)).items():
+            whole = [g for g in gs if not g.get(KV + "part")]
+            if whole:
+                anywhere.setdefault(e, whole[0])
     for ch, k in kanji.items():
         root = kvg_root(ch)
         parts, groups = decompose(ch, root, joyo)
+        wk = wk_parts(ch, root, jlpt_src.get(ch, {}).get("wk_radicals"), anywhere)
+        chosen = overrides.get(ch) or wk
+        if chosen and chosen != parts:
+            here = labelled(root)
+            parts = chosen
+            groups = {}
+            for p in parts:
+                whole = [g for g in here.get(p, []) + here.get(WK_ALIAS.get(p), []) if not g.get(KV + "part")]
+                if p == ch:
+                    groups[p] = root
+                elif whole:
+                    groups[p] = whole[0]
         k["parts"] = parts
         for p, g in groups.items():
             groups_by_part.setdefault(p, g)
@@ -435,6 +599,19 @@ def main():
             k["phon"] = ph
         strokes[ch] = paths(root)
         k["jlpt"] = jlpt_src.get(ch, {}).get("jlpt_new") or 1
+    for p, g in anywhere.items():
+        groups_by_part.setdefault(p, g)
+    for p, shape in WK_ALIAS.items():
+        if shape in anywhere:
+            groups_by_part.setdefault(p, anywhere[shape])
+    unseen = [x for x in WK_UNSEEN if x[0] not in overrides]
+    if unseen:
+        # WaniKani often names a look-alike (年 = Gun + Cow) that KanjiVG
+        # doesn't mark as a component; set KANJI_VERBOSE=1 to list them.
+        print("  %d parts follow WaniKani's look-alikes, unmarked in KanjiVG" % len(unseen), file=sys.stderr)
+        if os.environ.get("KANJI_VERBOSE"):
+            for ch, n, p in unseen:
+                print("    %s: %s taken as %s" % (ch, n, p), file=sys.stderr)
 
     # --- order: tier, then school grade, then frequency, then stroke count; a
     # kanji that another kanji in the same tier is built from goes first.
@@ -485,6 +662,8 @@ def main():
             if info.get("mnemonic"):
                 r["mn"] = info["mnemonic"]
             g = groups_by_part.get(p)
+            if g is None and p not in kanji:
+                g = leftover_strokes(k, p)
             if p in kanji:
                 r["svg"] = {"d": strokes[p], "t": [1, 0, 0]}
             elif g is not None:
@@ -542,6 +721,14 @@ def main():
             print("  anime word not found in JMdict:", w, file=sys.stderr)
             continue
         chosen[w] = dict(rec, level=max(kanji[c]["level"] for c in rec["k"]), anime=True)
+    # a word someone wrote an anime line for always stays in, even if the
+    # frequency-based pick above would have left it out
+    for name in sorted(os.listdir(CONTENT)):
+        if name.startswith("anime_lines") and name.endswith(".json"):
+            for w in load_json(name, {}):
+                if w not in chosen and w in all_vocab:
+                    rec = all_vocab[w]
+                    chosen[w] = dict(rec, level=max(kanji[c]["level"] for c in rec["k"]))
     for w, over in vocab_content.items():
         if w in chosen:
             chosen[w].update({k: v for k, v in over.items() if k != "primary"})
@@ -590,7 +777,8 @@ def main():
 
     out_vocab = {}
     for v in sorted(chosen.values(), key=lambda v: (v["level"], v["score"])):
-        rec = {"w": v["w"], "r": v["r"], "m": v["m"], "pos": v["pos"], "k": v["k"], "level": v["level"]}
+        rec = {"w": v["w"], "r": v["r"], "m": v["m"], "pos": v["pos"], "k": v["k"], "level": v["level"],
+               "f": commonness(v["w"], v.get("score", 99))}
         if v.get("mm"):
             rec["mm"] = v["mm"]
         if v.get("anime"):
