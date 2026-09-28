@@ -1,0 +1,7 @@
+# build inputs (tools/fetch_sources.sh) and test output
+.sources/
+smoke_output/
+node_modules/
+
+# your own anime screenshots for the Anime Edition (never committed)
+img/anime/

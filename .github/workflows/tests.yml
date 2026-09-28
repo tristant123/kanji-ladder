@@ -1,0 +1,30 @@
+# Unit tests plus a headless-browser run through
+# lessons, reviews and every screen.
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Unit tests
+        run: node --test tests/*.test.js
+      - name: Browser smoke test
+        run: |
+          npm install --no-save playwright@1
+          npx playwright install --with-deps chromium
+          node tools/smoke.js smoke_output
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kanji-screenshots
+          path: smoke_output/

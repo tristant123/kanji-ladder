@@ -1,6 +1,7 @@
 # Kanji Ladder · Anime Edition
 
-This branch (`claude/kanji-anime`) is the anime-flavoured fork. Same kanji,
+This is the anime-flavoured edition (the `main` branch; the plain app is on
+`plain`). Same kanji,
 levels, SRS and mnemonics as the main app, plus:
 
 - **Anime example lines.** Vocabulary shows a sentence about a real series
@@ -48,10 +49,10 @@ your browser.
 
 - **On your computer:** open `index.html` in a browser. That's it.
 - **As a local server** (needed for offline mode and the WaniKani import):
-  `python3 -m http.server -d kanji 8000`, then go to http://localhost:8000.
+  `python3 -m http.server 8000` in this folder, then go to http://localhost:8000.
 - **On your phone:** publish it with GitHub Pages. In the repo, go to
   Settings → Pages and set *Source* to **GitHub Actions**, then run the
-  **kanji-pages** workflow from the Actions tab. Open the URL it prints and
+  **pages** workflow from the Actions tab. Open the URL it prints and
   "Add to Home Screen"; it works offline after the first load.
 
 Progress lives in the browser you study in. Use Settings → *Export progress*
@@ -159,7 +160,7 @@ node --test tests/*.test.js   # SRS rules, answer checking, romaji input, data c
 node tools/smoke.js out/      # drives the real app in headless Chromium (needs playwright)
 ```
 
-CI runs both on every change to `kanji/` (`.github/workflows/kanji.yml`).
+CI runs both on every push (`.github/workflows/tests.yml`).
 
 ## Data and credits
 
