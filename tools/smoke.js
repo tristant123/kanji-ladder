@@ -84,6 +84,9 @@ const server = http.createServer((req, res) => {
   await shot("03_quiz");
   await answerQuiz(false);
   await page.waitForSelector(".summary");
+  // "Next lessons" on the summary opens the next batch (same URL as before)
+  await page.click('.summary a[href="#/lessons"]');
+  await page.waitForSelector(".lesson, .empty-state");
   const learned = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem("kanji-ladder.v1")).items).length);
   if (learned < 1) throw new Error("lesson quiz did not record items");
 

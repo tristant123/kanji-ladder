@@ -641,6 +641,16 @@
     if (!/^item/.test(head)) window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", route);
+  // A link to the page you're already on (Next lessons after a lesson quiz,
+  // More reviews after reviews) changes nothing in the URL, so no hashchange
+  // fires: re-open the page by hand.
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="#/"]');
+    if (a && a.getAttribute("href") === location.hash && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+      e.preventDefault();
+      route();
+    }
+  });
 
   document.getElementById("search-form").onsubmit = (e) => {
     e.preventDefault();
