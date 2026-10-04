@@ -171,6 +171,36 @@ const server = http.createServer((req, res) => {
   if (!lv2) throw new Error("level skip did not put every level-2 kanji at Guru");
   await shot("17_level_skipped");
 
+  // Automatic backups: a daily snapshot and one from before the level skip,
+  // which Restore brings back.
+  await page.goto(base + "#/settings");
+  await page.waitForSelector("#b-snaps .snap");
+  const reasons = await page.evaluate(() => Store.snapshots().then((l) => l.map((s) => s.reason)));
+  if (!reasons.includes("daily") || !reasons.includes("guru")) throw new Error("expected daily and guru snapshots: " + reasons);
+  await page.locator("#b-snaps .snap", { hasText: "before marking levels Guru" }).locator("[data-snap]").click();
+  await page.waitForFunction(() => window.KANJI_DATA.kanji.filter((k) => k.level === 2).some((k) => {
+    const e = JSON.parse(localStorage.getItem("kanji-ladder.v1")).items["k:" + k.ch];
+    return !e || e.stage < 5;
+  }));
+  // The backup file, with a stand-in for the file the browser would let you pick.
+  await page.evaluate(() => {
+    window.__written = [];
+    window.showSaveFilePicker = window.showSaveFilePicker || (() => {});
+    Store.chooseBackupFile = async () => ({
+      name: "test-backup.json",
+      queryPermission: async () => "granted",
+      createWritable: async () => ({ write: async (t) => window.__written.push(t), close: async () => {} }),
+    });
+  });
+  await page.goto(base + "#/settings");
+  await page.click("#bf-pick");
+  await page.waitForSelector("#bf-stop");
+  await page.evaluate(() => document.getElementById("b-snaps").closest(".panel").scrollIntoView());
+  await page.waitForTimeout(400);
+  await shot("24_backups");
+  const written = await page.evaluate(() => window.__written.length && JSON.parse(window.__written.at(-1)).progress.items);
+  if (!written || !Object.keys(written).length) throw new Error("backup file was not written");
+
   // mobile layout
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(base + "#/item/k:語");

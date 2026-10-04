@@ -61,8 +61,17 @@ your browser.
   **pages** workflow from the Actions tab. Open the URL it prints and
   "Add to Home Screen"; it works offline after the first load.
 
-Progress lives in the browser you study in. Use Settings → *Export progress*
-to back it up or move it to another device.
+Progress lives in the browser you study in, and is backed up automatically
+(Settings → *Backup*):
+
+- **Snapshots** in the same browser: one a day for two weeks, plus one before
+  every import, restore, reset or bulk Guru/Burn. Restore any of them in one
+  click. They don't survive clearing the browser's site data.
+- **A backup file** (Chrome and Edge on a computer): pick a file once, ideally
+  in a folder a cloud drive syncs, and the app rewrites it a few seconds after
+  every change. After a browser restart it may ask you to resume.
+- **Export progress** saves a copy by hand, and is how you move to another
+  device (*Import progress* reads both exports and backup files).
 
 ## How it's organised
 

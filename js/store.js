@@ -71,7 +71,9 @@
     return p;
   }
 
-  // ------------------------------------------------------------ WaniKani cache
+  // ------------------------------------------------------------ IndexedDB
+  // One key-value store: the WaniKani cache, the automatic snapshots and the
+  // backup file handle.
   const DB = "kanji-ladder-wk";
   function idb() {
     return new Promise((resolve, reject) => {
@@ -82,28 +84,30 @@
       req.onerror = () => reject(req.error);
     });
   }
-  async function wkGet() {
+  async function kvGet(key) {
     try {
       const db = await idb();
       return await new Promise((resolve, reject) => {
-        const r = db.transaction("kv").objectStore("kv").get("subjects");
-        r.onsuccess = () => resolve(r.result || null);
+        const r = db.transaction("kv").objectStore("kv").get(key);
+        r.onsuccess = () => resolve(r.result === undefined ? null : r.result);
         r.onerror = () => reject(r.error);
       });
     } catch (e) {
       return null;
     }
   }
-  async function wkPut(value) {
+  async function kvPut(key, value) {
     const db = await idb();
     return new Promise((resolve, reject) => {
       const tx = db.transaction("kv", "readwrite");
-      if (value === null) tx.objectStore("kv").delete("subjects");
-      else tx.objectStore("kv").put(value, "subjects");
+      if (value === null) tx.objectStore("kv").delete(key);
+      else tx.objectStore("kv").put(value, key);
       tx.oncomplete = () => resolve();
       tx.onerror = () => reject(tx.error);
     });
   }
+  const wkGet = () => kvGet("subjects");
+  const wkPut = (value) => kvPut("subjects", value);
 
   // Pull every radical/kanji/vocabulary subject with your personal token and
   // keep just the mnemonic fields, keyed by the characters.
@@ -139,5 +143,62 @@
     return out;
   }
 
-  root.Store = { load, save, blank, today, bumpDay, exportJSON, importJSON, wkGet, wkPut, wkImport, DEFAULT_SETTINGS };
+  // ------------------------------------------------------------ automatic backups
+  // Snapshots of your progress, kept in IndexedDB apart from the localStorage
+  // copy: one a day, plus one before anything that replaces or rewrites a lot
+  // of progress (import, restore, reset, bulk Guru/Burn).
+  const KEEP_DAILY = 14;
+  const KEEP_OTHER = 5;
+  const itemCount = (progress) => Object.keys(progress.items || {}).length;
+
+  // The snapshot list with one more added: newest first, oldest pruned.
+  function withSnapshot(list, progress, reason, now) {
+    const at = now || Date.now();
+    const snap = { at, day: today(at), reason, count: itemCount(progress), progress };
+    let daily = 0;
+    let other = 0;
+    return [snap]
+      .concat(list || [])
+      .sort((a, b) => b.at - a.at)
+      .filter((s) => (s.reason === "daily" ? ++daily <= KEEP_DAILY : ++other <= KEEP_OTHER));
+  }
+
+  async function snapshots() {
+    return (await kvGet("snapshots")) || [];
+  }
+
+  // Copies the progress straight away, so callers can change it afterwards.
+  // Empty progress isn't worth a slot; "daily" is taken once a day.
+  async function snapshot(progress, reason, now) {
+    if (!itemCount(progress)) return false;
+    const copy = JSON.parse(JSON.stringify(progress));
+    const list = await snapshots();
+    if (reason === "daily" && list.some((s) => s.reason === "daily" && s.day === today(now))) return false;
+    await kvPut("snapshots", withSnapshot(list, copy, reason, now));
+    return true;
+  }
+
+  // A backup file on disk, rewritten after changes. Needs the File System
+  // Access API (Chrome and Edge on a computer).
+  const canBackupFile = () => typeof root.showSaveFilePicker === "function";
+  async function chooseBackupFile() {
+    const handle = await root.showSaveFilePicker({
+      suggestedName: "kanji-ladder-backup.json",
+      types: [{ description: "Kanji Ladder backup", accept: { "application/json": [".json"] } }],
+    });
+    await kvPut("backupFile", handle);
+    return handle;
+  }
+  const backupFile = () => kvGet("backupFile");
+  const forgetBackupFile = () => kvPut("backupFile", null);
+  async function writeBackupFile(handle, progress) {
+    const w = await handle.createWritable();
+    await w.write(exportJSON(progress));
+    await w.close();
+  }
+
+  root.Store = {
+    load, save, blank, today, bumpDay, exportJSON, importJSON, wkGet, wkPut, wkImport, DEFAULT_SETTINGS,
+    withSnapshot, snapshots, snapshot, canBackupFile, chooseBackupFile, backupFile, forgetBackupFile, writeBackupFile,
+  };
 })(this);

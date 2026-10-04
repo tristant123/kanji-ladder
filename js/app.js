@@ -14,6 +14,8 @@
     wk: null,
     save() {
       if (!Store.save(ctx.progress)) toast("Couldn't save. Is storage full or disabled?", "down");
+      dailySnapshot();
+      scheduleFileBackup();
     },
     toast,
   };
@@ -26,6 +28,55 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => (t.className = "toast"), 1800);
   }
+
+  // ------------------------------------------------------------ automatic backups
+  // A snapshot at the start of each day and before big changes (kept in this
+  // browser), and, where the browser allows it, a backup file rewritten a few
+  // seconds after each change.
+  let snapDay = "";
+  function dailySnapshot() {
+    if (snapDay === Store.today()) return;
+    snapDay = Store.today();
+    Store.snapshot(ctx.progress, "daily").catch(() => {});
+  }
+  const snapshotBefore = (reason) => Store.snapshot(ctx.progress, reason).catch(() => {});
+  dailySnapshot();
+  // Ask the browser not to clear our storage when space runs low.
+  if (Object.keys(ctx.progress.items).length && navigator.storage && navigator.storage.persist) {
+    navigator.storage.persisted().then((yes) => yes || navigator.storage.persist()).catch(() => {});
+  }
+
+  const backup = { file: null, permission: "", last: 0, error: "", timer: null };
+  const filePermission = (h) => h.queryPermission({ mode: "readwrite" }).catch(() => "prompt");
+  if (Store.canBackupFile()) {
+    Store.backupFile().then(async (h) => {
+      if (!h) return;
+      backup.file = h;
+      backup.permission = await filePermission(h);
+      renderBackupFile();
+    });
+  }
+  function scheduleFileBackup() {
+    if (!backup.file || backup.permission !== "granted") return;
+    clearTimeout(backup.timer);
+    backup.timer = setTimeout(writeFileBackup, 3000);
+  }
+  async function writeFileBackup() {
+    clearTimeout(backup.timer);
+    backup.timer = null;
+    if (!backup.file || backup.permission !== "granted") return;
+    try {
+      await Store.writeBackupFile(backup.file, ctx.progress);
+      backup.last = Date.now();
+      backup.error = "";
+    } catch (e) {
+      backup.error = e.message;
+      backup.permission = await filePermission(backup.file);
+    }
+    if (location.hash === "#/settings") renderBackupFile();
+  }
+  // Don't lose the last few seconds when the tab is closed or hidden.
+  document.addEventListener("visibilitychange", () => document.visibilityState === "hidden" && backup.timer && writeFileBackup());
 
   Store.wkGet().then((wk) => {
     if (wk) {
@@ -275,6 +326,7 @@
       const items = L.radical.concat(L.kanji, L.vocab).filter((it) => SRS.stageOf(p, it.id) < SRS.GURU);
       if (!items.length) return toast("Everything here is already Guru or above");
       if (!confirm("Mark " + items.length + " items in level " + n + " as Guru? They skip their lessons and come back for review in a week.")) return;
+      snapshotBefore("guru");
       const now = Date.now();
       items.forEach((it) => SRS.skipToGuru(p, it.id, now));
       ctx.save();
@@ -386,6 +438,61 @@
   }
 
   // ------------------------------------------------------------ settings
+  const SNAP_REASON = {
+    daily: "start of the day",
+    import: "before an import",
+    restore: "before a restore",
+    reset: "before a reset",
+    guru: "before marking levels Guru",
+    burn: "before burning levels",
+  };
+
+  function renderBackupFile() {
+    const box = document.getElementById("b-file");
+    if (!box) return;
+    if (!Store.canBackupFile()) {
+      box.innerHTML = '<p class="muted small">This browser can\'t keep a file up to date by itself (Chrome and Edge on a computer can). Export now and then instead.</p>';
+      return;
+    }
+    const f = backup.file;
+    let status;
+    if (!f) status = "Pick a file (somewhere a cloud drive syncs is ideal) and the app rewrites it a few seconds after every change.";
+    else if (backup.permission === "granted")
+      status = "Saving to <b>" + esc(f.name) + "</b>" + (backup.last ? ", last written " + esc(new Date(backup.last).toLocaleTimeString()) : "") + "." +
+        (backup.error ? " Last write failed: " + esc(backup.error) : "");
+    else status = "Paused: the browser needs your OK again to write to <b>" + esc(f.name) + "</b>. Choosing “Allow on every visit” saves asking next time.";
+    box.innerHTML =
+      '<p class="muted small">' + status + "</p>" +
+      '<div class="row">' +
+      (f && backup.permission !== "granted" ? '<button class="btn" id="bf-resume">Resume backups</button>' : "") +
+      '<button class="btn' + (f ? " ghost-btn" : "") + '" id="bf-pick">' + (f ? "Use a different file" : "Choose backup file") + "</button>" +
+      (f ? '<button class="btn ghost-btn" id="bf-stop">Stop</button>' : "") +
+      "</div>";
+    const $ = (id) => document.getElementById(id);
+    $("bf-pick").onclick = async () => {
+      try {
+        backup.file = await Store.chooseBackupFile();
+      } catch (e) {
+        if (e.name !== "AbortError") toast("Couldn't use that file: " + e.message, "down");
+        return;
+      }
+      backup.permission = "granted";
+      await writeFileBackup();
+      if (!backup.error) toast("Backing up to " + backup.file.name);
+      renderBackupFile();
+    };
+    if ($("bf-resume")) $("bf-resume").onclick = async () => {
+      backup.permission = await backup.file.requestPermission({ mode: "readwrite" }).catch(() => "denied");
+      await writeFileBackup();
+      renderBackupFile();
+    };
+    if ($("bf-stop")) $("bf-stop").onclick = async () => {
+      await Store.forgetBackupFile();
+      Object.assign(backup, { file: null, permission: "", last: 0, error: "" });
+      renderBackupFile();
+    };
+  }
+
   function settings() {
     const s = ctx.progress.settings;
     const wk = ctx.wk;
@@ -420,7 +527,14 @@
       '<p class="muted small" id="wk-status"></p>' +
       "</section>" +
       '<section class="panel"><h2>Backup</h2>' +
-      '<p class="muted">Progress lives in this browser (' + count + " items started). Export it now and then, and to move to another device.</p>" +
+      '<p class="muted">Progress lives in this browser (' + count + " items started).</p>" +
+      "<h3>Automatic snapshots</h3>" +
+      '<p class="muted small">Kept in this browser: one a day for the last two weeks, plus one before every import, restore, reset, or bulk Guru or Burn. They undo mistakes, but they go if the browser\'s site data is cleared, so keep a backup file or an export too.</p>' +
+      '<div id="b-snaps" class="muted small">Loading…</div>' +
+      "<h3>Backup file</h3>" +
+      '<div id="b-file"></div>' +
+      "<h3>By hand</h3>" +
+      '<p class="muted small">Export to keep a copy anywhere, or to move to another device.</p>' +
       '<div class="row"><button class="btn" id="b-export">Export progress</button>' +
       '<label class="btn">Import progress<input type="file" id="b-import" accept="application/json,.json" hidden></label>' +
       '<button class="btn danger" id="b-reset">Reset everything</button></div>' +
@@ -450,6 +564,7 @@
         ? "Mark every radical, kanji and word in levels 1–" + upto + " as Guru? They skip their lessons and come back for review in a week. Items already higher stay where they are."
         : "Burn every radical, kanji and word in levels 1–" + upto + "? They won't come up in lessons or reviews again.";
       if (!confirm(msg)) return;
+      snapshotBefore(mode);
       const now = Date.now();
       let n = 0;
       for (const it of cat.items) {
@@ -497,8 +612,10 @@
         try {
           const p = Store.importJSON(text);
           if (!confirm("Replace your current progress with this backup?")) return;
+          snapshotBefore("import");
           Store.save(p);
           ctx.progress = Store.load();
+          ctx.save();
           toast("Progress restored");
           settings();
         } catch (err) {
@@ -506,8 +623,35 @@
         }
       });
     };
+    renderBackupFile();
+    Store.snapshots().then((list) => {
+      const box = $("b-snaps");
+      if (!box) return;
+      if (!list.length) return (box.textContent = "None yet. The first is taken once you've started some items.");
+      box.className = "snaps";
+      box.innerHTML = list
+        .map((sn, i) =>
+          '<div class="row snap"><span><b>' + esc(new Date(sn.at).toLocaleString([], { dateStyle: "medium", timeStyle: "short" })) + "</b> " +
+          '<span class="muted small">' + esc(SNAP_REASON[sn.reason] || sn.reason) + " · " + sn.count + " items</span></span>" +
+          '<button class="btn small ghost-btn" data-snap="' + i + '">Restore</button></div>')
+        .join("");
+      box.onclick = (e) => {
+        const b = e.target.closest("[data-snap]");
+        if (!b) return;
+        const sn = list[+b.dataset.snap];
+        if (!confirm("Go back to your progress from " + new Date(sn.at).toLocaleString() + " (" + sn.count + " items)? Your current progress is snapshotted first.")) return;
+        snapshotBefore("restore").then(() => {
+          Store.save(sn.progress);
+          ctx.progress = Store.load();
+          ctx.save();
+          toast("Progress restored");
+          settings();
+        });
+      };
+    });
     $("b-reset").onclick = () => {
-      if (!confirm("Delete all progress, notes and synonyms? This can't be undone. (Export first if unsure.)")) return;
+      if (!confirm("Delete all progress, notes and synonyms? A snapshot is kept under Automatic backups.")) return;
+      snapshotBefore("reset");
       ctx.progress = Store.blank();
       ctx.save();
       toast("Reset");
