@@ -36,9 +36,7 @@ test("data is complete: 2136 kanji across N5-N1", () => {
   const tiers = new Set(data.levels.map((l) => l.jlpt));
   assert.deepStrictEqual([...tiers], [5, 4, 3, 2, 1]);
   for (const k of data.kanji) {
-    for (const p of k.parts) assert.ok(cat.get("r:" + p), "missing radical " + p + " for " + k.ch);
-    // every radical is taught no later than the kanji that needs it
-    for (const p of k.parts) assert.ok(cat.get("r:" + p).level <= k.level, k.ch + " before its radical " + p);
+    assert.strictEqual(cat.parts(k).length, k.parts.length, "missing part for " + k.ch);
   }
   for (const v of data.vocab) {
     assert.strictEqual(v.level, Math.max(...v.k.map((c) => cat.get("k:" + c).level)), v.w);
@@ -141,10 +139,23 @@ test("the reading quizzed first is the one the mnemonic teaches", () => {
   }
 });
 
-test("kanji break into the radicals WaniKani teaches", () => {
+test("kanji are built from the fewest pieces you already know", () => {
   const parts = (c) => data.kanji.find((k) => k.ch === c).parts.join("+");
-  assert.strictEqual(parts("開"), "門+开"); // Gate + Lantern, not Gate + Dry
+  assert.strictEqual(parts("渡"), "氵+度"); // not water + canopy + ... : 度 is an earlier kanji
+  assert.strictEqual(parts("荷"), "艹+何");
   assert.strictEqual(parts("作"), "亻+乍");
-  assert.strictEqual(parts("年"), "𠂉+牛");
+  assert.strictEqual(parts("年"), "𠂉+牛"); // KanjiVG doesn't show these, so WaniKani's breakdown stays
   for (const r of data.radicals) assert.ok(r.name && r.name !== r.ch, "radical without a name: " + r.ch);
+});
+
+test("every part of a kanji is taught before the kanji", () => {
+  const typeRank = { radical: 0, kanji: 1 };
+  const before = (a, b) => a.level < b.level || (a.level === b.level && (typeRank[a.type] < typeRank[b.type] || a.order < b.order));
+  for (const k of cat.items.filter((it) => it.type === "kanji")) {
+    for (const id of cat.prereqs(k)) {
+      const p = cat.get(id);
+      assert.ok(p, k.ch + " has a missing part " + id);
+      assert.ok(before(p, k), k.ch + " uses " + id + " before it is taught");
+    }
+  }
 });

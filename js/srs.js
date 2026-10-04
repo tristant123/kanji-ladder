@@ -65,7 +65,16 @@
       if (!usedIn.has(from)) usedIn.set(from, []);
       usedIn.get(from).push(to);
     };
-    for (const k of data.kanji) for (const p of k.parts) link("r:" + p, "k:" + k.ch);
+    // A kanji's parts are radicals, or kanji learned earlier (listed in kp).
+    const partId = (k, p) => (k.kp && k.kp.includes(p) ? "k:" : "r:") + p;
+    const inKanji = new Map();
+    for (const k of data.kanji)
+      for (const p of k.parts) {
+        const id = partId(k, p);
+        if (id === "k:" + k.ch) continue;
+        if (id[0] === "r") link(id, "k:" + k.ch);
+        else (inKanji.get(id) || inKanji.set(id, []).get(id)).push("k:" + k.ch);
+      }
     for (const v of data.vocab) for (const c of v.k) link("k:" + c, "v:" + v.w);
 
     // Kanji that share a phonetic component.
@@ -83,11 +92,14 @@
       get: (id) => byId.get(id),
       level: (n) => byLevel.get(n),
       usedIn: (id) => usedIn.get(id) || [],
+      // Kanji that use this kanji as one of their parts.
+      inKanji: (id) => inKanji.get(id) || [],
+      parts: (k) => k.parts.map((p) => byId.get(partId(k, p))).filter(Boolean),
       phonetic: (ch) => phonetic.get(ch) || [],
       maxLevel: levels.length,
       // The items that must reach Guru before this one unlocks.
       prereqs(it) {
-        if (it.type === "kanji") return it.parts.map((p) => "r:" + p);
+        if (it.type === "kanji") return it.parts.map((p) => partId(it, p)).filter((id) => id !== it.id);
         if (it.type === "vocab") return it.k.map((c) => "k:" + c);
         return [];
       },

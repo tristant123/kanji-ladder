@@ -153,9 +153,11 @@
 
   // ------------------------------------------------------------ mnemonics
   function nameOf(cat, part) {
-    const r = cat.get("r:" + part);
-    return r ? r.name : part;
+    const r = cat.get("r:" + part) || cat.get("k:" + part);
+    return r ? r.name || r.m[0] : part;
   }
+  // A part as story markup: radicals in radical colour, earlier kanji in kanji colour.
+  const partTag = (cat, k, p) => (k.kp && k.kp.includes(p) ? "<kanji>" + cat.get("k:" + p).m[0] + "</kanji>" : "<radical>" + nameOf(cat, p) + "</radical>");
 
   function meaningMnemonic(cat, k) {
     if (k.mm) return { html: markup(k.mm), own: true };
@@ -171,7 +173,7 @@
         own: false,
       };
     }
-    const names = parts.map((p) => "<radical>" + nameOf(cat, p) + "</radical>");
+    const names = parts.map((p) => partTag(cat, k, p));
     return {
       html: markup(
         names.join(" + ") + " = <kanji>" + k.m[0] + "</kanji>\n\n" +
@@ -257,8 +259,8 @@
     }
 
     if (it.type === "kanji") {
-      const parts = it.parts.map((p) => cat.get("r:" + p)).filter(Boolean);
-      out.push(section("Radicals", '<div class="chips">' + parts.map((r) => chip(r, progress)).join('<span class="plus">+</span>') + "</div>"));
+      const parts = cat.parts(it);
+      out.push(section(it.kp ? "Built from" : "Radicals", '<div class="chips">' + parts.map((r) => chip(r, progress)).join('<span class="plus">+</span>') + "</div>"));
       const mm = meaningMnemonic(cat, it);
       out.push(section("Meaning",
         '<p class="answers"><b>' + esc(it.m[0]) + "</b>" + (it.m.length > 1 ? '<span class="alt">' + it.m.slice(1, 6).map(esc).join(", ") + "</span>" : "") + synonyms(progress, it) + "</p>" +
@@ -275,6 +277,8 @@
       // most common words first
       const vocab = cat.usedIn(it.id).map((id) => cat.get(id)).sort((a, b) => (a.f ?? 99) - (b.f ?? 99) || a.level - b.level);
       if (vocab.length) out.push(section("Vocabulary", '<div class="chips">' + vocab.map((v) => chip(v, progress)).join("") + "</div>"));
+      const builds = cat.inKanji(it.id).map((id) => cat.get(id));
+      if (builds.length) out.push(section("Found in kanji", '<div class="chips">' + builds.map((k) => chip(k, progress)).join("") + "</div>"));
       const lines = vocab.filter((v) => v.ex).slice(0, 3);
       if (lines.length) out.push(section("In anime", lines.map((v) => animeLine(v, true)).join("")));
     }

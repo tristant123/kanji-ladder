@@ -208,6 +208,7 @@ def decompose(ch, root, joyo):
 # used: radical names and stories here are this app's own.
 WK_COMPONENTS = {}
 WK_ALIAS = {}
+WK_SHAPE_OF = collections.defaultdict(list)  # 八 -> [丷]: shapes KanjiVG labels under another name
 PART_STROKES = set("一丨丿丶亅乚乙𠃊𠃌")
 
 
@@ -261,6 +262,129 @@ def wk_parts(ch, root, names, known):
     # WaniKani sometimes names a radical that looks like the kanji itself
     # (互 = Ground + Shuriken): then the kanji is simply its own radical.
     return [ch] if ch in parts else parts
+
+
+# ------------------------------------------------------- learned-pieces pass
+# Rebuild each kanji from as few pieces as possible, where every piece is
+# something you've already met by then: a radical taught earlier (a level's
+# radicals come before its kanji) or a kanji from an earlier lesson. A part
+# from the breakdown above is taught as a new radical only where no learned
+# piece covers that bit of the kanji. Single strokes are kept to one per
+# kanji (or as many as the breakdown above had), so 十 doesn't turn into 一
+# and 丨.
+def piece_candidates(ch, root):
+    """[(piece, stroke ids)] for every named group of the kanji, with split
+    elements (kvg:part) joined back together, plus single strokes."""
+    out = []
+    split = collections.defaultdict(set)
+    for g in root.iter(SVG + "g"):
+        e = elem(g)
+        if g is root or not e:
+            continue
+        ids = frozenset(x.get("id") for x in g.iter(SVG + "path"))
+        if g.get(KV + "part"):
+            split[(e, g.get(KV + "number"))] |= ids
+            continue
+        out.append((e, ids))
+        if e in WK_SHAPE_OF:
+            out.extend((p, ids) for p in WK_SHAPE_OF[e])
+    out += [(e, frozenset(ids)) for (e, _), ids in split.items()]
+    for x in root.iter(SVG + "path"):
+        r = stroke_radical(x)
+        if r:
+            out.append((r, frozenset([x.get("id")])))
+    return out
+
+
+def best_cover(strokes, cands, max_single):
+    """Fewest new radicals, then fewest pieces, then most like the old
+    breakdown. cands: [(piece, stroke ids, is_new, is_old)]. None if the
+    strokes can't be covered."""
+    order = {s: i for i, s in enumerate(strokes)}
+    by_first = collections.defaultdict(list)
+    for c in cands:
+        if c[1] <= set(strokes):
+            by_first[min(c[1], key=order.get)].append(c)
+    best = [None, None]
+
+    def go(i, covered, chosen):
+        while i < len(strokes) and strokes[i] in covered:
+            i += 1
+        new = len({c[0] for c in chosen if c[2]})
+        cost = (new, len(chosen), sum(1 for c in chosen if not c[3]))
+        if best[0] is not None and cost >= best[0]:
+            return
+        if i == len(strokes):
+            best[:] = [cost, list(chosen)]
+            return
+        for c in by_first.get(strokes[i], []):
+            if c[1] & covered:
+                continue
+            if len(c[1]) == 1 and sum(1 for x in chosen if len(x[1]) == 1) >= max_single:
+                continue
+            go(i + 1, covered | c[1], chosen + [c])
+
+    go(0, frozenset(), [])
+    return best[1]
+
+
+def learned_pieces(ordered, kanji):
+    """Second pass over kanji["parts"], in teaching order. Sets k["kp"] to
+    the parts that are earlier kanji rather than radicals."""
+    known_r, known_k = set(), set()
+    stats = collections.Counter()
+    for k in ordered:
+        ch, old = k["ch"], k["parts"]
+        root = kvg_root(ch)
+        strokes = [x.get("id") for x in root.iter(SVG + "path")]
+        cands = []
+        for p, ids in piece_candidates(ch, root):
+            learned = p in known_r or (p in known_k and p != ch)
+            if learned or p in old:
+                cands.append((p, ids, not learned, p in old))
+        # One old part KanjiVG labels some other way (辶 is ⻌ there): it is
+        # whatever strokes the other old parts leave over.
+        found = {c[0] for c in cands if c[3]}
+        missing = [p for p in old if p not in found and p != ch]
+        if len(missing) == 1:
+            rest = set(strokes)
+            for c in sorted((c for c in cands if c[3]), key=lambda c: -len(c[1])):
+                if c[1] <= rest:
+                    rest -= c[1]
+            if rest:
+                learned = missing[0] in known_r
+                cands.append((missing[0], frozenset(rest), not learned, True))
+        if ch in known_r or old == [ch]:
+            cands.append((ch, frozenset(strokes), ch not in known_r, old == [ch]))
+        max_single = max(1, sum(1 for p in old if p in PART_STROKES))
+        if os.environ.get("PARTS_MODE") == "merge":
+            # only swap whole old parts for a bigger learned piece, never split one
+            base = best_cover(strokes, [c for c in cands if c[3]], max_single)
+            if base:
+                inst = [c[1] for c in base]
+                cands = [c for c in cands if c[3] or all(not (c[1] & o) or o <= c[1] for o in inst)]
+        cover = best_cover(strokes, cands, max_single)
+        if cover is None:
+            stats["kept: KanjiVG doesn't show the breakdown"] += 1
+            parts = old
+            if os.environ.get("KANJI_VERBOSE"):
+                print("    kept %s %s" % (ch, " ".join(old)), file=sys.stderr)
+        else:
+            cover.sort(key=lambda c: min(strokes.index(s) for s in c[1]))
+            parts = []
+            for c in cover:
+                if c[0] not in parts:
+                    parts.append(c[0])
+            if sorted(parts) == sorted(old):
+                parts = old
+            stats["changed" if parts != old else "same"] += 1
+        kp = [p for p in parts if p != ch and p not in known_r and p in known_k]
+        k["parts"] = parts
+        if kp:
+            k["kp"] = kp
+        known_r.update(p for p in parts if p not in kp)
+        known_k.add(ch)
+    print("  learned pieces: " + ", ".join("%s %d" % kv for kv in sorted(stats.items())), file=sys.stderr)
 
 
 def phonetic(root):
@@ -568,6 +692,8 @@ def main():
     WK_COMPONENTS.update(load_json("../tools/wk_components.json", {}))
     # "丷@八": the part 丷 is drawn from what KanjiVG labels 八
     WK_ALIAS.update(c.split("@") for cs in WK_COMPONENTS.values() for c in cs if "@" in c)
+    for p, shape in WK_ALIAS.items():
+        WK_SHAPE_OF[shape].append(p)
     overrides = {k: v for k, v in load_json("parts.json", {}).items() if not k.startswith("_")}
     # every shape KanjiVG labels anywhere, so a part can always be drawn
     anywhere = {}
@@ -643,11 +769,13 @@ def main():
                 k["level"] = level_no
             levels.append({"n": level_no, "jlpt": tier})
 
+    learned_pieces(ordered, kanji)
+
     # --- radicals
     radicals = {}
     for k in sorted(kanji.values(), key=lambda k: (k["level"], ordered.index(k))):
         for p in k["parts"]:
-            if p in radicals:
+            if p in radicals or p in k.get("kp", ()):
                 continue
             info = radical_content.get(p, {})
             name = info.get("name")
@@ -756,6 +884,8 @@ def main():
             "pr": mn.get("primary", k["primary"]),
             "parts": k["parts"],
         }
+        if k.get("kp"):
+            rec["kp"] = k["kp"]
         if k.get("phon"):
             rec["phon"] = k["phon"]
         if mn.get("meaning"):
@@ -838,6 +968,9 @@ def clean_meaning(ms):
 def check_mnemonics(kanji, radicals):
     """Warn when a story names a radical the kanji isn't built from."""
     names = {}
+    kanji_names = {}
+    for c, k in kanji.items():
+        kanji_names[c] = {m.lower() for m in k["m"][:3]}
     for r in radicals.values():
         names[r["ch"]] = {n.lower() for n in [r["name"]] + r.get("alt", [])}
     bad = 0
@@ -846,7 +979,7 @@ def check_mnemonics(kanji, radicals):
             continue
         allowed = set()
         for p in k["parts"]:
-            allowed |= names.get(p, set())
+            allowed |= names.get(p, set()) | kanji_names.get(p, set())
         for used in re.findall(r"<radical>(.*?)</radical>", k["mm"]):
             u = used.lower()
             stems = {u, u.rstrip("s"), re.sub(r"(ing|ed|es)$", "", u), re.sub(r"ing$", "e", u)}
