@@ -2,1026 +2,1231 @@
  "一つ": [
   "onepiece",
   "{一繋|ひとつな}ぎの大秘宝「ONE PIECE」は、世界に一つしかない。",
-  "The great treasure \"One Piece\" is the only one of its kind in the world."
+  "The great treasure \"One Piece\" is the only one of its kind in the world.",
+  "<ja>〜しかない</ja> \"there is only ~\": しか always pairs with a negative verb."
  ],
  "一月": [
   "haikyu",
   "{春高|はるこう}（春の高校バレー）は一月に行われる。",
-  "The Spring High volleyball tournament is held in January."
+  "The Spring High volleyball tournament is held in January.",
+  "<ja>行われる</ja> is the passive of 行う, the usual way to say an event \"is held\". The month names are just number + 月."
  ],
  "人々": [
   "aot",
   "壁の中の人々は、巨人を恐れて暮らしていた。",
-  "The people inside the walls lived in fear of the Titans."
+  "The people inside the walls lived in fear of the Titans.",
+  "<ja>〜を恐れて</ja> \"fearing ~\": the て-form describes how they lived. <ja>暮らしていた</ja> \"were living\"."
  ],
  "三人": [
   "kimetsu",
   "{炭治郎|たんじろう}、{善逸|ぜんいつ}、{伊之助|いのすけ}の三人はいつも一緒だ。",
-  "Tanjiro, Zenitsu and Inosuke, the three of them are always together."
+  "Tanjiro, Zenitsu and Inosuke, the three of them are always together.",
+  "<ja>AとBとCの三人</ja>: put the count after the names with の. <ja>いつも一緒だ</ja> \"are always together\"."
  ],
  "大学": [
   "steinsgate",
   "{岡部|おかべ}は大学生だが、自分を「マッドサイエンティスト」と呼ぶ。",
-  "Okabe is a university student, but calls himself a \"mad scientist\"."
+  "Okabe is a university student, but calls himself a \"mad scientist\".",
+  "<ja>AをBと呼ぶ</ja> \"to call A B\". <ja>が</ja> between clauses means \"but\"."
  ],
  "十": [
   "opm",
   "サイタマは毎日{十|じゅっ}キロ走った。",
-  "Saitama ran ten kilometres every day."
+  "Saitama ran ten kilometres every day.",
+  "Counting: 十 + キロ is read じゅっキロ, the small っ comes from the sound change. <ja>毎日</ja> \"every day\" needs no particle."
  ],
  "十一": [
   "totoro",
   "サツキは{十一歳|じゅういっさい}、メイは四歳だ。",
-  "Satsuki is eleven and Mei is four."
+  "Satsuki is eleven and Mei is four.",
+  "Ages use the counter <ja>歳</ja> (さい). 十一歳 is じゅういっさい, with a small っ."
  ],
  "十九": [
   "onepiece",
   "二年後、ルフィは十九歳になった。",
-  "Two years later, Luffy turned nineteen."
+  "Two years later, Luffy turned nineteen.",
+  "<ja>〜になった</ja> \"became ~\": なる + past. <ja>二年後</ja> \"two years later\"."
  ],
  "二": [
   "eva",
   "エヴァンゲリオン{二号機|にごうき}のパイロットはアスカだ。",
-  "Asuka pilots Evangelion Unit-02."
+  "Asuka pilots Evangelion Unit-02.",
+  "<ja>〜号機</ja> \"unit number ~\" counts machines. <ja>のパイロットは</ja>: の links \"Unit-02\" and \"pilot\"."
  ],
  "十二": [
   "kimetsu",
   "{無惨|むざん}のそばには「十二{鬼月|きづき}」という十二体の鬼がいる。",
-  "Muzan keeps twelve demons close: the Twelve Kizuki."
+  "Muzan keeps twelve demons close: the Twelve Kizuki.",
+  "<ja>〜という</ja> \"called ~\". Demons are counted with <ja>体</ja> (たい), the counter for bodies or figures."
  ],
  "三": [
   "onepiece",
   "ゾロは{三本|さんぼん}の刀で戦う「{三刀流|さんとうりゅう}」の剣士だ。",
-  "Zoro is a swordsman of the three-sword style."
+  "Zoro is a swordsman of the three-sword style.",
+  "Long things like swords take the counter <ja>本</ja>: 一本 いっぽん, 二本 にほん, 三本 さんぼん."
  ],
  "九月": [
   "haikyu",
   "{九月|くがつ}、{烏野|からすの}のバレー部はまた練習を始めた。",
-  "In September, Karasuno's volleyball club started practising again."
+  "In September, Karasuno's volleyball club started practising again.",
+  "九 is く in 九月 (September), not きゅう. <ja>また</ja> \"again\"."
  ],
  "五": [
   "sailormoon",
   "最初のセーラー戦士は五人だった。",
-  "The first Sailor Guardians were five."
+  "The first Sailor Guardians were five.",
+  "People are counted with <ja>人</ja>: 五人 ごにん. <ja>最初の</ja> \"the first\"."
  ],
  "五月": [
   "totoro",
   "サツキもメイも「五月」という意味の名前だ。",
-  "Satsuki and Mei are both names meaning \"May\"."
+  "Satsuki and Mei are both names meaning \"May\".",
+  "<ja>AもBも</ja> \"both A and B\". <ja>〜という意味の</ja> \"meaning ~\" before a noun."
  ],
  "十五": [
   "bleach",
   "{一護|いちご}は十五歳の高校生だ。",
-  "Ichigo is a fifteen-year-old high-school student."
+  "Ichigo is a fifteen-year-old high-school student.",
+  "<ja>十五歳の高校生</ja>: the age + の describes the noun after it."
  ],
  "四": [
   "onepiece",
   "「{四皇|よんこう}」はONE PIECEの世界で最も強い{四人|よにん}の海賊だ。",
-  "The Four Emperors are the four strongest pirates in One Piece's world."
+  "The Four Emperors are the four strongest pirates in One Piece's world.",
+  "<ja>最も</ja> \"most\" (formal). 四人 is read よにん, not しにん."
  ],
  "四月": [
   "kon",
   "{四月|しがつ}、{唯|ゆい}は軽音部に入った。",
-  "In April, Yui joined the light music club."
+  "In April, Yui joined the light music club.",
+  "四 is し in 四月 (April). <ja>〜に入る</ja> \"to join (a club)\"."
  ],
  "十四": [
   "eva",
   "シンジは十四歳でエヴァに乗ることになった。",
-  "Shinji ended up piloting an Eva at fourteen."
+  "Shinji ended up piloting an Eva at fourteen.",
+  "<ja>〜ことになった</ja> \"it turned out that ~ / ended up having to ~\": decided by circumstances, not by him."
  ],
  "九": [
   "naruto",
   "ナルトの中には{九尾|きゅうび}の{妖狐|ようこ}が封印されている。",
-  "The Nine-Tailed Fox is sealed inside Naruto."
+  "The Nine-Tailed Fox is sealed inside Naruto.",
+  "<ja>封印されている</ja>: passive + ている for a state, \"is sealed\". <ja>〜の中には</ja> \"inside ~\"."
  ],
  "子": [
   "spyfam",
   "アーニャはロイドの本当の子ではない。",
-  "Anya isn't Loid's real child."
+  "Anya isn't Loid's real child.",
+  "<ja>本当の〜ではない</ja> \"is not a real ~\". ではない is the plain negative of だ."
  ],
  "八": [
   "naruto",
   "カカシは{八匹|はっぴき}の{忍犬|にんけん}を呼び出す。",
-  "Kakashi summons eight ninja hounds."
+  "Kakashi summons eight ninja hounds.",
+  "Small animals take the counter <ja>匹</ja>: 八匹 はっぴき. <ja>呼び出す</ja> \"to summon\": stem + 出す."
  ],
  "十八": [
   "dbz",
   "人造人間十八号はクリリンと結婚した。",
-  "Android 18 married Krillin."
+  "Android 18 married Krillin.",
+  "<ja>〜と結婚する</ja> \"to marry ~\": the partner takes と, not を."
  ],
  "八月": [
   "doraemon",
   "のび太の誕生日は八月{七日|なのか}だ。",
-  "Nobita's birthday is August 7th."
+  "Nobita's birthday is August 7th.",
+  "Dates: 七日 is read なのか, one of the irregular day readings (一日 ついたち, 二日 ふつか...)."
  ],
  "六": [
   "haikyu",
   "バレーボールは六人でするスポーツだ。",
-  "Volleyball is played six a side."
+  "Volleyball is played six a side.",
+  "<ja>六人で</ja>: で after a number of people means \"as a group of\"."
  ],
  "六月": [
   "haikyu",
   "インターハイの予選は六月ごろにある。",
-  "The Inter-High qualifiers are around June."
+  "The Inter-High qualifiers are around June.",
+  "<ja>〜ごろ</ja> \"around (a time)\". <ja>予選</ja> \"qualifying round\"."
  ],
  "年": [
   "frieren",
   "フリーレンはエルフなので、なかなか年を取らない。",
-  "Frieren is an elf, so she barely ages."
+  "Frieren is an elf, so she barely ages.",
+  "<ja>年を取る</ja> \"to get older\". <ja>なかなか〜ない</ja> \"hardly, not easily\"."
  ],
  "年金": [
   "gintama",
   "{銀時|ぎんとき}には年金も貯金もない。あるのは甘いものへの愛だけだ。",
-  "Gintoki has no pension and no savings. Just a love of sweets."
+  "Gintoki has no pension and no savings. Just a love of sweets.",
+  "<ja>AもBもない</ja> \"neither A nor B\". <ja>あるのは〜だけだ</ja> \"all there is is ~\"."
  ],
  "年生": [
   "kon",
   "{唯|ゆい}たちは一年生の時、廃部寸前の軽音部を立て直した。",
-  "In their first year, Yui and the others saved the light music club from being shut down."
+  "In their first year, Yui and the others saved the light music club from being shut down.",
+  "<ja>〜年生</ja> counts school years. <ja>寸前の</ja> \"on the verge of\". <ja>立て直す</ja>: stem + 直す \"to rebuild\"."
  ],
  "二つ": [
   "fma",
   "エドとアルは、二つのものを失った。アルの体と、エドの手足だ。",
-  "Ed and Al lost two things: Al's body, and Ed's arm and leg."
+  "Ed and Al lost two things: Al's body, and Ed's arm and leg.",
+  "Things are counted with <ja>〜つ</ja>: 一つ, 二つ. The second sentence lists what the two things were."
  ],
  "本人": [
   "conan",
   "コナンの本人は、実は{工藤新一|くどうしんいち}だ。",
-  "Conan himself is actually Shinichi Kudo."
+  "Conan himself is actually Shinichi Kudo.",
+  "<ja>実は</ja> \"actually, in fact\": it reveals a truth."
  ],
  "山": [
   "mononoke",
   "サンは山の森で山犬に育てられた。",
-  "San was raised by wolves in the mountain forest."
+  "San was raised by wolves in the mountain forest.",
+  "<ja>育てられた</ja> is the passive of 育てる: \"was raised\". The raiser takes に."
  ],
  "六十": [
   "aot",
   "超大型巨人は六十メートルもある。",
-  "The Colossal Titan is sixty metres tall."
+  "The Colossal Titan is sixty metres tall.",
+  "<ja>〜もある</ja>: も after a number stresses how big it is (\"a whole sixty metres\")."
  ],
  "日": [
   "kimetsu",
   "鬼は日の光を浴びると消えてしまう。",
-  "Demons disappear if they're caught in the sunlight."
+  "Demons disappear if they're caught in the sunlight.",
+  "<ja>〜と</ja> \"if/when ~\" for a natural consequence. <ja>消えてしまう</ja>: 〜てしまう \"end up ~ (sadly)\"."
  ],
  "一本": [
   "onepiece",
   "ゾロは刀を{一本|いっぽん}口にくわえて戦う。",
-  "Zoro fights with one sword held in his mouth."
+  "Zoro fights with one sword held in his mouth.",
+  "<ja>くわえて戦う</ja>: the て-form describes how he fights."
  ],
  "中学": [
   "mha",
   "デクは中学の時、ずっとヒーローを目指していた。",
-  "All through junior high, Deku was aiming to be a hero."
+  "All through junior high, Deku was aiming to be a hero.",
+  "<ja>〜の時</ja> \"when ~\". <ja>ずっと〜ていた</ja> \"had been ~ the whole time\"."
  ],
  "出す": [
   "dbz",
   "{悟空|ごくう}は両手でかめはめ波を出す。",
-  "Goku fires the Kamehameha with both hands."
+  "Goku fires the Kamehameha with both hands.",
+  "<ja>両手で</ja>: で marks the means (with both hands)."
  ],
  "三つ": [
   "dbz",
   "{悟空|ごくう}は三つ目のドラゴンボールを見つけた。",
-  "Goku found the third Dragon Ball."
+  "Goku found the third Dragon Ball.",
+  "<ja>三つ目の</ja> \"the third\": number + 目 makes an ordinal."
  ],
  "入り": [
   "spirited",
   "{千尋|ちひろ}たちはトンネルを抜けて、不思議な町に{入|い}り{込|こ}んだ。",
-  "Chihiro and her parents went through a tunnel into a strange town."
+  "Chihiro and her parents went through a tunnel into a strange town.",
+  "<ja>抜けて</ja>: て-form, \"going through (the tunnel)\". <ja>入り込む</ja> \"to wander into\"."
  ],
  "金子": [
   "spirited",
   "カオナシは手から金を出し、{金子|きんす}でみんなの気を引いた。",
-  "No-Face made gold come out of his hands and won everyone over with money."
+  "No-Face made gold come out of his hands and won everyone over with money.",
+  "<ja>出し、</ja>: the verb stem joins clauses in written style, like 出して. <ja>気を引く</ja> \"to attract attention\"."
  ],
  "日々": [
   "frieren",
   "フリーレンはヒンメルたちと過ごした日々を思い出す。",
-  "Frieren remembers the days she spent with Himmel and the others."
+  "Frieren remembers the days she spent with Himmel and the others.",
+  "<ja>〜と過ごした日々</ja>: the clause describes the days. <ja>思い出す</ja> \"to recall\"."
  ],
  "日中": [
   "kimetsu",
   "日中、{炭治郎|たんじろう}は{禰豆子|ねずこ}を{箱|はこ}に入れて背負って歩く。",
-  "During the day, Tanjiro carries Nezuko on his back in a box."
+  "During the day, Tanjiro carries Nezuko on his back in a box.",
+  "<ja>〜に入れて背負う</ja>: て-form chains actions. 背負う \"to carry on one's back\"."
  ],
  "大きな": [
   "totoro",
   "トトロは大きな{楠|くすのき}の中に住んでいる。",
-  "Totoro lives inside a big camphor tree."
+  "Totoro lives inside a big camphor tree.",
+  "<ja>大きな</ja> is a special pre-noun form of 大きい; it can only come right before a noun."
  ],
  "お金": [
   "gintama",
   "{万事屋|よろずや}にはいつもお金がない。",
-  "The Yorozuya never has any money."
+  "The Yorozuya never has any money.",
+  "<ja>〜には〜がない</ja> \"~ has no ~\". <ja>いつも</ja> \"always\"."
  ],
  "入学": [
   "mha",
   "デクは{雄英|ゆうえい}高校に入学した。",
-  "Deku got into U.A. High School."
+  "Deku got into U.A. High School.",
+  "<ja>〜に入学する</ja> \"to enter (a school)\": the school takes に."
  ],
  "円": [
   "onepiece",
   "ONE PIECEの世界のお金は「ベリー」で、円ではない。",
-  "Money in One Piece is berries, not yen."
+  "Money in One Piece is berries, not yen.",
+  "<ja>AはBで、Cではない</ja> \"A is B, not C\": で joins the clauses."
  ],
  "出生": [
   "onepiece",
   "ルフィの出生には、大きな秘密があった。",
-  "There was a big secret about Luffy's birth."
+  "There was a big secret about Luffy's birth.",
+  "<ja>〜には〜があった</ja> \"there was ~ about ~\"."
  ],
  "上げ": [
   "haikyu",
   "{影山|かげやま}は{日向|ひなた}にトスを上げた。",
-  "Kageyama set the ball for Hinata."
+  "Kageyama set the ball for Hinata.",
+  "<ja>〜に〜を上げる</ja> \"to send ~ up to someone\". In volleyball, トスを上げる is \"to set\"."
  ],
  "見学": [
   "kon",
   "{唯|ゆい}は軽音部を見学に行って、そのまま入部した。",
-  "Yui went to look round the light music club and just joined."
+  "Yui went to look round the light music club and just joined.",
+  "<ja>見学に行く</ja> \"go to observe\". <ja>そのまま</ja> \"just like that, without stopping\"."
  ],
  "見出し": [
   "deathnote",
   "新聞の見出しは「キラ」のことばかりだ。",
-  "The newspaper headlines are all about Kira."
+  "The newspaper headlines are all about Kira.",
+  "<ja>〜のことばかり</ja> \"nothing but ~\". ばかり stresses that it's only that."
  ],
  "上がり": [
   "onepiece",
   "ルフィの懸賞金は、戦うたびに上がり続ける。",
-  "Luffy's bounty keeps going up with every fight."
+  "Luffy's bounty keeps going up with every fight.",
+  "<ja>〜たびに</ja> \"every time ~\". <ja>上がり続ける</ja>: stem + 続ける \"keeps rising\"."
  ],
  "大山": [
   "mononoke",
   "シシ{神|がみ}は{大山|たいざん}の森に住む神だ。",
-  "The Forest Spirit is the god of the great mountain forest."
+  "The Forest Spirit is the god of the great mountain forest.",
+  "<ja>〜に住む神</ja>: a verb phrase describing 神 (\"the god who lives in ~\")."
  ],
  "一円": [
   "doraemon",
   "のび太の財布には一円も入っていない。",
-  "There's not a single yen in Nobita's wallet."
+  "There's not a single yen in Nobita's wallet.",
+  "<ja>一円も〜ない</ja> \"not even one yen\": one + も + negative means \"not a single\"."
  ],
  "出": [
   "kiki",
   "キキは十三歳で家を出る。",
-  "Kiki leaves home at thirteen."
+  "Kiki leaves home at thirteen.",
+  "<ja>家を出る</ja> \"to leave home\": を marks the place you leave."
  ],
  "出入り": [
   "spirited",
   "{油屋|あぶらや}には八百万の神々が出入りしている。",
-  "All the myriad gods come and go at the bathhouse."
+  "All the myriad gods come and go at the bathhouse.",
+  "<ja>八百万</ja> (やおよろず) means \"countless\". <ja>出入りしている</ja> \"are coming and going\"."
  ],
  "見る": [
   "deathnote",
   "デスノートに触れた人だけが、リュークの姿を見ることができる。",
-  "Only people who've touched the Death Note can see Ryuk."
+  "Only people who've touched the Death Note can see Ryuk.",
+  "<ja>〜だけが</ja> \"only ~\". <ja>〜ことができる</ja> \"can ~\"."
  ],
  "山々": [
   "frieren",
   "フリーレンたちは北の山々を越えて旅を続ける。",
-  "Frieren's party keeps travelling over the northern mountains."
+  "Frieren's party keeps travelling over the northern mountains.",
+  "<ja>々</ja> repeats the kanji before it and makes a plural: 山々, 人々. <ja>旅を続ける</ja> \"to keep travelling\"."
  ],
  "一人っ子": [
   "mha",
   "デクは一人っ子で、お母さんと二人で暮らしている。",
-  "Deku is an only child and lives with his mum."
+  "Deku is an only child and lives with his mum.",
+  "<ja>〜と二人で</ja> \"just the two of them, with ~\". <ja>暮らしている</ja> \"lives\"."
  ],
  "人": [
   "deathnote",
   "デスノートに名前を書かれた{人|ひと}は死ぬ。",
-  "Anyone whose name is written in the Death Note dies."
+  "Anyone whose name is written in the Death Note dies.",
+  "<ja>名前を書かれた人</ja>: a passive clause describing 人, \"a person who has had their name written\"."
  ],
  "本": [
   "onepiece",
   "ロビンは{本|ほん}を読むのが大好きだ。",
-  "Robin loves reading books."
+  "Robin loves reading books.",
+  "<ja>〜のが大好きだ</ja> \"loves ~ing\": の turns 本を読む into a noun."
  ],
  "中": [
   "kimetsu",
   "{禰豆子|ねずこ}は{箱|はこ}の中で眠っている。",
-  "Nezuko is asleep inside the box."
+  "Nezuko is asleep inside the box.",
+  "<ja>〜の中で</ja> \"inside ~\" (where an action happens). <ja>眠っている</ja> \"is sleeping\"."
  ],
  "月": [
   "sailormoon",
   "「{月|つき}に代わっておしおきよ！」",
-  "\"In the name of the Moon, I'll punish you!\" (Sailor Moon's catchphrase)"
+  "\"In the name of the Moon, I'll punish you!\" (Sailor Moon's catchphrase)",
+  "<ja>〜に代わって</ja> \"in place of, on behalf of ~\". The sentence-final <ja>よ</ja> adds emphasis."
  ],
  "生": [
   "totoro",
   "メイは生のトウモロコシを持って、お母さんの病院へ向かった。",
-  "Mei set off for her mother's hospital carrying a fresh ear of corn."
+  "Mei set off for her mother's hospital carrying a fresh ear of corn.",
+  "<ja>生の</ja> \"raw, fresh\". <ja>〜へ向かう</ja> \"to head for ~\"."
  ],
  "上": [
   "laputa",
   "ラピュタは雲の上に浮かぶ城だ。",
-  "Laputa is a castle floating above the clouds."
+  "Laputa is a castle floating above the clouds.",
+  "<ja>〜の上に浮かぶ</ja> \"to float above ~\". The clause describes 城."
  ],
  "金": [
   "dbz",
   "スーパーサイヤ{人|じん}になると、髪が金色になる。",
-  "When you become a Super Saiyan, your hair turns gold."
+  "When you become a Super Saiyan, your hair turns gold.",
+  "<ja>〜になると</ja> \"when you become ~\". <ja>髪が金色になる</ja> \"the hair turns gold\"."
  ],
  "円み": [
   "pokemon",
   "ピカチュウは円みのある体で、とてもかわいい。",
-  "Pikachu is round and very cute."
+  "Pikachu is round and very cute.",
+  "<ja>円みのある</ja> \"having roundness\": ある inside a describing clause, with が → の."
  ],
  "一": [
   "onepiece",
   "ルフィの夢は、世界一の海賊になることだ。",
-  "Luffy's dream is to be the greatest pirate in the world."
+  "Luffy's dream is to be the greatest pirate in the world.",
+  "<ja>夢は〜ことだ</ja> \"the dream is to ~\". <ja>世界一</ja> \"number one in the world\"."
  ],
  "大": [
   "onepiece",
   "ONE PIECEは、大海賊時代の物語だ。",
-  "One Piece is a story from the Great Pirate Era."
+  "One Piece is a story from the Great Pirate Era.",
+  "<ja>大〜</ja> as a prefix means \"great, big\": 大海賊時代 \"the Great Pirate Era\"."
  ],
  "気": [
   "dbz",
   "{悟空|ごくう}は相手の気を感じ取ることができる。",
-  "Goku can sense his opponent's ki."
+  "Goku can sense his opponent's ki.",
+  "<ja>感じ取る</ja> \"to sense\": stem + 取る adds \"to pick up\". <ja>〜ことができる</ja> \"can\"."
  ],
  "人気": [
   "pokemon",
   "ピカチュウはとても人気のあるポケモンだ。",
-  "Pikachu is a very popular Pokémon."
+  "Pikachu is a very popular Pokémon.",
+  "<ja>人気のある</ja> \"popular\" (lit. having popularity). が → の inside the clause."
  ],
  "七": [
   "dbz",
   "ドラゴンボールを七つ集めると、{神龍|シェンロン}が現れる。",
-  "Gather all seven Dragon Balls and Shenron appears."
+  "Gather all seven Dragon Balls and Shenron appears.",
+  "<ja>〜と</ja> \"when/if ~ (it always happens)\". <ja>七つ集める</ja>: the count goes right before the verb."
  ],
  "七月": [
   "kimetsu",
   "{炭治郎|たんじろう}の誕生日は{七月|しちがつ}{十四日|じゅうよっか}だ。",
-  "Tanjiro's birthday is July 14th."
+  "Tanjiro's birthday is July 14th.",
+  "<ja>誕生日は〜だ</ja> \"the birthday is ~\". 十四日 is read じゅうよっか."
  ],
  "十七": [
   "deathnote",
   "{夜神月|やがみライト}は十七歳でデスノートを拾った。",
-  "Light Yagami picked up the Death Note at seventeen."
+  "Light Yagami picked up the Death Note at seventeen.",
+  "<ja>十七歳で</ja> \"at seventeen\": で marks the age at which something happens."
  ],
  "女子": [
   "kon",
   "軽音部は女子高のバンドだ。",
-  "The light music club is a band at a girls' school."
+  "The light music club is a band at a girls' school.",
+  "<ja>女子高</ja> \"girls' high school\". The noun before の describes the next noun."
  ],
  "百": [
   "opm",
   "サイタマは毎日、腕立て伏せを{百回|ひゃっかい}した。",
-  "Saitama did a hundred push-ups every day."
+  "Saitama did a hundred push-ups every day.",
+  "Times are counted with <ja>回</ja>: 百回 ひゃっかい. <ja>毎日</ja> needs no particle."
  ],
  "千": [
   "spirited",
   "{湯婆婆|ゆばーば}は{千尋|ちひろ}の名前を奪って「{千|せん}」と呼んだ。",
-  "Yubaba took Chihiro's name and called her \"Sen\"."
+  "Yubaba took Chihiro's name and called her \"Sen\".",
+  "<ja>〜を奪って</ja> \"took ~ and\": the て-form joins actions. <ja>AをBと呼ぶ</ja> \"call A B\"."
  ],
  "水": [
   "kimetsu",
   "{炭治郎|たんじろう}は「水の呼吸」を使う。",
-  "Tanjiro uses Water Breathing."
+  "Tanjiro uses Water Breathing.",
+  "<ja>〜を使う</ja> \"to use ~\". The breathing styles are written in 「」 like titles."
  ],
  "男": [
   "onepiece",
   "ゾロは世界一の大剣豪を目指す男だ。",
-  "Zoro is a man aiming to be the world's greatest swordsman."
+  "Zoro is a man aiming to be the world's greatest swordsman.",
+  "<ja>〜を目指す男</ja> \"a man aiming for ~\": a verb phrase before a noun describes it."
  ],
  "男子": [
   "haikyu",
   "{烏野|からすの}高校男子バレー部は、再び強くなった。",
-  "Karasuno High's boys' volleyball team got strong again."
+  "Karasuno High's boys' volleyball team got strong again.",
+  "<ja>再び</ja> \"again\" (formal). <ja>強くなった</ja>: い-adjective → く + なる \"became strong\"."
  ],
  "木": [
   "totoro",
   "メイは大きな木の根元で、眠っているトトロを見つけた。",
-  "At the foot of the big tree, Mei found Totoro asleep."
+  "At the foot of the big tree, Mei found Totoro asleep.",
+  "<ja>眠っている</ja> describes トトロ: \"the sleeping Totoro\". <ja>根元</ja> \"base of the trunk\"."
  ],
  "学校": [
   "jjk",
   "{虎杖|いたどり}は呪術を学ぶ学校に入った。",
-  "Itadori entered a school for learning jujutsu."
+  "Itadori entered a school for learning jujutsu.",
+  "<ja>呪術を学ぶ学校</ja>: the clause describes the school. <ja>〜に入る</ja> \"to enter\"."
  ],
  "車": [
   "totoro",
   "ネコバスはどんな車よりも速く走る。",
-  "The Catbus runs faster than any car."
+  "The Catbus runs faster than any car.",
+  "<ja>どんな〜よりも</ja> \"than any ~\". <ja>速く</ja>: い-adjective → く as an adverb."
  ],
  "右": [
   "fma",
   "エドの右腕は{機械鎧|オートメイル}だ。",
-  "Ed's right arm is automail."
+  "Ed's right arm is automail.",
+  "<ja>AはBだ</ja>: the simplest sentence pattern, \"A is B\"."
  ],
  "左": [
   "fma",
   "エドは左足も{機械鎧|オートメイル}だ。",
-  "Ed's left leg is automail too."
+  "Ed's left leg is automail too.",
+  "<ja>も</ja> \"also\" replaces は: 左足も \"the left leg too\"."
  ],
  "国": [
   "fma",
   "エドとアルは、{国中|くにじゅう}を旅して賢者の石を探す。",
-  "Ed and Al travel all over the country searching for the Philosopher's Stone."
+  "Ed and Al travel all over the country searching for the Philosopher's Stone.",
+  "<ja>国中</ja> \"all over the country\": 中 read じゅう means \"throughout\"."
  ],
  "中国": [
   "dbz",
   "ドラゴンボールの世界は、中国の物語『西遊記』がもとになっている。",
-  "Dragon Ball's world is based on the Chinese tale Journey to the West."
+  "Dragon Ball's world is based on the Chinese tale Journey to the West.",
+  "<ja>〜がもとになっている</ja> \"is based on ~\". 『』 marks titles of books."
  ],
  "長男": [
   "kimetsu",
   "{炭治郎|たんじろう}は{竈門家|かまどけ}の長男だ。",
-  "Tanjiro is the eldest son of the Kamado family."
+  "Tanjiro is the eldest son of the Kamado family.",
+  "<ja>〜家</ja> (け) \"the ~ family\". <ja>長男</ja> \"eldest son\"."
  ],
  "一時": [
   "conan",
   "コナンは一時だけ元の姿に戻れた。",
-  "Conan was able to go back to his real form, just for a while."
+  "Conan was able to go back to his real form, just for a while.",
+  "<ja>一時だけ</ja> \"only for a while\". <ja>戻れた</ja> \"was able to return\" (potential past)."
  ],
  "行う": [
   "aot",
   "調査兵団は壁の外で調査を行う。",
-  "The Survey Corps carries out expeditions outside the walls."
+  "The Survey Corps carries out expeditions outside the walls.",
+  "<ja>行う</ja> \"to carry out\" is more formal than する. <ja>壁の外で</ja> \"outside the walls\"."
  ],
  "女": [
   "kiki",
   "キキは十三歳の魔女、つまり魔法を使う女の子だ。",
-  "Kiki is a thirteen-year-old witch: a girl who uses magic."
+  "Kiki is a thirteen-year-old witch: a girl who uses magic.",
+  "<ja>つまり</ja> \"in other words\". <ja>魔法を使う</ja> describes 女の子."
  ],
  "男女": [
   "kiminona",
   "『君の名は。』は、会ったことのない男女の物語だ。",
-  "Your Name is the story of a boy and a girl who've never met."
+  "Your Name is the story of a boy and a girl who've never met.",
+  "<ja>会ったことのない</ja> \"who have never met\": the experience pattern 〜たことがない used before a noun."
  ],
  "二百": [
   "opm",
   "腕立て伏せ{百回|ひゃっかい}と腹筋{百回|ひゃっかい}、合わせて{二百回|にひゃっかい}。サイタマの修行だ。",
-  "A hundred push-ups and a hundred sit-ups make two hundred. That's Saitama's training."
+  "A hundred push-ups and a hundred sit-ups make two hundred. That's Saitama's training.",
+  "<ja>合わせて</ja> \"altogether\". Counting times: 百回 ひゃっかい, 二百回 にひゃっかい."
  ],
  "先月": [
   "spyfam",
   "アーニャは先月、イーデン校に入学した。",
-  "Anya started at Eden Academy last month."
+  "Anya started at Eden Academy last month.",
+  "<ja>先月</ja> \"last month\" needs no particle. <ja>〜に入学する</ja> \"to enrol at\"."
  ],
  "名": [
   "kiminona",
   "「君の名は？」と{瀧|たき}は聞いた。",
-  "\"What's your name?\" Taki asked."
+  "\"What's your name?\" Taki asked.",
+  "<ja>君の名は？</ja> \"Your name is...?\": a short, poetic way to ask; the verb is left off."
  ],
  "火": [
   "kimetsu",
   "{煉獄|れんごく}は、火よりも熱い「炎の呼吸」を使う。",
-  "Rengoku uses Flame Breathing, hotter than fire."
+  "Rengoku uses Flame Breathing, hotter than fire.",
+  "<ja>〜よりも</ja> \"even more than ~\". <ja>熱い</ja> \"hot (to the touch)\"."
  ],
  "雨": [
   "totoro",
   "雨のバス停で、トトロは初めて傘を見た。",
-  "At the rainy bus stop, Totoro saw an umbrella for the first time."
+  "At the rainy bus stop, Totoro saw an umbrella for the first time.",
+  "<ja>初めて</ja> \"for the first time\". <ja>雨のバス停</ja>: の turns 雨 into a description."
  ],
  "下車": [
   "kimetsu",
   "無限列車からは、誰も無事に下車できなかった。",
-  "Nobody got off the Mugen Train unscathed."
+  "Nobody got off the Mugen Train unscathed.",
+  "<ja>誰も〜ない</ja> \"nobody\". <ja>下車できなかった</ja> \"couldn't get off\"."
  ],
  "一気": [
   "kimetsu",
   "{善逸|ぜんいつ}は眠ったまま、一気に鬼を倒す。",
-  "Zenitsu defeats the demon in one go, still asleep."
+  "Zenitsu defeats the demon in one go, still asleep.",
+  "<ja>〜たまま</ja> \"while still ~\". <ja>一気に</ja> \"in one go\"."
  ],
  "小学校": [
   "conan",
   "コナンは小学校の一年生として暮らしている。",
-  "Conan lives as a first-grader at elementary school."
+  "Conan lives as a first-grader at elementary school.",
+  "<ja>〜として</ja> \"as ~\". <ja>暮らしている</ja> \"is living\"."
  ],
  "白": [
   "frieren",
   "フリーレンは白い髪のエルフだ。",
-  "Frieren is an elf with white hair."
+  "Frieren is an elf with white hair.",
+  "<ja>白い</ja> is the adjective, 白 the noun. <ja>白い髪のエルフ</ja> \"an elf with white hair\"."
  ],
  "三百": [
   "onepiece",
   "ナミはお金にうるさい。{三百|さんびゃく}ベリーでも忘れない。",
-  "Nami is fussy about money. She won't forget even three hundred berries."
+  "Nami is fussy about money. She won't forget even three hundred berries.",
+  "<ja>〜にうるさい</ja> \"fussy about ~\". <ja>〜でも</ja> \"even ~\"."
  ],
  "川": [
   "spirited",
   "ハクの本当の姿は、川の神だった。",
-  "Haku's true form was a river spirit."
+  "Haku's true form was a river spirit.",
+  "<ja>本当の姿</ja> \"true form\". <ja>〜だった</ja>: past of だ."
  ],
  "三千": [
   "onepiece",
   "ゾロの技「{三千世界|さんぜんせかい}」は、{三本|さんぼん}の刀を使う。",
-  "Zoro's technique \"Three Thousand Worlds\" uses three swords."
+  "Zoro's technique \"Three Thousand Worlds\" uses three swords.",
+  "<ja>技</ja> \"technique\". 三千 is さんぜん, with the sound change from せん."
  ],
  "校長": [
   "jjk",
   "夜蛾校長は{呪骸|じゅがい}（ぬいぐるみ）を作るのが得意だ。",
-  "Principal Yaga is good at making cursed puppets."
+  "Principal Yaga is good at making cursed puppets.",
+  "<ja>〜のが得意だ</ja> \"is good at ~ing\": the opposite is 〜のが苦手だ."
  ],
  "天": [
   "laputa",
   "『天空の城ラピュタ』は、天に浮かぶ城の話だ。",
-  "Castle in the Sky is about a castle floating in the heavens."
+  "Castle in the Sky is about a castle floating in the heavens.",
+  "<ja>〜の話</ja> \"a story about ~\". 『』 marks a title."
  ],
  "白人": [
   "spyfam",
   "ロイドは白人のスパイで、コードネームは「{黄昏|たそがれ}」だ。",
-  "Loid is a white spy whose codename is Twilight."
+  "Loid is a white spy whose codename is Twilight.",
+  "<ja>AでBは〜</ja>: で joins two descriptions. <ja>コードネーム</ja> is a loanword, \"code name\"."
  ],
  "先に": [
   "haikyu",
   "{日向|ひなた}は誰よりも先に跳んで、ボールを打つ。",
-  "Hinata jumps before anyone else and spikes the ball."
+  "Hinata jumps before anyone else and spikes the ball.",
+  "<ja>誰よりも先に</ja> \"before anyone else\". <ja>跳んで</ja>: the て-form puts actions in order."
  ],
  "本名": [
   "spirited",
   "{千|せん}の本名は{千尋|ちひろ}だ。忘れてはいけない。",
-  "Sen's real name is Chihiro. She mustn't forget it."
+  "Sen's real name is Chihiro. She mustn't forget it.",
+  "<ja>〜てはいけない</ja> \"must not ~\". The subject (she) is left out, as it's clear from context."
  ],
  "名人": [
   "onepiece",
   "ウソップはパチンコの名人だ。",
-  "Usopp is a slingshot expert."
+  "Usopp is a slingshot expert.",
+  "<ja>〜の名人</ja> \"a master of ~\". <ja>AはBだ</ja> \"A is B\"."
  ],
  "土": [
   "naruto",
   "土の国の{忍|しのび}は、{岩隠|いわがく}れの里に住んでいる。",
-  "Ninja of the Land of Earth live in the Hidden Stone Village."
+  "Ninja of the Land of Earth live in the Hidden Stone Village.",
+  "<ja>〜の国の忍</ja>: の can chain nouns (\"ninja of the land of earth\"). <ja>に住んでいる</ja> \"live in\"."
  ],
  "火山": [
   "pokemon",
   "グレン{島|じま}には火山がある。",
-  "There's a volcano on Cinnabar Island."
+  "There's a volcano on Cinnabar Island.",
+  "<ja>〜には〜がある</ja> \"there is ~ in/on ~\". ある is for things that don't move by themselves."
  ],
  "時": [
   "steinsgate",
   "{岡部|おかべ}は電話レンジで、時を越えるメールを送った。",
-  "Okabe sent a message through time with the Phone Microwave."
+  "Okabe sent a message through time with the Phone Microwave.",
+  "<ja>時を越える</ja> \"to cross time\". <ja>電話レンジで</ja>: で marks the tool used."
  ],
  "小学": [
   "doraemon",
   "のび太は小学生だ。",
-  "Nobita is an elementary-school kid."
+  "Nobita is an elementary-school kid.",
+  "<ja>小学生</ja> \"elementary-school pupil\": 小学 + 生 (student)."
  ],
  "休み": [
   "kon",
   "軽音部は休み時間にお茶とケーキを楽しむ。",
-  "The light music club enjoys tea and cake in their breaks."
+  "The light music club enjoys tea and cake in their breaks.",
+  "<ja>休み時間</ja> \"break time\": the stem of 休む as a noun. <ja>AとBを楽しむ</ja> \"to enjoy A and B\"."
  ],
  "休日": [
   "spyfam",
   "休日、フォージャー{家|け}はみんなで出かけた。",
-  "On their day off, the Forger family went out together."
+  "On their day off, the Forger family went out together.",
+  "<ja>みんなで</ja> \"all together\". <ja>出かける</ja> \"to go out\"."
  ],
  "先行": [
   "conan",
   "『名探偵コナン』の映画は、先行上映が大人気だ。",
-  "The Detective Conan movies' preview screenings are hugely popular."
+  "The Detective Conan movies' preview screenings are hugely popular.",
+  "<ja>先行上映</ja> \"advance screening\". <ja>大人気だ</ja> \"is hugely popular\"."
  ],
  "小川": [
   "totoro",
   "サツキたちの家のそばには小川が流れている。",
-  "A stream runs by Satsuki's house."
+  "A stream runs by Satsuki's house.",
+  "<ja>〜のそばには</ja> \"beside ~\". <ja>流れている</ja> \"is flowing\"."
  ],
  "四千": [
   "opm",
   "怪人の強さが四千？サイタマには関係ない。",
-  "The monster's strength is four thousand? Doesn't matter to Saitama."
+  "The monster's strength is four thousand? Doesn't matter to Saitama.",
+  "<ja>〜には関係ない</ja> \"has nothing to do with ~\". The question mark shows a rising, surprised tone."
  ],
  "国土": [
   "aot",
   "壁の中が、人類に残された国土のすべてだった。",
-  "Inside the walls was all the land humanity had left."
+  "Inside the walls was all the land humanity had left.",
+  "<ja>人類に残された</ja>: passive \"left to humanity\", describing 国土. <ja>〜のすべて</ja> \"all of ~\"."
  ],
  "天気": [
   "kiminona",
   "『天気の子』は『君の名は。』の後に公開された映画だ。",
-  "Weathering With You came out after Your Name."
+  "Weathering With You came out after Your Name.",
+  "<ja>〜の後に</ja> \"after ~\". <ja>公開された</ja> \"was released\" (passive)."
  ],
  "左右": [
   "onepiece",
   "ゾロは方向音痴で、左右もわからない。",
-  "Zoro has no sense of direction and can't tell left from right."
+  "Zoro has no sense of direction and can't tell left from right.",
+  "<ja>〜も分からない</ja> \"can't even tell ~\": も adds \"even\"."
  ],
  "下": [
   "laputa",
   "シータは空から、ゆっくりと{下|した}へ降りてきた。",
-  "Sheeta floated slowly down from the sky."
+  "Sheeta floated slowly down from the sky.",
+  "<ja>降りてきた</ja>: 〜てくる shows movement toward the viewer. <ja>ゆっくりと</ja> \"slowly\"."
  ],
  "下げる": [
   "onepiece",
   "サンジはレディーには頭を下げる。",
-  "Sanji bows his head to ladies."
+  "Sanji bows his head to ladies.",
+  "<ja>頭を下げる</ja> \"to bow\" (lit. lower one's head). <ja>〜には</ja> \"to (certain people)\"."
  ],
  "土木": [
   "aot",
   "壁の土木工事は、百年以上も前のことだ。",
-  "The walls were built more than a hundred years ago."
+  "The walls were built more than a hundred years ago.",
+  "<ja>百年以上</ja> \"more than a hundred years\". <ja>前のことだ</ja> \"it happened before\"."
  ],
  "時々": [
   "deathnote",
   "Lは時々、椅子の上にしゃがんで座る。",
-  "L sometimes sits crouched on his chair."
+  "L sometimes sits crouched on his chair.",
+  "<ja>時々</ja> \"sometimes\". <ja>しゃがんで座る</ja>: the て-form shows how he sits."
  ],
  "行": [
   "deathnote",
   "デスノートに名前を一行書くだけで、その人は死ぬ。",
-  "Write a name on one line of the Death Note and that person dies."
+  "Write a name on one line of the Death Note and that person dies.",
+  "<ja>〜だけで</ja> \"just by ~ing\". Lines of text are counted with 行 (ぎょう)."
  ],
  "天下り": [
   "gintama",
   "『銀魂』の江戸では、{天人|あまんと}が天下りをしている。",
-  "In Gintama's Edo, the aliens have come down from the heavens and taken all the cushy jobs."
+  "In Gintama's Edo, the aliens have come down from the heavens and taken all the cushy jobs.",
+  "<ja>天下り</ja> literally \"descending from heaven\"; it's the word for officials parachuting into cushy jobs, used here as a pun."
  ],
  "長": [
   "kimetsu",
   "{産屋敷家|うぶやしきけ}の当主は、{鬼殺隊|きさつたい}の{長|ちょう}でもある。",
-  "The head of the Ubuyashiki family is also the leader of the Demon Slayer Corps."
+  "The head of the Ubuyashiki family is also the leader of the Demon Slayer Corps.",
+  "<ja>〜でもある</ja> \"is also ~\". <ja>当主</ja> \"head of the family\"."
  ],
  "大雨": [
   "totoro",
   "大雨の日、サツキはお父さんを迎えに行った。",
-  "On the day of the downpour, Satsuki went to meet her dad."
+  "On the day of the downpour, Satsuki went to meet her dad.",
+  "<ja>〜を迎えに行く</ja> \"to go to meet/pick up ~\"."
  ],
  "水上": [
   "onepiece",
   "ONE PIECEの冒険は、ほとんど水上で進む。",
-  "Most of One Piece's adventure happens on the water."
+  "Most of One Piece's adventure happens on the water.",
+  "<ja>ほとんど</ja> \"mostly, almost all\". <ja>進む</ja> \"to proceed\"."
  ],
  "水中": [
   "onepiece",
   "悪魔の{実|み}を食べた人は、水中では力が出ない。",
-  "People who've eaten a Devil Fruit lose their strength underwater."
+  "People who've eaten a Devil Fruit lose their strength underwater.",
+  "<ja>〜では</ja> \"in (that situation)\". <ja>力が出ない</ja> \"can't use one's strength\"."
  ],
  "出火": [
   "howl",
   "カルシファーは火の悪魔だ。出火に気をつけて！",
-  "Calcifer is a fire demon. Watch out for fires!"
+  "Calcifer is a fire demon. Watch out for fires!",
+  "<ja>〜に気をつけて</ja> \"be careful of ~\": a request using the て-form."
  ],
  "川上": [
   "mononoke",
   "アシタカは川上の森へ向かった。",
-  "Ashitaka headed for the forest upstream."
+  "Ashitaka headed for the forest upstream.",
+  "<ja>〜へ向かう</ja> \"to head toward ~\": へ marks direction."
  ],
  "大木": [
   "totoro",
   "トトロの住みかは、神社の大木の中だ。",
-  "Totoro's home is inside the great tree at the shrine."
+  "Totoro's home is inside the great tree at the shrine.",
+  "<ja>住みか</ja> \"dwelling, den\". <ja>〜の中だ</ja> \"is inside ~\"."
  ],
  "雨水": [
   "totoro",
   "トトロは大きな葉っぱで雨水をよけていた。",
-  "Totoro kept the rain off with a big leaf."
+  "Totoro kept the rain off with a big leaf.",
+  "<ja>〜で〜をよける</ja> \"to keep ~ off with ~\". <ja>よけていた</ja>: ongoing in the past."
  ],
  "白い": [
   "mononoke",
   "モロは大きな白い山犬だ。",
-  "Moro is a huge white wolf."
+  "Moro is a huge white wolf.",
+  "Two adjectives can stack before a noun: <ja>大きな白い山犬</ja>."
  ],
  "車中": [
   "kimetsu",
   "無限列車の車中で、{炭治郎|たんじろう}は夢を見た。",
-  "Aboard the Mugen Train, Tanjiro had a dream."
+  "Aboard the Mugen Train, Tanjiro had a dream.",
+  "<ja>夢を見る</ja> \"to have a dream\": Japanese \"sees\" dreams."
  ],
  "先": [
   "pokemon",
   "ピカチュウはいつもサトシの先を行く。",
-  "Pikachu always goes ahead of Ash."
+  "Pikachu always goes ahead of Ash.",
+  "<ja>〜の先を行く</ja> \"to go ahead of ~\". を marks the path."
  ],
  "右下": [
   "pokemon",
   "ポケモンのバトルでは、自分のHPは右下に出る。",
-  "In a Pokémon battle, your own HP shows at the bottom right."
+  "In a Pokémon battle, your own HP shows at the bottom right.",
+  "<ja>〜では</ja> \"in ~\". <ja>に出る</ja> \"appears at\"."
  ],
  "左上": [
   "pokemon",
   "相手のポケモンのHPは左上に出る。",
-  "The opponent Pokémon's HP shows at the top left."
+  "The opponent Pokémon's HP shows at the top left.",
+  "<ja>相手の</ja> \"the opponent's\". The structure mirrors the line for 右下."
  ],
  "後": [
   "aot",
   "母を失った後、エレンは調査兵団に入った。",
-  "After losing his mother, Eren joined the Survey Corps."
+  "After losing his mother, Eren joined the Survey Corps.",
+  "<ja>〜た後</ja> \"after ~ed\": past tense + 後. <ja>〜に入る</ja> \"to join\"."
  ],
  "午後": [
   "kon",
   "午後は部室でお茶を飲む時間だ。",
-  "Afternoons are tea time in the club room."
+  "Afternoons are tea time in the club room.",
+  "<ja>〜時間だ</ja> \"it's time for ~\": the clause before 時間 says what for."
  ],
  "今後": [
   "jjk",
   "{虎杖|いたどり}の今後は、{宿儺|すくな}次第だ。",
-  "Itadori's future depends on Sukuna."
+  "Itadori's future depends on Sukuna.",
+  "<ja>〜次第だ</ja> \"depends on ~\"."
  ],
  "午前": [
   "haikyu",
   "合宿では、午前も午後も練習だ。",
-  "At training camp it's practice both morning and afternoon."
+  "At training camp it's practice both morning and afternoon.",
+  "<ja>AもBも</ja> \"both A and B\". <ja>合宿</ja> \"training camp\"."
  ],
  "前年": [
   "fma",
   "エドが国家錬金術師になった前年、二人は母を生き返らせようとして失敗した。",
-  "The year before Ed became a State Alchemist, the brothers failed to bring their mother back."
+  "The year before Ed became a State Alchemist, the brothers failed to bring their mother back.",
+  "<ja>〜ようとして失敗した</ja> \"tried to ~ and failed\"."
  ],
  "時間": [
   "steinsgate",
   "{岡部|おかべ}は何度も時間を巻き戻して、まゆりを救おうとする。",
-  "Okabe rewinds time again and again to try to save Mayuri."
+  "Okabe rewinds time again and again to try to save Mayuri.",
+  "<ja>巻き戻す</ja> \"to rewind\". <ja>救おうとする</ja> \"tries to save\"."
  ],
  "人間": [
   "chainsaw",
   "デンジは悪魔と人間の間のような存在だ。",
-  "Denji is something between a devil and a human."
+  "Denji is something between a devil and a human.",
+  "<ja>AとBの間のような</ja> \"like something between A and B\"."
  ],
  "東": [
   "onepiece",
   "ルフィは{東|ひがし}の海（イーストブルー）の出身だ。",
-  "Luffy comes from the East Blue."
+  "Luffy comes from the East Blue.",
+  "<ja>〜の出身だ</ja> \"comes from ~\"."
  ],
  "今月": [
   "oshinoko",
   "ルビーたちは今月、初めてのライブをする。",
-  "Ruby and the others have their first live show this month."
+  "Ruby and the others have their first live show this month.",
+  "<ja>初めての</ja> \"first (ever)\". <ja>ライブをする</ja> \"to do a live show\"."
  ],
  "高校": [
   "haikyu",
   "{日向|ひなた}は{烏野|からすの}高校に入学した。",
-  "Hinata got into Karasuno High School."
+  "Hinata got into Karasuno High School.",
+  "<ja>〜に入学する</ja> \"to enter (a school)\"."
  ],
  "外国": [
   "conan",
   "コナンは外国の街でも事件を解決する。",
-  "Conan solves cases in foreign cities too."
+  "Conan solves cases in foreign cities too.",
+  "<ja>〜でも</ja> \"even in ~\": で (place) + も (even)."
  ],
  "外国人": [
   "spyfam",
   "ロイドは外国人のスパイだ。",
-  "Loid is a foreign spy."
+  "Loid is a foreign spy.",
+  "<ja>AはBだ</ja>: \"A is B\". 外国人 \"foreigner\" is 外国 + 人."
  ],
  "来年": [
   "haikyu",
   "「来年こそ、全国に行く！」",
-  "\"Next year, we're going to Nationals!\""
+  "\"Next year, we're going to Nationals!\"",
+  "<ja>〜こそ</ja> \"this time for sure\": こそ stresses the word before it."
  ],
  "話": [
   "onepiece",
   "ONE PIECEは、ルフィが海賊王を目指す{話|はなし}だ。",
-  "One Piece is the story of Luffy aiming to be Pirate King."
+  "One Piece is the story of Luffy aiming to be Pirate King.",
+  "<ja>〜を目指す話</ja> \"a story about aiming for ~\". 話 alone is read はなし."
  ],
  "電話": [
   "steinsgate",
   "{岡部|おかべ}の「電話レンジ」は、電話と電子レンジでできたタイムマシンだ。",
-  "Okabe's Phone Microwave is a time machine made from a phone and a microwave."
+  "Okabe's Phone Microwave is a time machine made from a phone and a microwave.",
+  "<ja>〜でできた</ja> \"made from ~\"."
  ],
  "北": [
   "frieren",
   "フリーレンたちは北へ向かって旅をする。",
-  "Frieren's party travels north."
+  "Frieren's party travels north.",
+  "<ja>〜へ向かって</ja> \"heading toward ~\"."
  ],
  "時半": [
   "onepiece",
   "約束は三時半。でもゾロは迷子で来ない。",
-  "The meeting is at half past three. But Zoro's lost and doesn't show."
+  "The meeting is at half past three. But Zoro's lost and doesn't show.",
+  "<ja>〜時半</ja> \"half past ~\". <ja>でも</ja> at the start of a sentence means \"but\"."
  ],
  "南": [
   "onepiece",
   "エースは南の海（サウスブルー）で生まれた。",
-  "Ace was born in the South Blue."
+  "Ace was born in the South Blue.",
+  "<ja>〜で生まれた</ja> \"was born in ~\"."
  ],
  "毎日": [
   "opm",
   "サイタマは毎日修行を続けて、髪の毛がなくなった。",
-  "Saitama kept training every day and lost all his hair."
+  "Saitama kept training every day and lost all his hair.",
+  "<ja>続けて</ja>: the て-form shows cause (he kept training, and so...). <ja>なくなった</ja> \"was gone\"."
  ],
  "母": [
   "aot",
   "エレンの母は巨人に食べられた。",
-  "Eren's mother was eaten by a Titan."
+  "Eren's mother was eaten by a Titan.",
+  "<ja>食べられた</ja> is the passive of 食べる: \"was eaten\". The eater takes に."
  ],
  "父": [
   "hxh",
   "ゴンは父を探すためにハンターになった。",
-  "Gon became a Hunter to find his father."
+  "Gon became a Hunter to find his father.",
+  "<ja>〜ために</ja> \"in order to ~\". <ja>〜になった</ja> \"became ~\"."
  ],
  "中東": [
   "fma",
   "エドたちの国の東にある砂漠は、中東のような場所だ。",
-  "The desert to the east of Ed's country is a bit like the Middle East."
+  "The desert to the east of Ed's country is a bit like the Middle East.",
+  "<ja>〜にある</ja> \"located at ~\". <ja>〜のような場所</ja> \"a place like ~\"."
  ],
  "東北": [
   "haikyu",
   "{烏野|からすの}高校は、東北の宮城県にある。",
-  "Karasuno High is in Miyagi, in the Tohoku region."
+  "Karasuno High is in Miyagi, in the Tohoku region.",
+  "<ja>〜にある</ja> \"is located in ~\". 東北 is the north-east region of Japan."
  ],
  "外": [
   "aot",
   "エレンは壁の外の世界を見たかった。",
-  "Eren wanted to see the world outside the walls."
+  "Eren wanted to see the world outside the walls.",
+  "<ja>〜たかった</ja> \"wanted to ~\": the past of 〜たい."
  ],
  "南北": [
   "onepiece",
   "グランドラインは世界を南北に分けている。",
-  "The Grand Line splits the world into north and south."
+  "The Grand Line splits the world into north and south.",
+  "<ja>〜に分ける</ja> \"to divide into ~\". <ja>分けている</ja> \"divides\" (a lasting state)."
  ],
  "後半": [
   "onepiece",
   "グランドラインの後半は「新世界」と呼ばれる。",
-  "The second half of the Grand Line is called the New World."
+  "The second half of the Grand Line is called the New World.",
+  "<ja>〜と呼ばれる</ja> \"is called ~\"."
  ],
  "西": [
   "onepiece",
   "ロビンは西の海（ウエストブルー）の生まれだ。",
-  "Robin was born in the West Blue."
+  "Robin was born in the West Blue.",
+  "<ja>〜の生まれだ</ja> \"was born in ~\" (a noun form, like 出身)."
  ],
  "電気": [
   "pokemon",
   "ピカチュウは電気タイプのポケモンだ。",
-  "Pikachu is an Electric-type Pokémon."
+  "Pikachu is an Electric-type Pokémon.",
+  "<ja>〜タイプの</ja> \"~-type\". Loanwords mix freely with kanji words."
  ],
  "日本語": [
   "naruto",
   "ナルトの「だってばよ」は、普通の日本語ではない。",
-  "Naruto's \"dattebayo\" isn't ordinary Japanese."
+  "Naruto's \"dattebayo\" isn't ordinary Japanese.",
+  "<ja>普通の</ja> \"ordinary\". <ja>ではない</ja> \"is not\"."
  ],
  "何": [
   "spyfam",
   "アーニャは人の心が読めるが、{何|なに}も知らないふりをする。",
-  "Anya can read minds but pretends she doesn't know anything."
+  "Anya can read minds but pretends she doesn't know anything.",
+  "<ja>何も〜ない</ja> \"nothing\". <ja>〜ふりをする</ja> \"to pretend to ~\"."
  ],
  "友人": [
   "deathnote",
   "Lはライトを友人と呼んだ。",
-  "L called Light his friend."
+  "L called Light his friend.",
+  "<ja>AをBと呼ぶ</ja> \"to call A B\"."
  ],
  "本来": [
   "jjk",
   "{虎杖|いたどり}は本来、普通の高校生だった。",
-  "Itadori was originally an ordinary high-school student."
+  "Itadori was originally an ordinary high-school student.",
+  "<ja>本来</ja> \"originally, by nature\". <ja>だった</ja> past of だ."
  ],
  "半": [
   "kimetsu",
   "{禰豆子|ねずこ}は、半分{鬼|おに}で半分人間のような存在だ。",
-  "Nezuko is something like half demon, half human."
+  "Nezuko is something like half demon, half human.",
+  "<ja>半分</ja> \"half\". <ja>Aで、B</ja>: で joins two descriptions."
  ],
  "東西": [
   "spyfam",
   "『SPY×FAMILY』の世界は、東西の国が冷たく対立している。",
-  "In Spy × Family's world, East and West are locked in a cold war."
+  "In Spy × Family's world, East and West are locked in a cold war.",
+  "<ja>冷たく対立している</ja>: い-adjective → く as an adverb, \"coldly opposed\"."
  ],
  "何か": [
   "doraemon",
   "のび太は困ると、ドラえもんに{何|なに}か道具を出してもらう。",
-  "When Nobita is in trouble, he gets Doraemon to bring out some gadget."
+  "When Nobita is in trouble, he gets Doraemon to bring out some gadget.",
+  "<ja>〜てもらう</ja> \"to have someone do ~ for you\". <ja>困ると</ja> \"whenever he's in trouble\"."
  ],
  "何も": [
   "opm",
   "サイタマは強くなりすぎて、戦っても{何|なに}も感じない。",
-  "Saitama got so strong he feels nothing when he fights."
+  "Saitama got so strong he feels nothing when he fights.",
+  "<ja>〜すぎて</ja> \"too ~, so\". <ja>〜ても</ja> \"even if ~\"."
  ],
  "十万": [
   "pokemon",
   "ピカチュウ、「{十万|じゅうまん}ボルト」だ！",
-  "Pikachu, use Thunderbolt! (literally \"100,000 volts\")"
+  "Pikachu, use Thunderbolt! (literally \"100,000 volts\")",
+  "The sentence-final <ja>だ</ja> here is an energetic command: \"(it's) Thunderbolt!\"."
  ],
  "百万": [
   "pokemon",
   "ポケモンのゲームは、何百万人もの人が遊んだ。",
-  "Millions of people have played the Pokémon games."
+  "Millions of people have played the Pokémon games.",
+  "<ja>何百万人もの</ja> \"millions of\": question word + counter + も = a huge amount."
  ],
  "毎年": [
   "kon",
   "軽音部は毎年、学園祭でライブをする。",
-  "The light music club plays a show at the school festival every year."
+  "The light music club plays a show at the school festival every year.",
+  "<ja>毎年</ja> \"every year\" needs no particle. <ja>学園祭</ja> \"school festival\"."
  ],
  "高さ": [
   "aot",
   "壁の高さは五十メートルある。",
-  "The walls are fifty metres high."
+  "The walls are fifty metres high.",
+  "<ja>高さ</ja>: い-adjective stem + さ = noun (\"height\"). <ja>〜ある</ja> \"is ~ (in size)\"."
  ],
  "白書": [
   "deathnote",
   "キラ事件の白書は、誰にも書けなかった。",
-  "Nobody could write the official report on the Kira case."
+  "Nobody could write the official report on the Kira case.",
+  "<ja>誰にも〜ない</ja> \"nobody\". <ja>書けなかった</ja> \"couldn't write\"."
  ],
  "電子": [
   "steinsgate",
   "{岡部|おかべ}は電子レンジで時を越えた。",
-  "Okabe crossed time with a microwave oven."
+  "Okabe crossed time with a microwave oven.",
+  "<ja>電子レンジ</ja> \"microwave oven\" (lit. electronic range). <ja>で</ja> marks the means."
  ],
  "聞かす": [
   "frieren",
   "フリーレンは、弟子のフェルンにヒンメルの話を聞かす。",
-  "Frieren tells her apprentice Fern stories about Himmel."
+  "Frieren tells her apprentice Fern stories about Himmel.",
+  "<ja>聞かす</ja> is a short causative of 聞く: \"to make (someone) listen, to tell\"."
  ],
  "友": [
   "naruto",
   "ナルトはサスケを友と呼び続けた。",
-  "Naruto kept calling Sasuke his friend."
+  "Naruto kept calling Sasuke his friend.",
+  "<ja>呼び続けた</ja>: stem + 続ける \"kept calling\"."
  ],
  "間": [
   "aot",
   "壁と壁の間に、人々は住んでいた。",
-  "People lived in the space between the walls."
+  "People lived in the space between the walls.",
+  "<ja>AとBの間に</ja> \"between A and B\"."
  ],
  "来": [
   "kon",
   "来年もみんなでライブをしよう！",
-  "Let's all play a show again next year!"
+  "Let's all play a show again next year!",
+  "<ja>〜しよう</ja> \"let's ~\": the volitional form."
  ],
  "読書": [
   "apothecary",
   "{猫猫|マオマオ}は読書より薬の実験が好きだ。",
-  "Maomao prefers experimenting with medicine to reading."
+  "Maomao prefers experimenting with medicine to reading.",
+  "<ja>AよりBが好きだ</ja> \"likes B more than A\"."
  ],
  "お母さん": [
   "totoro",
   "サツキとメイのお母さんは入院している。",
-  "Satsuki and Mei's mother is in hospital."
+  "Satsuki and Mei's mother is in hospital.",
+  "<ja>入院している</ja> \"is in hospital\": 〜ている for a current state."
  ],
  "南西": [
   "onepiece",
   "ルフィたちは南西へ船を進めた。",
-  "Luffy's crew sailed southwest."
+  "Luffy's crew sailed southwest.",
+  "<ja>船を進める</ja> \"to sail the ship forward\"."
  ],
  "父母": [
   "fma",
   "エドとアルの父母は、二人が幼い頃にいなくなった。",
-  "Ed and Al's parents were gone when they were little."
+  "Ed and Al's parents were gone when they were little.",
+  "<ja>幼い頃に</ja> \"when (they were) little\". <ja>いなくなる</ja> \"to disappear, be gone\"."
  ],
  "今": [
   "mha",
   "「もう大丈夫、{私|わたし}が来た！」オールマイトが今、ここにいる。",
-  "\"It's fine now. Why? Because I am here!\" All Might is here now."
+  "\"It's fine now. Why? Because I am here!\" All Might is here now.",
+  "<ja>もう大丈夫</ja> \"it's all right now\". All Might's full line goes on: なぜって？ 私が来た！"
  ],
  "食": [
   "apothecary",
   "{猫猫|マオマオ}は後宮で食の毒見をする。",
-  "Maomao tastes food for poison in the rear palace."
+  "Maomao tastes food for poison in the rear palace.",
+  "<ja>毒見</ja> \"tasting for poison\". <ja>後宮</ja> \"the inner palace\"."
  ],
  "お父さん": [
   "spyfam",
   "アーニャはロイドを「ちち」と呼ぶ。お父さんはスパイだ。",
-  "Anya calls Loid \"Papa\". Her dad is a spy."
+  "Anya calls Loid \"Papa\". Her dad is a spy.",
+  "<ja>AをBと呼ぶ</ja> \"to call A B\". <ja>ちち</ja> is a formal word for \"father\", which Anya uses like \"Papa\"."
  ],
  "本書": [
   "deathnote",
   "本書に名前を書かれた人間は死ぬ。",
-  "The human whose name is written in this book shall die."
+  "The human whose name is written in this book shall die.",
+  "<ja>本書</ja> \"this book\" (formal). The passive clause 名前を書かれた describes 人間."
  ],
  "読み": [
   "deathnote",
   "ライトの読みは、いつもLに見抜かれる。",
-  "L always sees through Light's plans."
+  "L always sees through Light's plans.",
+  "<ja>見抜かれる</ja> \"to be seen through\": passive of 見抜く."
  ],
  "語らう": [
   "frieren",
   "たき火のそばで、フリーレンたちは夜遅くまで語らう。",
-  "By the campfire, Frieren's party talks late into the night."
+  "By the campfire, Frieren's party talks late into the night.",
+  "<ja>夜遅くまで</ja> \"until late at night\". <ja>語らう</ja> \"to chat, talk together\"."
  ],
  "外食": [
   "gintama",
   "{万事屋|よろずや}の三人は、お金がないので外食ができない。",
-  "The three at the Yorozuya can't eat out because they're broke."
+  "The three at the Yorozuya can't eat out because they're broke.",
+  "<ja>〜ので</ja> \"because\". <ja>外食ができない</ja> \"can't eat out\"."
  ],
  "高": [
   "onepiece",
   "ルフィの懸賞金の{高|たか}は、三十億ベリーだ。",
-  "Luffy's bounty amounts to three billion berries."
+  "Luffy's bounty amounts to three billion berries.",
+  "<ja>懸賞金</ja> \"bounty\". <ja>億</ja> = a hundred million, so 三十億 = three billion."
  ],
  "読む": [
   "spyfam",
   "アーニャは人の心を読むことができる。",
-  "Anya can read people's minds."
+  "Anya can read people's minds.",
+  "<ja>〜ことができる</ja> \"can ~\"."
  ],
  "語": [
   "naruto",
   "「だってばよ」は、ナルトの口癖になっている語だ。",
-  "\"Dattebayo\" is Naruto's verbal tic."
+  "\"Dattebayo\" is Naruto's verbal tic.",
+  "<ja>口癖</ja> \"pet phrase\". <ja>〜になっている</ja> \"has become ~\"."
  ],
  "話す": [
   "pokemon",
   "ニャースは人間の言葉を話すポケモンだ。",
-  "Meowth is a Pokémon that speaks human language."
+  "Meowth is a Pokémon that speaks human language.",
+  "<ja>〜を話すポケモン</ja>: the clause describes the Pokémon."
  ],
  "聞こえる": [
   "chainsaw",
   "ポチタのエンジンの音が聞こえる。",
-  "You can hear the sound of Pochita's engine."
+  "You can hear the sound of Pochita's engine.",
+  "<ja>聞こえる</ja> \"can be heard\": the sound takes が."
  ],
  "食べる": [
   "dbz",
   "{悟空|ごくう}は戦いの後、山ほどご飯を食べる。",
-  "After a fight, Goku eats mountains of food."
+  "After a fight, Goku eats mountains of food.",
+  "<ja>山ほど</ja> \"heaps of\" (lit. as much as a mountain)."
  ],
  "前": [
   "onepiece",
   "ルフィはシャンクスの{前|まえ}で、海賊王になると宣言した。",
-  "In front of Shanks, Luffy declared he would become Pirate King."
+  "In front of Shanks, Luffy declared he would become Pirate King.",
+  "<ja>〜になると宣言した</ja> \"declared he would become ~\": と quotes the declaration."
  ],
  "万": [
   "dbz",
   "「{私|わたし}の戦闘力は五十三万です」はフリーザの有名なセリフだ。",
-  "\"My power level is 530,000\" is Frieza's famous line."
+  "\"My power level is 530,000\" is Frieza's famous line.",
+  "<ja>〜です</ja> is the polite form of だ; Frieza's politeness is part of the menace."
  ],
  "学友": [
   "mha",
   "デクと{爆豪|ばくごう}は幼い頃からの学友だ。",
-  "Deku and Bakugo have been schoolmates since they were little."
+  "Deku and Bakugo have been schoolmates since they were little.",
+  "<ja>〜からの</ja> \"since ~\". <ja>幼い頃</ja> \"early childhood\"."
  ]
 }

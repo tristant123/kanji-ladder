@@ -2,801 +2,961 @@
  "先生": [
   "jjk",
   "{五条|ごじょう}先生は最強の呪術師だ。",
-  "Gojo-sensei is the strongest sorcerer."
+  "Gojo-sensei is the strongest sorcerer.",
+  "<ja>〜先生</ja> after a name: teachers, doctors and manga artists all get 先生. <ja>最強の</ja> \"the strongest\"."
  ],
  "本気": [
   "opm",
   "サイタマが本気を出すと、パンチ{一発|いっぱつ}で終わる。",
-  "When Saitama gets serious, it's over in one punch."
+  "When Saitama gets serious, it's over in one punch.",
+  "<ja>本気を出す</ja> \"to get serious\". <ja>〜と</ja> \"when ~ (it always follows)\"."
  ],
  "お前": [
   "naruto",
   "「お前はオレの友達だ」とナルトはサスケに言った。",
-  "\"You're my friend,\" Naruto told Sasuke."
+  "\"You're my friend,\" Naruto told Sasuke.",
+  "<ja>お前</ja> is a rough, familiar \"you\", common between male friends. <ja>〜に言った</ja> \"said to ~\"."
  ],
  "花火": [
   "kiminona",
   "{三葉|みつは}は夏祭りの花火を見ていた。",
-  "Mitsuha was watching the summer festival fireworks."
+  "Mitsuha was watching the summer festival fireworks.",
+  "<ja>見ていた</ja>: 〜ていた for an action that was in progress."
  ],
  "正体": [
   "conan",
   "コナンの正体は、体が小さくなった{工藤新一|くどうしんいち}だ。",
-  "Conan's true identity is Shinichi Kudo, shrunk down."
+  "Conan's true identity is Shinichi Kudo, shrunk down.",
+  "<ja>正体</ja> \"true identity\". <ja>体が小さくなった</ja> describes 工藤新一."
  ],
  "夏休み": [
   "doraemon",
   "のび太は夏休みの宿題を最後までやらない。",
-  "Nobita never does his summer homework until the very end."
+  "Nobita never does his summer homework until the very end.",
+  "<ja>最後まで〜ない</ja> \"doesn't ~ until the very end\"."
  ],
  "弟子": [
   "dbz",
   "{悟空|ごくう}とクリリンは、亀仙人の弟子だ。",
-  "Goku and Krillin are Master Roshi's disciples."
+  "Goku and Krillin are Master Roshi's disciples.",
+  "<ja>AとBは、Cの弟子だ</ja> \"A and B are C's disciples\"."
  ],
  "世界": [
   "onepiece",
   "ルフィは世界一の海賊、海賊王を目指している。",
-  "Luffy is aiming to be the world's greatest pirate, the Pirate King."
+  "Luffy is aiming to be the world's greatest pirate, the Pirate King.",
+  "<ja>世界一の海賊、海賊王</ja>: the second noun restates the first, like an appositive."
  ],
  "主人公": [
   "mha",
   "デクは『ヒロアカ』の主人公だ。",
-  "Deku is the protagonist of My Hero Academia."
+  "Deku is the protagonist of My Hero Academia.",
+  "『』 marks a title. <ja>主人公</ja> \"main character\"."
  ],
  "天使": [
   "madoka",
   "まどかは最後に、天使のような存在になった。",
-  "In the end, Madoka became something like an angel."
+  "In the end, Madoka became something like an angel.",
+  "<ja>〜のような存在</ja> \"a being like ~\". <ja>最後に</ja> \"in the end\"."
  ],
  "転校": [
   "spirited",
   "{千尋|ちひろ}は引っ越しで転校することになった。",
-  "Chihiro had to change schools because her family moved."
+  "Chihiro had to change schools because her family moved.",
+  "<ja>引っ越しで</ja>: で marks the reason. <ja>〜ことになった</ja> \"it was decided that ~\"."
  ],
  "転生": [
   "slime",
   "{三上悟|みかみさとる}はスライムに{転生|てんせい}した。",
-  "Satoru Mikami was reincarnated as a slime."
+  "Satoru Mikami was reincarnated as a slime.",
+  "<ja>〜に転生する</ja> \"to be reborn as ~\": に marks what you become."
  ],
  "転校生": [
   "conan",
   "コナンは{帝丹|ていたん}小学校に転校生として入った。",
-  "Conan joined Teitan Elementary as a transfer student."
+  "Conan joined Teitan Elementary as a transfer student.",
+  "<ja>〜として</ja> \"as ~\". <ja>〜に入る</ja> \"to enter\"."
  ],
  "味方": [
   "deathnote",
   "Lはライトを味方につけようとした。",
-  "L tried to get Light on his side."
+  "L tried to get Light on his side.",
+  "<ja>〜を味方につける</ja> \"to win ~ over to one's side\". <ja>〜ようとした</ja> \"tried to\"."
  ],
  "屋上": [
   "bleach",
   "{一護|いちご}たちは学校の屋上で昼ご飯を食べる。",
-  "Ichigo and his friends eat lunch on the school roof."
+  "Ichigo and his friends eat lunch on the school roof.",
+  "<ja>で</ja> marks where they eat. <ja>昼ご飯</ja> \"lunch\"."
  ],
  "屋台": [
   "kimetsu",
   "{炭治郎|たんじろう}は夜の屋台でうどんを食べた。",
-  "Tanjiro ate udon at a night food stall."
+  "Tanjiro ate udon at a night food stall.",
+  "<ja>夜の屋台</ja> \"a night food stall\": の turns 夜 into a description."
  ],
  "光": [
   "laputa",
   "飛行石は青い光を放つ。",
-  "The flight stone gives off a blue light."
+  "The flight stone gives off a blue light.",
+  "<ja>放つ</ja> \"to give off, emit\". <ja>青い光</ja> \"blue light\"."
  ],
  "学園": [
   "mha",
   "{雄英|ゆうえい}はヒーローを育てる学園だ。",
-  "U.A. is a school that trains heroes."
+  "U.A. is a school that trains heroes.",
+  "<ja>〜を育てる学園</ja>: the clause describes 学園."
  ],
  "王子": [
   "dbz",
   "ベジータはサイヤ{人|じん}の王子だ。",
-  "Vegeta is the prince of the Saiyans."
+  "Vegeta is the prince of the Saiyans.",
+  "<ja>〜の王子</ja> \"prince of ~\". サイヤ人 is read サイヤじん."
  ],
  "王国": [
   "frieren",
   "フリーレンたちは魔王を倒し、王国に帰った。",
-  "Frieren's party defeated the Demon King and returned to the kingdom."
+  "Frieren's party defeated the Demon King and returned to the kingdom.",
+  "<ja>倒し、</ja>: the verb stem joins clauses (written style of 倒して)."
  ],
  "番長": [
   "jojo",
   "{空条承太郎|くうじょうじょうたろう}は番長のような不良高校生だ。",
-  "Jotaro Kujo is a delinquent high-schooler, a bit like a gang boss."
+  "Jotaro Kujo is a delinquent high-schooler, a bit like a gang boss.",
+  "<ja>〜のような</ja> \"like ~\" before a noun. <ja>不良</ja> \"delinquent\"."
  ],
  "雪": [
   "kimetsu",
   "{炭治郎|たんじろう}の家は雪深い山の中にあった。",
-  "Tanjiro's home was deep in the snowy mountains."
+  "Tanjiro's home was deep in the snowy mountains.",
+  "<ja>雪深い</ja> \"deep in snow\". <ja>〜の中にあった</ja> \"was in ~\"."
  ],
  "決着": [
   "naruto",
   "ナルトとサスケの戦いに、ついに決着がついた。",
-  "The fight between Naruto and Sasuke was finally settled."
+  "The fight between Naruto and Sasuke was finally settled.",
+  "<ja>決着がつく</ja> \"to be settled\". <ja>ついに</ja> \"finally\"."
  ],
  "天才": [
   "haikyu",
   "{影山|かげやま}は天才セッターと呼ばれる。",
-  "Kageyama is called a genius setter."
+  "Kageyama is called a genius setter.",
+  "<ja>〜と呼ばれる</ja> \"is called ~\"."
  ],
  "部活": [
   "kon",
   "{唯|ゆい}たちの部活は、ほとんどお茶の時間だ。",
-  "Yui's club activities are mostly tea time."
+  "Yui's club activities are mostly tea time.",
+  "<ja>部活</ja> is short for 部活動 \"club activities\". <ja>ほとんど</ja> \"mostly\"."
  ],
  "勝負": [
   "pokemon",
   "「ポケモン勝負だ！」",
-  "\"Let's have a Pokémon battle!\""
+  "\"Let's have a Pokémon battle!\"",
+  "<ja>〜だ！</ja> as a challenge: \"(this is) a battle!\"."
  ],
  "神社": [
   "kiminona",
   "{三葉|みつは}の家は神社だ。",
-  "Mitsuha's family runs a shrine."
+  "Mitsuha's family runs a shrine.",
+  "<ja>家は神社だ</ja>: Japanese says \"the house is a shrine\" for \"the family runs a shrine\"."
  ],
  "気配": [
   "kimetsu",
   "{炭治郎|たんじろう}は鼻で鬼の気配を感じ取る。",
-  "Tanjiro senses demons with his nose."
+  "Tanjiro senses demons with his nose.",
+  "<ja>鼻で</ja>: で for the means. <ja>感じ取る</ja> \"to sense\"."
  ],
  "運命": [
   "steinsgate",
   "{岡部|おかべ}は運命を変えるため、何度も時を戻る。",
-  "Okabe goes back in time again and again to change fate."
+  "Okabe goes back in time again and again to change fate.",
+  "<ja>〜を変えるため</ja> \"in order to change ~\". <ja>何度も</ja> \"many times\"."
  ],
  "守る": [
   "kimetsu",
   "{炭治郎|たんじろう}は妹の{禰豆子|ねずこ}を守る。",
-  "Tanjiro protects his sister Nezuko."
+  "Tanjiro protects his sister Nezuko.",
+  "<ja>妹の禰豆子</ja>: の links two nouns for the same person."
  ],
  "神様": [
   "spirited",
   "{油屋|あぶらや}には、いろいろな神様がやって来る。",
-  "All kinds of gods come to the bathhouse."
+  "All kinds of gods come to the bathhouse.",
+  "<ja>やって来る</ja> \"to come along, turn up\"."
  ],
  "入学式": [
   "mha",
   "{雄英|ゆうえい}の1年A{組|ぐみ}は、入学式に出なかった。",
-  "Class 1-A at U.A. skipped the entrance ceremony."
+  "Class 1-A at U.A. skipped the entrance ceremony.",
+  "<ja>〜に出る</ja> \"to attend (an event)\". 1年A組 is read いちねんエーぐみ."
  ],
  "勝利": [
   "haikyu",
   "{烏野|からすの}は全国大会への切符を勝ち取り、勝利を喜んだ。",
-  "Karasuno won their ticket to Nationals and celebrated the victory."
+  "Karasuno won their ticket to Nationals and celebrated the victory.",
+  "<ja>勝ち取る</ja> \"to win, earn\". <ja>〜を喜ぶ</ja> \"to be glad about ~\"."
  ],
  "約束": [
   "frieren",
   "フリーレンはヒンメルとの約束を覚えている。",
-  "Frieren remembers her promise to Himmel."
+  "Frieren remembers her promise to Himmel.",
+  "<ja>〜との約束</ja> \"a promise with ~\": と + の links it to a noun."
  ],
  "最強": [
   "jjk",
   "最強の呪術師といえば、{五条悟|ごじょうさとる}だ。",
-  "When you say the strongest sorcerer, you mean Satoru Gojo."
+  "When you say the strongest sorcerer, you mean Satoru Gojo.",
+  "<ja>〜といえば</ja> \"speaking of ~, when you say ~\"."
  ],
  "告白": [
   "kiminona",
   "{瀧|たき}は{三葉|みつは}の手に「すきだ」と書いた。それが告白だった。",
-  "Taki wrote \"I love you\" on Mitsuha's hand. That was his confession."
+  "Taki wrote \"I love you\" on Mitsuha's hand. That was his confession.",
+  "<ja>それが〜だった</ja> \"that was ~\". 「」 quotes what was written."
  ],
  "戦う": [
   "aot",
   "エレンは巨人と戦うと誓った。",
-  "Eren swore to fight the Titans."
+  "Eren swore to fight the Titans.",
+  "<ja>〜と戦う</ja> \"to fight (against) ~\". <ja>〜と誓った</ja> \"swore that ~\"."
  ],
  "信じる": [
   "pokemon",
   "サトシはピカチュウを信じている。",
-  "Ash believes in Pikachu."
+  "Ash believes in Pikachu.",
+  "<ja>信じている</ja>: 〜ている for an ongoing state of mind."
  ],
  "未来": [
   "doraemon",
   "ドラえもんは未来から来た猫型ロボットだ。",
-  "Doraemon is a cat-shaped robot from the future."
+  "Doraemon is a cat-shaped robot from the future.",
+  "<ja>〜から来た</ja> \"came from ~\". <ja>猫型</ja> \"cat-shaped\"."
  ],
  "友達": [
   "deathnote",
   "Lはライトを「初めての友達」と呼んだ。",
-  "L called Light his \"first friend\"."
+  "L called Light his \"first friend\".",
+  "<ja>初めての</ja> \"first\". <ja>AをBと呼ぶ</ja> \"to call A B\"."
  ],
  "不良": [
   "gintama",
   "{銀時|ぎんとき}は不良のように見えるが、実は優しい。",
-  "Gintoki looks like a delinquent but is actually kind."
+  "Gintoki looks like a delinquent but is actually kind.",
+  "<ja>〜のように見える</ja> \"looks like ~\". <ja>実は</ja> \"actually\"."
  ],
  "伝説": [
   "dbz",
   "伝説の{超|スーパー}サイヤ{人|じん}が現れた。",
-  "The legendary Super Saiyan appeared."
+  "The legendary Super Saiyan appeared.",
+  "<ja>伝説の</ja> \"legendary\". <ja>現れた</ja> \"appeared\"."
  ],
  "殺気": [
   "hxh",
   "キルアは相手の殺気にすぐ気づく。",
-  "Killua notices an opponent's bloodlust immediately."
+  "Killua notices an opponent's bloodlust immediately.",
+  "<ja>〜に気づく</ja> \"to notice ~\". <ja>すぐ</ja> \"right away\"."
  ],
  "必殺": [
   "opm",
   "サイタマの必殺技は「マジシリーズ」だ。",
-  "Saitama's killer moves are the \"Serious Series\"."
+  "Saitama's killer moves are the \"Serious Series\".",
+  "<ja>必殺技</ja> \"finishing move\". 「」 marks a name."
  ],
  "努力": [
   "naruto",
   "ロック・リーは努力の天才だ。",
-  "Rock Lee is a genius of hard work."
+  "Rock Lee is a genius of hard work.",
+  "<ja>努力の天才</ja> \"a genius of effort\": Lee's whole character."
  ],
  "支配": [
   "chainsaw",
   "マキマの正体は「支配の悪魔」だった。",
-  "Makima turned out to be the Control Devil."
+  "Makima turned out to be the Control Devil.",
+  "<ja>〜の正体は〜だった</ja> \"turned out to be ~\"."
  ],
  "友情": [
   "onepiece",
   "ルフィたちの友情は、{何|なに}よりも強い。",
-  "The friendship between Luffy and his crew is stronger than anything."
+  "The friendship between Luffy and his crew is stronger than anything.",
+  "<ja>何よりも</ja> \"than anything\". <ja>強い</ja> \"strong\"."
  ],
  "生徒会": [
   "kon",
   "{唯|ゆい}の幼なじみの{和|のどか}は、生徒会のメンバーだ。",
-  "Yui's childhood friend Nodoka is on the student council."
+  "Yui's childhood friend Nodoka is on the student council.",
+  "<ja>幼なじみ</ja> \"childhood friend\". <ja>〜のメンバー</ja> \"member of ~\"."
  ],
  "過去": [
   "steinsgate",
   "Dメールは過去に送るメールだ。",
-  "A D-Mail is a message sent to the past."
+  "A D-Mail is a message sent to the past.",
+  "<ja>過去に送る</ja> \"send to the past\": に marks the destination."
  ],
  "能力": [
   "onepiece",
   "悪魔の{実|み}を食べると、不思議な能力が手に入る。",
-  "Eat a Devil Fruit and you gain a strange power."
+  "Eat a Devil Fruit and you gain a strange power.",
+  "<ja>〜と</ja> \"if/when ~\". <ja>手に入る</ja> \"to obtain, come into one's hands\"."
  ],
  "絶対": [
   "onepiece",
   "ルフィは絶対に仲間を見捨てない。",
-  "Luffy absolutely never abandons his crew."
+  "Luffy absolutely never abandons his crew.",
+  "<ja>絶対に〜ない</ja> \"absolutely never\". <ja>見捨てる</ja> \"to abandon\"."
  ],
  "絶望": [
   "madoka",
   "魔法少女は絶望すると、魔女になってしまう。",
-  "When a magical girl falls into despair, she becomes a witch."
+  "When a magical girl falls into despair, she becomes a witch.",
+  "<ja>〜てしまう</ja> \"ends up ~ (unhappily)\". <ja>〜すると</ja> \"when ~\"."
  ],
  "彼女": [
   "kiminona",
   "{瀧|たき}は彼女の名前を思い出せない。",
-  "Taki can't remember her name."
+  "Taki can't remember her name.",
+  "<ja>思い出せない</ja> \"can't recall\" (potential negative of 思い出す)."
  ],
  "猫": [
   "kiki",
   "キキの黒猫の名前はジジだ。",
-  "Kiki's black cat is called Jiji."
+  "Kiki's black cat is called Jiji.",
+  "<ja>名前はジジだ</ja> \"the name is Jiji\". <ja>黒猫</ja> \"black cat\"."
  ],
  "倒す": [
   "opm",
   "サイタマはどんな敵も{一発|いっぱつ}で倒す。",
-  "Saitama takes down any enemy in one hit."
+  "Saitama takes down any enemy in one hit.",
+  "<ja>どんな〜も</ja> \"any ~\". <ja>一発で</ja> \"with one hit\"."
  ],
  "委員長": [
   "mha",
   "1年A{組|ぐみ}の委員長は{飯田|いいだ}くんだ。",
-  "Class 1-A's class president is Iida."
+  "Class 1-A's class president is Iida.",
+  "<ja>〜くん</ja> is a friendly suffix, usually for boys."
  ],
  "温泉": [
   "spirited",
   "{湯婆婆|ゆばーば}の{油屋|あぶらや}は、神様のための温泉宿だ。",
-  "Yubaba's bathhouse is a hot-spring inn for the gods."
+  "Yubaba's bathhouse is a hot-spring inn for the gods.",
+  "<ja>〜のための</ja> \"for ~\". <ja>宿</ja> \"inn\"."
  ],
  "祭り": [
   "kiminona",
   "{三葉|みつは}の町では、神社の祭りが行われた。",
-  "A shrine festival was held in Mitsuha's town."
+  "A shrine festival was held in Mitsuha's town.",
+  "<ja>行われた</ja> \"was held\": passive of 行う."
  ],
  "文化祭": [
   "kon",
   "軽音部は文化祭でライブをした。",
-  "The light music club played a show at the school festival."
+  "The light music club played a show at the school festival.",
+  "<ja>〜でライブをした</ja> \"did a live show at ~\"."
  ],
  "放課後": [
   "kon",
   "『けいおん！』のバンド名は「放課後ティータイム」だ。",
-  "The band in K-On! is called Afterschool Tea Time."
+  "The band in K-On! is called Afterschool Tea Time.",
+  "<ja>バンド名</ja> \"band name\". <ja>AはBだ</ja> \"A is B\"."
  ],
  "希望": [
   "madoka",
   "魔法少女は希望を守るために戦う。",
-  "Magical girls fight to protect hope."
+  "Magical girls fight to protect hope.",
+  "<ja>〜を守るために</ja> \"in order to protect ~\"."
  ],
  "仲間": [
   "onepiece",
   "ルフィは仲間を集めて海へ出た。",
-  "Luffy gathered a crew and set out to sea."
+  "Luffy gathered a crew and set out to sea.",
+  "<ja>集めて</ja>: て-form, \"gathered and then\". <ja>海へ出る</ja> \"to set out to sea\"."
  ],
  "卒業": [
   "kon",
   "{唯|ゆい}たちは最後に卒業していった。",
-  "In the end, Yui and the others graduated."
+  "In the end, Yui and the others graduated.",
+  "<ja>卒業していった</ja>: 〜ていく shows them moving on and away."
  ],
  "勇気": [
   "mha",
   "デクには力はなかったが、勇気はあった。",
-  "Deku had no power, but he had courage."
+  "Deku had no power, but he had courage.",
+  "<ja>〜には〜はなかったが</ja>: は for contrast, \"he didn't have A, but (he had B)\"."
  ],
  "浴衣": [
   "kiminona",
   "夏祭りには浴衣を着て行こう。",
-  "Let's wear yukata to the summer festival."
+  "Let's wear yukata to the summer festival.",
+  "<ja>着て行こう</ja>: て-form + 行く + volitional, \"let's wear it and go\"."
  ],
  "仲良し": [
   "spyfam",
   "アーニャとベッキーは仲良しだ。",
-  "Anya and Becky are best friends."
+  "Anya and Becky are best friends.",
+  "<ja>仲良し</ja> \"close friends\" works as a noun + だ."
  ],
  "勇者": [
   "frieren",
   "勇者ヒンメルは魔王を倒した。",
-  "Himmel the Hero defeated the Demon King."
+  "Himmel the Hero defeated the Demon King.",
+  "<ja>勇者ヒンメル</ja>: title before name, like \"Hero Himmel\"."
  ],
  "回復": [
   "sao",
   "キリトはポーションでHPを回復した。",
-  "Kirito restored his HP with a potion."
+  "Kirito restored his HP with a potion.",
+  "<ja>〜で回復する</ja> \"to recover with ~\"."
  ],
  "技": [
   "dbz",
   "かめはめ波は、{悟空|ごくう}の最も有名な技だ。",
-  "The Kamehameha is Goku's most famous technique."
+  "The Kamehameha is Goku's most famous technique.",
+  "<ja>最も有名な</ja> \"most famous\". 最も is the formal \"most\"."
  ],
  "防御": [
   "mha",
   "{切島|きりしま}の個性は防御に強い。",
-  "Kirishima's quirk is great for defence."
+  "Kirishima's quirk is great for defence.",
+  "<ja>〜に強い</ja> \"strong in, good at ~\". 個性 \"quirk\"."
  ],
  "必殺技": [
   "mha",
   "ヒーローには必殺技が必要だ。",
-  "Every hero needs a special move."
+  "Every hero needs a special move.",
+  "<ja>〜には〜が必要だ</ja> \"~ needs ~\"."
  ],
  "暴走": [
   "eva",
   "エヴァ初号機が暴走した。",
-  "Eva Unit-01 went berserk."
+  "Eva Unit-01 went berserk.",
+  "<ja>暴走する</ja> \"to run wild, go berserk\": a する-verb."
  ],
  "片思い": [
   "doraemon",
   "のび太はしずかちゃんに片思いしている。",
-  "Nobita has a crush on Shizuka."
+  "Nobita has a crush on Shizuka.",
+  "<ja>〜に片思いしている</ja> \"has a one-sided crush on ~\"."
  ],
  "装備": [
   "sao",
   "キリトは黒いコートを装備している。",
-  "Kirito is equipped with a black coat."
+  "Kirito is equipped with a black coat.",
+  "<ja>装備している</ja> \"is equipped with\"."
  ],
  "城": [
   "howl",
   "ハウルの城は、歩いて動く。",
-  "Howl's castle walks around."
+  "Howl's castle walks around.",
+  "<ja>歩いて動く</ja> \"moves by walking\": the て-form shows how."
  ],
  "裏切り": [
   "deathnote",
   "『DEATH NOTE』は、裏切りと嘘の物語だ。",
-  "Death Note is a story of betrayal and lies."
+  "Death Note is a story of betrayal and lies.",
+  "<ja>〜の物語</ja> \"a story of ~\". <ja>AとB</ja> \"A and B\"."
  ],
  "超能力": [
   "dandadan",
   "モモはおばあちゃんから超能力を受け継いだ。",
-  "Momo inherited psychic powers from her grandmother."
+  "Momo inherited psychic powers from her grandmother.",
+  "<ja>〜から受け継ぐ</ja> \"to inherit from ~\"."
  ],
  "相棒": [
   "pokemon",
   "ピカチュウはサトシの相棒だ。",
-  "Pikachu is Ash's partner."
+  "Pikachu is Ash's partner.",
+  "<ja>相棒</ja> \"partner, buddy\"."
  ],
  "爆発": [
   "mha",
   "{爆豪|ばくごう}の個性は「爆破」だ。手のひらで爆発を起こす。",
-  "Bakugo's quirk is Explosion. He sets off blasts from his palms."
+  "Bakugo's quirk is Explosion. He sets off blasts from his palms.",
+  "<ja>爆発を起こす</ja> \"to cause an explosion\". <ja>手のひらで</ja> \"with the palms\"."
  ],
  "恋": [
   "kiminona",
   "『君の名は。』は、不思議な恋の物語だ。",
-  "Your Name is a strange love story."
+  "Your Name is a strange love story.",
+  "<ja>不思議な</ja> \"strange, mysterious\": な-adjective before a noun."
  ],
  "殿": [
   "gintama",
   "『銀魂』には、将軍{殿|どの}も登場する。",
-  "The Shogun himself shows up in Gintama."
+  "The Shogun himself shows up in Gintama.",
+  "<ja>〜殿</ja> is an old, respectful title. <ja>登場する</ja> \"to appear (in a story)\"."
  ],
  "封印": [
   "naruto",
   "ナルトの体には、{九尾|きゅうび}が封印されている。",
-  "The Nine-Tails is sealed inside Naruto's body."
+  "The Nine-Tails is sealed inside Naruto's body.",
+  "<ja>封印されている</ja> \"is sealed\" (passive + ている)."
  ],
  "賢者": [
   "fma",
   "エドとアルは「賢者の石」を探している。",
-  "Ed and Al are searching for the Philosopher's Stone."
+  "Ed and Al are searching for the Philosopher's Stone.",
+  "<ja>探している</ja> \"are looking for\". 「」 marks a name."
  ],
  "刀": [
   "kimetsu",
   "{鬼殺隊|きさつたい}の刀は「日輪刀」という。",
-  "The Demon Slayer Corps' swords are called Nichirin blades."
+  "The Demon Slayer Corps' swords are called Nichirin blades.",
+  "<ja>〜という</ja> \"is called ~\". 日輪刀 にちりんとう."
  ],
  "変身": [
   "sailormoon",
   "{月野|つきの}うさぎはセーラームーンに変身する。",
-  "Usagi Tsukino transforms into Sailor Moon."
+  "Usagi Tsukino transforms into Sailor Moon.",
+  "<ja>〜に変身する</ja> \"to transform into ~\"."
  ],
  "彼氏": [
   "oshinoko",
   "アイドルに彼氏がいることは、秘密にしなければならない。",
-  "An idol having a boyfriend has to be kept secret."
+  "An idol having a boyfriend has to be kept secret.",
+  "<ja>〜ことは</ja>: こと makes the clause a subject. <ja>秘密にしなければならない</ja> \"must be kept secret\"."
  ],
  "結界": [
   "jjk",
   "呪術高専は結界で守られている。",
-  "Jujutsu High is protected by a barrier."
+  "Jujutsu High is protected by a barrier.",
+  "<ja>〜で守られている</ja> \"is protected by ~\" (passive)."
  ],
  "武器": [
   "chainsaw",
   "デンジの武器は、体から出るチェンソーだ。",
-  "Denji's weapons are the chainsaws that come out of his body."
+  "Denji's weapons are the chainsaws that come out of his body.",
+  "<ja>体から出る</ja> describes チェンソー: \"chainsaws that come out of his body\"."
  ],
  "救う": [
   "kimetsu",
   "{炭治郎|たんじろう}は{禰豆子|ねずこ}を人間に戻して救いたい。",
-  "Tanjiro wants to save Nezuko by turning her human again."
+  "Tanjiro wants to save Nezuko by turning her human again.",
+  "<ja>戻して救いたい</ja>: the て-form shows the means (by turning her back)."
  ],
  "戦士": [
   "sailormoon",
   "『美少女戦士セーラームーン』のセーラー戦士たち。",
-  "The Sailor Guardians of Sailor Moon."
+  "The Sailor Guardians of Sailor Moon.",
+  "The sentence ends on a noun phrase, like a caption."
  ],
  "馬鹿": [
   "aot",
   "エレンはよく「馬鹿」と言われる。",
-  "Eren often gets called an idiot."
+  "Eren often gets called an idiot.",
+  "<ja>〜と言われる</ja> \"to be called ~\" (passive of 言う)."
  ],
  "我": [
   "slime",
   "ヴェルドラは自分のことを「{我|われ}」と呼ぶ。",
-  "Veldora refers to himself as \"ware\" (I)."
+  "Veldora refers to himself as \"ware\" (I).",
+  "<ja>我</ja> (われ) is an old, grand-sounding \"I\"."
  ],
  "正義": [
   "deathnote",
   "「キラは正義だ」とライトは信じていた。",
-  "Light believed that Kira was justice."
+  "Light believed that Kira was justice.",
+  "<ja>〜と信じていた</ja> \"believed that ~\"."
  ],
  "桜": [
   "ccs",
   "{木之本桜|きのもとさくら}はクロウカードを集める。",
-  "Sakura Kinomoto collects the Clow Cards."
+  "Sakura Kinomoto collects the Clow Cards.",
+  "<ja>集める</ja> \"to collect\". The full name 木之本桜 is surname + given name."
  ],
  "敵": [
   "naruto",
   "サスケは一時、ナルトの敵になった。",
-  "For a time, Sasuke became Naruto's enemy."
+  "For a time, Sasuke became Naruto's enemy.",
+  "<ja>一時</ja> \"for a time\". <ja>〜の敵になる</ja> \"to become ~'s enemy\"."
  ],
  "素顔": [
   "opm",
   "サイタマの素顔は、いつもぼんやりした顔だ。",
-  "Saitama's real face is always blank."
+  "Saitama's real face is always blank.",
+  "<ja>ぼんやりした</ja> \"vacant, blank\": した form describing 顔."
  ],
  "仮面": [
   "onepiece",
   "ウソップは「そげキング」の仮面をつけた。",
-  "Usopp put on the Sogeking mask."
+  "Usopp put on the Sogeking mask.",
+  "<ja>仮面をつける</ja> \"to put on a mask\"."
  ],
  "修行": [
   "dbz",
   "{悟空|ごくう}は{界王様|かいおうさま}のところで修行した。",
-  "Goku trained with King Kai."
+  "Goku trained with King Kai.",
+  "<ja>〜のところで</ja> \"at ~'s place\"."
  ],
  "宿敵": [
   "dbz",
   "ベジータは{悟空|ごくう}の宿敵だ。",
-  "Vegeta is Goku's arch-rival."
+  "Vegeta is Goku's arch-rival.",
+  "<ja>宿敵</ja> \"arch-rival\". <ja>AはBだ</ja> \"A is B\"."
  ],
  "無敵": [
   "opm",
   "サイタマは無敵なので、戦いがつまらない。",
-  "Saitama is invincible, so fighting is boring for him."
+  "Saitama is invincible, so fighting is boring for him.",
+  "<ja>〜ので</ja> \"because\". <ja>つまらない</ja> \"boring\"."
  ],
  "お弁当": [
   "spyfam",
   "ヨルは料理が苦手で、お弁当作りも大変だ。",
-  "Yor is bad at cooking, so even making bento is a struggle."
+  "Yor is bad at cooking, so even making bento is a struggle.",
+  "<ja>〜が苦手で</ja> \"is bad at ~, so\". <ja>お弁当作りも</ja> \"even making bento\"."
  ],
  "奥義": [
   "naruto",
   "{螺旋丸|らせんがん}はナルトの奥義だ。",
-  "The Rasengan is Naruto's ultimate technique."
+  "The Rasengan is Naruto's ultimate technique.",
+  "<ja>奥義</ja> \"secret, ultimate technique\"."
  ],
  "兄貴": [
   "gurren",
   "シモンはカミナを「兄貴」と呼ぶ。",
-  "Simon calls Kamina \"Aniki\" (big bro)."
+  "Simon calls Kamina \"Aniki\" (big bro).",
+  "<ja>兄貴</ja> is a rough, affectionate \"big brother\", often used for someone you look up to."
  ],
  "異世界": [
   "slime",
   "{悟|さとる}は異世界でスライムとして生まれ変わった。",
-  "Satoru was reborn as a slime in another world."
+  "Satoru was reborn as a slime in another world.",
+  "<ja>生まれ変わる</ja> \"to be reborn\". <ja>〜として</ja> \"as ~\"."
  ],
  "貴様": [
   "dbz",
   "「貴様！」ベジータはよくこう叫ぶ。",
-  "\"You bastard!\" Vegeta often yells."
+  "\"You bastard!\" Vegeta often yells.",
+  "<ja>貴様</ja> was once respectful but is now an insulting \"you\". <ja>こう叫ぶ</ja> \"yells like this\"."
  ],
  "宇宙": [
   "dbz",
   "フリーザは宇宙の帝王だ。",
-  "Frieza is the emperor of the universe."
+  "Frieza is the emperor of the universe.",
+  "<ja>帝王</ja> \"emperor\". <ja>〜の帝王</ja> \"emperor of ~\"."
  ],
  "秘密": [
   "spyfam",
   "フォージャー{家|け}は、全員が秘密を持っている。",
-  "Everyone in the Forger family has a secret."
+  "Everyone in the Forger family has a secret.",
+  "<ja>全員が</ja> \"everyone\". <ja>秘密を持つ</ja> \"to have a secret\"."
  ],
  "宇宙船": [
   "dbz",
   "{悟空|ごくう}は宇宙船に乗ってナメック{星|せい}へ行った。",
-  "Goku flew to Planet Namek in a spaceship."
+  "Goku flew to Planet Namek in a spaceship.",
+  "<ja>〜に乗って</ja> \"riding in ~\". ナメック星 is read ナメックせい."
  ],
  "攻撃": [
   "aot",
   "巨人の攻撃で、壁が破られた。",
-  "The wall was breached in the Titans' attack."
+  "The wall was breached in the Titans' attack.",
+  "<ja>破られた</ja> \"was broken through\": passive of 破る."
  ],
  "影": [
   "naruto",
   "シカマルは「影真似の術」を使う。",
-  "Shikamaru uses the Shadow Possession Jutsu."
+  "Shikamaru uses the Shadow Possession Jutsu.",
+  "<ja>〜の術</ja> \"~ technique (jutsu)\"."
  ],
  "英雄": [
   "frieren",
   "ヒンメルは英雄として、みんなに覚えられている。",
-  "Himmel is remembered by everyone as a hero."
+  "Himmel is remembered by everyone as a hero.",
+  "<ja>覚えられている</ja> \"is remembered\": passive + ている. The rememberers take に."
  ],
  "帝国": [
   "sao",
   "『SAO』のアリシゼーション編には、{四|よっ}つの帝国が登場する。",
-  "Four empires appear in SAO's Alicization arc."
+  "Four empires appear in SAO's Alicization arc.",
+  "<ja>〜編</ja> \"~ arc\". 四つ is read よっつ."
  ],
  "決闘": [
   "sao",
   "キリトはヒースクリフと決闘した。",
-  "Kirito dueled Heathcliff."
+  "Kirito dueled Heathcliff.",
+  "<ja>〜と決闘する</ja> \"to duel ~\"."
  ],
  "契約": [
   "madoka",
   "「僕と契約して、魔法少女になってよ！」とキュゥべえは{言|い}う。",
-  "\"Make a contract with me and become a magical girl!\" says Kyubey."
+  "\"Make a contract with me and become a magical girl!\" says Kyubey.",
+  "<ja>〜てよ</ja>: a casual request. Kyubey's line is a well-known catchphrase."
  ],
  "一生懸命": [
   "haikyu",
   "{日向|ひなた}はいつも一生懸命ボールを追う。",
-  "Hinata always chases the ball with everything he's got."
+  "Hinata always chases the ball with everything he's got.",
+  "<ja>一生懸命</ja> \"with all one's might\" works as an adverb."
  ],
  "召喚": [
   "naruto",
   "ナルトはガマブン{太|た}を召喚した。",
-  "Naruto summoned Gamabunta."
+  "Naruto summoned Gamabunta.",
+  "<ja>召喚する</ja> \"to summon\"."
  ],
  "竜": [
   "dbz",
   "{神龍|シェンロン}は願いを叶える竜だ。",
-  "Shenron is a dragon that grants wishes."
+  "Shenron is a dragon that grants wishes.",
+  "<ja>願いを叶える</ja> \"to grant wishes\": describes 竜."
  ],
  "鬼": [
   "kimetsu",
   "{禰豆子|ねずこ}は鬼になってしまった。",
-  "Nezuko was turned into a demon."
+  "Nezuko was turned into a demon.",
+  "<ja>〜になってしまった</ja> \"ended up becoming ~\": てしまう for a sad change."
  ],
  "炎": [
   "kimetsu",
   "{煉獄|れんごく}さんは「{炎|ほのお}の呼吸」の使い手だ。",
-  "Rengoku is a master of Flame Breathing."
+  "Rengoku is a master of Flame Breathing.",
+  "<ja>〜の使い手</ja> \"a user/master of ~\"."
  ],
  "竜巻": [
   "opm",
   "S級ヒーローのタツマキの名前は「竜巻」という意味だ。",
-  "The S-Class hero Tatsumaki is named after the word for tornado."
+  "The S-Class hero Tatsumaki is named after the word for tornado.",
+  "<ja>〜という意味だ</ja> \"means ~\"."
  ],
  "滅ぼす": [
   "aot",
   "エレンは最後に、世界を滅ぼそうとした。",
-  "In the end, Eren tried to destroy the world."
+  "In the end, Eren tried to destroy the world.",
+  "<ja>滅ぼそうとした</ja> \"tried to destroy\": volitional + とする."
  ],
  "頑張る": [
   "kimetsu",
   "「頑張れ{炭治郎|たんじろう}、頑張れ！」",
-  "\"Hang in there, Tanjiro, hang in there!\""
+  "\"Hang in there, Tanjiro, hang in there!\"",
+  "<ja>頑張れ</ja> is the plain command form of 頑張る: \"hang in there!\"."
  ],
  "冒険": [
   "onepiece",
   "ルフィたちの冒険は、まだまだ続く。",
-  "Luffy's crew's adventure still goes on."
+  "Luffy's crew's adventure still goes on.",
+  "<ja>まだまだ</ja> \"still (a long way)\". <ja>続く</ja> \"continues\"."
  ],
  "剣": [
   "sao",
   "キリトは{二本|にほん}の剣で戦う。",
-  "Kirito fights with two swords."
+  "Kirito fights with two swords.",
+  "<ja>二本の剣で</ja> \"with two swords\": で marks the means."
  ],
  "剣士": [
   "onepiece",
   "ゾロは世界一の剣士を目指している。",
-  "Zoro is aiming to be the world's greatest swordsman."
+  "Zoro is aiming to be the world's greatest swordsman.",
+  "<ja>〜を目指している</ja> \"is aiming for ~\"."
  ],
  "聖剣": [
   "frieren",
   "勇者の剣は、本当は聖剣ではなかった。",
-  "The Hero's sword wasn't really a holy sword."
+  "The Hero's sword wasn't really a holy sword.",
+  "<ja>本当は〜ではなかった</ja> \"actually wasn't ~\"."
  ],
  "記憶": [
   "kiminona",
   "目が覚めると、{瀧|たき}と{三葉|みつは}の記憶は消えてしまう。",
-  "When they wake up, Taki and Mitsuha's memories fade away."
+  "When they wake up, Taki and Mitsuha's memories fade away.",
+  "<ja>目が覚めると</ja> \"when they wake up\". <ja>消えてしまう</ja> \"fade away (sadly)\"."
  ],
  "先輩": [
   "haikyu",
   "{日向|ひなた}は田中先輩を尊敬している。",
-  "Hinata looks up to Tanaka-senpai."
+  "Hinata looks up to Tanaka-senpai.",
+  "<ja>〜を尊敬している</ja> \"looks up to ~\". 先輩 also works as a title after a name."
  ],
  "大丈夫": [
   "mha",
   "「もう大丈夫、{私|わたし}が来た！」",
-  "\"It's fine now. Why? Because I am here!\""
+  "\"It's fine now. Why? Because I am here!\"",
+  "All Might's famous line: <ja>もう大丈夫！なぜって？私が来た！</ja>"
  ],
  "後輩": [
   "kon",
   "{梓|あずさ}は{唯|ゆい}たちの後輩だ。",
-  "Azusa is Yui and the others' junior."
+  "Azusa is Yui and the others' junior.",
+  "<ja>後輩</ja> \"junior (at school or work)\", the opposite of 先輩."
  ],
  "覚悟": [
   "kimetsu",
   "{炭治郎|たんじろう}は覚悟を決めて、{鬼殺隊|きさつたい}に入った。",
-  "Tanjiro made up his mind and joined the Demon Slayer Corps."
+  "Tanjiro made up his mind and joined the Demon Slayer Corps.",
+  "<ja>覚悟を決める</ja> \"to make up one's mind, steel oneself\"."
  ],
  "盾": [
   "frieren",
   "戦士アイゼンは、パーティを守る盾だった。",
-  "Eisen the warrior was the shield that protected the party."
+  "Eisen the warrior was the shield that protected the party.",
+  "<ja>パーティを守る盾</ja>: the clause describes 盾."
  ],
  "雷": [
   "kimetsu",
   "{善逸|ぜんいつ}は「雷の呼吸」を使う。",
-  "Zenitsu uses Thunder Breathing."
+  "Zenitsu uses Thunder Breathing.",
+  "<ja>〜を使う</ja> \"to use ~\"."
  ],
  "精霊": [
   "spirited",
   "ハクは川の精霊のような存在だ。",
-  "Haku is something like the spirit of a river."
+  "Haku is something like the spirit of a river.",
+  "<ja>〜のような存在</ja> \"a being like ~\"."
  ],
  "姫": [
   "mononoke",
   "サンは「もののけ姫」と呼ばれる。",
-  "San is called the Princess Mononoke."
+  "San is called the Princess Mononoke.",
+  "<ja>〜と呼ばれる</ja> \"is called ~\"."
  ],
  "悪魔": [
   "chainsaw",
   "ポチタはチェンソーの悪魔だ。",
-  "Pochita is the Chainsaw Devil."
+  "Pochita is the Chainsaw Devil.",
+  "<ja>チェンソーの悪魔</ja> \"the Chainsaw Devil\": the noun before の says what kind."
  ],
  "魔法": [
   "frieren",
   "フリーレンは、珍しい魔法を集めるのが好きだ。",
-  "Frieren loves collecting unusual spells."
+  "Frieren loves collecting unusual spells.",
+  "<ja>〜のが好きだ</ja> \"likes ~ing\". <ja>珍しい</ja> \"rare\"."
  ],
  "魔女": [
   "kiki",
   "キキは十三歳の魔女だ。",
-  "Kiki is a thirteen-year-old witch."
+  "Kiki is a thirteen-year-old witch.",
+  "<ja>十三歳の魔女</ja>: age + の describes the noun."
  ],
  "魔術": [
   "frieren",
   "フリーレンの世界では、魔族も魔術を使う。",
-  "In Frieren's world, demons use magic too."
+  "In Frieren's world, demons use magic too.",
+  "<ja>〜の世界では</ja> \"in the world of ~\". <ja>も</ja> \"also\"."
  ],
  "魔力": [
   "frieren",
   "フリーレンはいつも魔力を隠している。",
-  "Frieren always hides her mana."
+  "Frieren always hides her mana.",
+  "<ja>隠している</ja> \"is hiding\" (keeps hidden)."
  ],
  "魔物": [
   "slime",
   "リムルの国には、いろいろな魔物が住んでいる。",
-  "All kinds of monsters live in Rimuru's nation."
+  "All kinds of monsters live in Rimuru's nation.",
+  "<ja>いろいろな</ja> \"all kinds of\"."
  ],
  "魔王": [
   "slime",
   "リムルはやがて魔王になった。",
-  "Rimuru eventually became a Demon Lord."
+  "Rimuru eventually became a Demon Lord.",
+  "<ja>やがて</ja> \"eventually\". <ja>〜になった</ja> \"became\"."
  ],
  "姫様": [
   "laputa",
   "シータはラピュタ王家の姫様だった。",
-  "Sheeta turned out to be a princess of Laputa's royal line."
+  "Sheeta turned out to be a princess of Laputa's royal line.",
+  "<ja>〜様</ja> is a very respectful suffix. <ja>王家</ja> \"royal family\"."
  ],
  "魔剣": [
   "sao",
   "キリトの剣は、まるで魔剣のように強い。",
-  "Kirito's sword is strong as a cursed blade."
+  "Kirito's sword is strong as a cursed blade.",
+  "<ja>まるで〜のように</ja> \"just like ~\"."
  ],
  "世界征服": [
   "dbz",
   "ピッコロ大魔王は世界征服を狙っていた。",
-  "King Piccolo was out for world domination."
+  "King Piccolo was out for world domination.",
+  "<ja>〜を狙う</ja> \"to aim at ~\". <ja>狙っていた</ja> past ongoing."
  ],
  "怪物": [
   "aot",
   "巨人は人を食べる怪物だ。",
-  "Titans are monsters that eat people."
+  "Titans are monsters that eat people.",
+  "<ja>人を食べる怪物</ja>: the clause describes 怪物."
  ],
  "師匠": [
   "naruto",
   "{自来也|じらいや}はナルトの師匠だ。",
-  "Jiraiya is Naruto's master."
+  "Jiraiya is Naruto's master.",
+  "<ja>師匠</ja> \"master, teacher\" in a craft or martial art."
  ],
  "騎士": [
   "sao",
   "アスナは「{血盟|けつめい}騎士団」の副団長だ。",
-  "Asuna is vice-commander of the Knights of the Blood."
+  "Asuna is vice-commander of the Knights of the Blood.",
+  "<ja>騎士団</ja> \"order of knights\". <ja>副団長</ja> \"vice-commander\"."
  ],
  "忍者": [
   "naruto",
   "ナルトは{木|こ}ノ{葉|は}の忍者だ。",
-  "Naruto is a ninja of the Leaf."
+  "Naruto is a ninja of the Leaf.",
+  "木ノ葉 (このは) means \"tree leaves\", hence \"the Leaf\"."
  ],
  "嵐": [
   "onepiece",
   "ナミは空気の変化で嵐を予感する。",
-  "Nami can sense a coming storm from changes in the air."
+  "Nami can sense a coming storm from changes in the air.",
+  "<ja>予感する</ja> \"to have a premonition of\". <ja>空気の変化で</ja> \"from changes in the air\"."
  ],
  "俺": [
   "onepiece",
   "「海賊王に{俺|おれ}はなる！」",
-  "\"I'm gonna be King of the Pirates!\""
+  "\"I'm gonna be King of the Pirates!\"",
+  "Word order is flipped for emphasis: normally 俺は海賊王になる. <ja>俺</ja> is a rough male \"I\"."
  ],
  "闇": [
   "jjk",
   "「闇より{出|い}でて闇より黒く」は、{帳|とばり}を下ろす言葉だ。",
-  "\"Emerge from darkness, blacker than darkness\": the words that lower a Veil."
+  "\"Emerge from darkness, blacker than darkness\": the words that lower a Veil.",
+  "<ja>〜より</ja> here is \"from ~\" (literary). <ja>帳を下ろす</ja> \"to lower a curtain/veil\"."
  ],
  "侍": [
   "gintama",
   "{銀時|ぎんとき}は{木刀|ぼくとう}を持つ侍だ。",
-  "Gintoki is a samurai who carries a wooden sword."
+  "Gintoki is a samurai who carries a wooden sword.",
+  "<ja>〜を持つ侍</ja>: the clause describes 侍."
  ],
  "妖怪": [
   "dandadan",
   "オカルンとモモは、妖怪や宇宙{人|じん}と戦う。",
-  "Okarun and Momo fight yokai and aliens."
+  "Okarun and Momo fight yokai and aliens.",
+  "<ja>AやB</ja> \"A, B and so on\"."
  ],
  "拙者": [
   "kenshin",
   "{緋村剣心|ひむらけんしん}は自分のことを「拙者」と呼ぶ。",
-  "Kenshin Himura calls himself \"sessha\" (this humble one)."
+  "Kenshin Himura calls himself \"sessha\" (this humble one).",
+  "<ja>拙者</ja> is an old, humble samurai \"I\"."
  ],
  "幽霊": [
   "dandadan",
   "モモは幽霊を信じている。",
-  "Momo believes in ghosts."
+  "Momo believes in ghosts.",
+  "<ja>〜を信じている</ja> \"believes in ~\"."
  ],
  "呪い": [
   "jjk",
   "呪術師は呪いと戦う。",
-  "Jujutsu sorcerers fight curses."
+  "Jujutsu sorcerers fight curses.",
+  "<ja>〜と戦う</ja> \"to fight against ~\"."
  ],
  "呪文": [
   "frieren",
   "フリーレンは、花畑を出す呪文が好きだ。",
-  "Frieren likes the spell that makes a field of flowers."
+  "Frieren likes the spell that makes a field of flowers.",
+  "<ja>花畑を出す呪文</ja>: the clause describes 呪文."
  ],
  "諦める": [
   "naruto",
   "ナルトは絶対に諦めない。",
-  "Naruto never gives up."
+  "Naruto never gives up.",
+  "<ja>絶対に〜ない</ja> \"never\"."
  ],
  "覚醒": [
   "dbz",
   "{悟空|ごくう}は怒りで{超|スーパー}サイヤ{人|じん}に覚醒した。",
-  "In his rage, Goku awakened as a Super Saiyan."
+  "In his rage, Goku awakened as a Super Saiyan.",
+  "<ja>怒りで</ja> \"out of anger\": で marks the cause."
  ]
 }

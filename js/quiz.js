@@ -34,13 +34,13 @@
   }
 
   function lineCard(it, html) {
-    const [key, , en] = it.ex;
+    const [key, , en, , , note] = it.ex;
     const sr = Render.SERIES[key] || { jp: key, en: key, icon: "🎬", color: "#666" };
     return (
       '<div class="qline" style="--sc:' + esc(sr.color) + '">' +
       '<span class="series-tag"><span class="series-icon" aria-hidden="true">' + esc(sr.icon) + '</span><span lang="ja">' + esc(sr.jp) + '</span><span class="series-en">' + esc(sr.en) + "</span></span>" +
       '<blockquote lang="ja">' + html + "</blockquote>" +
-      '<p class="qline-en">' + esc(en) + "</p></div>"
+      '<p class="qline-en">' + esc(en) + (note ? '<span class="grammar-note">' + Render.markup(note) + "</span>" : "") + "</p></div>"
     );
   }
 

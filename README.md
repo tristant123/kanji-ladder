@@ -5,13 +5,14 @@ This is the anime-flavoured edition (the `main` branch; the plain app is on
 levels, SRS and mnemonics as the main app, plus:
 
 - **Anime example lines.** Vocabulary shows a sentence about a real series
-  (One Piece, Demon Slayer, Frieren, Spirited Away, ~40 shows), with the
-  word highlighted, a play button and a tap-to-reveal translation. Kanji
+  (One Piece, Demon Slayer, Frieren, Spirited Away, Slam Dunk, Inuyasha...
+  about 80 shows), with the word highlighted, a play button and a
+  tap-to-reveal translation that also explains a grammar point or two. Kanji
   pages show lines from their words. Lines are written the way a Japanese
   writer would, kanji and all: **hover (or tap) any kanji for its
   furigana** and a little card with the word's and each kanji's meaning,
-  or turn on *Always show furigana* in Settings. So far every
-  N5 word and every anime word has a line.
+  or turn on *Always show furigana* in Settings. Every N5 word, almost every N4 word, every anime word and a first batch
+  of N3 words has a line: about 860 in all.
 - **Anime words.** 160 extra words you hear constantly in anime (魔法, 先輩,
   覚悟, 異世界, 必殺技, 貴様...), marked アニメ. They're real dictionary
   words and unlock with their kanji like everything else.
@@ -30,12 +31,14 @@ levels, SRS and mnemonics as the main app, plus:
 The lines are original sentences about the shows. A handful quote a famous
 catchphrase of a few words (「海賊王に俺はなる！」, 「月にかわっておしおきよ！」),
 credited to the series. They live in `content/anime_lines_*.json` as
-`"word": ["series", "Japanese", "English"]`, and the build checks each one.
+`"word": ["series", "Japanese", "English", "grammar note"]` (the note can use
+`<ja>…</ja>` for Japanese), and the build checks each one.
 
 Furigana are generated at build time with the Sudachi morphological
 analyser (`pip install sudachipy sudachidict_core`). Where it guesses wrong,
 usually names and counters, write the reading into the line yourself:
-`{炭治郎|たんじろう}`, `{四人|よにん}`. Those always win.
+`{炭治郎|たんじろう}`, `{四人|よにん}`. Those always win. Names that come up
+in many lines go in `content/readings.json` instead, and apply everywhere.
 
 
 A WaniKani-style spaced-repetition trainer for all 2,136 Jōyō kanji, laid out

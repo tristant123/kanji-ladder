@@ -784,9 +784,11 @@ def main():
         if v.get("anime"):
             rec["anime"] = 1
         if v["w"] in lines:
-            key, jp, en = lines[v["w"]]
+            key, jp, en = lines[v["w"]][:3]
             ruby, kana = furigana(jp)
             rec["ex"] = [key, plain_text(jp), en, ruby, kana]
+            if len(lines[v["w"]]) > 3:
+                rec["ex"].append(lines[v["w"]][3])  # grammar note
         out_vocab[v["w"]] = rec
 
     data = {
@@ -885,9 +887,28 @@ def align(surface, reading):
     return [(r, m.group(i + 1) if HAS_KANJI.match(r) else "") for i, r in enumerate(runs)]
 
 
+KNOWN_READINGS = {}
+
+
+def with_known_readings(text):
+    """Wrap names from content/readings.json in {漢字|よみ}, outside existing
+    {…|…} groups, longest first."""
+    if not KNOWN_READINGS:
+        KNOWN_READINGS.update({k: v for k, v in load_json("readings.json", {}).items() if not k.startswith("_")})
+        KNOWN_READINGS.setdefault("", "")
+    parts = re.split(r"(\{[^{}]*\})", text)
+    for name in sorted((k for k in KNOWN_READINGS if k), key=len, reverse=True):
+        rd = KNOWN_READINGS[name]
+        parts = [p if p.startswith("{") else re.sub("(%s)" % re.escape(name), "\x00%s|%s\x01" % (name, rd), p) for p in parts]
+        parts = re.split(r"(\{[^{}]*\}|\x00[^\x01]*\x01)", "".join(parts))
+        parts = ["{" + p[1:-1] + "}" if p.startswith("\x00") else p for p in parts]
+    return "".join(parts)
+
+
 def furigana(text):
     """Text -> ruby markup "{漢字|よみ}..." plus an all-kana version for audio.
     {漢字|よみ} written in the source is kept as is (names, counters)."""
+    text = with_known_readings(text)
     tok, mode = _tokenizer()
     ruby, kana, pos = [], [], 0
     for m in list(MANUAL.finditer(text)) + [None]:
@@ -899,6 +920,9 @@ def furigana(text):
                 kana.append(surf)
                 continue
             reading = to_hira(t.reading_form())
+            # sudachi reads 言う as colloquial ゆう; teach いう
+            if surf.startswith("言") and reading.startswith("ゆ") and not surf.startswith("言葉"):
+                reading = "い" + reading[1:]
             kana.append(reading)
             for piece, r in align(surf, reading):
                 ruby.append("{%s|%s}" % (piece, r) if r else piece)
@@ -921,8 +945,8 @@ def check_lines(lines, vocab, kanji, speakers):
         if w not in vocab:
             print(where + "no such vocabulary item", file=sys.stderr)
             continue
-        if len(line) != 3 or line[0] not in speakers:
-            print(where + "expected [series, japanese, english]", file=sys.stderr)
+        if len(line) not in (3, 4) or line[0] not in speakers:
+            print(where + "expected [series, japanese, english, grammar note?]", file=sys.stderr)
             continue
         jp = plain_text(line[1])
         ks = vocab[w]["k"]

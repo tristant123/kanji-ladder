@@ -1,0 +1,740 @@
+{
+ "彼ら": [
+  "fruitsbasket",
+  "{草摩|そうま}家の人々には秘密がある。彼らは異性に抱きつかれると、十二支の動物に変身してしまう。",
+  "The Sohma family have a secret: when hugged by someone of the opposite sex, they turn into animals of the zodiac.",
+  "<ja>抱きつかれる</ja>: passive of 抱きつく, \"to be hugged\". <ja>〜と</ja> \"whenever ~\"."
+ ],
+ "彼": [
+  "kuroko",
+  "黒子は影がうすいので、彼がコートにいることに誰も気づかない。",
+  "Kuroko has such a weak presence that nobody notices he's on the court.",
+  "<ja>影がうすい</ja> \"to have little presence\" (lit. a thin shadow). <ja>〜ことに気づく</ja> \"to notice that ~\"."
+ ],
+ "君": [
+  "gurren",
+  "カミナはシモンに「君のドリルは天を突くドリルだ」と言った。",
+  "Kamina told Simon his drill was the drill that would pierce the heavens.",
+  "<ja>君</ja> is a familiar \"you\", gentler than お前. <ja>天を突く</ja> \"to pierce the heavens\" describes ドリル."
+ ],
+ "殺す": [
+  "kenshin",
+  "剣心は、もう二度と人を殺さないと決めた。",
+  "Kenshin decided he would never kill anyone again.",
+  "<ja>二度と〜ない</ja> \"never again\". <ja>〜と決めた</ja> \"decided that ~\"."
+ ],
+ "必要": [
+  "shield",
+  "盾の勇者は攻撃ができないので、一緒に戦う仲間が必要だ。",
+  "The Shield Hero can't attack, so he needs companions to fight alongside him.",
+  "<ja>〜が必要だ</ja> \"needs ~\": the needed thing takes が."
+ ],
+ "良い": [
+  "toradora",
+  "竜児は目つきが悪いが、本当は良い人だ。",
+  "Ryuji has a scary glare, but he's actually a good person.",
+  "<ja>目つきが悪い</ja> \"has a mean look\". <ja>良い</ja> is a slightly formal いい."
+ ],
+ "本当": [
+  "tokyorev",
+  "タケミチは、本当にヒナを救えるのか分からなかった。",
+  "Takemichi didn't know if he could really save Hina.",
+  "<ja>本当に</ja> \"really\". <ja>救えるのか分からない</ja> \"doesn't know whether he can save ~\"."
+ ],
+ "戻す": [
+  "tokyorev",
+  "タケミチは、ヒナの未来を取り戻すために過去へ戻った。",
+  "Takemichi went back to the past to win back Hina's future.",
+  "<ja>取り戻す</ja> \"to take back\" (戻す \"put back\" + 取る). <ja>戻る</ja> is the intransitive \"go back\"."
+ ],
+ "一緒": [
+  "fairytail",
+  "ナツとハッピーは、いつも一緒に仕事に行く。",
+  "Natsu and Happy always go on jobs together.",
+  "<ja>一緒に</ja> \"together\". <ja>仕事に行く</ja> \"to go to work / on a job\"."
+ ],
+ "助け": [
+  "inuyasha",
+  "かごめは、犬夜叉に助けを求めた。",
+  "Kagome asked Inuyasha for help.",
+  "<ja>〜に助けを求める</ja> \"to ask ~ for help\"."
+ ],
+ "所": [
+  "suzume",
+  "すずめは、災いが出てくる扉のある所を旅した。",
+  "Suzume travelled to places with doors that disasters come out of.",
+  "<ja>扉のある所</ja> \"places where there are doors\": が → の inside the clause."
+ ],
+ "場所": [
+  "suzume",
+  "後ろ戸は、人がいなくなった場所にある。",
+  "The back doors are found in places that people have abandoned.",
+  "<ja>いなくなった</ja> \"became empty of people\". The clause describes 場所."
+ ],
+ "子供": [
+  "neverland",
+  "グレイス=フィールドハウスの子供たちは、ママが大好きだった。",
+  "The children of Grace Field House loved Mom.",
+  "<ja>〜が大好きだった</ja> \"loved ~\" (past). <ja>〜たち</ja> marks a group."
+ ],
+ "愛": [
+  "koenokatachi",
+  "「聲の形」は、愛と許しの物語だ。",
+  "A Silent Voice is a story of love and forgiveness.",
+  "<ja>AとBの物語</ja> \"a story of A and B\"."
+ ],
+ "探す": [
+  "hxh",
+  "ゴンは、父親のジンを探すためにハンターになった。",
+  "Gon became a Hunter to search for his father, Ging.",
+  "<ja>〜ために</ja> \"in order to ~\". <ja>父親のジン</ja>: の links two names for the same person."
+ ],
+ "頼む": [
+  "dandadan",
+  "モモはおばあちゃんに、オカルンを助けてほしいと頼んだ。",
+  "Momo asked her grandmother to help Okarun.",
+  "<ja>〜てほしい</ja> \"want (someone) to ~\". <ja>〜と頼む</ja> \"to ask that ~\"."
+ ],
+ "呼ぶ": [
+  "inuyasha",
+  "かごめが「おすわり！」と呼ぶと、犬夜叉は地面にたおれる。",
+  "When Kagome calls out \"Sit!\", Inuyasha slams into the ground.",
+  "<ja>〜と</ja> \"whenever ~\". <ja>たおれる</ja> \"to fall down\"."
+ ],
+ "警察": [
+  "lupin",
+  "銭形警部は、警察の仕事としてルパンを追い続ける。",
+  "Inspector Zenigata keeps chasing Lupin as his police job.",
+  "<ja>〜として</ja> \"as ~\". <ja>追い続ける</ja>: stem + 続ける \"keep chasing\"."
+ ],
+ "心配": [
+  "fruitsbasket",
+  "透は、いつも自分より人のことを心配する。",
+  "Tohru always worries about others more than herself.",
+  "<ja>AよりB</ja> \"B more than A\". <ja>〜のことを心配する</ja> \"to worry about ~\"."
+ ],
+ "関係": [
+  "geass",
+  "ルルーシュとスザクの関係は、とても複雑だ。",
+  "Lelouch and Suzaku's relationship is very complicated.",
+  "<ja>複雑だ</ja> \"complicated\": a な-adjective."
+ ],
+ "神": [
+  "gurren",
+  "グレンラガンは、最後には神のような力を手に入れた。",
+  "In the end, Gurren Lagann gained god-like power.",
+  "<ja>〜のような力</ja> \"power like ~\". <ja>手に入れる</ja> \"to obtain\"."
+ ],
+ "息子": [
+  "lupin",
+  "ルパン三世は、怪盗アルセーヌ・ルパンの孫だ。息子ではない。",
+  "Lupin III is the grandson of the gentleman thief Arsène Lupin, not his son.",
+  "<ja>AのB</ja> \"A's B\". <ja>ではない</ja> \"is not\"."
+ ],
+ "娘": [
+  "apothecary",
+  "{猫猫|マオマオ}は、花街で育った薬屋の娘だ。",
+  "Maomao is an apothecary's daughter who grew up in the pleasure district.",
+  "<ja>〜で育った</ja> \"grew up in ~\", describing 娘."
+ ],
+ "次": [
+  "blackclover",
+  "アスタの夢は、次の魔法帝になることだ。",
+  "Asta's dream is to become the next Wizard King.",
+  "<ja>次の〜</ja> \"the next ~\". <ja>夢は〜ことだ</ja> \"the dream is to ~\"."
+ ],
+ "取る": [
+  "hxh",
+  "ゴンとキルアは、ハンター試験でライセンスを取ろうとした。",
+  "Gon and Killua tried to get their licences in the Hunter Exam.",
+  "<ja>取ろうとした</ja>: volitional + とする \"tried to get\"."
+ ],
+ "情報": [
+  "ghostshell",
+  "公安9課は、電脳から情報を集める。",
+  "Section 9 gathers information from cyberbrains.",
+  "<ja>〜から集める</ja> \"to gather from ~\"."
+ ],
+ "頭": [
+  "ippo",
+  "一歩の頭の中は、いつもボクシングのことでいっぱいだ。",
+  "Ippo's head is always full of boxing.",
+  "<ja>〜でいっぱいだ</ja> \"is full of ~\"."
+ ],
+ "事件": [
+  "dandadan",
+  "モモとオカルンは、出会った日から次々と事件に巻き込まれた。",
+  "From the day they met, Momo and Okarun got dragged into one incident after another.",
+  "<ja>次々と</ja> \"one after another\". <ja>巻き込まれる</ja> \"to get caught up in\" (passive)."
+ ],
+ "理由": [
+  "slamdunk",
+  "花道がバスケを始めた理由は、晴子さんだった。",
+  "The reason Hanamichi started basketball was Haruko.",
+  "<ja>〜理由は〜だった</ja> \"the reason ~ was ~\": the clause before 理由 describes it."
+ ],
+ "数": [
+  "yugioh",
+  "遊戯は、たくさんの数のカードでデッキを作る。",
+  "Yugi builds his deck out of lots of cards.",
+  "<ja>〜でデッキを作る</ja> \"to build a deck from ~\": で marks the material."
+ ],
+ "危険": [
+  "nausicaa",
+  "腐海の空気は、人間にとって危険だ。",
+  "The air of the Sea of Corruption is dangerous to humans.",
+  "<ja>〜にとって</ja> \"for, to ~\"."
+ ],
+ "安全": [
+  "nausicaa",
+  "風の谷は、海から風が吹くので安全だ。",
+  "The Valley of the Wind is safe because wind blows in from the sea.",
+  "<ja>〜ので</ja> \"because\". <ja>風が吹く</ja> \"the wind blows\"."
+ ],
+ "最初": [
+  "slamdunk",
+  "花道は最初、バスケのルールを何も知らなかった。",
+  "At first, Hanamichi knew nothing about the rules of basketball.",
+  "<ja>最初</ja> \"at first\". <ja>何も〜ない</ja> \"nothing\"."
+ ],
+ "方法": [
+  "suzume",
+  "すずめは、草太を元の姿に戻す方法を探した。",
+  "Suzume searched for a way to turn Souta back to normal.",
+  "<ja>〜方法</ja> \"a way to ~\": the clause before it says what for."
+ ],
+ "顔": [
+  "mob",
+  "モブは感情を顔に出さない。",
+  "Mob doesn't show his emotions on his face.",
+  "<ja>顔に出す</ja> \"to show on one's face\"."
+ ],
+ "命": [
+  "rezero",
+  "スバルは、仲間の命を守るために何度も死んだ。",
+  "Subaru died again and again to protect his friends' lives.",
+  "<ja>〜ために</ja> \"in order to\". <ja>何度も</ja> \"many times\"."
+ ],
+ "失う": [
+  "shield",
+  "尚文は、仲間も名誉もすべて失った。",
+  "Naofumi lost everything: his companions and his honour.",
+  "<ja>AもBも</ja> \"both A and B\". <ja>すべて</ja> \"everything\"."
+ ],
+ "確認": [
+  "psychopass",
+  "ドミネーターは、相手の犯罪係数を確認する。",
+  "The Dominator checks a target's Crime Coefficient.",
+  "<ja>確認する</ja> \"to check, confirm\"."
+ ],
+ "感じ": [
+  "bocchi",
+  "ぼっちは、人前に出ると溶けてしまう感じがする。",
+  "When Bocchi is in front of people, she feels like she's melting.",
+  "<ja>〜感じがする</ja> \"to feel like ~\"."
+ ],
+ "船": [
+  "bebop",
+  "ビバップ号は、スパイクたちが住む船だ。",
+  "The Bebop is the ship Spike and the crew live on.",
+  "<ja>スパイクたちが住む</ja> describes 船."
+ ],
+ "確か": [
+  "neverland",
+  "ノーマンの考えは、いつも確かだった。",
+  "Norman's thinking was always sound.",
+  "<ja>確か</ja> \"certain, reliable\" (な-adjective). <ja>だった</ja> past."
+ ],
+ "怖い": [
+  "neverland",
+  "農園の本当の姿は、とても怖いものだった。",
+  "The farm's true nature was something truly terrifying.",
+  "<ja>〜ものだった</ja> \"was a ~ thing\"."
+ ],
+ "盗む": [
+  "lupin",
+  "ルパンは、どんなお宝でも盗んでみせる。",
+  "Lupin can steal any treasure, and he'll show you.",
+  "<ja>〜てみせる</ja> \"I'll show you I can ~\". <ja>どんな〜でも</ja> \"any ~ at all\"."
+ ],
+ "感じる": [
+  "inuyasha",
+  "かごめは、四魂のかけらの気配を感じることができる。",
+  "Kagome can sense the presence of Shikon Jewel shards.",
+  "<ja>〜ことができる</ja> \"can ~\"."
+ ],
+ "説明": [
+  "drstone",
+  "千空は、科学のことを分かりやすく説明する。",
+  "Senku explains science in an easy-to-understand way.",
+  "<ja>分かりやすく</ja>: stem + やすい \"easy to ~\", in adverb form."
+ ],
+ "寝る": [
+  "onepiece",
+  "ゾロは、ひまさえあれば寝ている。",
+  "Zoro is asleep whenever he gets the chance.",
+  "<ja>〜さえあれば</ja> \"as long as there's ~\"."
+ ],
+ "夢": [
+  "blackclover",
+  "アスタとユノは、同じ夢を持つライバルだ。",
+  "Asta and Yuno are rivals with the same dream.",
+  "<ja>同じ夢を持つ</ja> describes ライバル."
+ ],
+ "歳": [
+  "mushoku",
+  "ルーデウスは、三歳で魔法を使えるようになった。",
+  "Rudeus became able to use magic at the age of three.",
+  "<ja>〜ようになった</ja> \"came to be able to ~\". <ja>三歳で</ja> \"at three\"."
+ ],
+ "重要": [
+  "geass",
+  "ギアスの重要なルールは、一人に一回しか使えないことだ。",
+  "An important rule of Geass is that it only works once per person.",
+  "<ja>〜しか〜ない</ja> \"only\". <ja>一人に一回</ja> \"once per person\"."
+ ],
+ "一番": [
+  "kuroko",
+  "キセキの世代は、中学で一番強いチームだった。",
+  "The Generation of Miracles was the strongest team in middle school.",
+  "<ja>一番〜</ja> \"the most ~\"."
+ ],
+ "犯罪": [
+  "psychopass",
+  "シビュラは、犯罪が起こる前に犯罪者を見つける。",
+  "Sibyl finds criminals before crimes happen.",
+  "<ja>〜前に</ja> \"before ~\": dictionary form + 前に."
+ ],
+ "自由": [
+  "aot",
+  "エレンは、壁の外の自由を求めた。",
+  "Eren longed for the freedom outside the walls.",
+  "<ja>〜を求める</ja> \"to seek ~\"."
+ ],
+ "相手": [
+  "slamdunk",
+  "花道は、どんな相手にもリバウンドで負けたくない。",
+  "Hanamichi never wants to lose a rebound to any opponent.",
+  "<ja>どんな〜にも</ja> \"against any ~\". <ja>負けたくない</ja> \"doesn't want to lose\"."
+ ],
+ "声": [
+  "koenokatachi",
+  "硝子は耳が聞こえないので、手話で話す。声は出しにくい。",
+  "Shoko can't hear, so she speaks in sign language. It's hard for her to use her voice.",
+  "<ja>〜にくい</ja> \"hard to ~\": verb stem + にくい."
+ ],
+ "王": [
+  "yugioh",
+  "遊戯の中には、古代エジプトの王の魂がいる。",
+  "Inside Yugi there's the soul of an ancient Egyptian king.",
+  "<ja>〜の中には〜がいる</ja> \"inside ~ there is ~\"."
+ ],
+ "選ぶ": [
+  "rezero",
+  "スバルは、エミリアを王に選んでほしいと願った。",
+  "Subaru wished for Emilia to be chosen as ruler.",
+  "<ja>〜てほしい</ja> \"want ~ to happen\". <ja>選ぶ</ja> \"to choose\"."
+ ],
+ "昔": [
+  "inuyasha",
+  "かごめは井戸を通って、昔の日本に行く。",
+  "Kagome goes to old Japan through a well.",
+  "<ja>〜を通って</ja> \"through ~\"."
+ ],
+ "戦争": [
+  "violet",
+  "ヴァイオレットは、戦争で両腕を失った。",
+  "Violet lost both arms in the war.",
+  "<ja>戦争で</ja>: で marks the circumstance (in the war)."
+ ],
+ "許す": [
+  "shield",
+  "尚文は、自分をだました王女をなかなか許さなかった。",
+  "Naofumi took a long time to forgive the princess who had tricked him.",
+  "<ja>なかなか〜ない</ja> \"not easily\". <ja>だました</ja> describes 王女."
+ ],
+ "実は": [
+  "kuroko",
+  "黒子は、実はとてもパスがうまい。",
+  "Kuroko is actually very good at passing.",
+  "<ja>実は</ja> \"actually\" reveals something surprising."
+ ],
+ "責任": [
+  "mha",
+  "オールマイトは、平和の象徴としての責任を感じていた。",
+  "All Might felt the responsibility of being the Symbol of Peace.",
+  "<ja>〜としての</ja> \"as ~\" before a noun."
+ ],
+ "変わる": [
+  "mob",
+  "モブの力は、感情が100%になると大きく変わる。",
+  "Mob's powers change dramatically when his emotions hit 100%.",
+  "<ja>〜になると</ja> \"when it reaches ~\". <ja>大きく</ja> \"greatly\"."
+ ],
+ "役": [
+  "oshinoko",
+  "アクアは、ドラマで大事な役をもらった。",
+  "Aqua got an important role in a drama.",
+  "<ja>役をもらう</ja> \"to be given a role\"."
+ ],
+ "存在": [
+  "kuroko",
+  "黒子の存在は、相手チームにとって見えない武器だ。",
+  "Kuroko's presence is an invisible weapon against the other team.",
+  "<ja>見えない</ja> \"invisible\" (can't be seen). <ja>〜にとって</ja> \"for ~\"."
+ ],
+ "追う": [
+  "lupin",
+  "銭形警部は、世界中でルパンを追う。",
+  "Inspector Zenigata chases Lupin all over the world.",
+  "<ja>世界中で</ja> \"all over the world\"."
+ ],
+ "罪": [
+  "koenokatachi",
+  "将也は、昔の罪を背負って生きている。",
+  "Shoya lives carrying the weight of his past wrongs.",
+  "<ja>〜を背負って</ja> \"carrying ~ (on one's back)\"."
+ ],
+ "薬": [
+  "apothecary",
+  "猫猫は、薬にくわしい薬屋の娘だ。",
+  "Maomao is an apothecary's daughter who knows all about medicine.",
+  "<ja>〜にくわしい</ja> \"knowledgeable about ~\"."
+ ],
+ "怒る": [
+  "fruitsbasket",
+  "{夾|きょう}はすぐに怒るが、本当は優しい。",
+  "Kyo gets angry easily, but he's really kind.",
+  "<ja>すぐに</ja> \"quickly, easily\". <ja>が</ja> \"but\"."
+ ],
+ "生活": [
+  "fruitsbasket",
+  "透は、テントで一人で生活していた。",
+  "Tohru was living by herself in a tent.",
+  "<ja>一人で</ja> \"alone\". <ja>生活する</ja> \"to live (day to day)\"."
+ ],
+ "地球": [
+  "bebop",
+  "ビバップの時代、地球にはあまり人が住んでいない。",
+  "In Bebop's era, not many people live on Earth.",
+  "<ja>あまり〜ない</ja> \"not much, not many\"."
+ ],
+ "願い": [
+  "tenki",
+  "陽菜が空に祈ると、晴れてほしいという願いがかなう。",
+  "When Hina prays to the sky, wishes for sunshine come true.",
+  "<ja>〜てほしいという願い</ja> \"the wish that ~ would happen\". <ja>かなう</ja> \"to come true\"."
+ ],
+ "静か": [
+  "natsume",
+  "夏目は、静かな田舎の町に住んでいる。",
+  "Natsume lives in a quiet country town.",
+  "<ja>静かな</ja>: な-adjective before a noun."
+ ],
+ "飛行": [
+  "nausicaa",
+  "ナウシカは、メーヴェで自由に空を飛行する。",
+  "Nausicaä flies freely through the sky on her glider, the Mehve.",
+  "<ja>自由に</ja> \"freely\". <ja>で</ja> marks the means."
+ ],
+ "幸せ": [
+  "fruitsbasket",
+  "透は、みんなの幸せを一番に考える。",
+  "Tohru puts everyone's happiness first.",
+  "<ja>〜を一番に考える</ja> \"to think of ~ first\"."
+ ],
+ "互い": [
+  "kuroko",
+  "黒子と火神は、お互いを信じている。",
+  "Kuroko and Kagami trust each other.",
+  "<ja>お互い</ja> \"each other\". <ja>信じている</ja> \"believe in\"."
+ ],
+ "最近": [
+  "ghostshell",
+  "最近の犯罪は、電脳をねらうものが多い。",
+  "These days, many crimes target cyberbrains.",
+  "<ja>〜ものが多い</ja> \"many (things) are ~\"."
+ ],
+ "完全": [
+  "ghostshell",
+  "草薙素子は、ほぼ完全な義体の人間だ。",
+  "Motoko Kusanagi is a human with an almost completely artificial body.",
+  "<ja>ほぼ</ja> \"almost\". <ja>完全な</ja>: な-adjective before a noun."
+ ],
+ "失敗": [
+  "drstone",
+  "千空は何度失敗しても、実験をやめない。",
+  "No matter how many times Senku fails, he doesn't stop experimenting.",
+  "<ja>何度〜ても</ja> \"no matter how many times ~\"."
+ ],
+ "信頼": [
+  "hxh",
+  "ゴンとキルアは、強い信頼で結ばれている。",
+  "Gon and Killua are bound by deep trust.",
+  "<ja>〜で結ばれている</ja> \"are tied together by ~\" (passive)."
+ ],
+ "決して": [
+  "kenshin",
+  "剣心は、決して人を殺さない。",
+  "Kenshin never kills anyone.",
+  "<ja>決して〜ない</ja> \"never\", stronger than ぜんぜん."
+ ],
+ "必ず": [
+  "inuyasha",
+  "犬夜叉は、かごめを必ず守る。",
+  "Inuyasha always protects Kagome without fail.",
+  "<ja>必ず</ja> \"without fail\"."
+ ],
+ "両親": [
+  "fma",
+  "エドとアルが両親と一緒に暮らした時間は、とても短かった。",
+  "The time Ed and Al got to live with their parents was very short.",
+  "<ja>〜と一緒に</ja> \"together with\". The clause before 時間 describes it."
+ ],
+ "経験": [
+  "mushoku",
+  "ルーデウスは、前の人生の経験を生かして生きる。",
+  "Rudeus lives making use of his experience from his previous life.",
+  "<ja>〜を生かす</ja> \"to make good use of ~\"."
+ ],
+ "科学": [
+  "drstone",
+  "千空は、科学の力で石の世界を変えていく。",
+  "Senku changes the stone world with the power of science.",
+  "<ja>変えていく</ja>: 〜ていく for change continuing into the future."
+ ],
+ "首": [
+  "neverland",
+  "農園の子供たちの首には、番号が書かれている。",
+  "The farm children have numbers written on their necks.",
+  "<ja>書かれている</ja> \"is written\" (passive + ている)."
+ ],
+ "戦い": [
+  "blackclover",
+  "アスタの戦いは、いつも反魔法の剣で行われる。",
+  "Asta's fights are always fought with his anti-magic swords.",
+  "<ja>行われる</ja> \"is carried out\" (passive of 行う)."
+ ],
+ "期待": [
+  "bluelock",
+  "絵心は、潔に大きな期待をしている。",
+  "Ego has big expectations for Isagi.",
+  "<ja>〜に期待する</ja> \"to expect a lot from ~\"."
+ ],
+ "現実": [
+  "sao",
+  "SAOの中で死ぬと、現実の体も死んでしまう。",
+  "If you die inside SAO, your real body dies too.",
+  "<ja>〜と</ja> \"if/when ~\". <ja>〜てしまう</ja> for a terrible result."
+ ],
+ "船長": [
+  "onepiece",
+  "ルフィは、麦わらの一味の船長だ。",
+  "Luffy is the captain of the Straw Hat crew.",
+  "<ja>一味</ja> \"gang, crew\"."
+ ],
+ "窓": [
+  "violet",
+  "ヴァイオレットは窓の外を見ながら、少佐のことを思った。",
+  "Violet thought of the Major while looking out of the window.",
+  "<ja>〜ながら</ja> \"while ~ing\". <ja>〜のことを思う</ja> \"to think of ~\"."
+ ],
+ "馬": [
+  "inuyasha",
+  "戦国時代の人々は、馬に乗って移動した。",
+  "People in the Warring States period got about on horseback.",
+  "<ja>〜に乗る</ja> \"to ride ~\". <ja>移動する</ja> \"to move, travel\"."
+ ],
+ "判断": [
+  "haikyu",
+  "影山は、一瞬で正しい判断をする。",
+  "Kageyama makes the right call in an instant.",
+  "<ja>一瞬で</ja> \"in an instant\". <ja>判断をする</ja> \"to make a judgment\"."
+ ],
+ "機会": [
+  "slamdunk",
+  "花道は、試合に出る機会をいつも待っていた。",
+  "Hanamichi was always waiting for a chance to play in a game.",
+  "<ja>〜機会</ja> \"a chance to ~\". <ja>待っていた</ja> \"was waiting\"."
+ ],
+ "偉大": [
+  "fma",
+  "ホーエンハイムは、偉大な錬金術師だった。",
+  "Hohenheim was a great alchemist.",
+  "<ja>偉大な</ja> \"great\" (な-adjective, used for people and achievements)."
+ ],
+ "恐怖": [
+  "aot",
+  "人々は、巨人への恐怖の中で暮らしていた。",
+  "People lived in fear of the Titans.",
+  "<ja>〜への恐怖</ja> \"fear of ~\": へ + の links a direction to a noun."
+ ],
+ "突然": [
+  "suzume",
+  "草太は、突然いすの姿に変えられてしまった。",
+  "Souta was suddenly turned into a chair.",
+  "<ja>変えられてしまった</ja>: passive + てしまう, \"got turned (unfortunately)\"."
+ ],
+ "打つ": [
+  "slamdunk",
+  "流川は、どんな時でもシュートを打つ。",
+  "Rukawa takes the shot no matter the situation.",
+  "<ja>どんな時でも</ja> \"at any time at all\". <ja>シュートを打つ</ja> \"to take a shot\"."
+ ],
+ "人類": [
+  "aot",
+  "壁の中は、人類の最後の場所だった。",
+  "Inside the walls was humanity's last place.",
+  "<ja>最後の</ja> \"last\". <ja>だった</ja> past of だ."
+ ],
+ "平和": [
+  "mha",
+  "オールマイトは「平和の象徴」と呼ばれた。",
+  "All Might was called the Symbol of Peace.",
+  "<ja>〜と呼ばれた</ja> \"was called ~\"."
+ ],
+ "途中": [
+  "frieren",
+  "フリーレンたちは、旅の途中でいろいろな人に出会う。",
+  "On the way, Frieren's party meets all sorts of people.",
+  "<ja>〜の途中で</ja> \"in the middle of ~, on the way\"."
+ ],
+ "絵": [
+  "shigatsu",
+  "かをりのバイオリンは、まるで絵のように美しかった。",
+  "Kaori's violin playing was beautiful, just like a painting.",
+  "<ja>まるで〜のように</ja> \"just like ~\". <ja>美しかった</ja> past of 美しい."
+ ],
+ "痛み": [
+  "tokyoghoul",
+  "金木は、痛みにたえて強くなった。",
+  "Kaneki grew stronger by enduring pain.",
+  "<ja>〜にたえる</ja> \"to endure ~\". <ja>強くなる</ja> \"to become strong\"."
+ ],
+ "種": [
+  "ginsaji",
+  "八軒は、農業高校で{種|たね}のまき方から学んだ。",
+  "At agricultural school, Hachiken learned everything from how to sow seeds.",
+  "<ja>〜方</ja> after a verb stem: \"how to ~\". <ja>〜から学ぶ</ja> \"learn starting from ~\"."
+ ],
+ "席": [
+  "kaguya",
+  "生徒会室の会長の席には、白銀が座っている。",
+  "Shirogane sits in the president's seat in the student council room.",
+  "<ja>〜に座る</ja> \"to sit in/on ~\". 座っている \"is sitting\"."
+ ],
+ "息": [
+  "kimetsu",
+  "鬼殺隊の剣士は、特別な息の仕方で強くなる。",
+  "Demon Slayer swordsmen grow strong through a special way of breathing.",
+  "<ja>仕方</ja> \"way of doing\". <ja>〜で</ja> marks the means."
+ ],
+ "自然": [
+  "nausicaa",
+  "ナウシカは、自然と人間をつなごうとした。",
+  "Nausicaä tried to bring nature and people together.",
+  "<ja>AとBをつなぐ</ja> \"to connect A and B\"."
+ ],
+ "女王": [
+  "ccs",
+  "知世はいつも、さくらのために女王のようなドレスを作る。",
+  "Tomoyo always makes Sakura dresses fit for a queen.",
+  "<ja>〜のために</ja> \"for ~\". <ja>〜のような</ja> \"like ~\"."
+ ],
+ "偶然": [
+  "tenki",
+  "帆高は、偶然陽菜と出会った。",
+  "Hodaka met Hina by chance.",
+  "<ja>偶然</ja> \"by chance\" works as an adverb here."
+ ],
+ "呼吸": [
+  "kimetsu",
+  "全集中の呼吸で、炭治郎は力を出す。",
+  "Through Total Concentration Breathing, Tanjiro draws out his strength.",
+  "<ja>力を出す</ja> \"to exert strength\"."
+ ],
+ "怒り": [
+  "dbz",
+  "悟空の怒りが、スーパーサイヤ人の力を目覚めさせた。",
+  "Goku's anger awakened the power of the Super Saiyan.",
+  "<ja>目覚めさせる</ja> \"to awaken (something)\": the causative of 目覚める."
+ ],
+ "成長": [
+  "mob",
+  "モブは、力ではなく心で成長していく。",
+  "Mob grows not through his powers but through his heart.",
+  "<ja>AではなくB</ja> \"not A but B\". <ja>成長していく</ja> \"keeps growing\"."
+ ],
+ "遠く": [
+  "suzume",
+  "すずめは九州から、遠く東北まで旅をした。",
+  "Suzume travelled all the way from Kyushu to far-off Tohoku.",
+  "<ja>AからBまで</ja> \"from A to B\". <ja>遠く</ja> \"far away\"."
+ ],
+ "若さ": [
+  "mushoku",
+  "ルーデウスは、子供の若さと大人の記憶を持っている。",
+  "Rudeus has a child's youth and an adult's memories.",
+  "<ja>若さ</ja>: い-adjective stem + さ = noun (young → youth)."
+ ],
+ "手術": [
+  "tokyoghoul",
+  "金木は手術で、喰種の臓器を移植された。",
+  "In surgery, Kaneki was given a ghoul's organs.",
+  "<ja>移植された</ja> \"was transplanted\" (passive)."
+ ],
+ "制御": [
+  "akira",
+  "鉄雄は、自分の力を制御できなくなった。",
+  "Tetsuo lost control of his own power.",
+  "<ja>〜できなくなった</ja> \"became unable to ~\"."
+ ],
+ "市民": [
+  "akira",
+  "ネオ東京の市民は、暴動の中で暮らしている。",
+  "The citizens of Neo-Tokyo live amid riots.",
+  "<ja>〜の中で</ja> \"in the middle of ~\"."
+ ],
+ "倒れる": [
+  "ippo",
+  "一歩のパンチを受けて、相手は倒れた。",
+  "Hit by Ippo's punch, the opponent went down.",
+  "<ja>〜を受けて</ja> \"receiving ~\": the て-form gives the cause."
+ ],
+ "夫人": [
+  "spyfam",
+  "ヨルは、フォージャー夫人としてイーデン校の面接に出た。",
+  "Yor attended the Eden Academy interview as Mrs Forger.",
+  "<ja>〜として</ja> \"as ~\". <ja>〜に出る</ja> \"to attend\"."
+ ],
+ "満足": [
+  "shokugeki",
+  "創真の料理を食べると、審査員はみんな満足する。",
+  "When the judges eat Soma's cooking, they're all satisfied.",
+  "<ja>〜と</ja> \"when ~\". <ja>みんな</ja> \"all\"."
+ ],
+ "決定": [
+  "yugioh",
+  "海馬は、ブルーアイズを自分のエースに決定した。",
+  "Kaiba made the Blue-Eyes his ace.",
+  "<ja>AをBに決定する</ja> \"to settle on A as B\"."
+ ],
+ "方向": [
+  "onepiece",
+  "ゾロは、いつも反対の方向へ行ってしまう。",
+  "Zoro always ends up going in the opposite direction.",
+  "<ja>〜てしまう</ja> \"ends up ~\"."
+ ],
+ "生徒": [
+  "neverland",
+  "農園の子供たちは、生徒のように毎日テストを受けた。",
+  "The farm children took tests every day, like pupils.",
+  "<ja>テストを受ける</ja> \"to take a test\"."
+ ],
+ "会議": [
+  "kimetsu",
+  "柱合会議で、柱たちは炭治郎のことを話し合った。",
+  "At the Hashira Meeting, the Hashira discussed Tanjiro.",
+  "<ja>話し合う</ja> \"to discuss\": stem + 合う \"do together\"."
+ ]
+}

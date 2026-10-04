@@ -392,7 +392,7 @@
   }
 
   function animeLine(v, withWord) {
-    const [key, jp, en, ruby, kana] = v.ex;
+    const [key, jp, en, ruby, kana, note] = v.ex;
     const sr = SERIES[key] || { key, jp: key, en: key, icon: "🎬", color: "#666" };
     return (
       '<figure class="anime-line" style="--sc:' + esc(sr.color) + '">' +
@@ -402,7 +402,8 @@
       '<blockquote lang="ja" title="Hover or tap a kanji for its reading">' + rubyLine(ruby || jp, v) +
       (canSpeak() ? ' <button class="btn icon" type="button" data-say="' + esc(kana || jp) + '" aria-label="Play the line">🔊</button>' : "") +
       "</blockquote>" +
-      '<details class="anime-en"><summary>Translation</summary>' + esc(en) + "</details>" +
+      '<details class="anime-en"><summary>Translation' + (note ? " &amp; grammar" : "") + "</summary>" + esc(en) +
+      (note ? '<p class="grammar-note">' + markup(note) + "</p>" : "") + "</details>" +
       "</div></figure>"
     );
   }

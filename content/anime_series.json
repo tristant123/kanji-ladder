@@ -285,5 +285,285 @@
   "en": "Rurouni Kenshin",
   "icon": "🌀",
   "color": "#b33a4a"
+ },
+ {
+  "key": "bocchi",
+  "jp": "ぼっち・ざ・ろっく！",
+  "en": "Bocchi the Rock!",
+  "icon": "🎸",
+  "color": "#e86a9a"
+ },
+ {
+  "key": "mob",
+  "jp": "モブサイコ100",
+  "en": "Mob Psycho 100",
+  "icon": "💯",
+  "color": "#7a5cc7"
+ },
+ {
+  "key": "vinland",
+  "jp": "ヴィンランド・サガ",
+  "en": "Vinland Saga",
+  "icon": "⛵",
+  "color": "#5b6f7a"
+ },
+ {
+  "key": "bebop",
+  "jp": "カウボーイビバップ",
+  "en": "Cowboy Bebop",
+  "icon": "🎷",
+  "color": "#c9792b"
+ },
+ {
+  "key": "geass",
+  "jp": "コードギアス",
+  "en": "Code Geass",
+  "icon": "♟️",
+  "color": "#8b1e3f"
+ },
+ {
+  "key": "tokyorev",
+  "jp": "東京リベンジャーズ",
+  "en": "Tokyo Revengers",
+  "icon": "🏍️",
+  "color": "#2b2b2b"
+ },
+ {
+  "key": "blackclover",
+  "jp": "ブラッククローバー",
+  "en": "Black Clover",
+  "icon": "🍀",
+  "color": "#1f6b3a"
+ },
+ {
+  "key": "fairytail",
+  "jp": "FAIRY TAIL",
+  "en": "Fairy Tail",
+  "icon": "🧚",
+  "color": "#d6452f"
+ },
+ {
+  "key": "rezero",
+  "jp": "Re:ゼロから始める異世界生活",
+  "en": "Re:Zero",
+  "icon": "⏳",
+  "color": "#5a7bd6"
+ },
+ {
+  "key": "konosuba",
+  "jp": "この素晴らしい世界に祝福を！",
+  "en": "KonoSuba",
+  "icon": "💥",
+  "color": "#e3a01b"
+ },
+ {
+  "key": "toradora",
+  "jp": "とらドラ！",
+  "en": "Toradora!",
+  "icon": "🐯",
+  "color": "#e07b39"
+ },
+ {
+  "key": "violet",
+  "jp": "ヴァイオレット・エヴァーガーデン",
+  "en": "Violet Evergarden",
+  "icon": "✉️",
+  "color": "#3f6fb5"
+ },
+ {
+  "key": "shigatsu",
+  "jp": "四月は君の嘘",
+  "en": "Your Lie in April",
+  "icon": "🎻",
+  "color": "#e58fb0"
+ },
+ {
+  "key": "koenokatachi",
+  "jp": "聲の形",
+  "en": "A Silent Voice",
+  "icon": "🤟",
+  "color": "#6aa9c9"
+ },
+ {
+  "key": "tenki",
+  "jp": "天気の子",
+  "en": "Weathering with You",
+  "icon": "🌦️",
+  "color": "#4a90d9"
+ },
+ {
+  "key": "suzume",
+  "jp": "すずめの戸締まり",
+  "en": "Suzume",
+  "icon": "🚪",
+  "color": "#c05a5a"
+ },
+ {
+  "key": "ponyo",
+  "jp": "崖の上のポニョ",
+  "en": "Ponyo",
+  "icon": "🐟",
+  "color": "#e2483d"
+ },
+ {
+  "key": "nausicaa",
+  "jp": "風の谷のナウシカ",
+  "en": "Nausicaä",
+  "icon": "🪲",
+  "color": "#7d8f4e"
+ },
+ {
+  "key": "inuyasha",
+  "jp": "犬夜叉",
+  "en": "Inuyasha",
+  "icon": "🐕",
+  "color": "#b23a3a"
+ },
+ {
+  "key": "yugioh",
+  "jp": "遊☆戯☆王",
+  "en": "Yu-Gi-Oh!",
+  "icon": "🃏",
+  "color": "#8a2be2"
+ },
+ {
+  "key": "kaguya",
+  "jp": "かぐや様は告らせたい",
+  "en": "Kaguya-sama: Love Is War",
+  "icon": "💘",
+  "color": "#c9324b"
+ },
+ {
+  "key": "kuroko",
+  "jp": "黒子のバスケ",
+  "en": "Kuroko's Basketball",
+  "icon": "🏀",
+  "color": "#2f6db5"
+ },
+ {
+  "key": "slamdunk",
+  "jp": "SLAM DUNK",
+  "en": "Slam Dunk",
+  "icon": "🏀",
+  "color": "#d6452f"
+ },
+ {
+  "key": "ippo",
+  "jp": "はじめの一歩",
+  "en": "Hajime no Ippo",
+  "icon": "🥊",
+  "color": "#c4312b"
+ },
+ {
+  "key": "lupin",
+  "jp": "ルパン三世",
+  "en": "Lupin the Third",
+  "icon": "🎩",
+  "color": "#c9302c"
+ },
+ {
+  "key": "natsume",
+  "jp": "夏目友人帳",
+  "en": "Natsume's Book of Friends",
+  "icon": "🐱",
+  "color": "#c99a5b"
+ },
+ {
+  "key": "meshi",
+  "jp": "ダンジョン飯",
+  "en": "Delicious in Dungeon",
+  "icon": "🍲",
+  "color": "#b0752e"
+ },
+ {
+  "key": "tokyoghoul",
+  "jp": "東京喰種",
+  "en": "Tokyo Ghoul",
+  "icon": "☕",
+  "color": "#6d1f2a"
+ },
+ {
+  "key": "neverland",
+  "jp": "約束のネバーランド",
+  "en": "The Promised Neverland",
+  "icon": "🌲",
+  "color": "#3e6e57"
+ },
+ {
+  "key": "drstone",
+  "jp": "Dr.STONE",
+  "en": "Dr. Stone",
+  "icon": "🧪",
+  "color": "#3c9a5f"
+ },
+ {
+  "key": "shokugeki",
+  "jp": "食戟のソーマ",
+  "en": "Food Wars!",
+  "icon": "🍳",
+  "color": "#d9822b"
+ },
+ {
+  "key": "yurucamp",
+  "jp": "ゆるキャン△",
+  "en": "Laid-Back Camp",
+  "icon": "⛺",
+  "color": "#e3a33b"
+ },
+ {
+  "key": "fruitsbasket",
+  "jp": "フルーツバスケット",
+  "en": "Fruits Basket",
+  "icon": "🍙",
+  "color": "#d47fa6"
+ },
+ {
+  "key": "bluelock",
+  "jp": "ブルーロック",
+  "en": "Blue Lock",
+  "icon": "⚽",
+  "color": "#1f4fa8"
+ },
+ {
+  "key": "psychopass",
+  "jp": "PSYCHO-PASS",
+  "en": "Psycho-Pass",
+  "icon": "🔫",
+  "color": "#2c7a8c"
+ },
+ {
+  "key": "ghostshell",
+  "jp": "攻殻機動隊",
+  "en": "Ghost in the Shell",
+  "icon": "🤖",
+  "color": "#4b5d73"
+ },
+ {
+  "key": "akira",
+  "jp": "AKIRA",
+  "en": "Akira",
+  "icon": "🏍️",
+  "color": "#c41e24"
+ },
+ {
+  "key": "mushoku",
+  "jp": "無職転生",
+  "en": "Mushoku Tensei",
+  "icon": "🪄",
+  "color": "#6c58a8"
+ },
+ {
+  "key": "shield",
+  "jp": "盾の勇者の成り上がり",
+  "en": "The Rising of the Shield Hero",
+  "icon": "🛡️",
+  "color": "#8a6d3b"
+ },
+ {
+  "key": "ginsaji",
+  "jp": "銀の匙",
+  "en": "Silver Spoon",
+  "icon": "🥄",
+  "color": "#8a9a5b"
  }
 ]
