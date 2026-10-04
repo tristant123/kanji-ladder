@@ -146,6 +146,15 @@ const server = http.createServer((req, res) => {
   }
   if (!(await page.$("#app .chip"))) throw new Error("dashboard shows no kanji");
 
+  // a kanji built from an earlier kanji shows it as a piece, and that kanji lists it back
+  await page.goto(base + "#/item/k:渡");
+  await page.waitForSelector(".item-kanji");
+  if (!(await page.$('.chips a[href="#/item/' + encodeURIComponent("k:度") + '"]'))) errors.push("渡 doesn't show 度 as a piece");
+  await shot("25_kanji_piece");
+  await page.goto(base + "#/item/k:度");
+  await page.waitForSelector(".item-kanji");
+  if (!(await page.$('.chips a[href="#/item/' + encodeURIComponent("k:渡") + '"]'))) errors.push("度 doesn't list 渡 under Found in kanji");
+
   // hovering a kanji in an anime line shows its reading and a meaning card
   await page.goto(base + "#/anime/onepiece");
   await page.waitForSelector(".anime-line ruby");

@@ -85,8 +85,8 @@ Progress lives in the browser you study in, and is backed up automatically
 
 Each level has its radicals, ~30 kanji and ~90 vocabulary words.
 
-**Unlocking, as on WaniKani.** A kanji unlocks when every radical in it
-reaches *Guru*. A word unlocks when every kanji in it reaches Guru. The next
+**Unlocking, as on WaniKani.** A kanji unlocks when every piece in it (its
+radicals, and any earlier kanji it's built from) reaches *Guru*. A word unlocks when every kanji in it reaches Guru. The next
 level opens when 90% of this level's kanji are at Guru.
 
 **Skipping what you already know.** *Skip to Guru* puts an item straight at
@@ -118,6 +118,17 @@ which character each of those radical names is, and the build checks it
 against the kanji's KanjiVG strokes. Kanji WaniKani doesn't teach are broken
 down from KanjiVG so that every stroke belongs to a part. Where either is
 wrong, `content/parts.json` fixes a kanji by hand.
+
+Then a second pass builds each kanji from the fewest pieces you already know
+by the time you reach it: radicals taught earlier (a level's radicals come
+before its kanji) and kanji from earlier lessons, including earlier in the
+same level. Several parts give way to one bigger piece you've learned, so
+渡 is Water + 度 (Degree) rather than Water, Canopy, Twenty and Stool, and
+荷 is Grass + 何 (What). It only ever merges: a radical is never split into
+smaller pieces (攵 stays the Whip). Where KanjiVG doesn't show the parts
+(about 120 kanji, mostly WaniKani's look-alikes), the kanji keeps the
+breakdown above. A kanji used as a piece shows on the kanji's page under
+*Built from*, and has to reach Guru before the kanji unlocks.
 
 Radicals added for that follow WaniKani's names (Lantern, Gladiator,
 Mohawk...) so they match what you'd look up; their stories are this app's own.

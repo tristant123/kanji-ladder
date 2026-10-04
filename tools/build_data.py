@@ -269,7 +269,7 @@ def wk_parts(ch, root, names, known):
 # something you've already met by then: a radical taught earlier (a level's
 # radicals come before its kanji) or a kanji from an earlier lesson. A part
 # from the breakdown above is taught as a new radical only where no learned
-# piece covers that bit of the kanji. Single strokes are kept to one per
+# piece covers it (渡 = 氵 + 度 once 度 is known, not 氵 广 廿 又). Single strokes are kept to one per
 # kanji (or as many as the breakdown above had), so 十 doesn't turn into 一
 # and 丨.
 def piece_candidates(ch, root):
@@ -357,13 +357,16 @@ def learned_pieces(ordered, kanji):
         if ch in known_r or old == [ch]:
             cands.append((ch, frozenset(strokes), ch not in known_r, old == [ch]))
         max_single = max(1, sum(1 for p in old if p in PART_STROKES))
-        if os.environ.get("PARTS_MODE") == "merge":
-            # only swap whole old parts for a bigger learned piece, never split one
-            base = best_cover(strokes, [c for c in cands if c[3]], max_single)
-            if base:
-                inst = [c[1] for c in base]
-                cands = [c for c in cands if c[3] or all(not (c[1] & o) or o <= c[1] for o in inst)]
-        cover = best_cover(strokes, cands, max_single)
+        # A learned piece may stand in for several whole old parts, but never
+        # splits one: 攵 stays 攵 rather than becoming 𠂉 and 乂.
+        # Without the old parts located in KanjiVG we can't tell merging from
+        # splitting, so the kanji keeps its breakdown.
+        base = best_cover(strokes, [c for c in cands if c[3]], max_single)
+        cover = None
+        if base:
+            inst = [c[1] for c in base]
+            cands = [c for c in cands if c[3] or all(not (c[1] & o) or o <= c[1] for o in inst)]
+            cover = best_cover(strokes, cands, max_single)
         if cover is None:
             stats["kept: KanjiVG doesn't show the breakdown"] += 1
             parts = old
