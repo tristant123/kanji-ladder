@@ -11,8 +11,10 @@ levels, SRS and mnemonics as the main app, plus:
   pages show lines from their words. Lines are written the way a Japanese
   writer would, kanji and all: **hover (or tap) any kanji for its
   furigana** and a little card with the word's and each kanji's meaning,
-  or turn on *Always show furigana* in Settings. Every N5 word, almost every N4 word, every anime word and a first batch
-  of N3 words has a line: about 860 in all.
+  or turn on *Always show furigana* in Settings. Every N5 word, every anime word and most N4 and N3
+  words have a line, plus the everyday half of N2: about 1,800 in all.
+  (Words that only really turn up in the news, like 関税 or 汚職, are
+  left without one.)
 - **Anime words.** 160 extra words you hear constantly in anime (魔法, 先輩,
   覚悟, 異世界, 必殺技, 貴様...), marked アニメ. They're real dictionary
   words and unlock with their kanji like everything else.
