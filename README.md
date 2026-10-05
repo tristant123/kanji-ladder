@@ -115,7 +115,8 @@ Lantern, 年 is Gun + Cow), including WaniKani's look-alikes where a shape
 isn't strictly that component. The breakdown comes from the WaniKani radical
 lists recorded in kanji-data's `kanji.json`; `tools/wk_components.json` says
 which character each of those radical names is, and the build checks it
-against the kanji's KanjiVG strokes. Kanji WaniKani doesn't teach are broken
+against the kanji's KanjiVG strokes. A kanji that is one WaniKani radical repeated is built from that radical
+(林 is Tree twice, 晶 is Sun three times). Kanji WaniKani doesn't teach are broken
 down from KanjiVG so that every stroke belongs to a part. Where either is
 wrong, `content/parts.json` fixes a kanji by hand.
 

@@ -235,6 +235,18 @@ def wk_parts(ch, root, names, known):
     if not names:
         return None
     if len(names) == 1:
+        # One radical, repeated (林 is Tree twice, 晶 Sun three times):
+        # the kanji is built from it. Otherwise WaniKani's radical is the
+        # kanji's own shape, and the kanji is its own radical.
+        pieces = piece_candidates(ch, root)
+        strokes = frozenset(x.get("id") for x in root.iter(SVG + "path"))
+        for c in WK_COMPONENTS.get(names[0], []):
+            if "+" in c:
+                continue
+            c = c.split("@")[0]
+            mine = [ids for p, ids in pieces if p == c]
+            if len(mine) > 1 and frozenset().union(*mine) == strokes and sum(map(len, mine)) == len(strokes):
+                return [c]
         return [ch]
     own = labelled(root, ("element",))
     anyform = labelled(root)
