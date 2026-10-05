@@ -365,7 +365,12 @@ def learned_pieces(ordered, kanji):
         cover = None
         if base:
             inst = [c[1] for c in base]
-            cands = [c for c in cands if c[3] or all(not (c[1] & o) or o <= c[1] for o in inst)]
+            # ...and has to swallow at least two old parts: a look-alike with
+            # the same strokes (八 for 丷 in 前) is a rename, not a merge.
+            cands = [c for c in cands if c[3] or (
+                all(not (c[1] & o) or o <= c[1] for o in inst)
+                and sum(1 for o in inst if o <= c[1]) >= 2
+                and not (c[1] == frozenset(strokes) and c[0] != ch))]
             cover = best_cover(strokes, cands, max_single)
         if cover is None:
             stats["kept: KanjiVG doesn't show the breakdown"] += 1

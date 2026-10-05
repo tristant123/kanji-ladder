@@ -125,7 +125,7 @@ before its kanji) and kanji from earlier lessons, including earlier in the
 same level. Several parts give way to one bigger piece you've learned, so
 渡 is Water + 度 (Degree) rather than Water, Canopy, Twenty and Stool, and
 荷 is Grass + 何 (What). It only ever merges: a radical is never split into
-smaller pieces (攵 stays the Whip). Where KanjiVG doesn't show the parts
+smaller pieces (攵 stays the Whip), and a look-alike you already know never stands in for the real piece (前 keeps 丷 Horns rather than 八 Eight). Where KanjiVG doesn't show the parts
 (about 120 kanji, mostly WaniKani's look-alikes), the kanji keeps the
 breakdown above. A kanji used as a piece shows on the kanji's page under
 *Built from*, and has to reach Guru before the kanji unlocks.
