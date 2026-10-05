@@ -284,23 +284,35 @@ def wk_parts(ch, root, names, known):
 # piece covers it (渡 = 氵 + 度 once 度 is known, not 氵 广 廿 又). Single strokes are kept to one per
 # kanji (or as many as the breakdown above had), so 十 doesn't turn into 一
 # and 丨.
-def piece_candidates(ch, root):
+def piece_candidates(ch, root, variants=None):
     """[(piece, stroke ids)] for every named group of the kanji, with split
-    elements (kvg:part) joined back together, plus single strokes."""
+    elements (kvg:part) joined back together, plus single strokes. Pieces
+    KanjiVG marks as a variant form of their element (告's top is only like
+    牛) are also added to the set `variants`, if given."""
     out = []
     split = collections.defaultdict(set)
+    split_variant = set()
     for g in root.iter(SVG + "g"):
         e = elem(g)
         if g is root or not e:
             continue
         ids = frozenset(x.get("id") for x in g.iter(SVG + "path"))
+        variant = g.get(KV + "variant") == "true"
         if g.get(KV + "part"):
-            split[(e, g.get(KV + "number"))] |= ids
+            key = (e, g.get(KV + "number"))
+            split[key] |= ids
+            if variant:
+                split_variant.add(key)
             continue
         out.append((e, ids))
+        if variant and variants is not None:
+            variants.add((e, ids))
         if e in WK_SHAPE_OF:
             out.extend((p, ids) for p in WK_SHAPE_OF[e])
-    out += [(e, frozenset(ids)) for (e, _), ids in split.items()]
+    for key, ids in split.items():
+        out.append((key[0], frozenset(ids)))
+        if key in split_variant and variants is not None:
+            variants.add((key[0], frozenset(ids)))
     for x in root.iter(SVG + "path"):
         r = stroke_radical(x)
         if r:
@@ -350,40 +362,53 @@ def learned_pieces(ordered, kanji):
         root = kvg_root(ch)
         strokes = [x.get("id") for x in root.iter(SVG + "path")]
         cands = []
-        for p, ids in piece_candidates(ch, root):
+        variants = set()
+        for p, ids in piece_candidates(ch, root, variants):
             learned = p in known_r or (p in known_k and p != ch)
             if learned or p in old:
                 cands.append((p, ids, not learned, p in old))
-        # One old part KanjiVG labels some other way (辶 is ⻌ there): it is
-        # whatever strokes the other old parts leave over.
+        if ch in known_r or old == [ch]:
+            cands.append((ch, frozenset(strokes), ch not in known_r, old == [ch]))
+        max_single = max(1, sum(1 for p in old if p in PART_STROKES))
+        # Start from the old parts where KanjiVG draws them. One old part may
+        # be labelled some other way (辶 is ⻌ there, 東 is 束): try it at each
+        # of the kanji's other named shapes, or on whatever strokes the other
+        # old parts leave over, and keep the placement that fits every old
+        # part with the fewest pieces. Without that we can't tell merging
+        # from splitting or renaming, so the kanji keeps its breakdown.
         found = {c[0] for c in cands if c[3]}
         missing = [p for p in old if p not in found and p != ch]
+        options = [[]]
         if len(missing) == 1:
+            m, learned = missing[0], missing[0] in known_r
+            spots = {ids for p, ids in piece_candidates(ch, root) if len(ids) > 1 and p not in old}
             rest = set(strokes)
             for c in sorted((c for c in cands if c[3]), key=lambda c: -len(c[1])):
                 if c[1] <= rest:
                     rest -= c[1]
             if rest:
-                learned = missing[0] in known_r
-                cands.append((missing[0], frozenset(rest), not learned, True))
-        if ch in known_r or old == [ch]:
-            cands.append((ch, frozenset(strokes), ch not in known_r, old == [ch]))
-        max_single = max(1, sum(1 for p in old if p in PART_STROKES))
-        # A learned piece may stand in for several whole old parts, but never
-        # splits one: 攵 stays 攵 rather than becoming 𠂉 and 乂.
-        # Without the old parts located in KanjiVG we can't tell merging from
-        # splitting, so the kanji keeps its breakdown.
-        base = best_cover(strokes, [c for c in cands if c[3]], max_single)
+                spots.add(frozenset(rest))
+            options = [[(m, ids, not learned, True)] for ids in spots if ids != frozenset(strokes)]
+        base = None
+        for extra in options:
+            b = best_cover(strokes, [c for c in cands if c[3]] + extra, max_single)
+            if b and {c[0] for c in b} >= {p for p in old if p != ch} and (base is None or len(b) < len(base)):
+                base = b
         cover = None
         if base:
             inst = [c[1] for c in base]
-            # ...and has to swallow at least two old parts: a look-alike with
-            # the same strokes (八 for 丷 in 前) is a rename, not a merge.
-            cands = [c for c in cands if c[3] or (
-                all(not (c[1] & o) or o <= c[1] for o in inst)
-                and sum(1 for o in inst if o <= c[1]) >= 2
-                and not (c[1] == frozenset(strokes) and c[0] != ch))]
-            cover = best_cover(strokes, cands, max_single)
+            # A learned piece can only take the place of two or more whole old
+            # parts (度 for 广 廿 又), never split one (攵 stays 攵), and has to
+            # be the real thing, not what KanjiVG calls a variant of it: 滋's
+            # top is 丷 over 一, not 艹, and 告's is only like 牛.
+            # A look-alike with the same strokes (八 for 丷 in 前) would be a
+            # rename, not a merge.
+            merges = [c for c in cands if not c[3] and not c[2]
+                      and all(not (c[1] & o) or o <= c[1] for o in inst)
+                      and sum(1 for o in inst if o <= c[1]) >= 2
+                      and not (c[1] == frozenset(strokes) and c[0] != ch)
+                      and (c[0], c[1]) not in variants]
+            cover = best_cover(strokes, base + merges, max_single)
         if cover is None:
             stats["kept: KanjiVG doesn't show the breakdown"] += 1
             parts = old
@@ -999,7 +1024,8 @@ def check_mnemonics(kanji, radicals):
             continue
         allowed = set()
         for p in k["parts"]:
-            allowed |= names.get(p, set()) | kanji_names.get(p, set())
+            # an earlier kanji used as a piece goes in <kanji> tags, not <radical>
+            allowed |= kanji_names.get(p, set()) if p in k.get("kp", ()) else names.get(p, set()) | kanji_names.get(p, set())
         for used in re.findall(r"<radical>(.*?)</radical>", k["mm"]):
             u = used.lower()
             stems = {u, u.rstrip("s"), re.sub(r"(ing|ed|es)$", "", u), re.sub(r"ing$", "e", u)}

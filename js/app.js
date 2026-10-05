@@ -35,7 +35,7 @@
   // seconds after each change.
   let snapDay = "";
   function dailySnapshot() {
-    if (snapDay === Store.today()) return;
+    if (snapDay === Store.today() || !Object.keys(ctx.progress.items).length) return;
     snapDay = Store.today();
     Store.snapshot(ctx.progress, "daily").catch(() => {});
   }
@@ -54,6 +54,7 @@
       backup.file = h;
       backup.permission = await filePermission(h);
       renderBackupFile();
+      if (backup.permission !== "granted" && !location.hash.replace(/^#\/?/, "")) dashboard();
     });
   }
   function scheduleFileBackup() {
@@ -61,9 +62,14 @@
     clearTimeout(backup.timer);
     backup.timer = setTimeout(writeFileBackup, 3000);
   }
-  async function writeFileBackup() {
+  // Writes run one after another, so two can't open the file at once.
+  let writing = Promise.resolve();
+  function writeFileBackup() {
     clearTimeout(backup.timer);
     backup.timer = null;
+    return (writing = writing.then(writeNow));
+  }
+  async function writeNow() {
     if (!backup.file || backup.permission !== "granted") return;
     try {
       await Store.writeBackupFile(backup.file, ctx.progress);
@@ -134,6 +140,9 @@
     });
 
     app.innerHTML =
+      (backup.file && backup.permission !== "granted"
+        ? '<p class="notice">Backups to <b>' + esc(backup.file.name) + '</b> are paused until you allow them again. <a href="#/settings">Resume in Settings</a></p>'
+        : "") +
       '<section class="hero">' +
       '<div class="level-card"><div class="lv-label">Level</div><div class="lv-n">' + level + '</div><div class="lv-tier">JLPT N' + tier + "</div></div>" +
       '<a class="big-btn lessons' + (lessons.length ? "" : " empty") + '" href="#/lessons"><span class="n">' + lessons.length + "</span><span>Lessons</span></a>" +
@@ -143,7 +152,7 @@
       '<section class="panel"><h2>Level ' + level + " progress</h2>" +
       progressLine("Radicals", L.radical, guru(L.radical)) +
       progressLine("Kanji", L.kanji, guru(L.kanji), Math.ceil(L.kanji.length * 0.9)) +
-      '<p class="muted small">Get 90% of this level\'s kanji to Guru to open level ' + (level + 1) + ". Kanji unlock once their radicals reach Guru; vocabulary once its kanji do.</p>" +
+      '<p class="muted small">Get 90% of this level\'s kanji to Guru to open level ' + (level + 1) + ". Kanji unlock once their pieces (radicals, and any earlier kanji they build on) reach Guru; vocabulary once its kanji do.</p>" +
       '<div class="chips tight">' + L.kanji.map((k) => chip(k, p, { brief: true, locked: !SRS.isUnlocked(cat, p, k, level) })).join("") + "</div>" +
       "</section>" +
       '<div class="cols">' +
@@ -185,7 +194,7 @@
     return (
       '<section class="panel welcome"><h2>How this works</h2>' +
       "<ol><li><b>Radicals first.</b> Each level starts with the building blocks. Learn their names; they're the words your mnemonics are made of.</li>" +
-      "<li><b>Then kanji.</b> A kanji unlocks when all its radicals reach <i>Guru</i>. You'll learn its meaning and the reading to know first.</li>" +
+      "<li><b>Then kanji.</b> A kanji unlocks when all its pieces reach <i>Guru</i>: its radicals, and any earlier kanji it builds on. You'll learn its meaning and the reading to know first.</li>" +
       "<li><b>Then vocabulary.</b> Real words that use the kanji, which is where the other readings get learned.</li>" +
       "<li><b>Reviews</b> come back at 4h, 8h, 1d, 2d, 1w, 2w, 1mo and 4mo. Miss one and it drops back. Pass the last one and it's burned.</li></ol>" +
       "<p>Levels 1–3 are JLPT N5, 4–8 N4, then N3, N2 and N1, covering all 2,136 Jōyō kanji. Already know N5? Skip ahead in <a href=\"#/settings\">Settings</a>.</p>" +

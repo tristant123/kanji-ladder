@@ -113,6 +113,7 @@ textarea { width: 100%; resize: vertical; }
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 16px; margin: 14px 0; box-shadow: var(--shadow);
 }
+.notice { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--kanji); border-radius: var(--radius); padding: 10px 14px; margin: 6px 0 12px; }
 .panel h3 { font-size: 0.92rem; margin: 16px 0 4px; }
 .snaps .snap { justify-content: space-between; margin-top: 4px; padding: 4px 0; border-top: 1px solid var(--line); }
 .snaps .snap:first-child { border-top: 0; }

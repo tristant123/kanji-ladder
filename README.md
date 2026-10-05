@@ -86,8 +86,9 @@ Progress lives in the browser you study in, and is backed up automatically
 Each level has its radicals, ~30 kanji and ~90 vocabulary words.
 
 **Unlocking, as on WaniKani.** A kanji unlocks when every piece in it (its
-radicals, and any earlier kanji it's built from) reaches *Guru*. A word unlocks when every kanji in it reaches Guru. The next
-level opens when 90% of this level's kanji are at Guru.
+radicals, and any earlier kanji it's built from) reaches *Guru*. A word
+unlocks when every kanji in it reaches Guru. The next level opens when 90% of
+this level's kanji are at Guru.
 
 **Skipping what you already know.** *Skip to Guru* puts an item straight at
 Guru 1, which unlocks everything built on it. It still comes back for one
@@ -112,33 +113,35 @@ first.
 
 Each kanji is broken into the radicals WaniKani uses for it (開 is Gate +
 Lantern, 年 is Gun + Cow), including WaniKani's look-alikes where a shape
-isn't strictly that component. The breakdown comes from the WaniKani radical
-lists recorded in kanji-data's `kanji.json`; `tools/wk_components.json` says
-which character each of those radical names is, and the build checks it
-against the kanji's KanjiVG strokes. A kanji that is one WaniKani radical repeated is built from that radical
-(林 is Tree twice, 晶 is Sun three times). Kanji WaniKani doesn't teach are broken
-down from KanjiVG so that every stroke belongs to a part. Where either is
-wrong, `content/parts.json` fixes a kanji by hand.
+isn't strictly that component. A kanji that is one radical repeated is built
+from that radical (林 is Tree twice, 晶 is Sun three times). The breakdown
+comes from the WaniKani radical lists recorded in kanji-data's `kanji.json`;
+`tools/wk_components.json` says which character each of those radical names
+is, and the build checks it against the kanji's KanjiVG strokes. Kanji
+WaniKani doesn't teach are broken down from KanjiVG so that every stroke
+belongs to a part. Where either is wrong, `content/parts.json` fixes a kanji
+by hand. Radicals added for those follow WaniKani's names (Lantern,
+Gladiator, Mohawk...) so they match what you'd look up; their stories are
+this app's own.
 
 Then a second pass builds each kanji from the fewest pieces you already know
 by the time you reach it: radicals taught earlier (a level's radicals come
 before its kanji) and kanji from earlier lessons, including earlier in the
-same level. Several parts give way to one bigger piece you've learned, so
-渡 is Water + 度 (Degree) rather than Water, Canopy, Twenty and Stool, and
-荷 is Grass + 何 (What). It only ever merges: a radical is never split into
-smaller pieces (攵 stays the Whip), and a look-alike you already know never stands in for the real piece (前 keeps 丷 Horns rather than 八 Eight). Where KanjiVG doesn't show the parts
-(about 120 kanji, mostly WaniKani's look-alikes), the kanji keeps the
-breakdown above. A kanji used as a piece shows on the kanji's page under
-*Built from*, and has to reach Guru before the kanji unlocks.
-
-Radicals added for that follow WaniKani's names (Lantern, Gladiator,
-Mohawk...) so they match what you'd look up; their stories are this app's own.
+same level. Several parts give way to one bigger piece you've learned, so 渡
+is Water + 度 (Degree) rather than Water, Canopy, Twenty and Stool, and 荷 is
+Grass + 何 (What). It only ever merges: a radical is never split into smaller
+pieces (攵 stays the Whip), and a look-alike you already know never stands in
+for the real piece (前 keeps 丷 Horns rather than 八 Eight, and 告 keeps
+Slide + Dirt because its top is only like 牛). Where KanjiVG
+doesn't show every part (about 125 kanji, mostly WaniKani's look-alikes), the
+kanji keeps the breakdown above. A kanji used as a piece shows on the kanji's
+page under *Built from*, and has to reach Guru before the kanji unlocks.
 
 ## Mnemonics
 
 Every radical has a name and a story. All N5 to N2 kanji (979)
-have hand-written meaning and reading mnemonics. They reuse the radical names you
-learned, and each reading ties to a fixed *sound anchor* (こう is always a
+have hand-written meaning and reading mnemonics. They reuse the names of the
+radicals and kanji they're built from, and each reading ties to a fixed *sound anchor* (こう is always a
 koala, かん a kangaroo, しょう a showman...) that's used across all kanji
 with that sound.
 

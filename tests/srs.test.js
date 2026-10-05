@@ -145,6 +145,9 @@ test("kanji are built from the fewest pieces you already know", () => {
   assert.strictEqual(parts("荷"), "艹+何");
   assert.strictEqual(parts("作"), "亻+乍");
   assert.strictEqual(parts("年"), "𠂉+牛"); // KanjiVG doesn't show these, so WaniKani's breakdown stays
+  assert.strictEqual(parts("前"), "丷+一+月+刂"); // 八 has the same strokes, but Horns is the real piece
+  assert.strictEqual(parts("告"), "丿+土+口"); // only looks like 牛
+  assert.strictEqual(parts("林"), "木"); // WaniKani: Tree, twice
   for (const r of data.radicals) assert.ok(r.name && r.name !== r.ch, "radical without a name: " + r.ch);
 });
 
